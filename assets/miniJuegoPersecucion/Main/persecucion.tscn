@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://buwkurjm8i2x"]
+
+[ext_resource type="PackedScene" uid="uid://rs25s0gepwpb" path="res://assets/miniJuegoPersecucion/StaticScenes/street.tscn" id="1_7g86r"]
+[ext_resource type="PackedScene" uid="uid://bkf7wdf8fhv4l" path="res://assets/miniJuegoPersecucion/Elementos/auto_movil.tscn" id="2_v76dr"]
+
+[node name="persecucion" type="Node2D"]
+
+[node name="StaticBody2D" parent="." instance=ExtResource("1_7g86r")]
+position = Vector2(99, 60)
+
+[node name="AutoMovil" parent="." instance=ExtResource("2_v76dr")]
+position = Vector2(36, 29)

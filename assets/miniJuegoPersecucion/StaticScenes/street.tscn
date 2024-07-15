@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://rs25s0gepwpb"]
+
+[ext_resource type="Texture2D" uid="uid://mweh1ulv1lod" path="res://assets/miniJuegoPersecucion/res/Tiles/tile_0073.png" id="1_6dat5"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xdefk"]
+a = Vector2(763, 37)
+b = Vector2(-96, 38)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(95, 56)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(337.469, -8)
+scale = Vector2(107.883, 11.5078)
+texture = ExtResource("1_6dat5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, -1)
+shape = SubResource("SegmentShape2D_xdefk")
