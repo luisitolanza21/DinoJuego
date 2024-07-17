@@ -1,22 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkf7wdf8fhv4l"]
+[gd_scene load_steps=4 format=3 uid="uid://b337s0x7lvipt"]
 
-[ext_resource type="Texture2D" uid="uid://bk1hvwdpbcgga" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/tile_0276.png" id="1_6ic2d"]
-[ext_resource type="Script" path="res://assets/miniJuegoPersecucion/Scripts/auto_movil.gd" id="1_883it"]
-[ext_resource type="Texture2D" uid="uid://53aax6txcugj" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/tile_0277.png" id="2_vrg4p"]
+[ext_resource type="Texture2D" uid="uid://hnbvgybcolls" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/auto.webp" id="1_ge5ee"]
+[ext_resource type="Script" path="res://assets/miniJuegoPersecucion/Scripts/auto_movil2.gd" id="1_se0ug"]
 
-[node name="AutoMovil" type="CharacterBody2D"]
-position = Vector2(3, 1)
-script = ExtResource("1_883it")
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ltqr"]
+radius = 8.0
+height = 36.0
 
-[node name="Tile0276" type="Sprite2D" parent="."]
-position = Vector2(78, 21.25)
-scale = Vector2(7.875, 5.5625)
-texture = ExtResource("1_6ic2d")
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_se0ug")
 
-[node name="Tile0277" type="Sprite2D" parent="Tile0276"]
-position = Vector2(-7.15873, 0.0888891)
-scale = Vector2(0.900794, 1)
-texture = ExtResource("2_vrg4p")
+[node name="Auto" type="Sprite2D" parent="."]
+rotation = -1.55509
+scale = Vector2(0.0386318, 0.0395619)
+texture = ExtResource("1_ge5ee")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-2, 16, -2, 37, 19, 39, 23, 44, 36, 44, 36, 37, 61, 37, 61, 45, 75, 44, 78, 39, 101, 39, 104, 11, 96, 6, 77, 5, 70, 0, 29, 0, 22, 5, 8, 3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_7ltqr")

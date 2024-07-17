@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6ehfg3g6ugu3"]
+
+[ext_resource type="Texture2D" uid="uid://dgbg0bp0xgfsy" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/tile_0327.png" id="1_de7mm"]
+[ext_resource type="Texture2D" uid="uid://b5w2xm4gjpc8j" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/tile_0303.png" id="2_66p6e"]
+
+[sub_resource type="GDScript" id="GDScript_cs50k"]
+script/source = "extends CharacterBody2D
+
+# Variables de configuración
+var acceleration = 500
+var max_speed = 1000
+var friction = 0.1
+var turn_speed = 5
+var target_direction = Vector2(1, 0) # Dirección en la que el auto debe moverse
+
+# Variables internas
+var current_velocity = Vector2()
+
+func _physics_process(delta):
+	# Aplicar aceleración en la dirección objetivo
+	current_velocity += target_direction * acceleration * delta
+
+	# Limitar la velocidad máxima
+	if current_velocity.length() > max_speed:
+		current_velocity = current_velocity.normalized() * max_speed
+
+	# Aplicar fricción
+	current_velocity = current_velocity.move_toward(Vector2(), friction * delta)
+
+	# Aplicar la velocidad al CharacterBody2D
+	velocity = current_velocity
+	move_and_slide()
+	
+	# Actualizar la dirección del auto según la rotación actual
+	# Esto es opcional y depende de si deseas que el auto gire
+	rotation += turn_speed * delta
+	target_direction = Vector2(cos(rotation), sin(rotation)).normalized()
+
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0byht"]
+size = Vector2(30, 60)
+
+[node name="caja1" type="CharacterBody2D"]
+position = Vector2(0, -2)
+script = SubResource("GDScript_cs50k")
+
+[node name="Tile0327" type="Sprite2D" parent="."]
+position = Vector2(0, -18)
+scale = Vector2(4.57031, 4.9375)
+texture = ExtResource("1_de7mm")
+
+[node name="Tile0303" type="Sprite2D" parent="."]
+position = Vector2(-3.57628e-07, 20)
+scale = Vector2(4.75, 5.125)
+texture = ExtResource("2_66p6e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_0byht")

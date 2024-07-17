@@ -154,7 +154,6 @@ script = ExtResource("1_dnq5p")
 [node name="SpriteDinoAnimated" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jk01m")
 animation = &"side_walk"
-frame_progress = 0.598399
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 163.84)

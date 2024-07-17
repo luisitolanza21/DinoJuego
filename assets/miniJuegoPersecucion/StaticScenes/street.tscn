@@ -2,18 +2,23 @@
 
 [ext_resource type="Texture2D" uid="uid://mweh1ulv1lod" path="res://assets/miniJuegoPersecucion/res/Tiles/tile_0073.png" id="1_6dat5"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_xdefk"]
-a = Vector2(763, 37)
-b = Vector2(-96, 38)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_x6xj6"]
+a = Vector2(-12, -52)
+b = Vector2(-13, 592)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 position = Vector2(95, 56)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(337.469, -8)
-scale = Vector2(107.883, 11.5078)
+position = Vector2(-93, -54)
+rotation = 1.5708
+scale = Vector2(80.9186, 16.2795)
 texture = ExtResource("1_6dat5")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-147, -327)
+shape = SubResource("SegmentShape2D_x6xj6")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, -1)
-shape = SubResource("SegmentShape2D_xdefk")
+position = Vector2(-17, -326)
+shape = SubResource("SegmentShape2D_x6xj6")

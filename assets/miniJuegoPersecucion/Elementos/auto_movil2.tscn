@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b337s0x7lvipt"]
-
-[ext_resource type="Texture2D" uid="uid://dgbg0bp0xgfsy" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/tile_0327.png" id="1_6iewl"]
-
-[node name="Tile0327" type="Sprite2D"]
-position = Vector2(28, 19)
-scale = Vector2(8.875, 10.5)
-texture = ExtResource("1_6iewl")

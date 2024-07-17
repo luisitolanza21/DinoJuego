@@ -3,10 +3,12 @@ extends CharacterBody2D
 @export var speed = 1000
 
 @onready var animated = $SpriteDinoAnimated
+
 var direction = Vector2()
 var idle_position: int = 0 
 
 @onready var camara = $Camera2D
+
 func _input(event):
 	direction.x = Input.get_axis("left","right")
 	direction.y = Input.get_axis("up","down")
@@ -36,6 +38,7 @@ func _input(event):
 		#camara.zoom = Vector2(1,1)
 
 	direction.normalized()	
+	
 func _physics_process(delta):
 	
 	velocity = speed * direction
