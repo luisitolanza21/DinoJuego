@@ -7,43 +7,61 @@
 script/source = "extends CharacterBody2D
 
 # Variables de configuración
-var acceleration = 500
+
 var max_speed = 1000
 var friction = 0.1
 var turn_speed = 5
+
+
+var FRICTION = 0.1
+var ACCELERATION = 50
+
+var velocity = Vector2.ZERO
+var rng = RandomNumberGenerator.new()
 var target_direction = Vector2(1, 0) # Dirección en la que el auto debe moverse
 
+
+@export var SPEED = 2000.0
 # Variables internas
 var current_velocity = Vector2()
 
-func _physics_process(delta):
-	# Aplicar aceleración en la dirección objetivo
-	current_velocity += target_direction * acceleration * delta
+var temporizador=Timer.new();
+	
+func cambiarDireccion():
+  var target_speed = rng.randi_range(-1, 1) * SPEED
 
-	# Limitar la velocidad máxima
-	if current_velocity.length() > max_speed:
-		current_velocity = current_velocity.normalized() * max_speed
+	# Suavizar el cambio de dirección
+  if target_speed > velocity.x:
+	velocity.x = min(velocity.x + ACCELERATION * delta, target_speed)
+  elif target_speed < velocity.x:
+	velocity.x = max(velocity.x - ACCELERATION * delta, target_speed)
 
 	# Aplicar fricción
-	current_velocity = current_velocity.move_toward(Vector2(), friction * delta)
+  if abs(velocity.x) > 0:
+	velocity.x -= velocity.x * FRICTION
 
-	# Aplicar la velocidad al CharacterBody2D
-	velocity = current_velocity
-	move_and_slide()
+  if velocity.x > 0:
+	print(\"Cambiando Direccion der\")
+  elif velocity.x < 0:
+	print(\"Cambiando direccion Izq\")
+  else:
+	print(\"Sin cambio\")
+
+  velocity = move_and_slide(velocity)
 	
-	# Actualizar la dirección del auto según la rotación actual
-	# Esto es opcional y depende de si deseas que el auto gire
-	rotation += turn_speed * delta
-	target_direction = Vector2(cos(rotation), sin(rotation)).normalized()
 
+func _on_timer_timeout():
+	cambiarDireccion();
+	$Timer.wait_time=randf_range(2, 5);
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0byht"]
 size = Vector2(30, 60)
 
 [node name="caja1" type="CharacterBody2D"]
-position = Vector2(0, -2)
+position = Vector2(113, 90)
 script = SubResource("GDScript_cs50k")
+SPEED = null
 
 [node name="Tile0327" type="Sprite2D" parent="."]
 position = Vector2(0, -18)
@@ -58,3 +76,8 @@ texture = ExtResource("2_66p6e")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_0byht")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

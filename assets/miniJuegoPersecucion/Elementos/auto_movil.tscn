@@ -17,3 +17,4 @@ texture = ExtResource("1_ge5ee")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_7ltqr")
+metadata/_edit_lock_ = true
