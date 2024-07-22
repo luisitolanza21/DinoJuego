@@ -12,42 +12,27 @@ var max_speed = 1000
 var friction = 0.1
 var turn_speed = 5
 
-
 var FRICTION = 0.1
 var ACCELERATION = 50
-
-var velocity = Vector2.ZERO
 var rng = RandomNumberGenerator.new()
-var target_direction = Vector2(1, 0) # Dirección en la que el auto debe moverse
-
-
 @export var SPEED = 2000.0
 # Variables internas
-var current_velocity = Vector2()
-
 var temporizador=Timer.new();
 	
+
 func cambiarDireccion():
-  var target_speed = rng.randi_range(-1, 1) * SPEED
-
-	# Suavizar el cambio de dirección
-  if target_speed > velocity.x:
-	velocity.x = min(velocity.x + ACCELERATION * delta, target_speed)
-  elif target_speed < velocity.x:
-	velocity.x = max(velocity.x - ACCELERATION * delta, target_speed)
-
-	# Aplicar fricción
-  if abs(velocity.x) > 0:
-	velocity.x -= velocity.x * FRICTION
-
-  if velocity.x > 0:
-	print(\"Cambiando Direccion der\")
-  elif velocity.x < 0:
-	print(\"Cambiando direccion Izq\")
-  else:
-	print(\"Sin cambio\")
-
-  velocity = move_and_slide(velocity)
+	var dir = rng.randi_range(-1, 1);
+	
+	if (dir < 0):
+		velocity.x=dir*SPEED;
+		print(\"IZQ\");
+	elif (dir>0):
+		velocity.x=dir*SPEED;
+		print(\"DER\");
+	else:
+		print(\"Sin cambio de direccion\");
+		
+	move_and_slide()
 	
 
 func _on_timer_timeout():
@@ -61,7 +46,6 @@ size = Vector2(30, 60)
 [node name="caja1" type="CharacterBody2D"]
 position = Vector2(113, 90)
 script = SubResource("GDScript_cs50k")
-SPEED = null
 
 [node name="Tile0327" type="Sprite2D" parent="."]
 position = Vector2(0, -18)

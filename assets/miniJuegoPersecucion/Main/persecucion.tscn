@@ -15,12 +15,9 @@ position = Vector2(391, 271)
 
 [node name="caja2" parent="." instance=ExtResource("3_jtjr5")]
 position = Vector2(436, -227)
-SPEED = null
 
 [node name="caja1" parent="." instance=ExtResource("3_jtjr5")]
 position = Vector2(364, -80)
-SPEED = null
 
 [node name="caja3" parent="." instance=ExtResource("3_jtjr5")]
 position = Vector2(392, -459)
-SPEED = null
