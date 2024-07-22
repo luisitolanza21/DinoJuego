@@ -18,7 +18,7 @@ func _on_body_entered(body):
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u7s0u"]
 size = Vector2(842, 351)
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="comisaria" type="StaticBody2D"]
 self_modulate = Color(0.980392, 0.980392, 0.980392, 1)
 position = Vector2(117, 74)
 script = ExtResource("1_2al3d")

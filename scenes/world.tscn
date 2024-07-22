@@ -1,48 +1,78 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx7smj1r5uu13"]
+[gd_scene load_steps=11 format=3 uid="uid://bx7smj1r5uu13"]
 
+[ext_resource type="PackedScene" uid="uid://dhgrtai21185r" path="res://scenes/acera.tscn" id="1_fvph8"]
 [ext_resource type="PackedScene" uid="uid://c66vv04fsnrtl" path="res://scenes/comisaría.tscn" id="1_i5a5j"]
 [ext_resource type="PackedScene" uid="uid://da4rsea7q2hbr" path="res://scenes/player.tscn" id="2_7d60p"]
 [ext_resource type="Texture2D" uid="uid://dvhfh1pwm37c5" path="res://icon.svg" id="3_mmsou"]
+[ext_resource type="PackedScene" uid="uid://8m11sauenl4k" path="res://scenes/casa_1.tscn" id="4_qlewv"]
+[ext_resource type="PackedScene" uid="uid://cqucukouetgb0" path="res://scenes/casa_2.tscn" id="5_6qgay"]
+[ext_resource type="PackedScene" uid="uid://dannjbdl61ghk" path="res://scenes/casa_3.tscn" id="6_bp22j"]
+[ext_resource type="PackedScene" uid="uid://dg6l272kgmooc" path="res://scenes/casa_4.tscn" id="7_uigbc"]
+[ext_resource type="PackedScene" uid="uid://bm43xued7cplx" path="res://scenes/castillo_azul.tscn" id="9_ycb4h"]
+[ext_resource type="PackedScene" uid="uid://0nc6wf5twuc2" path="res://scenes/casa_dorada.tscn" id="10_6irid"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="StaticBody2D4" parent="." instance=ExtResource("1_i5a5j")]
-position = Vector2(238, 15)
-scale = Vector2(0.371222, 0.371222)
+[node name="acera" parent="." instance=ExtResource("1_fvph8")]
+position = Vector2(1771, -257)
+scale = Vector2(-2.73108, 1.38409)
+
+[node name="casa_4" parent="." instance=ExtResource("7_uigbc")]
+position = Vector2(2786, -435)
+
+[node name="casa_1" parent="." instance=ExtResource("4_qlewv")]
+position = Vector2(937, -250)
+
+[node name="casa_2" parent="." instance=ExtResource("5_6qgay")]
+position = Vector2(1616, -284)
+
+[node name="casa_3" parent="." instance=ExtResource("6_bp22j")]
+position = Vector2(2220, -249)
+
+[node name="comisaria" parent="." instance=ExtResource("1_i5a5j")]
+position = Vector2(-762, -265)
+scale = Vector2(1.17122, 1.17122)
+
+[node name="castillo_azul" parent="." instance=ExtResource("9_ycb4h")]
+position = Vector2(4641, -707)
+scale = Vector2(0.794402, 0.794402)
+
+[node name="casa_dorada" parent="." instance=ExtResource("10_6irid")]
+position = Vector2(-249, -2507)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_7d60p")]
-position = Vector2(543, 109)
-scale = Vector2(0.315046, 0.315046)
-speed = 150
+position = Vector2(256, 341)
+scale = Vector2(0.761783, 0.67924)
+speed = 2885
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(53.9604, 22.219)
 scale = Vector2(3.17414, 3.17414)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.34, 0.34)
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-position = Vector2(-869, 376)
+position = Vector2(-449.777, 197.866)
 scale = Vector2(0.845991, 0.83972)
 texture_normal = ExtResource("3_mmsou")
 passby_press = true
 action = "right"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-position = Vector2(-978, 269)
+position = Vector2(-558.777, 90.8663)
 scale = Vector2(0.845991, 0.83972)
 texture_normal = ExtResource("3_mmsou")
 passby_press = true
 action = "up"
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-position = Vector2(-980, 482)
+position = Vector2(-560.777, 303.866)
 scale = Vector2(0.845991, 0.83972)
 texture_normal = ExtResource("3_mmsou")
 passby_press = true
 action = "down"
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-position = Vector2(-1088, 374)
+position = Vector2(-668.777, 195.866)
 scale = Vector2(0.845991, 0.83972)
 texture_normal = ExtResource("3_mmsou")
 passby_press = true

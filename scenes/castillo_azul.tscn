@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm43xued7cplx"]
+
+[ext_resource type="Texture2D" uid="uid://bo6gpygmhe7bd" path="res://assets/edificios_unicos/Castillo Azul.png" id="1_fs2on"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mb64"]
+size = Vector2(1511, 781)
+
+[node name="castillo_azul" type="StaticBody2D"]
+
+[node name="CastilloAzul" type="Sprite2D" parent="."]
+texture = ExtResource("1_fs2on")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.5, 380.5)
+shape = SubResource("RectangleShape2D_2mb64")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhgrtai21185r"]
+
+[ext_resource type="Texture2D" uid="uid://dhus7rmu4qul6" path="res://assets/acera.png" id="1_riutb"]
+
+[node name="acera" type="Node2D"]
+position = Vector2(8, -6)
+
+[node name="Acera" type="Sprite2D" parent="."]
+texture = ExtResource("1_riutb")
