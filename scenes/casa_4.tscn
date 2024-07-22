@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg6l272kgmooc"]
+
+[ext_resource type="Texture2D" uid="uid://d0b1whe6dv5mc" path="res://assets/casas/casa 4.png" id="1_tmoam"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n66xb"]
+size = Vector2(492.5, 305.75)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Casa4" type="Sprite2D" parent="."]
+texture = ExtResource("1_tmoam")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.25, 453.875)
+shape = SubResource("RectangleShape2D_n66xb")

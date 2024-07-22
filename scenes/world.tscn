@@ -1,35 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx7smj1r5uu13"]
+[gd_scene load_steps=4 format=3 uid="uid://bx7smj1r5uu13"]
 
-[ext_resource type="Texture2D" uid="uid://8e0u6ubmn7g4" path="res://79e521d5-9b3e-4343-a8fe-f2a31af33bae.png" id="1_4or6f"]
 [ext_resource type="PackedScene" uid="uid://c66vv04fsnrtl" path="res://scenes/comisaría.tscn" id="1_i5a5j"]
 [ext_resource type="PackedScene" uid="uid://da4rsea7q2hbr" path="res://scenes/player.tscn" id="2_7d60p"]
 [ext_resource type="Texture2D" uid="uid://dvhfh1pwm37c5" path="res://icon.svg" id="3_mmsou"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="79e521d5-9b3e-4343-a8Fe-f2a31Af33Bae" type="Sprite2D" parent="."]
-position = Vector2(4170, 1842)
-scale = Vector2(7.65033, 4.31969)
-texture = ExtResource("1_4or6f")
-
-[node name="StaticBody2D3" parent="." instance=ExtResource("1_i5a5j")]
-position = Vector2(780, 467)
-scale = Vector2(0.371222, 0.371222)
-
-[node name="StaticBody2D2" parent="." instance=ExtResource("1_i5a5j")]
-position = Vector2(782, 15)
-scale = Vector2(0.371222, 0.371222)
-
 [node name="StaticBody2D4" parent="." instance=ExtResource("1_i5a5j")]
 position = Vector2(238, 15)
 scale = Vector2(0.371222, 0.371222)
 
-[node name="StaticBody2D5" parent="." instance=ExtResource("1_i5a5j")]
-position = Vector2(238, 466)
-scale = Vector2(0.371222, 0.371222)
-
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_7d60p")]
-position = Vector2(290, 260)
+position = Vector2(543, 109)
 scale = Vector2(0.315046, 0.315046)
 speed = 150
 
@@ -39,28 +21,28 @@ scale = Vector2(3.17414, 3.17414)
 zoom = Vector2(0.5, 0.5)
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-position = Vector2(-346, 110)
+position = Vector2(-869, 376)
 scale = Vector2(0.845991, 0.83972)
 texture_normal = ExtResource("3_mmsou")
 passby_press = true
 action = "right"
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-position = Vector2(-451, 0)
+position = Vector2(-978, 269)
 scale = Vector2(0.845991, 0.83972)
 texture_normal = ExtResource("3_mmsou")
 passby_press = true
 action = "up"
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-position = Vector2(-456, 208)
+position = Vector2(-980, 482)
 scale = Vector2(0.845991, 0.83972)
 texture_normal = ExtResource("3_mmsou")
 passby_press = true
 action = "down"
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="CharacterBody2D/Camera2D"]
-position = Vector2(-564, 104)
+position = Vector2(-1088, 374)
 scale = Vector2(0.845991, 0.83972)
 texture_normal = ExtResource("3_mmsou")
 passby_press = true
