@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0tt8njne6hex"
-path="res://.godot/imported/calles.png-564c5d8c36731da772ae45c2fb7f02c2.ctex"
+uid="uid://dqdfugxwsdppx"
+path="res://.godot/imported/DINO NPCS (1).png-c22ef81879420e4984ab209784400990.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/calles.png"
-dest_files=["res://.godot/imported/calles.png-564c5d8c36731da772ae45c2fb7f02c2.ctex"]
+source_file="res://assets/NPC/DINO NPCS (1).png"
+dest_files=["res://.godot/imported/DINO NPCS (1).png-c22ef81879420e4984ab209784400990.ctex"]
 
 [params]
 

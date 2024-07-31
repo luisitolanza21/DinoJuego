@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://2my17l5say2h"]
+
+[ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="1_78lom"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_posws"]
+atlas = ExtResource("1_78lom")
+region = Rect2(0, 0, 246, 428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_im6km"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_posws")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jm81d"]
+size = Vector2(247.854, 1085.14)
+
+[node name="NPC_1" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_im6km")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-18, -24)
+scale = Vector2(0.790788, 0.361242)
+shape = SubResource("RectangleShape2D_jm81d")
