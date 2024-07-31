@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 
+#script para desvanecer edificios cuando pasas por detras
 func _on_area_2d_body_entered(body):
 	if body is player:
 		modulate.a = 0.5

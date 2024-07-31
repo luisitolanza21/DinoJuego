@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8e0u6ubmn7g4"
-path="res://.godot/imported/79e521d5-9b3e-4343-a8fe-f2a31af33bae.png-a664b85c06febbc07e9abfa038cbe2b3.ctex"
+uid="uid://cfqtor8jxdvax"
+path="res://.godot/imported/calle 2.png-a05a4816eb563e6fbde4ec5f443df32f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://79e521d5-9b3e-4343-a8fe-f2a31af33bae.png"
-dest_files=["res://.godot/imported/79e521d5-9b3e-4343-a8fe-f2a31af33bae.png-a664b85c06febbc07e9abfa038cbe2b3.ctex"]
+source_file="res://assets/calles/calle 2.png"
+dest_files=["res://.godot/imported/calle 2.png-a05a4816eb563e6fbde4ec5f443df32f.ctex"]
 
 [params]
 

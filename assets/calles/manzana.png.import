@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhus7rmu4qul6"
-path="res://.godot/imported/acera.png-df1c0222d299b74e877a9d48a95e7df9.ctex"
+uid="uid://bp004ykc5rsp6"
+path="res://.godot/imported/manzana.png-f9dca105a26bebfb6768b21b74587be0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/acera.png"
-dest_files=["res://.godot/imported/acera.png-df1c0222d299b74e877a9d48a95e7df9.ctex"]
+source_file="res://assets/calles/manzana.png"
+dest_files=["res://.godot/imported/manzana.png-f9dca105a26bebfb6768b21b74587be0.ctex"]
 
 [params]
 

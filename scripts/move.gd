@@ -1,4 +1,6 @@
 class_name player
+
+# script del movimiento del personaje y animación
 extends CharacterBody2D
 @export var speed = 1000
 
@@ -9,7 +11,7 @@ var idle_position: int = 0
 
 @onready var camara = $Camera2D
 
-func _input(event):
+func _input(event): 
 	direction.x = Input.get_axis("left","right")
 	direction.y = Input.get_axis("up","down")
 	#camara.zoom = Vector2(1,1)
