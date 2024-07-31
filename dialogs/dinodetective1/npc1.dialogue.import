@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://co1p6k2or5q7r"
+path="res://.godot/imported/npc1.dialogue-2d2c073ed9083430015273cdeafb8bf8.tres"
+
+[deps]
+
+source_file="res://dialogs/dinodetective1/npc1.dialogue"
+dest_files=["res://.godot/imported/npc1.dialogue-2d2c073ed9083430015273cdeafb8bf8.tres"]
+
+[params]
+
+defaults=true

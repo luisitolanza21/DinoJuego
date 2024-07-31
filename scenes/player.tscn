@@ -1,11 +1,75 @@
-[gd_scene load_steps=24 format=3 uid="uid://da4rsea7q2hbr"]
+[gd_scene load_steps=25 format=3 uid="uid://b3carl8xavxf6"]
 
-[ext_resource type="Script" path="res://scripts/move.gd" id="1_dnq5p"]
 [ext_resource type="Texture2D" uid="uid://bnr1ov8vp2x44" path="res://assets/player/back walk animation.png" id="2_5xywp"]
 [ext_resource type="Texture2D" uid="uid://kcnbisxk363g" path="res://assets/player/front walk animation.png" id="2_kjpj3"]
 [ext_resource type="Texture2D" uid="uid://bbjq0fgq0j7pl" path="res://assets/player/sprite dino.png" id="4_6kjst"]
 [ext_resource type="Texture2D" uid="uid://ccrageo0w1bjm" path="res://assets/player/Side walk animation.png" id="4_clt7v"]
 [ext_resource type="Texture2D" uid="uid://k5qyfawkip7u" path="res://assets/player/idle 2 (1).png" id="5_mosdi"]
+
+[sub_resource type="GDScript" id="GDScript_i7yhm"]
+script/source = "extends CharacterBody2D
+@export var speed = 500
+
+@onready var animated = $SpriteDinoAnimated
+var direction = Vector2()
+var idle_position: int = 0
+
+@onready var camara = $Camera2D
+
+var current_npc = null
+
+func _ready():
+	$Area2D.connect(\"body_entered\", Callable(self, \"_on_body_entered\"))
+	$Area2D.connect(\"body_exited\", Callable(self, \"_on_body_exited\"))
+
+func _input(event):
+	direction.x = Input.get_axis(\"left\", \"right\")
+	direction.y = Input.get_axis(\"up\", \"down\")
+	
+	if direction.x and direction.y != 0:
+		direction = Vector2(0, 0)
+		
+	if direction.y > 0:
+		animated.play(\"front_walk\")
+		idle_position = 1
+	if direction.y < 0:
+		animated.play(\"back_walk\")
+		idle_position = 2
+	if direction.x > 0:
+		$SpriteDinoAnimated.flip_h = false
+		animated.play(\"side_walk\")
+		idle_position = 3
+	if direction.x < 0:
+		$SpriteDinoAnimated.flip_h = true
+		animated.play(\"side_walk\")
+		idle_position = 3
+
+	direction = direction.normalized()
+
+func _physics_process(delta):
+	velocity = speed * direction
+	if velocity == Vector2(0, 0):
+		if idle_position == 1:
+			animated.play(\"idle_1\")
+		if idle_position == 2:
+			animated.play(\"idle_2\")
+		if idle_position == 3:
+			animated.play(\"idle_3\")
+	move_and_slide()
+
+func _process(delta):
+	if Input.is_action_just_pressed(\"ui_accept\") and current_npc:
+		print(\"Player pressed ui_accept near NPC\")
+		current_npc.player_interacted()
+
+func _on_body_entered(body):
+	if body.has_method(\"player_interacted\"):
+		current_npc = body
+
+func _on_body_exited(body):
+	if body == current_npc:
+		current_npc = null
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1l6p7"]
 atlas = ExtResource("2_5xywp")
@@ -148,14 +212,25 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_k5j4j"]
 radius = 54.0041
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkgcl"]
+radius = 256.0
+height = 512.0
+
 [node name="CharacterBody2D" type="CharacterBody2D"]
-script = ExtResource("1_dnq5p")
+script = SubResource("GDScript_i7yhm")
 
 [node name="SpriteDinoAnimated" type="AnimatedSprite2D" parent="."]
+position = Vector2(199.5, 260.5)
 sprite_frames = SubResource("SpriteFrames_jk01m")
-animation = &"side_walk"
+animation = &"idle_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 163.84)
+position = Vector2(201.5, 424.34)
 scale = Vector2(1, 0.24)
 shape = SubResource("CircleShape2D_k5j4j")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(195, 268)
+shape = SubResource("CapsuleShape2D_fkgcl")

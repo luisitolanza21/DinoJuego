@@ -1,0 +1,68 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3jxdwhr02f4e"]
+
+[ext_resource type="Script" path="res://scripts/ventanadedialogo.gd" id="1_oscai"]
+[ext_resource type="Texture2D" uid="uid://fslh4g4x3sw4" path="res://assets/dialogos/barra.png" id="2_sulq2"]
+
+[node name="ventanadialogo" type="CanvasLayer"]
+script = ExtResource("1_oscai")
+
+[node name="bg" type="NinePatchRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -391.0
+offset_top = -333.0
+offset_right = 382.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_sulq2")
+
+[node name="mc" type="MarginContainer" parent="bg"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08
+anchor_top = 0.162
+anchor_right = 0.925
+anchor_bottom = 0.809
+offset_left = -0.0399971
+offset_top = 9.388
+offset_right = 0.224976
+offset_bottom = -8.834
+
+[node name="vb" type="VBoxContainer" parent="bg/mc"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+
+[node name="speaker" type="RichTextLabel" parent="bg/mc/vb"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "ciudadano
+
+"
+
+[node name="test" type="RichTextLabel" parent="bg/mc/vb"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
+text = "TEST
+"
+
+[node name="option_list" type="GridContainer" parent="bg/mc/vb"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+columns = 2
+
+[node name="option_ref_button" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.018
+anchor_bottom = 0.025
+offset_left = 911.0
+offset_top = 663.0
+offset_right = 898.264
+offset_bottom = 654.8

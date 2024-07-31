@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwa5rcvbh24gi"]
+
+[ext_resource type="Texture2D" uid="uid://c4xc884k78y4r" path="res://assets/npcs/dinonpc3.png" id="1_dba2d"]
+[ext_resource type="Script" path="res://scripts/npc3.gd" id="1_o4yia"]
+[ext_resource type="Resource" uid="uid://co1p6k2or5q7r" path="res://dialogs/dinodetective1/npc1.dialogue" id="2_lmf4n"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xr4hv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dba2d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ecm5h"]
+height = 108.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ky1me"]
+radius = 121.758
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_o4yia")
+dialogueResource = ExtResource("2_lmf4n")
+NPC_dialogue = ExtResource("2_lmf4n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(82, 53.25)
+scale = Vector2(0.528736, 0.582353)
+sprite_frames = SubResource("SpriteFrames_xr4hv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(70, 112)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_ecm5h")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(73, 57)
+shape = SubResource("CircleShape2D_ky1me")
+
+[connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]

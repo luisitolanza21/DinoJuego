@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b7ou5ofnlklr1"]
+
+[ext_resource type="Script" path="res://scripts/Camera2D.gd" id="1_5jivt"]
+[ext_resource type="PackedScene" uid="uid://d04ah2kuf8exf" path="res://scenes/ciudad.tscn" id="1_8ro5y"]
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_xul28"]
+[ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="2_le1lw"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_xul28")
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objetct_follow")]
+position = Vector2(224, 1164)
+zoom = Vector2(0.8, 0.8)
+limit_left = 0
+limit_top = 0
+limit_right = 2450
+limit_bottom = 1570
+script = ExtResource("1_5jivt")
+objetct_follow = NodePath("../CharacterBody2D")
+
+[node name="ciudad" parent="." instance=ExtResource("1_8ro5y")]
+position = Vector2(-5, 1)
+scale = Vector2(0.9, 0.9)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_le1lw")]
+position = Vector2(456, 864)
+scale = Vector2(0.5, 0.5)
