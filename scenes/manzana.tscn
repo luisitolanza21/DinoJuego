@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://hprpkvbx1lbd"]
+
+[ext_resource type="Texture2D" uid="uid://23kirm3f4mu2" path="res://assets/calles/calle 3.png" id="2_3je6q"]
+[ext_resource type="Texture2D" uid="uid://djsdw8qfrcvd8" path="res://assets/calles/calle 1.png" id="2_pmul2"]
+[ext_resource type="Texture2D" uid="uid://cfqtor8jxdvax" path="res://assets/calles/calle 2.png" id="3_7tvb7"]
+
+[node name="manzana" type="Node2D"]
+
+[node name="Calle3" type="Sprite2D" parent="."]
+position = Vector2(2.25, 409.5)
+scale = Vector2(2.62232, 1)
+texture = ExtResource("2_pmul2")
+
+[node name="Calle4" type="Sprite2D" parent="."]
+position = Vector2(594.5, 409.5)
+texture = ExtResource("2_3je6q")
+
+[node name="Calle5" type="Sprite2D" parent="."]
+position = Vector2(594.5, 1)
+scale = Vector2(1, 1.50153)
+texture = ExtResource("3_7tvb7")
+
+[node name="Calle6" type="Sprite2D" parent="."]
+position = Vector2(-590.5, 410.5)
+texture = ExtResource("2_3je6q")
+
+[node name="Calle7" type="Sprite2D" parent="."]
+position = Vector2(-590.5, -0.25)
+scale = Vector2(1, 1.50917)
+texture = ExtResource("3_7tvb7")
+
+[node name="Calle9" type="Sprite2D" parent="."]
+position = Vector2(-590.5, -409.5)
+texture = ExtResource("2_3je6q")
+
+[node name="Calle8" type="Sprite2D" parent="."]
+position = Vector2(594.5, -408.5)
+texture = ExtResource("2_3je6q")
+
+[node name="Calle10" type="Sprite2D" parent="."]
+position = Vector2(2.75, -408.5)
+scale = Vector2(2.64373, 1)
+texture = ExtResource("2_pmul2")

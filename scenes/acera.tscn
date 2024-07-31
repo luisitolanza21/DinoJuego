@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dhgrtai21185r"]
-
-[ext_resource type="Texture2D" uid="uid://sy73280abanq" path="res://assets/manzana (1).png" id="1_d5xdy"]
-
-[node name="acera" type="Node2D"]
-position = Vector2(8, -6)
-
-[node name="Manzana(1)" type="Sprite2D" parent="."]
-texture = ExtResource("1_d5xdy")
