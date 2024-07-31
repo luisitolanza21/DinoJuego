@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://vhsr0lwaev0l"]
+
+[ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="1_rty5g"]
+[ext_resource type="PackedScene" uid="uid://8m11sauenl4k" path="res://scenes/world_scenes/casa_1.tscn" id="2_y84ln"]
+[ext_resource type="PackedScene" uid="uid://dg6l272kgmooc" path="res://scenes/world_scenes/casa_4.tscn" id="3_an5rq"]
+[ext_resource type="PackedScene" uid="uid://cqucukouetgb0" path="res://scenes/world_scenes/casa_2.tscn" id="4_8xyh3"]
+[ext_resource type="PackedScene" uid="uid://dannjbdl61ghk" path="res://scenes/world_scenes/casa_3.tscn" id="5_hm21l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1mhl"]
+size = Vector2(6215.15, 52.3081)
+
+[node name="cuadra3" type="StaticBody2D"]
+
+[node name="Manzana2" type="Sprite2D" parent="."]
+position = Vector2(-1600.25, 11.75)
+scale = Vector2(2.3582, 2.26377)
+texture = ExtResource("1_rty5g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1599.92, -0.253448)
+scale = Vector2(0.30922, 24.2507)
+shape = SubResource("RectangleShape2D_m1mhl")
+
+[node name="casa_6" parent="." instance=ExtResource("2_y84ln")]
+position = Vector2(-2172, -199)
+
+[node name="casa_5" parent="." instance=ExtResource("3_an5rq")]
+position = Vector2(-1544, -9)
+
+[node name="casa_4" parent="." instance=ExtResource("4_8xyh3")]
+position = Vector2(-955, -164)
+
+[node name="casa_1" parent="." instance=ExtResource("2_y84ln")]
+position = Vector2(-1599, 205)
+
+[node name="casa_3" parent="." instance=ExtResource("5_hm21l")]
+position = Vector2(-941, 205)
+
+[node name="casa_2" parent="." instance=ExtResource("4_8xyh3")]
+position = Vector2(-2257, 166)

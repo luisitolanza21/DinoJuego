@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://d0b1whe6dv5mc" path="res://assets/casas/casa 4.png" id="1_tmoam"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n66xb"]
-size = Vector2(492.5, 305.75)
+size = Vector2(494, 311)
 
 [node name="casa_4" type="StaticBody2D"]
 
@@ -11,5 +11,5 @@ size = Vector2(492.5, 305.75)
 texture = ExtResource("1_tmoam")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.25, 453.875)
+position = Vector2(0, 455)
 shape = SubResource("RectangleShape2D_n66xb")

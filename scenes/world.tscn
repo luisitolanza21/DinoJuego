@@ -1,9 +1,23 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx7smj1r5uu13"]
+[gd_scene load_steps=18 format=3 uid="uid://bx7smj1r5uu13"]
 
-[ext_resource type="PackedScene" uid="uid://c66vv04fsnrtl" path="res://scenes/comisaría.tscn" id="1_i5a5j"]
+[ext_resource type="PackedScene" uid="uid://c66vv04fsnrtl" path="res://scenes/world_scenes/comisaría.tscn" id="1_i5a5j"]
 [ext_resource type="PackedScene" uid="uid://da4rsea7q2hbr" path="res://scenes/player.tscn" id="2_7d60p"]
+[ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="3_bvxdc"]
 [ext_resource type="Texture2D" uid="uid://dvhfh1pwm37c5" path="res://icon.svg" id="3_mmsou"]
 [ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles.png" id="4_qapcl"]
+[ext_resource type="PackedScene" uid="uid://8m11sauenl4k" path="res://scenes/world_scenes/casa_1.tscn" id="4_qlewv"]
+[ext_resource type="PackedScene" uid="uid://cqucukouetgb0" path="res://scenes/world_scenes/casa_2.tscn" id="5_6qgay"]
+[ext_resource type="PackedScene" uid="uid://vhsr0lwaev0l" path="res://scenes/world_scenes/cuadra_estilo_2.tscn" id="7_kvecl"]
+[ext_resource type="PackedScene" uid="uid://dg6l272kgmooc" path="res://scenes/world_scenes/casa_4.tscn" id="7_uigbc"]
+[ext_resource type="PackedScene" uid="uid://0nc6wf5twuc2" path="res://scenes/world_scenes/casa_dorada.tscn" id="8_h4tpw"]
+[ext_resource type="PackedScene" uid="uid://bm43xued7cplx" path="res://scenes/world_scenes/castillo_azul.tscn" id="8_kbhds"]
+[ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="9_xguyn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3g1qj"]
+size = Vector2(1285, 1251)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjhql"]
+size = Vector2(1919, 1282)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4vanx"]
 texture = ExtResource("4_qapcl")
@@ -1360,15 +1374,99 @@ texture_region_size = Vector2i(320, 320)
 tile_size = Vector2i(320, 320)
 sources/0 = SubResource("TileSetAtlasSource_4vanx")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wigvi"]
+size = Vector2(1919.5, 1578)
+
 [node name="Node2D" type="Node2D"]
 position = Vector2(-30, 0)
 
-[node name="comisaria" parent="." instance=ExtResource("1_i5a5j")]
+[node name="edificios" type="Node2D" parent="."]
+
+[node name="comisaria cuadra" type="StaticBody2D" parent="edificios"]
+
+[node name="Manzana" type="Sprite2D" parent="edificios/comisaria cuadra"]
+position = Vector2(320, -0.499935)
+scale = Vector2(1.60049, 2.28952)
+texture = ExtResource("3_bvxdc")
+
+[node name="comisaria" parent="edificios/comisaria cuadra" instance=ExtResource("1_i5a5j")]
+position = Vector2(302, 10)
+scale = Vector2(1.43833, 1.44299)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edificios/comisaria cuadra"]
+position = Vector2(314.5, 3.5)
+shape = SubResource("RectangleShape2D_3g1qj")
+
+[node name="cuadra" type="StaticBody2D" parent="edificios"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="edificios/cuadra"]
+position = Vector2(2240.5, -2)
+shape = SubResource("RectangleShape2D_bjhql")
+
+[node name="Manzana" type="Sprite2D" parent="edificios/cuadra"]
+position = Vector2(2242.9, -2.09934)
+scale = Vector2(2.36475, 2.26963)
+texture = ExtResource("3_bvxdc")
+
+[node name="casa_3" parent="edificios/cuadra" instance=ExtResource("4_qlewv")]
+position = Vector2(2773, -198)
+
+[node name="casa_6" parent="edificios/cuadra" instance=ExtResource("7_uigbc")]
+position = Vector2(2119, -23)
+
+[node name="casa_5" parent="edificios/cuadra" instance=ExtResource("7_uigbc")]
+position = Vector2(1548, -23)
+
+[node name="casa_1" parent="edificios/cuadra" instance=ExtResource("4_qlewv")]
+position = Vector2(1668, 207)
+scale = Vector2(0.980783, 1)
+
+[node name="casa_2" parent="edificios/cuadra" instance=ExtResource("5_6qgay")]
+position = Vector2(2333, 173)
+scale = Vector2(1.08, 1)
+
+[node name="casa_4" parent="edificios/cuadra" instance=ExtResource("7_uigbc")]
+position = Vector2(2911, 25)
+scale = Vector2(1.2, 1)
+
+[node name="cuadra2" parent="edificios" instance=ExtResource("9_xguyn")]
+position = Vector2(-3852, 3520)
+
+[node name="cuadra3" parent="edificios" instance=ExtResource("7_kvecl")]
+
+[node name="calles" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_owgvi")
+format = 2
+layer_0/tile_data = PackedInt32Array(196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 196606, 65536, 0, -2, 131072, 0, 65534, 131072, 0, 131070, 131072, 0, 65539, 131072, 0, 3, 131072, 0, -65533, 131072, 0, 131075, 65536, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 196605, 0, 0, 196604, 0, 0, 196603, 0, 0, 196602, 0, 0, 196601, 0, 0, 131081, 0, 0, 131082, 65536, 0, 131083, 0, 0, 65546, 131072, 0, 10, 131072, 0, -65526, 131072, 0, -196604, 0, 0, -196603, 0, 0, -196602, 0, 0, -196601, 0, 0, -196600, 0, 0, -196599, 0, 0, -196598, 65536, 0, -196605, 65536, 0, -131069, 131072, 0, -131062, 131072, 0, -65538, 131072, 0, -131074, 65536, 0, -131073, 0, 0, -196608, 0, 0, -196607, 0, 0, -196606, 0, 0, 196600, 0, 0, 196599, 65536, 0, 131063, 131072, 0, 65527, 131072, 0, -9, 131072, 0, -65545, 131072, 0, -131081, 65536, 0, -131075, 0, 0, -131076, 0, 0, -131077, 0, 0, -131078, 0, 0, -131079, 0, 0, -131080, 0, 0, 262142, 131072, 0, 327678, 131072, 0, 393214, 131072, 0, 458750, 131072, 0, 196611, 131072, 0, 262147, 131072, 0, 327683, 131072, 0, 393219, 131072, 0, 196618, 131072, 0, 262154, 131072, 0, 327690, 131072, 0, 393226, 131072, 0, 262135, 131072, 0, 327671, 131072, 0, 393207, 131072, 0, 458743, 131072, 0, 524279, 131072, 0, 524286, 131072, 0, 589816, 0, 0, 589817, 0, 0, 589818, 0, 0, 589819, 0, 0, 589820, 0, 0, 589821, 0, 0, 589822, 65536, 0, 589815, 65536, 0, 524291, 65536, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 65536, 0, 458755, 131072, 0, 458762, 131072, 0, 655351, 131072, 0, 720887, 131072, 0, 786423, 131072, 0, 851959, 131072, 0, 917495, 65536, 0, 917496, 0, 0, 917497, 0, 0, 917498, 0, 0, 917499, 0, 0, 917500, 0, 0, 917501, 0, 0, 655358, 131072, 0, 720894, 131072, 0, 786430, 131072, 0, 851966, 131072, 0, 917502, 65536, 0, 917503, 0, 0, 851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 65536, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 65536, 0, 786442, 131072, 0, 720906, 131072, 0, 655370, 131072, 0, 589834, 131072, 0, 589827, 131072, 0, 655363, 131072, 0, 720899, 131072, 0, 786435, 131072, 0, -196610, 131072, 0, -262146, 131072, 0, -327682, 131072, 0, -393218, 131072, 0, -262141, 131072, 0, -327677, 131072, 0, -393213, 131072, 0, -458749, 131072, 0, -262134, 131072, 0, -327670, 131072, 0, -393206, 131072, 0, -458742, 131072, 0, -196617, 131072, 0, -262153, 131072, 0, -327689, 131072, 0, -393225, 131072, 0, -458761, 131072, 0, -524297, 131072, 0, -458754, 131072, 0, -524290, 131072, 0, -524285, 131072, 0, -589821, 131072, 0, -524278, 131072, 0, -589814, 131072, 0, -196597, 0, 0, -196596, 0, 0, -196595, 0, 0, -196594, 0, 0, -196593, 0, 0, -196592, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 131088, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 524304, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 917514, 131072, 0, 983050, 131072, 0, 1048586, 131072, 0, 1114122, 131072, 0, 1179658, 131072, 0, 917507, 131072, 0, 983043, 131072, 0, 1048579, 131072, 0, 1114115, 131072, 0, 1179651, 131072, 0, 983038, 131072, 0, 1048574, 131072, 0, 1114110, 131072, 0, 1179646, 131072, 0, 1245182, 131072, 0, 983031, 131072, 0, 1048567, 131072, 0, 1245175, 131072, 0, 1114103, 131072, 0, 1179639, 131072, 0, 917494, 0, 0, 917493, 0, 0, 917492, 0, 0, 917491, 0, 0, 917490, 0, 0, 589814, 0, 0, 589813, 0, 0, 589812, 0, 0, 589811, 0, 0, 589810, 0, 0, 589809, 0, 0, 196598, 0, 0, 196597, 0, 0, 196596, 0, 0, 196595, 0, 0, 196594, 0, 0, 196593, 0, 0, -131082, 0, 0, -131083, 0, 0, -131084, 0, 0, -131085, 0, 0, -131086, 0, 0)
+
+[node name="Manzana" type="Sprite2D" parent="."]
+position = Vector2(-1600, 1760)
+scale = Vector2(2.36005, 2.83126)
+texture = ExtResource("3_bvxdc")
+
+[node name="castillo_azul" parent="." instance=ExtResource("8_kbhds")]
+position = Vector2(-1594, 1762)
+scale = Vector2(1.15011, 0.983387)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Manzana2" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(2235.25, 1755.25)
+scale = Vector2(2.3619, 2.82682)
+texture = ExtResource("3_bvxdc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2239.25, 1748)
+shape = SubResource("RectangleShape2D_wigvi")
+
+[node name="casa_dorada" parent="StaticBody2D" instance=ExtResource("8_h4tpw")]
+position = Vector2(2214, 1753)
+scale = Vector2(0.948964, 0.828429)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_7d60p")]
-position = Vector2(-24, 476)
+position = Vector2(-155, 655)
 scale = Vector2(0.761783, 0.67924)
-speed = 2885
+speed = 2000
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(53.9604, 22.219)
@@ -1403,7 +1501,5 @@ texture_normal = ExtResource("3_mmsou")
 passby_press = true
 action = "left"
 
-[node name="calles" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_owgvi")
-format = 2
-layer_0/tile_data = PackedInt32Array(196607, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 65536, 0, 65541, 131072, 0, 5, 131072, 0, -65531, 131072, 0, -131067, 65536, 0, -131068, 0, 0, -131069, 0, 0, -131070, 0, 0, -131071, 0, 0, -131072, 0, 0, -65537, 0, 0, -65538, 65536, 0, 196606, 65536, 0, -2, 131072, 0, 65534, 131072, 0, 131070, 131072, 0)
+[node name="cuadra3" parent="." instance=ExtResource("7_kvecl")]
+position = Vector2(3841, 3509)

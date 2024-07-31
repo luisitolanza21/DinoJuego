@@ -35,7 +35,7 @@ shape = SubResource("RectangleShape2D_8bxim")
 script = SubResource("GDScript_kai8p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(17, -214.5)
+position = Vector2(18, -212)
 shape = SubResource("RectangleShape2D_u7s0u")
 debug_color = Color(0.909279, 0.209103, 0.539146, 0.42)
 
