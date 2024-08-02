@@ -9,10 +9,10 @@ size = Vector2(24.8743, 13.1927)
 [sub_resource type="GDScript" id="GDScript_kai8p"]
 script/source = "extends Area2D
 
-func _on_body_entered(body):
-	if body is player:
-		modulate.a = 0.5
-		print(\"entro al area a desvanecer\")
+#func _on_body_entered(body):
+	#if body is player:
+	#	modulate.a = 0.5
+	#	print(\"entro al area a desvanecer\")
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u7s0u"]

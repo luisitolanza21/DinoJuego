@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bm43xued7cplx" path="res://scenes/world_scenes/castillo_azul.tscn" id="8_kbhds"]
 [ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="9_xguyn"]
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="13_o46t5"]
-[ext_resource type="PackedScene" path="res://scenes/npc2.tscn" id="14_vkwj7"]
+[ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="14_vkwj7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3g1qj"]
 size = Vector2(1285, 1251)
