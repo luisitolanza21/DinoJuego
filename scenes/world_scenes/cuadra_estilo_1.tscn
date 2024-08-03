@@ -10,10 +10,6 @@ size = Vector2(1919, 1282)
 
 [node name="cuadra" type="StaticBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2240.5, -2)
-shape = SubResource("RectangleShape2D_bjhql")
-
 [node name="Manzana" type="Sprite2D" parent="."]
 position = Vector2(2242.9, -2.09934)
 scale = Vector2(2.36475, 2.26963)
@@ -39,3 +35,7 @@ scale = Vector2(1.08, 1)
 [node name="casa_4" parent="." instance=ExtResource("3_0pj4t")]
 position = Vector2(2911, 25)
 scale = Vector2(1.2, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2240.5, -2)
+shape = SubResource("RectangleShape2D_bjhql")

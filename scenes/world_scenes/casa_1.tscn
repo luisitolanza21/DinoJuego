@@ -1,15 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://8m11sauenl4k"]
+[gd_scene load_steps=2 format=3 uid="uid://8m11sauenl4k"]
 
 [ext_resource type="Texture2D" uid="uid://b4yycpa8gme1v" path="res://assets/casas/Casa 1.png" id="1_bvrqi"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fuurm"]
-size = Vector2(751, 432)
-
-[node name="casa_1" type="StaticBody2D"]
+[node name="casa_1" type="Node2D"]
 
 [node name="Casa1" type="Sprite2D" parent="."]
 texture = ExtResource("1_bvrqi")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 204)
-shape = SubResource("RectangleShape2D_fuurm")

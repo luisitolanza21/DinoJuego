@@ -1,15 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://0nc6wf5twuc2"]
+[gd_scene load_steps=2 format=3 uid="uid://0nc6wf5twuc2"]
 
 [ext_resource type="Texture2D" uid="uid://dq3pmc6fc4xpy" path="res://assets/edificios_unicos/Casa dorada.png" id="1_qofcg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7s1s"]
-size = Vector2(2061, 1038)
-
-[node name="casa_dorada" type="StaticBody2D"]
+[node name="casa_dorada" type="Node2D"]
 
 [node name="CasaDorada" type="Sprite2D" parent="."]
 texture = ExtResource("1_qofcg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8.5, 441)
-shape = SubResource("RectangleShape2D_u7s1s")

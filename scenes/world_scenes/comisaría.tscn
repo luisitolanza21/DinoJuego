@@ -1,44 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c66vv04fsnrtl"]
+[gd_scene load_steps=2 format=3 uid="uid://c66vv04fsnrtl"]
 
-[ext_resource type="Script" path="res://scripts/comisaría.gd" id="1_2al3d"]
 [ext_resource type="Texture2D" uid="uid://b43kfgl6ft1yv" path="res://assets/comisaría/COMISARIA (1).png" id="2_1cq81"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8bxim"]
-size = Vector2(24.8743, 13.1927)
-
-[sub_resource type="GDScript" id="GDScript_kai8p"]
-script/source = "extends Area2D
-
-#func _on_body_entered(body):
-	#if body is player:
-	#	modulate.a = 0.5
-	#	print(\"entro al area a desvanecer\")
-"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_u7s0u"]
-size = Vector2(842, 351)
-
-[node name="comisaria" type="StaticBody2D"]
+[node name="comisaria" type="Node2D"]
 self_modulate = Color(0.980392, 0.980392, 0.980392, 1)
 position = Vector2(117, 74)
-script = ExtResource("1_2al3d")
 
 [node name="Comisaria(1)" type="Sprite2D" parent="."]
 texture = ExtResource("2_1cq81")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(20.25, 192.625)
-scale = Vector2(33.7497, 33.7497)
-shape = SubResource("RectangleShape2D_8bxim")
-
-[node name="Area2D" type="Area2D" parent="."]
-script = SubResource("GDScript_kai8p")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(18, -212)
-shape = SubResource("RectangleShape2D_u7s0u")
-debug_color = Color(0.909279, 0.209103, 0.539146, 0.42)
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
