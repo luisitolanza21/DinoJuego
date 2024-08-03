@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://ch627og680phc"
+path="res://.godot/imported/policia.dialogue-f730ddf2f5f78c781ad57bef7417ce65.tres"
+
+[deps]
+
+source_file="res://dialogs/dinodetective1/policia.dialogue"
+dest_files=["res://.godot/imported/policia.dialogue-f730ddf2f5f78c781ad57bef7417ce65.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,9 @@
+~ start
+policia: ¿Ya terminaste de investigar?
+- si
+	policia: Esta bien dime quien fue
+	set listo = "si"
+- No
+	policia: Avisame cuando estes listo
+
+=> END

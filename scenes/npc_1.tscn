@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://2my17l5say2h"]
+[gd_scene load_steps=6 format=3 uid="uid://2my17l5say2h"]
 
 [ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="1_78lom"]
 
@@ -20,6 +20,10 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jm81d"]
 size = Vector2(247.854, 1085.14)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_38v58"]
+radius = 285.0
+height = 570.0
+
 [node name="NPC_1" type="StaticBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -29,3 +33,9 @@ sprite_frames = SubResource("SpriteFrames_im6km")
 position = Vector2(-18, -24)
 scale = Vector2(0.790788, 0.361242)
 shape = SubResource("RectangleShape2D_jm81d")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-20, -20)
+shape = SubResource("CapsuleShape2D_38v58")

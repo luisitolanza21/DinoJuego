@@ -59,16 +59,17 @@ func _physics_process(delta):
 
 func _process(delta):
 	if Input.is_action_just_pressed(\"ui_accept\") and current_npc:
-		print(\"Player pressed ui_accept near NPC\")
 		current_npc.player_interacted()
 
 func _on_body_entered(body):
 	if body.has_method(\"player_interacted\"):
 		current_npc = body
 
+
 func _on_body_exited(body):
 	if body == current_npc:
 		current_npc = null
+
 "
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1l6p7"]

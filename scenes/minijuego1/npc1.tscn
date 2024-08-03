@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://djwdjwhi7xkie"]
 
-[ext_resource type="PackedScene" uid="uid://vof2ldopllje" path="res://scenes/dialogo.tscn" id="2_6d7uq"]
+[ext_resource type="Script" path="res://scripts/minijuego1/npc1.gd" id="1_s45ji"]
 [ext_resource type="Texture2D" uid="uid://uxc8atgnayc6" path="res://assets/npcs/dinonpc1.png" id="3_rif7t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t7ulq"]
@@ -40,8 +40,7 @@ radius = 63.0
 height = 202.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-
-[node name="Control" parent="." instance=ExtResource("2_6d7uq")]
+script = ExtResource("1_s45ji")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(44, 55)

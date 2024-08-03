@@ -10,11 +10,13 @@ func _ready():
 
 
 func _on_body_entered(body):
+	print("Player entered NPC area1")
 	if body.name == player_name:
-		print("Player entered NPC area")
 		body.set("current_npc", self)
 
+
 func _on_body_exited(body):
+	print("Player entered NPC area2")
 	if body.name == player_name:
 		print("Player exited NPC area")
 		body.set("current_npc", null)
