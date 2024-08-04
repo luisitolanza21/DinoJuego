@@ -1,0 +1,13 @@
+~ correcto
+policia: ¿Este es el culpable?
+- si
+	policia: ¡eres increible lo atrapaste!
+- no
+=> END
+
+~ incorrecto
+policia: ¿Este es el culpable?
+- si
+	ppolicia: ¡es inocente!, lo siento pero no econtraste al culpable
+- no
+=> END

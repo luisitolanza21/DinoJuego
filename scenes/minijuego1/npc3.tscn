@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwa5rcvbh24gi"]
+[gd_scene load_steps=6 format=3 uid="uid://bwa5rcvbh24gi"]
 
 [ext_resource type="Texture2D" uid="uid://c4xc884k78y4r" path="res://assets/npcs/dinonpc3.png" id="1_dba2d"]
+[ext_resource type="Script" path="res://scripts/minijuego1/npc3.gd" id="1_ebs0x"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xr4hv"]
 animations = [{
@@ -20,6 +21,7 @@ height = 108.0
 radius = 121.758
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ebs0x")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(82, 53.25)

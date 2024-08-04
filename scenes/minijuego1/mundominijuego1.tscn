@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://djwdjwhi7xkie" path="res://scenes/minijuego1/npc1.tscn" id="2_x1sri"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="3_lu1lf"]
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="4_74qso"]
-[ext_resource type="PackedScene" path="res://scenes/ciudad.tscn" id="5_yqq6r"]
+[ext_resource type="PackedScene" uid="uid://d04ah2kuf8exf" path="res://scenes/ciudad.tscn" id="5_yqq6r"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="6_7j6cd"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="7_qy4hq"]
 [ext_resource type="Script" path="res://scripts/UI.gd" id="8_sa3s2"]

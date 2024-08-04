@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bt0r71my3g8c1"
+path="res://.godot/imported/seleccion.dialogue-e23faa2c81951ba2197d390f4026a7ab.tres"
+
+[deps]
+
+source_file="res://dialogs/dinodetective1/seleccion.dialogue"
+dest_files=["res://.godot/imported/seleccion.dialogue-e23faa2c81951ba2197d390f4026a7ab.tres"]
+
+[params]
+
+defaults=true

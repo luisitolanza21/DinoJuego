@@ -1,0 +1,135 @@
+[gd_scene load_steps=17 format=3 uid="uid://c5up5ok3fjos4"]
+
+[ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles/calles.png" id="1_phgc6"]
+[ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="2_b22xn"]
+[ext_resource type="Script" path="res://scripts/minijuego1/sospechoso1.gd" id="3_73w1i"]
+[ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="3_ohov7"]
+[ext_resource type="Script" path="res://scripts/minijuego1/texto.gd" id="4_04d5o"]
+[ext_resource type="Script" path="res://scripts/minijuego1/sospechoso2.gd" id="5_80nbc"]
+[ext_resource type="Script" path="res://scripts/minijuego1/sospechoso3.gd" id="6_thmvq"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73bjr"]
+texture = ExtResource("1_phgc6")
+margins = Vector2i(20, 10)
+separation = Vector2i(40, 0)
+texture_region_size = Vector2i(320, 320)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rf48b"]
+tile_size = Vector2i(320, 320)
+sources/0 = SubResource("TileSetAtlasSource_73bjr")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo1fq"]
+atlas = ExtResource("3_ohov7")
+region = Rect2(738, 0, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nie4y"]
+atlas = ExtResource("3_ohov7")
+region = Rect2(246, 428, 246, 428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tvs2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo1fq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nie4y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrpc3"]
+atlas = ExtResource("3_ohov7")
+region = Rect2(246, 428, 246, 428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bomwd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrpc3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n64x"]
+atlas = ExtResource("3_ohov7")
+region = Rect2(1230, 428, 246, 428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nshrn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n64x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SeleccionCulpable" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [491.0]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_rf48b")
+format = 2
+layer_0/tile_data = PackedInt32Array(65539, 0, 0, 65537, 0, 0, 65536, 0, 0, 65538, 0, 0, 131071, 0, 0, 131070, 0, 0)
+
+[node name="cuadra" parent="." instance=ExtResource("2_b22xn")]
+position = Vector2(-1922, -312)
+
+[node name="sospechoso1" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 89.0
+offset_right = 345.0
+offset_bottom = 486.0
+script = ExtResource("3_73w1i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sospechoso1"]
+position = Vector2(121, 214)
+sprite_frames = SubResource("SpriteFrames_tvs2w")
+
+[node name="sospechoso2" type="Button" parent="."]
+offset_left = 430.0
+offset_top = 90.0
+offset_right = 675.0
+offset_bottom = 487.0
+script = ExtResource("5_80nbc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sospechoso2"]
+position = Vector2(141, 179)
+sprite_frames = SubResource("SpriteFrames_bomwd")
+
+[node name="sospechoso3" type="Button" parent="."]
+offset_left = 759.0
+offset_top = 89.0
+offset_right = 1004.0
+offset_bottom = 486.0
+script = ExtResource("6_thmvq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sospechoso3"]
+position = Vector2(122, 186)
+sprite_frames = SubResource("SpriteFrames_nshrn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 362.0
+offset_top = 513.0
+offset_right = 746.0
+offset_bottom = 574.0
+theme_override_colors/default_color = Color(1.41504e-05, 0.907729, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[wave amp=40 freq =6
+]ELIGE AL CULPABLE[/wave]"
+tab_size = 10
+script = ExtResource("4_04d5o")
+
+[connection signal="pressed" from="sospechoso1" to="sospechoso1" method="_on_pressed"]
+[connection signal="pressed" from="sospechoso2" to="sospechoso2" method="_on_pressed"]
+[connection signal="pressed" from="sospechoso3" to="sospechoso3" method="_on_pressed"]
