@@ -1,47 +1,43 @@
 extends CharacterBody2D
 
+@export var MAX_SPEED = 500.0
+@export var ACCELERATION = 500.0
+@export var DECELERATION = 200.0
 
-@export var SPEED = 200.0;
-@export var FRICCION=0.5;
-
-
-#vector2d para almacenar las direcciones
-var axis : Vector2;
-			
-func entradasDetectadasPorBoleano() -> Vector2:
-	axis.x=int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"));
-	axis.y=int(Input.is_action_pressed("ui_up"))-int(Input.is_action_pressed("ui_down"));
-	return axis.normalized();
-
-
-func movimientoPorEntradasBooleanas() -> void:
-	velocity.x=entradasDetectadasPorBoleano().x*SPEED;
-	velocity.y=entradasDetectadasPorBoleano().y*-SPEED;
-	move_and_slide();
-	
-	
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-func _movimientoPorTeclasPreConfiguradas():
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-
-	var directionX = Input.get_axis("left", "right")
-	var direccionY=Input.get_axis("up","down")
-	
-	
-	if directionX:
-		velocity.x = directionX * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
-	if direccionY:
-		velocity.y=direccionY*SPEED
-	else:
-		velocity.y = move_toward(velocity.y, 0, SPEED)
-
-	move_and_slide()
-
+var velocity_target = Vector2.ZERO
 
 func _physics_process(delta):
-	movimientoPorEntradasBooleanas();
+	var input_direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
+	var input_vertical = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
+	var is_braking = Input.is_action_pressed("ui_accept")  # Suponiendo que "ui_accept" es la acción de la barra espaciadora
+
+	# Aceleración horizontal
+	if input_direction > 0:
+		velocity_target.x = clamp(velocity_target.x + ACCELERATION * delta, 0, MAX_SPEED)
+	elif input_direction < 0:
+		velocity_target.x = clamp(velocity_target.x - ACCELERATION * delta, -MAX_SPEED, 0)
+	else:
+		# Desaceleración horizontal
+		velocity_target.x = move_toward(velocity_target.x, 0, DECELERATION * delta)
+
+	# Aceleración vertical (solo si hay movimiento horizontal)
+	if abs(velocity.x) > 0.1:  # Pequeña tolerancia para evitar saltos
+		if input_vertical > 0:
+			velocity_target.y = clamp(velocity_target.y + ACCELERATION * delta, 0, MAX_SPEED)
+		elif input_vertical < 0:
+			velocity_target.y = clamp(velocity_target.y - ACCELERATION * delta, -MAX_SPEED, 0)
+		else:
+			# Desaceleración vertical
+			velocity_target.y = move_toward(velocity_target.y, 0, DECELERATION * delta)
+	else:
+		velocity_target.y = 0  # Forzar a detener el movimiento vertical
+		
+			# Frenado (se aplica si se presiona la barra espaciadora)
+	if is_braking:
+		velocity_target.x = move_toward(velocity_target.x, 0, DECELERATION * delta * 2)  # Frenado más rápido
+		velocity_target.y = move_toward(velocity_target.y, 0, DECELERATION * delta * 2)
+		# Aplicamos la velocidad
+	velocity.x = move_toward(velocity.x, velocity_target.x, ACCELERATION * delta)
+	velocity.y = move_toward(velocity.y, velocity_target.y, ACCELERATION * delta)
+	move_and_slide()
 

@@ -1,20 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://b337s0x7lvipt"]
+[gd_scene load_steps=3 format=3 uid="uid://b337s0x7lvipt"]
 
-[ext_resource type="Texture2D" uid="uid://hnbvgybcolls" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/auto.webp" id="1_ge5ee"]
 [ext_resource type="Script" path="res://assets/miniJuegoPersecucion/Scripts/auto_movil2.gd" id="1_se0ug"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7ltqr"]
-radius = 8.0
-height = 36.0
+[ext_resource type="Texture2D" uid="uid://cson4e0e2x08" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/Auto policia.png" id="2_klpkt"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_se0ug")
 
-[node name="Auto" type="Sprite2D" parent="."]
-rotation = -1.55509
-scale = Vector2(0.0386318, 0.0395619)
-texture = ExtResource("1_ge5ee")
+[node name="AutoPolicia" type="Sprite2D" parent="."]
+position = Vector2(2, -4.76837e-07)
+scale = Vector2(0.416667, 0.470779)
+texture = ExtResource("2_klpkt")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_7ltqr")
-metadata/_edit_lock_ = true
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, -69, -21, -69, -21, -57, -54, -58, -72, -31, -99, -31, -99, 43, -84, 53, -78, 52, -73, 64, -64, 69, -52, 67, -45, 58, -39, 53, 49, 54, 54, 67, 65, 69, 77, 64, 83, 56, 103, 54, 103, -12, 100, -11, 99, -31, 47, -31, 27, -58, -2, -58)

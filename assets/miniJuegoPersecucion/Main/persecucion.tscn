@@ -1,23 +1,53 @@
-[gd_scene load_steps=4 format=3 uid="uid://buwkurjm8i2x"]
+[gd_scene load_steps=10 format=3 uid="uid://buwkurjm8i2x"]
 
 [ext_resource type="PackedScene" uid="uid://rs25s0gepwpb" path="res://assets/miniJuegoPersecucion/StaticScenes/street.tscn" id="1_7g86r"]
 [ext_resource type="PackedScene" uid="uid://b337s0x7lvipt" path="res://assets/miniJuegoPersecucion/Elementos/auto_movil.tscn" id="2_5cun7"]
 [ext_resource type="PackedScene" uid="uid://c6ehfg3g6ugu3" path="res://assets/miniJuegoPersecucion/Elementos/auto_Obstaculo.tscn" id="3_jtjr5"]
+[ext_resource type="Texture2D" uid="uid://b4yycpa8gme1v" path="res://assets/casas/Casa 1.png" id="4_cb3tm"]
+[ext_resource type="Texture2D" uid="uid://b2pee8j86k4c7" path="res://assets/casas/casa 2.png" id="5_p8qdn"]
+[ext_resource type="Texture2D" uid="uid://cf0bgqsidm58h" path="res://assets/casas/casa 3.png" id="6_l01o6"]
+[ext_resource type="Texture2D" uid="uid://d0b1whe6dv5mc" path="res://assets/casas/casa 4.png" id="7_m6p37"]
+[ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="8_ojphi"]
+[ext_resource type="Texture2D" uid="uid://cn6otk25baq6q" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/mancha.png" id="9_vo74a"]
 
 [node name="persecucion" type="Node2D"]
 position = Vector2(105, 326)
 
 [node name="StaticBody2D" parent="." instance=ExtResource("1_7g86r")]
-position = Vector2(489, 53)
+position = Vector2(562, 237)
+
+[node name="Mancha" type="Sprite2D" parent="."]
+position = Vector2(800, 172)
+scale = Vector2(0.353293, 0.354103)
+texture = ExtResource("9_vo74a")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_5cun7")]
-position = Vector2(391, 271)
+position = Vector2(0, 172)
 
 [node name="caja2" parent="." instance=ExtResource("3_jtjr5")]
-position = Vector2(436, -227)
+position = Vector2(406, 230)
 
-[node name="caja1" parent="." instance=ExtResource("3_jtjr5")]
-position = Vector2(364, -80)
+[node name="Casa1" type="Sprite2D" parent="."]
+position = Vector2(-21, -164)
+scale = Vector2(0.210199, 0.211581)
+texture = ExtResource("4_cb3tm")
 
-[node name="caja3" parent="." instance=ExtResource("3_jtjr5")]
-position = Vector2(392, -459)
+[node name="Casa2" type="Sprite2D" parent="."]
+position = Vector2(117, -152)
+scale = Vector2(0.194781, 0.171811)
+texture = ExtResource("5_p8qdn")
+
+[node name="Casa3" type="Sprite2D" parent="."]
+position = Vector2(681, -194.25)
+scale = Vector2(0.365031, 0.296317)
+texture = ExtResource("6_l01o6")
+
+[node name="Casa4" type="Sprite2D" parent="."]
+position = Vector2(921.813, -193.656)
+scale = Vector2(0.504843, 0.210987)
+texture = ExtResource("7_m6p37")
+
+[node name="Manzana" type="Sprite2D" parent="."]
+position = Vector2(379, -175)
+scale = Vector2(0.338471, 0.361456)
+texture = ExtResource("8_ojphi")
