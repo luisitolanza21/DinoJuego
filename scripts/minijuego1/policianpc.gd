@@ -13,9 +13,10 @@ func _ready():
 	
 # Esta función se llamará cuando 'listo' cambie en el script global
 func _on_listo_changed(new_value):
-	print("Global.listo ha cambiado a: ", new_value)
+	#print("Global.listo ha cambiado a: ", new_value)
 	Transicion.cambiar_escena("res://scenes/minijuego1/seleccion_culpable.tscn")
 	# Aquí puedes añadir el código que deseas ejecutar cuando 'listo' cambie
+
 
 func _on_body_entered(body):
 	print(Global.listo)

@@ -2,6 +2,9 @@ extends Node
 
 #var listo: String = "no"
 signal listo_changed(new_value)
+
+
+
 var _listo: String = "no"
 var listo: String:
 	get:
