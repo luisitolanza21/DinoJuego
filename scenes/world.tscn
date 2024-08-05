@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b7ou5ofnlklr1"]
+[gd_scene load_steps=21 format=3 uid="uid://b7ou5ofnlklr1"]
 
 [ext_resource type="PackedScene" uid="uid://c66vv04fsnrtl" path="res://scenes/world_scenes/comisaría.tscn" id="1_i5a5j"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="2_7d60p"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://0nc6wf5twuc2" path="res://scenes/world_scenes/casa_dorada.tscn" id="8_h4tpw"]
 [ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="9_xguyn"]
 [ext_resource type="Texture2D" uid="uid://bo6gpygmhe7bd" path="res://assets/edificios_unicos/Castillo Azul.png" id="9_xuyk7"]
+[ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles/calles.png" id="10_775st"]
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="13_o46t5"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="14_vkwj7"]
 
@@ -26,8 +27,18 @@ size = Vector2(1919, 1282)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1gdx0"]
 size = Vector2(1921, 1603)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0iec0"]
+texture = ExtResource("10_775st")
+margins = Vector2i(27, 10)
+separation = Vector2i(37, 0)
+texture_region_size = Vector2i(320, 320)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_owgvi"]
 tile_size = Vector2i(320, 320)
+sources/0 = SubResource("TileSetAtlasSource_0iec0")
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-30, 0)
