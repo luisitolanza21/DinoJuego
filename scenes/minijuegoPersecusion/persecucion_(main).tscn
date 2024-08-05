@@ -12082,14 +12082,7 @@ position = Vector2(3437, 245)
 [node name="Autos" type="Node2D" parent="."]
 
 [node name="autoMovil3" parent="Autos" instance=ExtResource("12_f23iu")]
-<<<<<<< HEAD
-position = Vector2(1339, 323)
-=======
 position = Vector2(415, 205)
->>>>>>> f1cc5e0b9c7cf318c2c06018b192a53cf88fc48a
-
-[node name="autoMovil1" parent="Autos" instance=ExtResource("12_f23iu")]
-position = Vector2(2000, 171)
 
 [node name="autoMovil2" parent="Autos" instance=ExtResource("12_f23iu")]
 position = Vector2(1490, 170)
