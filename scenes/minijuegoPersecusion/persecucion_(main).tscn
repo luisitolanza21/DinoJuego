@@ -10431,11 +10431,9 @@ position = Vector2(655, 256)
 
 [node name="Casas" type="Node2D" parent="."]
 position = Vector2(0, 3.05176e-05)
-scale = Vector2(1, 1)
 
 [node name="LineaDeCasasV11" type="Node2D" parent="Casas"]
 position = Vector2(46367, -198)
-scale = Vector2(1, 1)
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV11"]
 position = Vector2(5667.5, 68.5)
@@ -10474,7 +10472,6 @@ texture = ExtResource("5_skb1k")
 
 [node name="LineaDeCasasV10" type="Node2D" parent="Casas"]
 position = Vector2(42607, -8.00003)
-scale = Vector2(1, 1)
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(6144.22, -119.83)
@@ -10533,7 +10530,6 @@ texture = ExtResource("5_skb1k")
 
 [node name="LineaDeCasasV9" type="Node2D" parent="Casas"]
 position = Vector2(36846, -200)
-scale = Vector2(1, 1)
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV9"]
 position = Vector2(5667.5, 68.5)
@@ -10572,7 +10568,6 @@ texture = ExtResource("5_skb1k")
 
 [node name="LineaDeCasasV8" type="Node2D" parent="Casas"]
 position = Vector2(50806, -210)
-scale = Vector2(1, 1)
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV8"]
 position = Vector2(5667.5, 68.5)
@@ -11480,7 +11475,6 @@ texture = ExtResource("7_3w3bf")
 
 [node name="LineaDeCasas6" type="Node2D" parent="Casas"]
 position = Vector2(25359.9, -4.66965)
-scale = Vector2(1, 1)
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(3216, -107)
@@ -11544,7 +11538,6 @@ texture = ExtResource("4_xa6qp")
 
 [node name="LineaDeCasas7" type="Node2D" parent="Casas"]
 position = Vector2(25359.9, -4.66965)
-scale = Vector2(1, 1)
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(3216, -107)
@@ -11608,7 +11601,6 @@ texture = ExtResource("4_xa6qp")
 
 [node name="LineaDeCasasV6" type="Node2D" parent="Casas"]
 position = Vector2(25359.9, -4.66965)
-scale = Vector2(1, 1)
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(6144.22, -119.83)
@@ -11667,7 +11659,6 @@ texture = ExtResource("5_skb1k")
 
 [node name="LineaDeCasas8" type="Node2D" parent="Casas"]
 position = Vector2(30176, 9.99997)
-scale = Vector2(1, 1)
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(3216, -107)
@@ -11731,7 +11722,6 @@ texture = ExtResource("4_xa6qp")
 
 [node name="LineaDeCasas8" type="Node2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(12673, 2)
-scale = Vector2(1, 1)
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(3249.91, -127.5)
@@ -11830,7 +11820,6 @@ texture = ExtResource("6_he8mv")
 
 [node name="LineaDeCasasV7" type="Node2D" parent="Casas"]
 position = Vector2(30284, -197)
-scale = Vector2(1, 1)
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(5732.13, 82.5)
@@ -12085,7 +12074,7 @@ position = Vector2(3437, 245)
 [node name="Autos" type="Node2D" parent="."]
 
 [node name="autoMovil3" parent="Autos" instance=ExtResource("12_f23iu")]
-position = Vector2(377, 233)
+position = Vector2(415, 205)
 
 [node name="autoMovil1" parent="Autos" instance=ExtResource("12_f23iu")]
 position = Vector2(1381, 187)
