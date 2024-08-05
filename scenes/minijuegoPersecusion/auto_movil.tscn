@@ -4,12 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://djq5wvxdanj5e" path="res://assets/autos/Auto policia.png" id="2_klpkt"]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-48, -40)
 script = ExtResource("1_se0ug")
 
 [node name="AutoPolicia" type="Sprite2D" parent="."]
-position = Vector2(2, -4.76837e-07)
-scale = Vector2(0.416667, 0.470779)
+position = Vector2(52.75, 37.25)
+scale = Vector2(0.210366, 0.228896)
 texture = ExtResource("2_klpkt")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-2, -69, -21, -69, -21, -57, -54, -58, -72, -31, -99, -31, -99, 43, -84, 53, -78, 52, -73, 64, -64, 69, -52, 67, -45, 58, -39, 53, 49, 54, 54, 67, 65, 69, 77, 64, 83, 56, 103, 54, 103, -12, 100, -11, 99, -31, 47, -31, 27, -58, -2, -58)
+position = Vector2(79, 6)
+polygon = PackedVector2Array(-77, 17, -77, 51, -70, 58, -65, 57, -64, 63, -56, 65, -47, 57, -38, 58, -3, 58, 1, 65, 9, 65, 14, 62, 16, 58, 25, 58, 26, 28, 23, 17)

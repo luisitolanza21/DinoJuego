@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxr1iymhft5io"]
+
+[ext_resource type="Texture2D" uid="uid://db0agqdnjxkyy" path="res://assets/obstaculos/mancha.png" id="1_uixeg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kwo60"]
+radius = 113.046
+height = 249.347
+
+[node name="ManchaDeAceite" type="Node2D"]
+
+[node name="Mancha" type="Sprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.27021, 0.18807)
+texture = ExtResource("1_uixeg")
+
+[node name="Area2D" type="Area2D" parent="Mancha"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mancha/Area2D"]
+position = Vector2(10.2769, 13.8526)
+shape = SubResource("CapsuleShape2D_kwo60")

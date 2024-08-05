@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://buwkurjm8i2x"]
-
-[node name="persecucion" type="Node2D"]
-position = Vector2(105, 326)
-
-[node name="TileMap" type="TileMap" parent="."]
-position = Vector2(137, -115)
-format = 2

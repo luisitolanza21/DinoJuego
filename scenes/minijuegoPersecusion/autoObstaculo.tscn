@@ -1,0 +1,113 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddqt5byi7yo1r"]
+
+[ext_resource type="Texture2D" uid="uid://x2x3tmmxwbtf" path="res://assets/autos/auto 3.png" id="1_jb8yw"]
+[ext_resource type="Texture2D" uid="uid://2wup3i4wbx2h" path="res://assets/autos/auto 1.png" id="2_xfjj6"]
+[ext_resource type="Texture2D" uid="uid://cw7hrqmxjb3i1" path="res://assets/autos/auto 2.png" id="3_auob7"]
+
+[sub_resource type="GDScript" id="GDScript_cs50k"]
+script/source = "extends CharacterBody2D
+
+@export var MAX_SPEED_REF= 1000;
+@export var MIN_SPEED_REF= 200;
+
+@export var ACCELERATION = 400;
+
+@export var DECELERATION = 200.0;
+
+@export var SUBIR=false;
+@export var BAJAR=false;
+@export var IR_ADELANTE=true;
+@export var RETROCEDER=false;
+
+
+var MAX_SPEED;
+#ALEATORIZANDO SPRITESÇ
+var current_sprite: Sprite2D;
+var sprite_auto_rojo: Sprite2D
+var sprite_auto_verde: Sprite2D
+var sprite_auto_amarillo: Sprite2D
+
+
+var velocity_target = Vector2.ZERO
+
+func _ready():
+	sprite_auto_rojo = $auto_rojo
+	sprite_auto_verde = $auto_verde
+	sprite_auto_amarillo=$auto_amarillo
+	
+	MAX_SPEED=randf_range(MIN_SPEED_REF, MAX_SPEED_REF);
+	
+	
+	var random_choice =  randi() % 3  # Generate a random number between 0 and 2
+	if random_choice == 0:
+		current_sprite = sprite_auto_verde
+	if random_choice == 1:
+		current_sprite = sprite_auto_amarillo;
+	else:
+		current_sprite = sprite_auto_rojo
+	# Make sure the chosen sprite is visible
+	current_sprite.visible = true
+	
+func _physics_process(delta):
+	var input_direction = 1;
+	var input_vertical = 0;
+	var is_braking =0;  # Suponiendo que \"ui_accept\" es la acción de la barra espaciadora
+
+	# Aceleración horizontal
+	if input_direction > 0:
+		velocity_target.x = clamp(velocity_target.x + ACCELERATION * delta, 0, MAX_SPEED)
+	elif input_direction < 0:
+		velocity_target.x = clamp(velocity_target.x - ACCELERATION * delta, -MAX_SPEED, 0)
+	else:
+		# Desaceleración horizontal
+		velocity_target.x = move_toward(velocity_target.x, 0, DECELERATION * delta)
+
+	# Aceleración vertical (solo si hay movimiento horizontal)
+	if abs(velocity.x) > 0.1:  # Pequeña tolerancia para evitar saltos
+		if input_vertical > 0:
+			velocity_target.y = clamp(velocity_target.y + ACCELERATION * delta, 0, MAX_SPEED)
+		elif input_vertical < 0:
+			velocity_target.y = clamp(velocity_target.y - ACCELERATION * delta, -MAX_SPEED, 0)
+		else:
+			# Desaceleración vertical
+			velocity_target.y = move_toward(velocity_target.y, 0, DECELERATION * delta)
+	else:
+		velocity_target.y = 0  # Forzar a detener el movimiento vertical
+			# Frenado (se aplica si se presiona la barra espaciadora)
+	if is_braking:
+		velocity_target.x = move_toward(velocity_target.x, 0, DECELERATION * delta * 2)  # Frenado más rápido
+		velocity_target.y = move_toward(velocity_target.y, 0, DECELERATION * delta * 2)
+		# Aplicamos la velocidad
+		
+		
+	velocity.x = move_toward(velocity.x, velocity_target.x, ACCELERATION * delta)
+	velocity.y = move_toward(velocity.y, velocity_target.y, ACCELERATION * delta)
+	move_and_slide()
+
+"
+
+[node name="autoMovil1" type="CharacterBody2D"]
+position = Vector2(113, 90)
+script = SubResource("GDScript_cs50k")
+
+[node name="auto_verde" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-112, -88)
+scale = Vector2(0.208743, 0.251633)
+texture = ExtResource("1_jb8yw")
+
+[node name="auto_rojo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-112, -87)
+scale = Vector2(0.207317, 0.24911)
+texture = ExtResource("2_xfjj6")
+
+[node name="auto_amarillo" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-112, -87)
+scale = Vector2(0.206413, 0.248476)
+texture = ExtResource("3_auob7")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(2, 12)
+polygon = PackedVector2Array(-165, -119, -164, -79, -157, -75, -153, -75, -152, -70, -146, -66, -140, -67, -136, -73, -91, -73, -88, -68, -82, -65, -76, -67, -74, -74, -63, -74, -63, -108, -65, -108, -65, -119)
