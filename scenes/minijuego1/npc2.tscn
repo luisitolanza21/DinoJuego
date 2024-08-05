@@ -1,13 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0mad3ukakhjg"]
+[gd_scene load_steps=7 format=3 uid="uid://b0mad3ukakhjg"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/npc2.gd" id="1_jl4ne"]
-[ext_resource type="Texture2D" uid="uid://cbp352p8kgkj5" path="res://assets/npcs/dinonpc2.png" id="2_s2dap"]
+[ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="2_5mjrt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7axh"]
+atlas = ExtResource("2_5mjrt")
+region = Rect2(1230, 428, 246, 428)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_cdr1d"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_s2dap")
+"texture": SubResource("AtlasTexture_u7axh")
 }],
 "loop": true,
 "name": &"default",
@@ -16,15 +20,17 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rfhi8"]
 radius = 7.0
-height = 110.0
+height = 74.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wql4r"]
-radius = 210.06
+radius = 137.004
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_jl4ne")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -29)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_cdr1d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -35,4 +41,5 @@ shape = SubResource("CapsuleShape2D_rfhi8")
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, -2)
 shape = SubResource("CircleShape2D_wql4r")

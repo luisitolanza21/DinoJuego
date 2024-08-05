@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://b7ou5ofnlklr1"]
+[gd_scene load_steps=13 format=3 uid="uid://b7ou5ofnlklr1"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego1.gd" id="1_h7gmc"]
 [ext_resource type="PackedScene" uid="uid://djwdjwhi7xkie" path="res://scenes/minijuego1/npc1.tscn" id="2_x1sri"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="3_lu1lf"]
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="4_74qso"]
-[ext_resource type="PackedScene" path="res://scenes/ciudad.tscn" id="5_yqq6r"]
+[ext_resource type="PackedScene" uid="uid://3dei3lxqhl8q" path="res://scenes/minijuego1/ciudad1.tscn" id="5_eoba2"]
+[ext_resource type="PackedScene" uid="uid://d04ah2kuf8exf" path="res://scenes/ciudad.tscn" id="5_yqq6r"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="6_7j6cd"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="7_qy4hq"]
 [ext_resource type="Script" path="res://scripts/UI.gd" id="8_sa3s2"]
@@ -20,8 +21,12 @@ npc3 = ExtResource("4_74qso")
 spawn_area = Rect2(0, 0, 2212, 1500)
 metadata/_edit_horizontal_guides_ = [22.0]
 
+[node name="TileMap" parent="." instance=ExtResource("5_eoba2")]
+position = Vector2(400, 1050)
+scale = Vector2(1, 1)
+
 [node name="ciudad" parent="." instance=ExtResource("5_yqq6r")]
-position = Vector2(-5, 1)
+position = Vector2(-5, 3000)
 scale = Vector2(0.9, 0.9)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objetct_follow")]
