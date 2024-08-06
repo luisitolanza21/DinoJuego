@@ -9,7 +9,11 @@ script/source = "extends CharacterBody2D
 @export var ACCELERATION = 500.0
 @export var DECELERATION = 200.0
 
+
+
 var velocity_target = Vector2.ZERO
+
+
 
 func _physics_process(delta):
 	var input_direction = 1;

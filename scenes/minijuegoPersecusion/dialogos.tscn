@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://tm0yyxu7bp5u"]
+
+[ext_resource type="Script" path="res://scripts/minijuegoPersecusion/dialogosPersecusion.gd" id="1_lxofa"]
+[ext_resource type="Texture2D" uid="uid://fslh4g4x3sw4" path="res://assets/dialogos/barra.png" id="1_y3akk"]
+
+[node name="DialogosPersecusion" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lxofa")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_y3akk")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 78.0
+offset_top = 61.0
+offset_right = 796.0
+offset_bottom = 218.0
+bbcode_enabled = true
+text = "jjjj"
