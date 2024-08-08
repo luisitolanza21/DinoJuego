@@ -1,6 +1,7 @@
-[gd_scene load_steps=33 format=3 uid="uid://buwkurjm8i2x"]
+[gd_scene load_steps=35 format=3 uid="uid://buwkurjm8i2x"]
 
 [ext_resource type="Texture2D" uid="uid://djsdw8qfrcvd8" path="res://assets/calles/calle 1.png" id="1_5ltm1"]
+[ext_resource type="Script" path="res://scripts/minijuegoPersecusion/persecucion_(main).gd" id="1_ojhoy"]
 [ext_resource type="Texture2D" uid="uid://23kirm3f4mu2" path="res://assets/calles/calle 3.png" id="2_hbrp7"]
 [ext_resource type="Texture2D" uid="uid://cfqtor8jxdvax" path="res://assets/calles/calle 2.png" id="3_vb0kc"]
 [ext_resource type="Texture2D" uid="uid://b4yycpa8gme1v" path="res://assets/casas/Casa 1.png" id="4_xa6qp"]
@@ -11,7 +12,23 @@
 [ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="10_vl3te"]
 [ext_resource type="PackedScene" uid="uid://cxr1iymhft5io" path="res://scenes/minijuegoPersecusion/manchaDeAceite.tscn" id="11_ptvo4"]
 [ext_resource type="PackedScene" uid="uid://b2rqldrk5bstu" path="res://scenes/minijuegoPersecusion/auto_enemigo.tscn" id="12_5vi4u"]
-[ext_resource type="PackedScene" uid="uid://tx0rn48uy3po" path="res://scenes/minijuegoPersecusion/autoObstaculo.tscn" id="12_f23iu"]
+[ext_resource type="PackedScene" uid="uid://dliitigrsykd6" path="res://scenes/minijuegoPersecusion/obstaculosAleatorios.tscn" id="12_kr5pj"]
+[ext_resource type="PackedScene" uid="uid://tm0yyxu7bp5u" path="res://scenes/minijuegoPersecusion/dialogosPersecucion.tscn" id="13_p4iax"]
+
+[sub_resource type="Animation" id="Animation_2kyoa"]
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("autoEnemigo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3, 0.6, 1.1, 1.4, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(197, 346), Vector2(242, 320), Vector2(395, 275), Vector2(529, 267), Vector2(837, 284), Vector2(1008, 284), Vector2(60322, 280)]
+}
 
 [sub_resource type="Animation" id="Animation_cfrqg"]
 resource_name = "autoEscapando"
@@ -27,21 +44,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(182, 336), Vector2(191, 324), Vector2(220, 295), Vector2(258, 284), Vector2(332, 285), Vector2(1219, 270), Vector2(60250, 220)]
-}
-
-[sub_resource type="Animation" id="Animation_2kyoa"]
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("autoEnemigo:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3, 0.6, 1.1, 1.4, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(197, 346), Vector2(242, 320), Vector2(395, 275), Vector2(529, 267), Vector2(837, 284), Vector2(1008, 284), Vector2(60322, 280)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mxtdu"]
@@ -10476,6 +10478,7 @@ size = Vector2(1865.95, 20)
 
 [node name="persecucion" type="Node2D"]
 position = Vector2(105, 326)
+script = ExtResource("1_ojhoy")
 
 [node name="Inicio" type="AnimationPlayer" parent="."]
 libraries = {
@@ -10495,21 +10498,25 @@ layer_0/tile_data = PackedInt32Array(65529, 0, 0, 131065, 0, 1, 196601, 0, 2, 26
 [node name="Trampas" type="Node2D" parent="."]
 
 [node name="ManchaDeAceite2" parent="Trampas" instance=ExtResource("11_ptvo4")]
-position = Vector2(2145, 133)
+position = Vector2(515, 119)
 
 [node name="ManchaDeAceite" parent="Trampas" instance=ExtResource("11_ptvo4")]
-position = Vector2(1019, 239)
+position = Vector2(622, 219)
 
 [node name="ManchaDeAceite3" parent="Trampas" instance=ExtResource("11_ptvo4")]
 position = Vector2(3437, 245)
 
+[node name="ObstaculosAleatorios" parent="." instance=ExtResource("12_kr5pj")]
+position = Vector2(-108, -323)
+
 [node name="DINOMOVIL" parent="." instance=ExtResource("8_0bce6")]
-position = Vector2(-114, 212)
+position = Vector2(-99, 200)
 MAX_SPEED = 800.0
 ACCELERATION = 100.0
 
 [node name="Camera2D" type="Camera2D" parent="DINOMOVIL"]
 position = Vector2(288, 87)
+limit_bottom = 800
 
 [node name="autoEnemigo" parent="." instance=ExtResource("12_5vi4u")]
 position = Vector2(197, 346)
@@ -12147,14 +12154,6 @@ position = Vector2(50295.1, -215.75)
 scale = Vector2(0.495836, 0.463477)
 texture = ExtResource("5_skb1k")
 
-[node name="Autos" type="Node2D" parent="."]
-
-[node name="autoMovil5" parent="Autos" instance=ExtResource("12_f23iu")]
-position = Vector2(2150, 321)
-
-[node name="autoMovil6" parent="Autos" instance=ExtResource("12_f23iu")]
-position = Vector2(86, 162)
-
 [node name="CollitionShape" type="Node2D" parent="."]
 position = Vector2(170, 456)
 
@@ -12236,3 +12235,9 @@ shape = SubResource("RectangleShape2D_rtabt")
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(59306, -146)
 shape = SubResource("RectangleShape2D_rtabt")
+
+[node name="DialogosPersecusion" parent="." instance=ExtResource("13_p4iax")]
+offset_left = -166.0
+offset_top = 301.0
+offset_right = -166.0
+offset_bottom = 301.0
