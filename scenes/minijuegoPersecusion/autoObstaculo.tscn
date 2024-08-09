@@ -18,7 +18,7 @@ script/source = "extends CharacterBody2D
 @export var BAJAR=false;
 @export var IR_ADELANTE=true;
 @export var RETROCEDER=false;
-
+@export var posicionParaDesaparecerX=-400;
 
 var MAX_SPEED;
 #ALEATORIZANDO SPRITESÇ
@@ -29,6 +29,7 @@ var sprite_auto_amarillo: Sprite2D
 
 
 var velocity_target = Vector2.ZERO
+
 
 func _ready():
 	sprite_auto_rojo = $auto_rojo
