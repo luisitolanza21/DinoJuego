@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://blgd2iyubxb0c"]
+
+[ext_resource type="Texture2D" uid="uid://s5dgwn83hjad" path="res://assets/edificios_unicos/parque assets.png" id="1_6ggc1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atav3"]
+atlas = ExtResource("1_6ggc1")
+region = Rect2(490, 0, 490, 796)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_752nv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atav3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_752nv")

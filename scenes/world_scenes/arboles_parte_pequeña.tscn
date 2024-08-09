@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgw1md30ir8np"]
+
+[ext_resource type="PackedScene" uid="uid://blgd2iyubxb0c" path="res://scenes/world_scenes/arbol_sin_piso.tscn" id="1_lhllq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5nhf"]
+size = Vector2(338, 1597)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("1_lhllq")]
+position = Vector2(818, 1321)
+
+[node name="Node2D2" parent="." instance=ExtResource("1_lhllq")]
+position = Vector2(813, 1763)
+
+[node name="Node2D3" parent="." instance=ExtResource("1_lhllq")]
+position = Vector2(828, 2201)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(789, 1750.5)
+shape = SubResource("RectangleShape2D_j5nhf")
