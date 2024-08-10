@@ -1,11 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://bp8scbgafvtfv"]
+[gd_scene load_steps=14 format=3 uid="uid://bp8scbgafvtfv"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego2.gd" id="1_ulh80"]
 [ext_resource type="PackedScene" uid="uid://7juse7binryn" path="res://scenes/minijuego1/nivel3/ciudad3.tscn" id="2_g017b"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="2_h4kpg"]
+[ext_resource type="PackedScene" uid="uid://de51d7hgc81rt" path="res://scenes/world_scenes/botones.tscn" id="2_k4muk"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="3_f1wgs"]
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="4_hd2ly"]
-[ext_resource type="PackedScene" path="res://scenes/minijuego1/autopolicia.tscn" id="4_lcrn1"]
+[ext_resource type="PackedScene" uid="uid://dgtr6jln0idjp" path="res://scenes/minijuego1/autopolicia.tscn" id="4_lcrn1"]
 [ext_resource type="Script" path="res://scripts/minijuego1/policia.gd" id="5_acl8n"]
 [ext_resource type="Resource" uid="uid://ch627og680phc" path="res://dialogs/dinodetective1/policia.dialogue" id="6_kvh7q"]
 [ext_resource type="PackedScene" uid="uid://djwdjwhi7xkie" path="res://scenes/minijuego1/npc1.tscn" id="7_dvapl"]
@@ -15,6 +16,8 @@
 
 [node name="nivel2" type="Node2D"]
 script = ExtResource("1_ulh80")
+
+[node name="Botones" parent="." instance=ExtResource("2_k4muk")]
 
 [node name="ciudad3" parent="." instance=ExtResource("2_g017b")]
 position = Vector2(-1393, 1350)
