@@ -14,8 +14,6 @@ script/source = "extends CharacterBody2D
 var direction = Vector2()
 var idle_position: int = 0
 
-@onready var camara = $Camera2D
-
 var current_npc = null
 
 func _ready():

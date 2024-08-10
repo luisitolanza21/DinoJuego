@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cjv2mlqqavuhb"]
+[gd_scene load_steps=13 format=3 uid="uid://cjv2mlqqavuhb"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego2.gd" id="1_8fn0v"]
+[ext_resource type="PackedScene" uid="uid://de51d7hgc81rt" path="res://scenes/world_scenes/botones.tscn" id="2_dplpr"]
 [ext_resource type="PackedScene" uid="uid://cmtpga8mk0d14" path="res://scenes/minijuego1/nivel2/ciudad2.tscn" id="2_jy2xc"]
 [ext_resource type="PackedScene" uid="uid://djwdjwhi7xkie" path="res://scenes/minijuego1/npc1.tscn" id="2_tdyoa"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="3_gq8kw"]
@@ -12,10 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="10_bi6r4"]
 [ext_resource type="Resource" uid="uid://ch627og680phc" path="res://dialogs/dinodetective1/policia.dialogue" id="12_ffytw"]
 
-[node name="nivel3" type="Node2D"]
+[node name="nivel2" type="Node2D"]
 script = ExtResource("1_8fn0v")
 metadata/_edit_horizontal_guides_ = [22.0, -69.0, 1944.0, 1935.0, -1495.0, 3631.0]
 metadata/_edit_vertical_guides_ = [-460.0, 2574.0, 390.0, 2415.0, 3250.0, -2193.0]
+
+[node name="Botones" parent="." instance=ExtResource("2_dplpr")]
 
 [node name="Ciudad2" parent="." instance=ExtResource("2_jy2xc")]
 position = Vector2(687.5, 2021.25)
