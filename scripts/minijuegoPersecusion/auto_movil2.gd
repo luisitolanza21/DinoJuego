@@ -1,3 +1,4 @@
+class_name AutoPolicia
 extends CharacterBody2D
 
 @export var MAX_SPEED = 500.0
@@ -48,4 +49,17 @@ func _physics_process(delta):
 	velocity.x = move_toward(velocity.x, velocity_target.x, ACCELERATION * delta)
 	velocity.y = move_toward(velocity.y, velocity_target.y, ACCELERATION * delta)
 	move_and_slide()
+
+
+
+
+func _on_area_2d_body_entered(body):
+	if body is manchaAceite:
+		print("procede a resbalarce");
+	pass # Replace with function body.
+
+
+
+
+
 
