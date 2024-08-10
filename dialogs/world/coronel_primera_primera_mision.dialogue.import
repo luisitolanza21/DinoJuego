@@ -2,7 +2,11 @@
 
 importer="dialogue_manager_compiler_12"
 type="Resource"
+<<<<<<< HEAD
 uid="uid://ce6gwusuk2aaj"
+=======
+uid="uid://wc15u1h014q6"
+>>>>>>> 573fe0655fcf7f85358cdb4244e15ebf639e27e6
 path="res://.godot/imported/coronel_primera_primera_mision.dialogue-c828d257ea0e75b6664a0d78c2ba8575.tres"
 
 [deps]

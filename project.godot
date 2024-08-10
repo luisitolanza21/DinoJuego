@@ -66,7 +66,11 @@ down={
 
 [internationalization]
 
+<<<<<<< HEAD
 locale/translations_pot_files=PackedStringArray("res://prueba.dialogue", "res://dialogs/dinodetective1/policia.dialogue", "res://dialogs/dinodetective1/seleccion.dialogue", "res://dialogs/dinodetective1/minijuego1_1.dialogue", "res://dialogs/world/START.dialogue", "res://dialogs/world/coronel_primera_primera_mision.dialogue")
+=======
+locale/translations_pot_files=PackedStringArray("res://prueba.dialogue", "res://dialogs/dinodetective1/policia.dialogue", "res://dialogs/dinodetective1/seleccion.dialogue", "res://dialogs/dinodetective1/minijuego1_1.dialogue", "res://dialogs/world/START.dialogue", "res://dialogs/world/coronel_primera_primera_misión.dialogue", "res://dialogs/world/coronel_primera_primera_mision.dialogue")
+>>>>>>> 573fe0655fcf7f85358cdb4244e15ebf639e27e6
 
 [rendering]
 

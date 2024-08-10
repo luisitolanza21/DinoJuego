@@ -20,7 +20,10 @@ func create_obstacles():
 	if new_obs:
 		print("Nuevo obstáculo instanciado.")
 	# Asignar una posición aleatoria en y
+<<<<<<< HEAD
 	var x=$"../DINOMOVIL".position
+=======
+>>>>>>> 573fe0655fcf7f85358cdb4244e15ebf639e27e6
 	var y=randf_range(468, 650)
 	new_obs.position = Vector2(0, y);
 	# Añadir el nuevo obstáculo a la escena actual

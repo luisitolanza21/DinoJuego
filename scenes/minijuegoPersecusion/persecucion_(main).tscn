@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://buwkurjm8i2x"]
+[gd_scene load_steps=36 format=3 uid="uid://buwkurjm8i2x"]
 
 [ext_resource type="Texture2D" uid="uid://djsdw8qfrcvd8" path="res://assets/calles/calle 1.png" id="1_5ltm1"]
 [ext_resource type="Script" path="res://scripts/minijuegoPersecusion/persecucion_(main).gd" id="1_ojhoy"]
@@ -14,21 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b2rqldrk5bstu" path="res://scenes/minijuegoPersecusion/auto_enemigo.tscn" id="12_5vi4u"]
 [ext_resource type="PackedScene" uid="uid://dliitigrsykd6" path="res://scenes/minijuegoPersecusion/obstaculosAleatorios.tscn" id="12_kr5pj"]
 [ext_resource type="PackedScene" uid="uid://tm0yyxu7bp5u" path="res://scenes/minijuegoPersecusion/dialogosPersecucion.tscn" id="13_p4iax"]
-
-[sub_resource type="Animation" id="Animation_2kyoa"]
-length = 2.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("autoEnemigo:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3, 0.6, 1.1, 1.4, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(197, 346), Vector2(242, 320), Vector2(395, 275), Vector2(529, 267), Vector2(837, 284), Vector2(1008, 284), Vector2(60322, 280)]
-}
+[ext_resource type="Script" path="res://scenes/minijuegoPersecusion/StaticBody2D.gd" id="14_xdudt"]
 
 [sub_resource type="Animation" id="Animation_cfrqg"]
 resource_name = "autoEscapando"
@@ -10497,20 +10483,14 @@ layer_0/tile_data = PackedInt32Array(65529, 0, 0, 131065, 0, 1, 196601, 0, 2, 26
 
 [node name="Trampas" type="Node2D" parent="."]
 
-[node name="ManchaDeAceite2" parent="Trampas" instance=ExtResource("11_ptvo4")]
-position = Vector2(515, 119)
-
 [node name="ManchaDeAceite" parent="Trampas" instance=ExtResource("11_ptvo4")]
-position = Vector2(622, 219)
-
-[node name="ManchaDeAceite3" parent="Trampas" instance=ExtResource("11_ptvo4")]
-position = Vector2(3437, 245)
+position = Vector2(589, 172)
 
 [node name="ObstaculosAleatorios" parent="." instance=ExtResource("12_kr5pj")]
 position = Vector2(-108, -323)
 
 [node name="DINOMOVIL" parent="." instance=ExtResource("8_0bce6")]
-position = Vector2(-99, 200)
+position = Vector2(-94, 207)
 MAX_SPEED = 800.0
 ACCELERATION = 100.0
 
@@ -12159,6 +12139,7 @@ position = Vector2(170, 456)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(30, 453)
+script = ExtResource("14_xdudt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(4356.06, -142)
@@ -12237,7 +12218,7 @@ position = Vector2(59306, -146)
 shape = SubResource("RectangleShape2D_rtabt")
 
 [node name="DialogosPersecusion" parent="." instance=ExtResource("13_p4iax")]
-offset_left = -166.0
-offset_top = 301.0
-offset_right = -166.0
-offset_bottom = 301.0
+offset_left = -172.0
+offset_top = 274.0
+offset_right = -172.0
+offset_bottom = 274.0
