@@ -77,6 +77,8 @@ size = Vector2(4763.25, 6638.5)
 [node name="Node2D" type="Node2D"]
 position = Vector2(-30, 0)
 script = ExtResource("1_bm47p")
+dialogueResourcePath = null
+mision = null
 
 [node name="calles" type="TileMap" parent="."]
 position = Vector2(13, -6)
@@ -171,6 +173,15 @@ texture = ExtResource("9_xuyk7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="edificios/castillo_azul"]
 position = Vector2(-1604.5, 1759.5)
 shape = SubResource("RectangleShape2D_1gdx0")
+
+[node name="CORONEL_NPC" parent="." instance=ExtResource("13_o46t5")]
+position = Vector2(273, 624)
+scale = Vector2(0.683015, 0.683015)
+script = ExtResource("13_yblo1")
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("14_vkwj7")]
+position = Vector2(450, 2940)
+scale = Vector2(1.39745, 1.38783)
 
 [node name="parque" type="Node2D" parent="."]
 
@@ -382,20 +393,10 @@ position = Vector2(-4198, 5080)
 [node name="casa_39" parent="fin de la ciudad" instance=ExtResource("7_uigbc")]
 position = Vector2(-4510, -1607)
 
-[node name="NPCS" type="Node2D" parent="."]
-
-[node name="CORONEL_NPC" parent="NPCS" instance=ExtResource("13_o46t5")]
-position = Vector2(273, 624)
-scale = Vector2(0.683015, 0.683015)
-script = ExtResource("13_yblo1")
-
-[node name="NPC_mision1" parent="NPCS" instance=ExtResource("14_vkwj7")]
-position = Vector2(421, 2922)
-scale = Vector2(1.40102, 1.39137)
-
 [node name="player" parent="." instance=ExtResource("2_7d60p")]
 position = Vector2(-2084, -1066)
 scale = Vector2(0.761783, 0.67924)
+speed = 1000
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(53.9604, 22.219)

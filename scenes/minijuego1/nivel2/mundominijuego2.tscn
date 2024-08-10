@@ -47,10 +47,8 @@ flag = "npc1"
 position = Vector2(-1548, 1387)
 scale = Vector2(2, 2)
 script = ExtResource("9_n3pfg")
-player_name = "player"
 dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
 flag = "npc2"
-dialogueStart = "Start"
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("4_eijhw")]
 position = Vector2(113, 3025)

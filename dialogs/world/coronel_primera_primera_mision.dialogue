@@ -1,0 +1,33 @@
+~ Llegada_a_la_Comisaría
+
+set Global.botones = false
+
+if Misiones.continuacion == 1:
+	
+	Dino: "¡Coronel, aquí estoy! ¿Qué sucede?"
+
+	Coronel: "Dino, me alegra verte. La ciudad nos necesita más que nunca. Hay un caso urgente que debemos resolver. Se trata de un robo en el parque. Tenemos un sospechoso, pero necesitamos pruebas. Tu misión es encontrar al culpable y llevarlo ante la justicia."
+
+	Dino: "Puedes contar conmigo, Coronel. ¿Qué pistas tenemos hasta ahora?"
+
+	Coronel: "Habla con los testigos, revisa el lugar del crimen y sigue cualquier pista que pueda llevarnos al responsable. Recuerda, Dino, en esta ciudad decimos: ¡DI-NO a la injusticia!"
+
+	Dino: "¡Lo tengo, Coronel! No descansaré hasta resolver este caso y devolver la paz a nuestro querido parque."
+
+if Misiones.continuacion == 2:
+	Ciudadano: "Dino, me han robado mis cosas ayudame a encontrar al culpable"
+	Dino: "Claro!!, comencemos"
+	set Transicion.cambiar_escena("res://scenes/minijuego1/mundominijuego1.tscn")
+if Misiones.continuacion == 3:
+	Ciudadano: "Gracias Dino!! he recuperado mis pertenencias"
+	
+	Dino: "No te preocupes, solo recuerda ¡DI-NO a la injusticia!"
+	
+	Dino: "Debería volver a la comisaría"
+	set Misiones.mision = 3
+	set Misiones.continuacion = 1
+if Misiones.mision == 3:
+	Ciudadano: "Gracias Dino!!, deberías volver a tu trabajo"
+
+set Global.botones = true
+=> END

@@ -1,0 +1,16 @@
+~ Escena_de_Introducción
+
+set Global.botones = false
+
+Dino: Mi ciudad... un lugar lleno de cultura, historia, y por supuesto, mi hogar. Pero no todo es perfecto. Hay amenazas que acechan en las sombras: violencia, crimen, inseguridad... Y es mi deber asegurarme de que todos sepan que en esta ciudad, decimos: ¡DI-NO a la violencia! ¡DI-NO al crimen! ¡DI-NO al silencio!
+
+Narrador: *Suena el teléfono de Dino.* Es una llamada de la comisaría.
+
+Dino: ¿Hola? Ah, ¡Coronel! ¿Qué sucede?
+
+Coronel: Dino, necesitamos hablar. Hay algo importante que debes saber. Ven a la comisaría cuanto antes.
+
+Dino: Entendido, Coronel. ¡Voy en camino!
+
+set Global.botones = true
+=> END

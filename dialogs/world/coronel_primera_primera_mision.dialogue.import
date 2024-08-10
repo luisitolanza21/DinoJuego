@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://ce6gwusuk2aaj"
+path="res://.godot/imported/coronel_primera_primera_mision.dialogue-c828d257ea0e75b6664a0d78c2ba8575.tres"
+
+[deps]
+
+source_file="res://dialogs/world/coronel_primera_primera_mision.dialogue"
+dest_files=["res://.godot/imported/coronel_primera_primera_mision.dialogue-c828d257ea0e75b6664a0d78c2ba8575.tres"]
+
+[params]
+
+defaults=true

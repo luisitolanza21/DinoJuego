@@ -21,6 +21,18 @@ func _on_body_exited(body):
 		body.set("current_npc", null)
 
 func player_interacted():
-	print("Player interacted with NPC")
-	DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/minijuego1_1.dialogue"), "npc2")
-	
+	if Misiones.esta_en_world: # haciendo referencia a que el npc esta en el mundo
+		if Misiones.mision == 3:
+			Misiones.continuacion = 4
+			DialogueManager.show_dialogue_balloon(load("res://dialogs/world/coronel_primera_primera_mision.dialogue"))
+			
+		else:
+			Misiones.continuacion = 2
+			var dialogue_resource = load(Misiones.get_current_dialogue_path())
+			DialogueManager.show_dialogue_balloon(dialogue_resource)
+			Global.dino_position = $"../../player".position #guardar posicion para persistencia en la escena
+
+	else:
+		print("Player interacted with NPC")
+		DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/minijuego1_1.dialogue"), "npc2")
+		

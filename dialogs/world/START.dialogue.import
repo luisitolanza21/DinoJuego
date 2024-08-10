@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cvbo868u3k00j"
+path="res://.godot/imported/START.dialogue-19472779b201906142253a9e68ecfc84.tres"
+
+[deps]
+
+source_file="res://dialogs/world/START.dialogue"
+dest_files=["res://.godot/imported/START.dialogue-19472779b201906142253a9e68ecfc84.tres"]
+
+[params]
+
+defaults=true
