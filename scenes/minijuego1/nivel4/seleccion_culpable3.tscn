@@ -1,0 +1,174 @@
+[gd_scene load_steps=20 format=3 uid="uid://clgt1cytr8av3"]
+
+[ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles/calles.png" id="1_cfvy5"]
+[ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="2_dbevg"]
+[ext_resource type="Script" path="res://scripts/minijuego1/sospechosos.gd" id="3_dwsxb"]
+[ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="4_ss2mv"]
+[ext_resource type="Script" path="res://scripts/minijuego1/texto.gd" id="5_as6y8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_73bjr"]
+texture = ExtResource("1_cfvy5")
+margins = Vector2i(20, 10)
+separation = Vector2i(40, 0)
+texture_region_size = Vector2i(320, 320)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_rf48b"]
+tile_size = Vector2i(320, 320)
+sources/0 = SubResource("TileSetAtlasSource_73bjr")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18g83"]
+atlas = ExtResource("4_ss2mv")
+region = Rect2(1230, 0, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws8xv"]
+atlas = ExtResource("4_ss2mv")
+region = Rect2(984, 0, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo1fq"]
+atlas = ExtResource("4_ss2mv")
+region = Rect2(738, 0, 246, 428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tvs2w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18g83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws8xv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo1fq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etqxa"]
+atlas = ExtResource("4_ss2mv")
+region = Rect2(492, 428, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yrpc3"]
+atlas = ExtResource("4_ss2mv")
+region = Rect2(246, 428, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25do7"]
+atlas = ExtResource("4_ss2mv")
+region = Rect2(0, 428, 246, 428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bomwd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etqxa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yrpc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25do7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqid4"]
+atlas = ExtResource("4_ss2mv")
+region = Rect2(984, 428, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xahbc"]
+atlas = ExtResource("4_ss2mv")
+region = Rect2(738, 428, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7n64x"]
+atlas = ExtResource("4_ss2mv")
+region = Rect2(1230, 428, 246, 428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nshrn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqid4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xahbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7n64x")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="SeleccionCulpable" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [491.0]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_rf48b")
+format = 2
+layer_0/tile_data = PackedInt32Array(65539, 0, 0, 65537, 0, 0, 65536, 0, 0, 65538, 0, 0, 131071, 0, 0, 131070, 0, 0)
+
+[node name="cuadra" parent="." instance=ExtResource("2_dbevg")]
+position = Vector2(-1922, -312)
+
+[node name="sospechoso1" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 89.0
+offset_right = 345.0
+offset_bottom = 486.0
+script = ExtResource("3_dwsxb")
+dialogo = "res://dialogs/dinodetective1/seleccion.dialogue"
+flag = "incorrecto"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sospechoso1"]
+position = Vector2(121, 214)
+sprite_frames = SubResource("SpriteFrames_tvs2w")
+
+[node name="sospechoso2" type="Button" parent="."]
+offset_left = 430.0
+offset_top = 90.0
+offset_right = 675.0
+offset_bottom = 487.0
+script = ExtResource("3_dwsxb")
+dialogo = "res://dialogs/dinodetective1/seleccion.dialogue"
+flag = "correcto"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sospechoso2"]
+position = Vector2(141, 179)
+sprite_frames = SubResource("SpriteFrames_bomwd")
+
+[node name="sospechoso3" type="Button" parent="."]
+offset_left = 759.0
+offset_top = 89.0
+offset_right = 1004.0
+offset_bottom = 486.0
+script = ExtResource("3_dwsxb")
+dialogo = "res://dialogs/dinodetective1/seleccion.dialogue"
+flag = "incorrecto"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sospechoso3"]
+position = Vector2(122, 186)
+sprite_frames = SubResource("SpriteFrames_nshrn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 362.0
+offset_top = 513.0
+offset_right = 746.0
+offset_bottom = 574.0
+theme_override_colors/default_color = Color(1.41504e-05, 0.907729, 0, 1)
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[wave amp=40 freq =6
+]ELIGE AL CULPABLE[/wave]"
+tab_size = 10
+script = ExtResource("5_as6y8")
+
+[connection signal="pressed" from="sospechoso1" to="sospechoso1" method="_on_pressed"]
+[connection signal="pressed" from="sospechoso2" to="sospechoso2" method="_on_pressed"]
+[connection signal="pressed" from="sospechoso3" to="sospechoso3" method="_on_pressed"]

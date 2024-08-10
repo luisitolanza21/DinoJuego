@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgtr6jln0idjp"]
+
+[ext_resource type="Texture2D" uid="uid://djq5wvxdanj5e" path="res://assets/autos/Auto policia.png" id="1_r5hif"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rakfl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_r5hif")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmep4"]
+size = Vector2(484, 178)
+
+[node name="autopolicia" type="StaticBody2D"]
+
+[node name="dinoauto" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rakfl")
+
+[node name="bordes" type="CollisionShape2D" parent="."]
+position = Vector2(0, 25)
+shape = SubResource("RectangleShape2D_tmep4")

@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bp8scbgafvtfv"]
+[gd_scene load_steps=13 format=3 uid="uid://bp8scbgafvtfv"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego2.gd" id="1_ulh80"]
 [ext_resource type="PackedScene" uid="uid://7juse7binryn" path="res://scenes/minijuego1/nivel3/ciudad3.tscn" id="2_g017b"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="2_h4kpg"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="3_f1wgs"]
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="4_hd2ly"]
+[ext_resource type="PackedScene" uid="uid://dgtr6jln0idjp" path="res://scenes/minijuego1/autopolicia.tscn" id="4_lcrn1"]
 [ext_resource type="Script" path="res://scripts/minijuego1/policia.gd" id="5_acl8n"]
 [ext_resource type="Resource" uid="uid://ch627og680phc" path="res://dialogs/dinodetective1/policia.dialogue" id="6_kvh7q"]
 [ext_resource type="PackedScene" uid="uid://djwdjwhi7xkie" path="res://scenes/minijuego1/npc1.tscn" id="7_dvapl"]
@@ -28,11 +29,14 @@ limit_bottom = 3630
 script = ExtResource("2_h4kpg")
 objetct_follow = NodePath("../CharacterBody2D")
 
+[node name="autopolicia" parent="." instance=ExtResource("4_lcrn1")]
+position = Vector2(-153, 897)
+
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_f1wgs")]
-position = Vector2(456, 864)
+position = Vector2(399, 825)
 
 [node name="NPC_1" parent="." instance=ExtResource("4_hd2ly")]
-position = Vector2(180, 829)
+position = Vector2(-287, 1132)
 script = ExtResource("5_acl8n")
 escena = "res://scenes/minijuego1/nivel3/seleccion_culpable3.tscn"
 dialogueResource = ExtResource("6_kvh7q")
