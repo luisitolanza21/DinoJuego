@@ -13,9 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bo6gpygmhe7bd" path="res://assets/edificios_unicos/Castillo Azul.png" id="9_xuyk7"]
 [ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles/calles.png" id="10_775st"]
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="13_o46t5"]
-[ext_resource type="PackedScene" uid="uid://dlbp355441i7u" path="res://scenes/world_scenes/parte_del_parque.tscn" id="14_367fu"]
+[ext_resource type="PackedScene" path="res://scenes/world_scenes/parte_del_parque.tscn" id="14_367fu"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="14_vkwj7"]
-[ext_resource type="PackedScene" uid="uid://dgw1md30ir8np" path="res://scenes/world_scenes/arboles_parte_pequeña.tscn" id="15_2el20"]
+[ext_resource type="PackedScene" path="res://scenes/world_scenes/arboles_parte_pequeña.tscn" id="15_2el20"]
 [ext_resource type="Texture2D" uid="uid://s5dgwn83hjad" path="res://assets/edificios_unicos/parque assets.png" id="17_pg5g8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3g1qj"]

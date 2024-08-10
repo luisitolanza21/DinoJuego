@@ -1,11 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7ou5ofnlklr1"]
+[gd_scene load_steps=10 format=3 uid="uid://b7ou5ofnlklr1"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego1.gd" id="1_h7gmc"]
-[ext_resource type="PackedScene" uid="uid://djwdjwhi7xkie" path="res://scenes/minijuego1/npc1.tscn" id="2_x1sri"]
-[ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="3_lu1lf"]
-[ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="4_74qso"]
 [ext_resource type="PackedScene" uid="uid://3dei3lxqhl8q" path="res://scenes/minijuego1/ciudad1.tscn" id="5_eoba2"]
-[ext_resource type="PackedScene" path="res://scenes/ciudad.tscn" id="5_yqq6r"]
+[ext_resource type="PackedScene" uid="uid://d04ah2kuf8exf" path="res://scenes/ciudad.tscn" id="5_yqq6r"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="6_7j6cd"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="7_qy4hq"]
 [ext_resource type="Script" path="res://scripts/UI.gd" id="8_sa3s2"]
@@ -15,10 +12,6 @@
 
 [node name="dinodetective" type="Node2D"]
 script = ExtResource("1_h7gmc")
-npc1 = ExtResource("2_x1sri")
-npc2 = ExtResource("3_lu1lf")
-npc3 = ExtResource("4_74qso")
-spawn_area = Rect2(390, 0, 2500, 1800)
 metadata/_edit_horizontal_guides_ = [22.0, -69.0, 1944.0, 1935.0]
 metadata/_edit_vertical_guides_ = [-460.0, 2574.0, 390.0, 2415.0]
 
@@ -43,6 +36,7 @@ objetct_follow = NodePath("../CharacterBody2D")
 [node name="CharacterBody2D" parent="." instance=ExtResource("7_qy4hq")]
 position = Vector2(456, 864)
 scale = Vector2(0.5, 0.5)
+speed = 500
 
 [node name="UI" type="CanvasLayer" parent="."]
 visible = false

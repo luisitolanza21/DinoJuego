@@ -1,5 +1,8 @@
 extends Button
 
+@export var dialogo : String
+@export var flag : String
+
 func _ready():
 	Global.connect("listo_changed", Callable(self, "_on_listo_changed"))
 	
@@ -7,8 +10,9 @@ func _ready():
 func _on_listo_changed(new_value):
 	#print("Global.listo ha cambiado a: ", new_value)
 	if (Global.listo == "si"):
-		Transicion.cambiar_escena("res://scenes/world.tscn")
-	# Aquí puedes añadir el código que deseas ejecutar cuando 'listo' cambie
+		if(flag == "correcto"):
+			Transicion.cambiar_escena("res://scenes/world.tscn")
+			# Aquí puedes añadir el código que deseas ejecutar cuando 'listo' cambie
 	
 func _on_pressed():
-	DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/seleccion.dialogue"), "correcto")
+	DialogueManager.show_dialogue_balloon(load(dialogo), flag)

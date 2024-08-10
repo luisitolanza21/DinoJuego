@@ -22,6 +22,7 @@ func _on_body_exited(body):
 
 func player_interacted():
 	print("Player interacted with NPC")
-	get_tree().paused = true
+	
 	DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/minijuego1_1.dialogue"), "npc3")
+	
 	

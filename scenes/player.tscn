@@ -8,7 +8,7 @@
 
 [sub_resource type="GDScript" id="GDScript_i7yhm"]
 script/source = "extends CharacterBody2D
-@export var speed = 500
+@export var speed = 1000
 
 @onready var animated = $SpriteDinoAnimated
 var direction = Vector2()
