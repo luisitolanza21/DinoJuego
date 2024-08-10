@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://buwkurjm8i2x"]
+[gd_scene load_steps=35 format=3 uid="uid://buwkurjm8i2x"]
 
 [ext_resource type="Texture2D" uid="uid://djsdw8qfrcvd8" path="res://assets/calles/calle 1.png" id="1_5ltm1"]
 [ext_resource type="Script" path="res://scripts/minijuegoPersecusion/persecucion_(main).gd" id="1_ojhoy"]
@@ -12153,7 +12153,6 @@ position = Vector2(170, 456)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(30, 453)
-script = ExtResource("14_xdudt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(4356.06, -142)
