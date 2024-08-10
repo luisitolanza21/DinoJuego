@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://3dei3lxqhl8q"]
+[gd_scene load_steps=9 format=3 uid="uid://3dei3lxqhl8q"]
 
 [ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles/calles.png" id="1_d35jg"]
 [ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="2_koxxu"]
@@ -1360,6 +1360,9 @@ texture_region_size = Vector2i(320, 320)
 tile_size = Vector2i(320, 320)
 sources/0 = SubResource("TileSetAtlasSource_gx31s")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgp40"]
+size = Vector2(320, 340)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8c2q7"]
 size = Vector2(878, 818)
 
@@ -1367,10 +1370,26 @@ size = Vector2(878, 818)
 scale = Vector2(0.5, 0.5)
 tile_set = SubResource("TileSet_70jtg")
 format = 2
-layer_0/tile_data = PackedInt32Array(-65536, 65536, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -131072, 131072, 0, -196608, 131072, 0, -1, 0, 0, 0, 131072, 0, -2, 0, 0, -3, 0, 0, -65531, 0, 0, -65530, 0, 0, 65536, 131072, 0, 131072, 131072, 0)
+layer_0/tile_data = PackedInt32Array(-65536, 65536, 0, -65535, 0, 0, -65534, 0, 0, -65533, 0, 0, -65532, 0, 0, -131072, 131072, 0, -196608, 131072, 0, -1, 0, 0, 0, 131072, 0, -2, 0, 0, -3, 0, 0, -65531, 0, 0, -65530, 0, 0, 65536, 131072, 0, 131072, 131072, 0, -262144, 131072, 0)
 
 [node name="cuadra" parent="." instance=ExtResource("2_koxxu")]
 position = Vector2(-974, -956)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="cuadra"]
+position = Vector2(-48, 788)
+shape = SubResource("RectangleShape2D_wgp40")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="cuadra"]
+position = Vector2(1118, -336)
+shape = SubResource("RectangleShape2D_wgp40")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="cuadra"]
+position = Vector2(3320, 804)
+shape = SubResource("RectangleShape2D_wgp40")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="cuadra"]
+position = Vector2(1132, 2020)
+shape = SubResource("RectangleShape2D_wgp40")
 
 [node name="comisaria" parent="." instance=ExtResource("3_x7dpb")]
 position = Vector2(-440, -714)

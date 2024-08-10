@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
-@export var player_name = "Player"
+@export var player_name = "player"
 @export var dialogueResource : DialogueResource
 @export var dialogueStart : String = "Start"
+var listo = Global.listo
 
 func _ready():
 	$Area2D.connect("body_entered", Callable(self, "_on_body_entered"))
@@ -10,18 +11,16 @@ func _ready():
 
 
 func _on_body_entered(body):
-	print("Player entered NPC area1")
+	print(listo)
 	if body.name == player_name:
 		body.set("current_npc", self)
 
-
 func _on_body_exited(body):
-	print("Player entered NPC area2")
+	print(listo)
 	if body.name == player_name:
-		print("Player exited NPC area")
 		body.set("current_npc", null)
 
 func player_interacted():
 	print("Player interacted with NPC")
-	DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/npc1.dialogue"), "this_is_a_node_title")
+	DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/minijuego1_1.dialogue"), "npc1")
 	
