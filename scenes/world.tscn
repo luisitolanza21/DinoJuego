@@ -16,9 +16,9 @@
 [ext_resource type="Script" path="res://scripts/WORLD/coronel_logica.gd" id="13_yblo1"]
 [ext_resource type="PackedScene" uid="uid://dlbp355441i7u" path="res://scenes/world_scenes/parte_del_parque.tscn" id="14_367fu"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="14_vkwj7"]
-[ext_resource type="PackedScene" path="res://scenes/world_scenes/arboles_parte_pequeña.tscn" id="15_2el20"]
+[ext_resource type="PackedScene" uid="uid://dgw1md30ir8np" path="res://scenes/world_scenes/arboles_parte_pequeña.tscn" id="15_2el20"]
 [ext_resource type="Texture2D" uid="uid://s5dgwn83hjad" path="res://assets/edificios_unicos/parque assets.png" id="17_pg5g8"]
-[ext_resource type="PackedScene" path="res://scenes/world_scenes/arbol_con_piso.tscn" id="18_umquc"]
+[ext_resource type="PackedScene" uid="uid://cx8wba2snh7rk" path="res://scenes/world_scenes/arbol_con_piso.tscn" id="18_umquc"]
 [ext_resource type="PackedScene" uid="uid://dannjbdl61ghk" path="res://scenes/world_scenes/casa_3.tscn" id="19_ix82e"]
 [ext_resource type="Texture2D" uid="uid://ca82fmxe7mbar" path="res://assets/UI/shadedLight04.png" id="21_ifiue"]
 [ext_resource type="Texture2D" uid="uid://c83vjulsliu2v" path="res://assets/UI/shadedLight36.png" id="22_r6laa"]
@@ -171,15 +171,6 @@ texture = ExtResource("9_xuyk7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="edificios/castillo_azul"]
 position = Vector2(-1604.5, 1759.5)
 shape = SubResource("RectangleShape2D_1gdx0")
-
-[node name="CORONEL_NPC" parent="." instance=ExtResource("13_o46t5")]
-position = Vector2(273, 624)
-scale = Vector2(0.683015, 0.683015)
-script = ExtResource("13_yblo1")
-
-[node name="NPC_mision1" parent="." instance=ExtResource("14_vkwj7")]
-position = Vector2(450, 2940)
-scale = Vector2(1.39745, 1.38783)
 
 [node name="parque" type="Node2D" parent="."]
 
@@ -390,6 +381,17 @@ position = Vector2(-4198, 5080)
 
 [node name="casa_39" parent="fin de la ciudad" instance=ExtResource("7_uigbc")]
 position = Vector2(-4510, -1607)
+
+[node name="NPCS" type="Node2D" parent="."]
+
+[node name="CORONEL_NPC" parent="NPCS" instance=ExtResource("13_o46t5")]
+position = Vector2(273, 624)
+scale = Vector2(0.683015, 0.683015)
+script = ExtResource("13_yblo1")
+
+[node name="NPC_mision1" parent="NPCS" instance=ExtResource("14_vkwj7")]
+position = Vector2(421, 2922)
+scale = Vector2(1.40102, 1.39137)
 
 [node name="player" parent="." instance=ExtResource("2_7d60p")]
 position = Vector2(-2084, -1066)

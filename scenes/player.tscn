@@ -17,6 +17,7 @@ var idle_position: int = 0
 @onready var camara = $Camera2D
 
 var current_npc = null
+var dino_position = Vector2(position)
 
 func _ready():
 	$Area2D.connect(\"body_entered\", Callable(self, \"_on_body_entered\"))
@@ -69,6 +70,8 @@ func _on_body_entered(body):
 func _on_body_exited(body):
 	if body == current_npc:
 		current_npc = null
+
+
 
 "
 

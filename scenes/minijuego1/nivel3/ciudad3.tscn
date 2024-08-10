@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://7juse7binryn"]
 
-[ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles/calles.png" id="1_1xfib"]
+[ext_resource type="Texture2D" uid="uid://b06lu8i140l61" path="res://assets/calles/calles.png" id="1_1xfib"]
 [ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="2_iftsg"]
 [ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="3_3nmjy"]
 [ext_resource type="PackedScene" uid="uid://vhsr0lwaev0l" path="res://scenes/world_scenes/cuadra_estilo_2.tscn" id="4_nhral"]
-[ext_resource type="PackedScene" path="res://scenes/world_scenes/arbol_sin_piso.tscn" id="6_u0mum"]
+[ext_resource type="PackedScene" uid="uid://blgd2iyubxb0c" path="res://scenes/world_scenes/arbol_sin_piso.tscn" id="6_u0mum"]
 [ext_resource type="PackedScene" uid="uid://8m11sauenl4k" path="res://scenes/world_scenes/casa_1.tscn" id="8_yh8om"]
 [ext_resource type="PackedScene" uid="uid://cqucukouetgb0" path="res://scenes/world_scenes/casa_2.tscn" id="9_oiu16"]
 [ext_resource type="PackedScene" uid="uid://dannjbdl61ghk" path="res://scenes/world_scenes/casa_3.tscn" id="10_syifj"]

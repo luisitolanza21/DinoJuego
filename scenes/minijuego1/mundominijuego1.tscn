@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego1.gd" id="1_h7gmc"]
 [ext_resource type="PackedScene" uid="uid://3dei3lxqhl8q" path="res://scenes/minijuego1/ciudad1.tscn" id="5_eoba2"]
-[ext_resource type="PackedScene" uid="uid://d04ah2kuf8exf" path="res://scenes/ciudad.tscn" id="5_yqq6r"]
+[ext_resource type="PackedScene" path="res://scenes/ciudad.tscn" id="5_yqq6r"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="6_7j6cd"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="7_qy4hq"]
 [ext_resource type="Script" path="res://scripts/UI.gd" id="8_sa3s2"]
