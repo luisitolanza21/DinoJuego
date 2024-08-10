@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/WORLD/logica_world.gd" id="1_bm47p"]
 [ext_resource type="PackedScene" uid="uid://c66vv04fsnrtl" path="res://scenes/world_scenes/comisaría.tscn" id="1_i5a5j"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="2_7d60p"]
-[ext_resource type="PackedScene" uid="uid://de51d7hgc81rt" path="res://scenes/world_scenes/botones.tscn" id="2_71bc5"]
+[ext_resource type="PackedScene" path="res://scenes/world_scenes/botones.tscn" id="2_71bc5"]
 [ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="3_bvxdc"]
 [ext_resource type="PackedScene" uid="uid://8m11sauenl4k" path="res://scenes/world_scenes/casa_1.tscn" id="4_qlewv"]
 [ext_resource type="PackedScene" uid="uid://cqucukouetgb0" path="res://scenes/world_scenes/casa_2.tscn" id="5_6qgay"]
