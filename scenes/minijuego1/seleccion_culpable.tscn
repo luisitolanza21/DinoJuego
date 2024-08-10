@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c5up5ok3fjos4"]
+[gd_scene load_steps=16 format=3 uid="uid://c5up5ok3fjos4"]
 
 [ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles/calles.png" id="1_phgc6"]
 [ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="2_b22xn"]
@@ -25,18 +25,11 @@ sources/0 = SubResource("TileSetAtlasSource_73bjr")
 atlas = ExtResource("3_ohov7")
 region = Rect2(738, 0, 246, 428)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nie4y"]
-atlas = ExtResource("3_ohov7")
-region = Rect2(246, 428, 246, 428)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_tvs2w"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_eo1fq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nie4y")
 }],
 "loop": true,
 "name": &"default",
