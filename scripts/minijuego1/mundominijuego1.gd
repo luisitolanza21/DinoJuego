@@ -8,6 +8,7 @@ extends Node2D
 var max_attempts = 1000
 
 func _ready():
+	Misiones.esta_en_world = false #para que el npc tenga otro dialogo fuera del world
 	randomize()
 	spawn_characters()
 

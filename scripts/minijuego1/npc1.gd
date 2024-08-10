@@ -21,6 +21,7 @@ func _on_body_exited(body):
 		body.set("current_npc", null)
 
 func player_interacted():
+
 	print("Player interacted with NPC")
 	DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/minijuego1_1.dialogue"), "npc1")
-	
+			

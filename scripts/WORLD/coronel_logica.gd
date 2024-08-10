@@ -20,6 +20,7 @@ func _on_body_exited(body):
 
 func player_interacted():
 	if Misiones.mision == 2:
+		Misiones.continuacion = 1
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
 		# Mostrar el diálogo
 		DialogueManager.show_dialogue_balloon(dialogue_resource)

@@ -2,6 +2,7 @@ extends Node
 
 @export var mision: int = 1  # Variable para controlar la misión actual
 @export var continuacion: int = 1 # variable para controlar dialogo dentro de las mismas misiones
+@export var esta_en_world: bool = true
 # Variable para almacenar el recurso de diálogo
 var current_dialogue_path : String = ""
 
