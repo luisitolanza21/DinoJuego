@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cjv2mlqqavuhb"]
+[gd_scene load_steps=12 format=3 uid="uid://cjv2mlqqavuhb"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego2.gd" id="1_8fn0v"]
 [ext_resource type="PackedScene" uid="uid://cmtpga8mk0d14" path="res://scenes/minijuego1/nivel2/ciudad2.tscn" id="2_jy2xc"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://scripts/minijuego1/policia.gd" id="6_enmuw"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="7_x8fyf"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="8_wbi1m"]
+[ext_resource type="Script" path="res://scripts/minijuego1/npc.gd" id="9_n3pfg"]
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="10_bi6r4"]
 [ext_resource type="Resource" uid="uid://ch627og680phc" path="res://dialogs/dinodetective1/policia.dialogue" id="12_ffytw"]
 
@@ -29,9 +30,6 @@ limit_bottom = 3630
 script = ExtResource("7_x8fyf")
 objetct_follow = NodePath("../CharacterBody2D")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("8_wbi1m")]
-position = Vector2(456, 864)
-
 [node name="NPC_1" parent="." instance=ExtResource("10_bi6r4")]
 position = Vector2(180, 829)
 script = ExtResource("6_enmuw")
@@ -41,11 +39,25 @@ dialogueResource = ExtResource("12_ffytw")
 [node name="CharacterBody2D2" parent="." instance=ExtResource("2_tdyoa")]
 position = Vector2(2386, 133)
 scale = Vector2(2, 2)
+script = ExtResource("9_n3pfg")
+dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+flag = "npc1"
 
 [node name="CharacterBody2D3" parent="." instance=ExtResource("3_gq8kw")]
 position = Vector2(-1548, 1387)
 scale = Vector2(2, 2)
+script = ExtResource("9_n3pfg")
+player_name = "player"
+dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+flag = "npc2"
+dialogueStart = "Start"
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("4_eijhw")]
 position = Vector2(113, 3025)
 scale = Vector2(2, 2)
+script = ExtResource("9_n3pfg")
+dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+flag = "npc3"
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("8_wbi1m")]
+position = Vector2(456, 864)

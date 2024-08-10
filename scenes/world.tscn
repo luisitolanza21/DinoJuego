@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="14_vkwj7"]
 [ext_resource type="PackedScene" path="res://scenes/world_scenes/arboles_parte_pequeña.tscn" id="15_2el20"]
 [ext_resource type="Texture2D" uid="uid://s5dgwn83hjad" path="res://assets/edificios_unicos/parque assets.png" id="17_pg5g8"]
-[ext_resource type="PackedScene" uid="uid://cx8wba2snh7rk" path="res://scenes/world_scenes/arbol_con_piso.tscn" id="18_umquc"]
+[ext_resource type="PackedScene" path="res://scenes/world_scenes/arbol_con_piso.tscn" id="18_umquc"]
 [ext_resource type="PackedScene" uid="uid://dannjbdl61ghk" path="res://scenes/world_scenes/casa_3.tscn" id="19_ix82e"]
 [ext_resource type="Texture2D" uid="uid://ca82fmxe7mbar" path="res://assets/UI/shadedLight04.png" id="21_ifiue"]
 [ext_resource type="Texture2D" uid="uid://c83vjulsliu2v" path="res://assets/UI/shadedLight36.png" id="22_r6laa"]
@@ -387,7 +387,6 @@ position = Vector2(-4510, -1607)
 [node name="player" parent="." instance=ExtResource("2_7d60p")]
 position = Vector2(-2054, -1031)
 scale = Vector2(0.761783, 0.67924)
-speed = 1000
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(53.9604, 22.219)

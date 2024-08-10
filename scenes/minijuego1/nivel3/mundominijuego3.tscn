@@ -1,0 +1,61 @@
+[gd_scene load_steps=12 format=3 uid="uid://bp8scbgafvtfv"]
+
+[ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego2.gd" id="1_ulh80"]
+[ext_resource type="PackedScene" uid="uid://7juse7binryn" path="res://scenes/minijuego1/nivel3/ciudad3.tscn" id="2_g017b"]
+[ext_resource type="Script" path="res://scripts/Camera2D.gd" id="2_h4kpg"]
+[ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="3_f1wgs"]
+[ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="4_hd2ly"]
+[ext_resource type="Script" path="res://scripts/minijuego1/policia.gd" id="5_acl8n"]
+[ext_resource type="Resource" uid="uid://ch627og680phc" path="res://dialogs/dinodetective1/policia.dialogue" id="6_kvh7q"]
+[ext_resource type="PackedScene" uid="uid://djwdjwhi7xkie" path="res://scenes/minijuego1/npc1.tscn" id="7_dvapl"]
+[ext_resource type="Script" path="res://scripts/minijuego1/npc.gd" id="8_0yky4"]
+[ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="9_wugut"]
+[ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="10_8t2qb"]
+
+[node name="nivel2" type="Node2D"]
+script = ExtResource("1_ulh80")
+
+[node name="ciudad3" parent="." instance=ExtResource("2_g017b")]
+position = Vector2(-1393, 1350)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objetct_follow")]
+position = Vector2(224, 1164)
+zoom = Vector2(0.4, 0.4)
+limit_left = -2190
+limit_top = -1495
+limit_right = 3250
+limit_bottom = 3630
+script = ExtResource("2_h4kpg")
+objetct_follow = NodePath("../CharacterBody2D")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_f1wgs")]
+position = Vector2(456, 864)
+
+[node name="NPC_1" parent="." instance=ExtResource("4_hd2ly")]
+position = Vector2(180, 829)
+script = ExtResource("5_acl8n")
+escena = "res://scenes/minijuego1/nivel3/seleccion_culpable3.tscn"
+dialogueResource = ExtResource("6_kvh7q")
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("7_dvapl")]
+position = Vector2(2190, 417)
+scale = Vector2(2, 2)
+script = ExtResource("8_0yky4")
+dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+flag = "npc1"
+
+[node name="CharacterBody2D3" parent="." instance=ExtResource("9_wugut")]
+position = Vector2(-216, 2575)
+scale = Vector2(2, 2)
+script = ExtResource("8_0yky4")
+player_name = "player"
+dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+flag = "npc2"
+dialogueStart = "Start"
+
+[node name="CharacterBody2D4" parent="." instance=ExtResource("10_8t2qb")]
+position = Vector2(2061, 2781)
+scale = Vector2(2, 2)
+script = ExtResource("8_0yky4")
+dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+flag = "npc3"
