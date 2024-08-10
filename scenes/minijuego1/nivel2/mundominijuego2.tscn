@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="10_bi6r4"]
 [ext_resource type="Resource" uid="uid://ch627og680phc" path="res://dialogs/dinodetective1/policia.dialogue" id="12_ffytw"]
 
-[node name="nivel2" type="Node2D"]
+[node name="nivel3" type="Node2D"]
 script = ExtResource("1_8fn0v")
 metadata/_edit_horizontal_guides_ = [22.0, -69.0, 1944.0, 1935.0, -1495.0, 3631.0]
 metadata/_edit_vertical_guides_ = [-460.0, 2574.0, 390.0, 2415.0, 3250.0, -2193.0]
