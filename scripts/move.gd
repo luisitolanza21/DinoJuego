@@ -8,6 +8,14 @@ var idle_position: int = 0
 
 @onready var camara = $Camera2D
 func _input(event):
+	
+	if Global.botones == true:
+		$player/Camera2D/joystick.visible = true
+		$player/Camera2D/ShadedLight36.visible = true
+	else:
+		$player/Camera2D/joystick.visible = false
+		$player/Camera2D/ShadedLight36.visible = false
+	
 	direction.x = Input.get_axis("left","right")
 	direction.y = Input.get_axis("up","down")
 	#camara.zoom = Vector2(1,1)

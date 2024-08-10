@@ -1,5 +1,7 @@
 ~ Llegada_a_la_Comisaría
 
+set Global.botones = false
+
 if Misiones.continuacion == 1:
 	
 	Dino: "¡Coronel, aquí estoy! ¿Qué sucede?"
@@ -20,9 +22,12 @@ if Misiones.continuacion == 3:
 	Ciudadano: "Gracias Dino!! he recuperado mis pertenencias"
 	
 	Dino: "No te preocupes, solo recuerda ¡DI-NO a la injusticia!"
-		
+	
+	Dino: "Debería volver a la comisaría"
 	set Misiones.mision = 3
 	set Misiones.continuacion = 1
 if Misiones.mision == 3:
-	Ciudadano: Dino: "Debería volver a la comisaria"
+	Ciudadano: "Gracias Dino!!, deberías volver a tu trabajo"
+
+set Global.botones = true
 => END

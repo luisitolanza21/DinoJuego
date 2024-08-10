@@ -2,7 +2,8 @@ extends Node
 
 #guardar posicion del dino al cambiar de escena
 var dino_position = Vector2(-2084, -1066)
-
+#variable para ocular botones cuando hay un dialogo
+var botones: bool = true
 
 #var listo: String = "no"
 signal listo_changed(new_value)

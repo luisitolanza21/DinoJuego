@@ -24,7 +24,7 @@ func player_interacted():
 	if Misiones.esta_en_world: # haciendo referencia a que el npc esta en el mundo
 		if Misiones.mision == 3:
 			Misiones.continuacion = 4
-			DialogueManager.show_dialogue_balloon(load("res://dialogs/world/coronel_primera_primera_misión.dialogue"))
+			DialogueManager.show_dialogue_balloon(load("res://dialogs/world/coronel_primera_primera_mision.dialogue"))
 			
 		else:
 			Misiones.continuacion = 2

@@ -17,7 +17,7 @@ func cargar_mision(mision_id: int):
 		1:
 			current_dialogue_path = "res://dialogs/world/START.dialogue"
 		2:
-			current_dialogue_path = "res://dialogs/world/coronel_primera_primera_misión.dialogue"
+			current_dialogue_path = "res://dialogs/world/coronel_primera_primera_mision.dialogue"
 		3:
 			current_dialogue_path = "res://dialogs/world/mission3.dialogue"
 		4:
