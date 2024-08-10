@@ -18,6 +18,7 @@ if Misiones.continuacion == 2:
 	Ciudadano: "Dino, me han robado mis cosas ayudame a encontrar al culpable"
 	Dino: "Claro!!, comencemos"
 	set Transicion.cambiar_escena("res://scenes/minijuego1/mundominijuego1.tscn")
+	set Misiones.este_en_world = false
 if Misiones.continuacion == 3:
 	Ciudadano: "Gracias Dino!! he recuperado mis pertenencias"
 	

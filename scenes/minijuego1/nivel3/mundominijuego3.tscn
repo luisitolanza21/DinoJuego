@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="2_h4kpg"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="3_f1wgs"]
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="4_hd2ly"]
-[ext_resource type="PackedScene" uid="uid://dgtr6jln0idjp" path="res://scenes/minijuego1/autopolicia.tscn" id="4_lcrn1"]
+[ext_resource type="PackedScene" path="res://scenes/minijuego1/autopolicia.tscn" id="4_lcrn1"]
 [ext_resource type="Script" path="res://scripts/minijuego1/policia.gd" id="5_acl8n"]
 [ext_resource type="Resource" uid="uid://ch627og680phc" path="res://dialogs/dinodetective1/policia.dialogue" id="6_kvh7q"]
 [ext_resource type="PackedScene" uid="uid://djwdjwhi7xkie" path="res://scenes/minijuego1/npc1.tscn" id="7_dvapl"]
@@ -52,10 +52,8 @@ flag = "npc1"
 position = Vector2(-216, 2575)
 scale = Vector2(2, 2)
 script = ExtResource("8_0yky4")
-player_name = "player"
 dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
 flag = "npc2"
-dialogueStart = "Start"
 
 [node name="CharacterBody2D4" parent="." instance=ExtResource("10_8t2qb")]
 position = Vector2(2061, 2781)
