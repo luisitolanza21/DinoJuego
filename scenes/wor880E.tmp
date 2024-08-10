@@ -77,6 +77,8 @@ size = Vector2(4763.25, 6638.5)
 [node name="Node2D" type="Node2D"]
 position = Vector2(-30, 0)
 script = ExtResource("1_bm47p")
+dialogueResourcePath = null
+mision = null
 
 [node name="calles" type="TileMap" parent="."]
 position = Vector2(13, -6)
@@ -177,7 +179,7 @@ position = Vector2(273, 624)
 scale = Vector2(0.683015, 0.683015)
 script = ExtResource("13_yblo1")
 
-[node name="NPC_mision1" parent="." instance=ExtResource("14_vkwj7")]
+[node name="CharacterBody2D2" parent="." instance=ExtResource("14_vkwj7")]
 position = Vector2(450, 2940)
 scale = Vector2(1.39745, 1.38783)
 
