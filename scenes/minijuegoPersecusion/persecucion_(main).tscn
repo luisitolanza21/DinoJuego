@@ -10505,8 +10505,8 @@ position = Vector2(-108, -323)
 
 [node name="DINOMOVIL" parent="." instance=ExtResource("8_0bce6")]
 position = Vector2(-94, 207)
-MAX_SPEED = 800.0
-ACCELERATION = 100.0
+MAX_SPEED = 5000.0
+ACCELERATION = 800.0
 
 [node name="Camera2D" type="Camera2D" parent="DINOMOVIL"]
 position = Vector2(288, 87)
