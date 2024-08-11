@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3r2q1twsx2mb"]
+
+[ext_resource type="Script" path="res://scripts/minijuego1/npc.gd" id="1_0qg73"]
+[ext_resource type="Texture2D" uid="uid://x2x3tmmxwbtf" path="res://assets/autos/auto 3.png" id="1_bj2yl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hu1h"]
+size = Vector2(524.125, 243)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j26sy"]
+radius = 295.332
+
+[node name="vehiculo_persecusion" type="CharacterBody2D"]
+script = ExtResource("1_0qg73")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bj2yl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 27)
+shape = SubResource("RectangleShape2D_1hu1h")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 0.0348062
+shape = SubResource("CircleShape2D_j26sy")

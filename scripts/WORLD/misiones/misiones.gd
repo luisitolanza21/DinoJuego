@@ -1,6 +1,7 @@
 extends Node
-
-@export var mision: int = 1  # Variable para controlar la misión actual
+# MISION INICIA EN 0
+# CONTINUACION INICA EN 1
+@export var mision: int = 0 # Variable para controlar la misión actual
 @export var continuacion: int = 1 # variable para controlar dialogo dentro de las mismas misiones
 @export var esta_en_world: bool = true
 # Variable para almacenar el recurso de diálogo
@@ -14,14 +15,16 @@ func _ready():
 func cargar_mision(mision_id: int):
 	# Define las rutas de los recursos para cada misión
 	match mision_id:
+		0:
+			current_dialogue_path = "res://dialogs/world/START.dialogue"	
 		1:
-			current_dialogue_path = "res://dialogs/world/START.dialogue"
+			current_dialogue_path = "res://dialogs/world/mision_1.dialogue"	
 		2:
-			current_dialogue_path = "res://dialogs/world/coronel_primera_primera_mision.dialogue"
+			current_dialogue_path = "res://dialogs/world/mision_2.dialogue"
 		3:
-			current_dialogue_path = "res://dialogs/world/mission3.dialogue"
+			current_dialogue_path = "res://dialogs/world/mision_3.dialogue"
 		4:
-			current_dialogue_path = "res://dialogs/world/mission4.dialogue"
+			current_dialogue_path = "res://dialogs/world/mission_4.dialogue"
 		# Agrega más casos según el número de misiones
 		_:
 			print("Misión no definida para el ID: ", mision_id)
