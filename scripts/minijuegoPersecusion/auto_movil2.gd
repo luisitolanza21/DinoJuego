@@ -1,9 +1,9 @@
 class_name AutoPolicia
 extends CharacterBody2D
 
-@export var MAX_SPEED = 500.0
-@export var ACCELERATION = 500.0
-@export var DECELERATION = 200.0
+@export var MAX_SPEED = 700.0;
+@export var ACCELERATION = 500.0;
+@export var DECELERATION = 200.0;
 @export var vida=3;
 
 @onready var animacionAdelante=$avanzando;

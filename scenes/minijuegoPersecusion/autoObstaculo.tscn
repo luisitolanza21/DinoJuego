@@ -8,12 +8,12 @@
 script/source = "class_name AutoObstaculo;
 extends CharacterBody2D
 
-@export var MAX_SPEED_REF= 1000;
+@export var MAX_SPEED_REF= 1500;
 @export var MIN_SPEED_REF= 200;
 
-@export var ACCELERATION = 400;
+@export var ACCELERATION = 1500;
 
-@export var DECELERATION = 200.0;
+@export var DECELERATION = 500.0;
 
 @export var SUBIR=false;
 @export var BAJAR=false;
@@ -21,7 +21,8 @@ extends CharacterBody2D
 @export var RETROCEDER=false;
 @export var posicionParaDesaparecerX=-400;
 
-var MAX_SPEED;
+@export var MAX_SPEED=randf_range(MIN_SPEED_REF, MAX_SPEED_REF);
+
 #ALEATORIZANDO SPRITESÇ
 var current_sprite: Sprite2D;
 var sprite_auto_rojo: Sprite2D
@@ -48,7 +49,7 @@ func _ready():
 	raycastFrontalSuperior=$RayCastFrontalSuperior;
 	raycastFrontalInferior=$RayCastFrontalInferior;
 	
-	MAX_SPEED=randf_range(MIN_SPEED_REF, MAX_SPEED_REF);
+	
 	
 	
 	var random_choice =  randi() % 3  # Generate a random number between 0 and 2
@@ -69,14 +70,34 @@ func detectarCosas(delta):
 	var colisionFrontalSuperior= raycastFrontalSuperior.is_colliding() 
 	var colisionFrontalInferior=  raycastFrontalInferior.is_colliding() 
 	var colisionFrontal = raycastFrontal.is_colliding() or raycastFrontalSuperior.is_colliding() or raycastFrontalInferior.is_colliding();
-
+	
+	var colisionMultiple = (raycastFrontal.is_colliding() and raycastFrontalSuperior.is_colliding() and raycastFrontalInferior.is_colliding());
+	var colisionMultipleSuperior = (raycastFrontal.is_colliding() and raycastFrontalSuperior.is_colliding());
+	var colisionMultipleInferior = (raycastFrontal.is_colliding() and raycastFrontalInferior.is_colliding());
 	# Depuración de cada colisión
-	print(\"colisionFrontal:\", colisionFrontal)
-	print(\"colisionSuperior:\", colisionSuperior)
-	print(\"colisionInferior:\", colisionInferior)
-	print(\"colisionFrontalSuperior:\", colisionFrontalSuperior)
-	print(\"colisionFrontalInferior:\", colisionFrontalInferior)
-
+	#print(\"colisionFrontal:\", colisionFrontal)
+	#print(\"colisionSuperior:\", colisionSuperior)
+	#print(\"colisionInferior:\", colisionInferior)
+	#print(\"colisionFrontalSuperior:\", colisionFrontalSuperior)
+	#print(\"colisionFrontalInferior:\", colisionFrontalInferior)
+# Verifica si alguna de las colisiones ocurre
+	if raycastFrontal.is_colliding() or colisionMultipleInferior or colisionMultipleSuperior:
+		var other_car = raycastFrontal.get_collider() if raycastFrontal.is_colliding() else null
+		if other_car is AutoObstaculo:
+			if other_car == null and raycastFrontalSuperior.is_colliding():
+				other_car = raycastFrontalSuperior.get_collider()
+			if other_car == null and raycastFrontalInferior.is_colliding():
+				other_car = raycastFrontalInferior.get_collider()
+			if other_car and other_car != self:
+				var eleccion=randi_range(0, 2);
+				if eleccion == 1:
+					MAX_SPEED = other_car.MAX_SPEED;
+				else:
+					other_car.MAX_SPEED = MAX_SPEED;
+				print(\"================ Igualando velocidad\");
+			
+		# print(\"MAX_SPEED enviado al auto de atrás: \", MAX_SPEED)
+	#	print(\"MAX_SPEED enviado al auto de atrás: \", MAX_SPEED)
 	if colisionFrontal:
 		if (colisionSuperior and colisionInferior) or (colisionFrontal and colisionFrontalSuperior and colisionFrontalInferior):
 			#print(\"Detección frontal, superior e inferior\")
@@ -93,6 +114,7 @@ func detectarCosas(delta):
 		elif colisionFrontalInferior or (colisionFrontalInferior and colisionFrontal):
 			#print(\"Detección frontal e inferior\")
 			dirVertical = -1
+		
 	else:
 		#print(\"Sin detección frontal\")
 		dirVertical = 0
@@ -135,10 +157,15 @@ func moverAutomovil(delta, dirHorizontal, dirVertical, freno):
 
 	move_and_slide()
 func destruiAuto():
+
+	print(\"Destruido\")
 	queue_free();
 
 func _physics_process(delta):
 	detectarCosas(delta);
+	#Condicion para destruir auto
+	if(position.x>60000):
+		destruiAuto();
 
 func _on_area_2d_body_entered(body):
 	if body is AutoPolicia:

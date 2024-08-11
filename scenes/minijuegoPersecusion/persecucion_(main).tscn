@@ -10488,14 +10488,12 @@ size = Vector2(30987.8, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j5co3"]
 size = Vector2(8961.88, 24.75)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pgh5i"]
-radius = 239.0
-height = 478.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_wffro"]
+radius = 239.37
 
 [node name="persecucion" type="Node2D"]
 position = Vector2(105, 326)
 script = ExtResource("1_ojhoy")
-metadata/_edit_horizontal_guides_ = [370.0, 581.0]
 
 [node name="Inicio" type="AnimationPlayer" parent="."]
 libraries = {
@@ -10529,6 +10527,10 @@ position = Vector2(178.927, -11.2385)
 [node name="Trampas" type="Node2D" parent="."]
 rotation = -0.0231387
 
+[node name="autoMovil1" parent="Trampas" instance=ExtResource("20_52ed3")]
+position = Vector2(-241.99, 126.435)
+rotation = 0.0231387
+
 [node name="ObstaculosAleatorios" parent="Trampas" instance=ExtResource("12_kr5pj")]
 position = Vector2(-166.48, -326.939)
 rotation = 0.0231387
@@ -10541,11 +10543,15 @@ rotation = 0.0231387
 position = Vector2(136.728, 186.213)
 
 [node name="DINOMOVIL" parent="." instance=ExtResource("8_0bce6")]
-position = Vector2(-85, 143)
+position = Vector2(-68, 192)
 floor_max_angle = 0.0
 MAX_SPEED = 1000.0
 ACCELERATION = 150.0
 DECELERATION = 500.0
+
+[node name="Camera2D" type="Camera2D" parent="DINOMOVIL"]
+position = Vector2(256, 82)
+limit_bottom = 800
 
 [node name="autoEnemigo" parent="." instance=ExtResource("12_5vi4u")]
 position = Vector2(375, 345)
@@ -12350,14 +12356,7 @@ position = Vector2(60438, 181)
 script = ExtResource("19_x4iyv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaFinal"]
-position = Vector2(-71, -6)
-shape = SubResource("CapsuleShape2D_pgh5i")
-
-[node name="autoMovil1" parent="." instance=ExtResource("20_52ed3")]
-position = Vector2(-223, 167)
-
-[node name="Camera2D" type="Camera2D" parent="autoMovil1"]
-position = Vector2(426, 63)
-limit_bottom = 800
+position = Vector2(-158, -8)
+shape = SubResource("CircleShape2D_wffro")
 
 [connection signal="body_entered" from="AreaFinal" to="AreaFinal" method="_on_body_entered"]

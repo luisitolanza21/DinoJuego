@@ -1,10 +1,11 @@
 extends Node2D
 
 var autoObstaculo=load("res://scenes/minijuegoPersecusion/autoObstaculo.tscn")
-
+var autoPolicia;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	autoPolicia=get_node("../../DINOMOVIL");
 	pass # Replace with function body.
 
 
@@ -20,13 +21,21 @@ func _process(delta):
 func create_obstacles():
 	# Instanciar la escena del auto obstáculo
 	var new_obs = autoObstaculo.instantiate()
-	if new_obs:
-		print("Nuevo obstáculo instanciado.")
-	# Asignar una posición aleatoria en y
 
+	# Asignar una posición aleatoria en y
+	var x=-100;
+	# Si super la velocidad de DINOMOVIL se genera a una distancia de  -200 del DINOMOVIL
+	# caso contrario se genera a 200 mas adelante del dinomovil
+	if new_obs.MAX_SPEED > autoPolicia.MAX_SPEED:
+		print("Generado ATRAS del dinomovil")
+		x=autoPolicia.position.x -200;
+	else:
+		print("Generado delante del dinomovil")
+		x=autoPolicia.position.x + 1000;
+		
 	var y=randf_range(390, 580)
-	new_obs.position = Vector2(0, y);
+	new_obs.position = Vector2(x, y);
 	# Añadir el nuevo obstáculo a la escena actual
 	add_child(new_obs)
-	print("Obstáculo añadido a la escena. y="+str(y))
+
 
