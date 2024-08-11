@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bcv5c52tpihdf"
+path="res://.godot/imported/mision_2.dialogue-017bb361249c2918fa7c09a6aac0c216.tres"
+
+[deps]
+
+source_file="res://dialogs/world/mision_2.dialogue"
+dest_files=["res://.godot/imported/mision_2.dialogue-017bb361249c2918fa7c09a6aac0c216.tres"]
+
+[params]
+
+defaults=true

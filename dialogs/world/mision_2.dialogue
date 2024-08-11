@@ -1,0 +1,43 @@
+~ MISION_2
+set Global.botones = false
+
+MISION: "¿Deseas continuar a la siguiente mision?"
+- si
+	Coronel: Perfecto, continuemos
+	=> MISION_2_1
+- no
+	Coronel: Regresa cuando estes preparado
+=> END!
+
+~ MISION_2_1
+Coronel: "hemos recibido informes de un individuo sospechoso que ha estado causando problemas en las calles. Se dedica a intimidar a los vecinos y ha escapado de nuestros agentes más de una vez. No podemos permitir que siga sembrando el miedo. Quiero que lo encuentres y lo detengas antes de que cause más daño."
+
+Dino: "Entendido, Coronel. Nadie escapa de Dino. DI-NO a la inseguridad! ¿Alguna pista sobre su paradero?"
+
+Coronel: "Lo vimos por última vez en las cercanías del castillo azul. Es rápido, pero confío en que tú lo serás más. Recuerda, Dino, esta no es solo una persecución. Es una oportunidad para mostrarle a la ciudad que estamos aquí para protegerla."
+
+Dino: "Voy a necesitar estar en mi mejor forma. ¡Esta ciudad merece estar en paz y tranquilidad!"
+
+Coronel: "Buena suerte, Dino. Te estaré apoyando desde aquí."
+set Misiones.continuacion = 2
+=> END!
+
+~ MISION_2_2
+Dino: "Alto ahí!!"
+Conducto: "No me atraparas jamas Dino!!" 
+do Transicion.cambiar_escena("res://scenes/minijuegoPersecusion/persecucion_(main).tscn")
+set Global.botones = true
+=> END!  
+
+~ MISION_2_3
+Conductor: "Está bien, está bien... me atrapaste. No puedo correr más."
+
+Dino: "Sabías que esto iba a pasar. No hay lugar para la violencia y el caos en Tarija. Aquí decimos ¡DI-NO al crimen!"
+
+Conductor: "Solo quería... escapar, pero ahora veo que no vale la pena."
+
+Dino: "Siempre hay otra opción. El camino que elegiste solo lleva a más problemas. Ahora, enfrentaremos las consecuencias, pero también es una oportunidad para cambiar."
+
+Dino: Deberia ir a comunicarle al coronel
+
+=> END!  

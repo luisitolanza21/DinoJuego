@@ -12,7 +12,7 @@ func _on_listo_changed(new_value):
 	if (Global.listo == "si"):
 		if(flag == "correcto"):
 			Transicion.cambiar_escena("res://scenes/world.tscn")
-			Misiones.continuacion += 1  # para continuar los dialogos de la mision 2 o siguiente mision 
+			#Misiones.continuacion += 1  # para continuar los dialogos de la mision 2 o siguiente mision 
 			#cargar ultimo dialogo de la mision 2
 			# Aquí puedes añadir el código que deseas ejecutar cuando 'listo' cambie
 			
