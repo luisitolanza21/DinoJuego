@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cx8wba2snh7rk" path="res://scenes/world_scenes/arbol_con_piso.tscn" id="12_xac0a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7djgr"]
+size = Vector2(673, 212)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s86cj"]
 texture = ExtResource("1_v6b3k")
@@ -53,6 +54,7 @@ sources/2 = SubResource("TileSetAtlasSource_mk7xt")
 [node name="Trafico1" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1811, 1737)
 shape = SubResource("RectangleShape2D_7djgr")
 
 [node name="TileMap" type="TileMap" parent="."]
