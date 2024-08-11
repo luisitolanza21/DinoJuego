@@ -1,0 +1,15 @@
+~ dinoDialogoDeLaDinoPersecucion
+
+Comisario: [[Hi|Hola|Saludos]], Persigue al vehículo sospehoso !!!!!!.
+
+#Nathan: Here are some choices.
+#- First one
+#	Nathan: You picked the first one.
+#- Second one
+#	Nathan: You picked the second one.
+#- Start again => dinoDialogoDeLaDinoPersecucion
+#- End the conversation => END
+#Coronel: For more information see the online documentation.
+
+
+=> END

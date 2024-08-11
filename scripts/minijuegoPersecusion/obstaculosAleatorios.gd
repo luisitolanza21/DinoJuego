@@ -13,6 +13,9 @@ func _process(delta):
 	if $TiempoGen.is_stopped():
 		create_obstacles();
 		$TiempoGen.start();
+
+		
+	
 		
 func create_obstacles():
 	# Instanciar la escena del auto obstáculo
@@ -21,9 +24,9 @@ func create_obstacles():
 		print("Nuevo obstáculo instanciado.")
 	# Asignar una posición aleatoria en y
 
-	var x=$"../DINOMOVIL".position
-	var y=randf_range(468, 650)
+	var y=randf_range(390, 580)
 	new_obs.position = Vector2(0, y);
 	# Añadir el nuevo obstáculo a la escena actual
 	add_child(new_obs)
 	print("Obstáculo añadido a la escena. y="+str(y))
+

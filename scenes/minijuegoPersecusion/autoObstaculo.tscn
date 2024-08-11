@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://tx0rn48uy3po"]
+[gd_scene load_steps=6 format=3 uid="uid://tx0rn48uy3po"]
 
 [ext_resource type="Texture2D" uid="uid://x2x3tmmxwbtf" path="res://assets/autos/auto 3.png" id="1_jb8yw"]
 [ext_resource type="Texture2D" uid="uid://2wup3i4wbx2h" path="res://assets/autos/auto 1.png" id="2_xfjj6"]
 [ext_resource type="Texture2D" uid="uid://cw7hrqmxjb3i1" path="res://assets/autos/auto 2.png" id="3_auob7"]
 
 [sub_resource type="GDScript" id="GDScript_cs50k"]
-script/source = "extends CharacterBody2D
+script/source = "class_name AutoObstaculo;
+extends CharacterBody2D
 
 @export var MAX_SPEED_REF= 1000;
 @export var MIN_SPEED_REF= 200;
@@ -27,14 +28,25 @@ var sprite_auto_rojo: Sprite2D
 var sprite_auto_verde: Sprite2D
 var sprite_auto_amarillo: Sprite2D
 
+var raycastFrontal: RayCast2D;
+var raycastSuperior: RayCast2D;
+var raycastInferior: RayCast2D;
+var raycastFrontalSuperior: RayCast2D;
+var raycastFrontalInferior: RayCast2D;
+
 
 var velocity_target = Vector2.ZERO
 
-
 func _ready():
-	sprite_auto_rojo = $auto_rojo
-	sprite_auto_verde = $auto_verde
-	sprite_auto_amarillo=$auto_amarillo
+	sprite_auto_rojo = $auto_rojo;
+	sprite_auto_verde = $auto_verde;
+	sprite_auto_amarillo=$auto_amarillo;
+	
+	raycastFrontal=$RayCastFrontal;
+	raycastInferior=$RayCastInferior;
+	raycastSuperior=$RayCastSuperior;
+	raycastFrontalSuperior=$RayCastFrontalSuperior;
+	raycastFrontalInferior=$RayCastFrontalInferior;
 	
 	MAX_SPEED=randf_range(MIN_SPEED_REF, MAX_SPEED_REF);
 	
@@ -48,12 +60,60 @@ func _ready():
 		current_sprite = sprite_auto_rojo
 	# Make sure the chosen sprite is visible
 	current_sprite.visible = true
-	
-func _physics_process(delta):
-	var input_direction = 1;
-	var input_vertical = 0;
-	var is_braking =0;  # Suponiendo que \"ui_accept\" es la acción de la barra espaciadora
 
+func detectarCosas(delta):
+	var dirVertical=0;
+	var freno=0;
+	var colisionSuperior = raycastSuperior.is_colliding()
+	var colisionInferior =raycastInferior.is_colliding()
+	var colisionFrontalSuperior= raycastFrontalSuperior.is_colliding() 
+	var colisionFrontalInferior=  raycastFrontalInferior.is_colliding() 
+	var colisionFrontal = raycastFrontal.is_colliding() or raycastFrontalSuperior.is_colliding() or raycastFrontalInferior.is_colliding();
+
+	# Depuración de cada colisión
+	print(\"colisionFrontal:\", colisionFrontal)
+	print(\"colisionSuperior:\", colisionSuperior)
+	print(\"colisionInferior:\", colisionInferior)
+	print(\"colisionFrontalSuperior:\", colisionFrontalSuperior)
+	print(\"colisionFrontalInferior:\", colisionFrontalInferior)
+
+	if colisionFrontal:
+		if (colisionSuperior and colisionInferior) or (colisionFrontal and colisionFrontalSuperior and colisionFrontalInferior):
+			#print(\"Detección frontal, superior e inferior\")
+			freno = 1
+		elif colisionSuperior:
+			#print(\"Detección superior\")
+			freno = 1
+		elif colisionInferior:
+			#print(\"Detección inferior\")
+			freno = 1
+		elif colisionFrontalSuperior or (colisionFrontalSuperior and colisionFrontal):
+			#print(\"Detección frontal y superior\")
+			dirVertical = 1
+		elif colisionFrontalInferior or (colisionFrontalInferior and colisionFrontal):
+			#print(\"Detección frontal e inferior\")
+			dirVertical = -1
+	else:
+		#print(\"Sin detección frontal\")
+		dirVertical = 0
+		freno = 0
+
+	moverAutomovil(delta, 1, dirVertical, freno)
+
+	
+func moverAutomovil(delta, dirHorizontal, dirVertical, freno):
+	var input_direction = dirHorizontal;
+	var input_vertical = dirVertical;
+	var is_braking =freno;  # Suponiendo que \"ui_accept\" es la acción de la barra espaciadora
+	
+	if input_vertical > 0:
+		velocity.y = 10000 * delta;
+		#print(\"MOviendo abajo\")
+	elif input_vertical < 0:
+		velocity.y = -10000 * delta;
+		#print(\"Moviendo arriba\")
+	else:
+		velocity.y = 0  # Detener el movimiento vertical si no hay entrada
 	# Aceleración horizontal
 	if input_direction > 0:
 		velocity_target.x = clamp(velocity_target.x + ACCELERATION * delta, 0, MAX_SPEED)
@@ -64,17 +124,7 @@ func _physics_process(delta):
 		velocity_target.x = move_toward(velocity_target.x, 0, DECELERATION * delta)
 
 	# Aceleración vertical (solo si hay movimiento horizontal)
-	if abs(velocity.x) > 0.1:  # Pequeña tolerancia para evitar saltos
-		if input_vertical > 0:
-			velocity_target.y = clamp(velocity_target.y + ACCELERATION * delta, 0, MAX_SPEED)
-		elif input_vertical < 0:
-			velocity_target.y = clamp(velocity_target.y - ACCELERATION * delta, -MAX_SPEED, 0)
-		else:
-			# Desaceleración vertical
-			velocity_target.y = move_toward(velocity_target.y, 0, DECELERATION * delta)
-	else:
-		velocity_target.y = 0  # Forzar a detener el movimiento vertical
-			# Frenado (se aplica si se presiona la barra espaciadora)
+
 	if is_braking:
 		velocity_target.x = move_toward(velocity_target.x, 0, DECELERATION * delta * 2)  # Frenado más rápido
 		velocity_target.y = move_toward(velocity_target.y, 0, DECELERATION * delta * 2)
@@ -82,33 +132,65 @@ func _physics_process(delta):
 		
 		
 	velocity.x = move_toward(velocity.x, velocity_target.x, ACCELERATION * delta)
-	velocity.y = move_toward(velocity.y, velocity_target.y, ACCELERATION * delta)
-	move_and_slide()
 
+	move_and_slide()
+func destruiAuto():
+	queue_free();
+
+func _physics_process(delta):
+	detectarCosas(delta);
+
+func _on_area_2d_body_entered(body):
+	if body is AutoPolicia:
+		print(\"Chocaste con un auto\")
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3bs7c"]
+size = Vector2(115, 60)
+
 [node name="autoMovil1" type="CharacterBody2D"]
-position = Vector2(113, 90)
 script = SubResource("GDScript_cs50k")
 
 [node name="auto_verde" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-112, -88)
 scale = Vector2(0.208743, 0.251633)
 texture = ExtResource("1_jb8yw")
 
 [node name="auto_rojo" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-112, -87)
 scale = Vector2(0.207317, 0.24911)
 texture = ExtResource("2_xfjj6")
 
 [node name="auto_amarillo" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-112, -87)
+position = Vector2(1, 1)
 scale = Vector2(0.206413, 0.248476)
 texture = ExtResource("3_auob7")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(2, 12)
+position = Vector2(113, 97)
 polygon = PackedVector2Array(-165, -119, -164, -79, -157, -75, -153, -75, -152, -70, -146, -66, -140, -67, -136, -73, -91, -73, -88, -68, -82, -65, -76, -67, -74, -74, -63, -74, -63, -108, -65, -108, -65, -119)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_3bs7c")
+
+[node name="RayCastFrontal" type="RayCast2D" parent="."]
+target_position = Vector2(188, -1)
+
+[node name="RayCastInferior" type="RayCast2D" parent="."]
+target_position = Vector2(0, 33)
+
+[node name="RayCastSuperior" type="RayCast2D" parent="."]
+target_position = Vector2(0, -42)
+
+[node name="RayCastFrontalSuperior" type="RayCast2D" parent="."]
+position = Vector2(-2, -23)
+target_position = Vector2(185, -1)
+
+[node name="RayCastFrontalInferior" type="RayCast2D" parent="."]
+position = Vector2(-4, 33)
+target_position = Vector2(188, -10)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
