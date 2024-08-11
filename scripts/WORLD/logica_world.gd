@@ -9,15 +9,15 @@ func _ready():
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
 		DialogueManager.show_dialogue_balloon(dialogue_resource)
 		
-	#if Misiones.mision == 1:
-	#	Misiones.cargar_mision(Misiones.mision)
-	#	var dialogue_resource = load(Misiones.get_current_dialogue_path())
-	#	DialogueManager.show_dialogue_balloon(dialogue_resource)
+	if Misiones.mision == 1:
+		Misiones.cargar_mision(Misiones.mision)
+		var dialogue_resource = load(Misiones.get_current_dialogue_path())
+		DialogueManager.show_dialogue_balloon(dialogue_resource)
 
-	#if Misiones.mision == 2: 
-	#	Misiones.cargar_mision(Misiones.mision)
-	#	var dialogue_resource = load(Misiones.get_current_dialogue_path())
-	#	DialogueManager.show_dialogue_balloon(dialogue_resource)
+	if Misiones.mision == 2: 
+		Misiones.cargar_mision(Misiones.mision)
+		var dialogue_resource = load(Misiones.get_current_dialogue_path())
+		DialogueManager.show_dialogue_balloon(dialogue_resource)
 		
 	print("estado mision: ", Misiones.mision)
 	
