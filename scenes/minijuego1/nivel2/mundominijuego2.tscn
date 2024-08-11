@@ -32,7 +32,7 @@ limit_top = -1495
 limit_right = 3250
 limit_bottom = 3630
 script = ExtResource("7_x8fyf")
-objetct_follow = NodePath("../CharacterBody2D")
+objetct_follow = NodePath("../player")
 
 [node name="NPC_1" parent="." instance=ExtResource("10_bi6r4")]
 position = Vector2(-417, 1165)
@@ -40,24 +40,24 @@ script = ExtResource("6_enmuw")
 escena = "res://scenes/minijuego1/nivel2/seleccion_culpable2.tscn"
 dialogueResource = ExtResource("12_ffytw")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("8_wbi1m")]
+[node name="player" parent="." instance=ExtResource("8_wbi1m")]
 position = Vector2(456, 864)
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("2_tdyoa")]
+[node name="npc1" parent="." instance=ExtResource("2_tdyoa")]
 position = Vector2(2386, 133)
 scale = Vector2(2, 2)
 script = ExtResource("9_n3pfg")
 dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
 flag = "npc1"
 
-[node name="CharacterBody2D3" parent="." instance=ExtResource("3_gq8kw")]
+[node name="npc2" parent="." instance=ExtResource("3_gq8kw")]
 position = Vector2(-1548, 1387)
 scale = Vector2(2, 2)
 script = ExtResource("9_n3pfg")
 dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
 flag = "npc2"
 
-[node name="CharacterBody2D4" parent="." instance=ExtResource("4_eijhw")]
+[node name="npc3" parent="." instance=ExtResource("4_eijhw")]
 position = Vector2(113, 3025)
 scale = Vector2(2, 2)
 script = ExtResource("9_n3pfg")

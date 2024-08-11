@@ -1,19 +1,19 @@
-[gd_scene load_steps=35 format=3 uid="uid://buwkurjm8i2x"]
+[gd_scene load_steps=35 format=3 uid="uid://b7ef10r0758mr"]
 
-[ext_resource type="Texture2D" uid="uid://djsdw8qfrcvd8" path="res://assets/calles/calle 1.png" id="1_5ltm1"]
-[ext_resource type="Script" path="res://scripts/minijuegoPersecusion/persecucion_(main).gd" id="1_ojhoy"]
-[ext_resource type="Texture2D" uid="uid://23kirm3f4mu2" path="res://assets/calles/calle 3.png" id="2_hbrp7"]
-[ext_resource type="Texture2D" uid="uid://cfqtor8jxdvax" path="res://assets/calles/calle 2.png" id="3_vb0kc"]
-[ext_resource type="Texture2D" uid="uid://b4yycpa8gme1v" path="res://assets/casas/Casa 1.png" id="4_xa6qp"]
-[ext_resource type="Texture2D" uid="uid://b2pee8j86k4c7" path="res://assets/casas/casa 2.png" id="5_skb1k"]
-[ext_resource type="Texture2D" uid="uid://cf0bgqsidm58h" path="res://assets/casas/casa 3.png" id="6_he8mv"]
-[ext_resource type="Texture2D" uid="uid://d0b1whe6dv5mc" path="res://assets/casas/casa 4.png" id="7_3w3bf"]
-[ext_resource type="PackedScene" uid="uid://b337s0x7lvipt" path="res://scenes/minijuegoPersecusion/auto_movil.tscn" id="8_0bce6"]
-[ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="10_vl3te"]
-[ext_resource type="PackedScene" uid="uid://cxr1iymhft5io" path="res://scenes/minijuegoPersecusion/manchaDeAceite.tscn" id="11_ptvo4"]
-[ext_resource type="PackedScene" uid="uid://b2rqldrk5bstu" path="res://scenes/minijuegoPersecusion/auto_enemigo.tscn" id="12_5vi4u"]
-[ext_resource type="PackedScene" uid="uid://dliitigrsykd6" path="res://scenes/minijuegoPersecusion/obstaculosAleatorios.tscn" id="12_kr5pj"]
-[ext_resource type="PackedScene" uid="uid://tm0yyxu7bp5u" path="res://scenes/minijuegoPersecusion/dialogosPersecucion.tscn" id="13_p4iax"]
+[ext_resource type="Script" path="res://scripts/minijuegoPersecusion/persecucion_(main).gd" id="1_nlgo6"]
+[ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="2_wl172"]
+[ext_resource type="Texture2D" uid="uid://djsdw8qfrcvd8" path="res://assets/calles/calle 1.png" id="3_irxq3"]
+[ext_resource type="Texture2D" uid="uid://23kirm3f4mu2" path="res://assets/calles/calle 3.png" id="4_wgjg7"]
+[ext_resource type="Texture2D" uid="uid://cfqtor8jxdvax" path="res://assets/calles/calle 2.png" id="5_4xhbm"]
+[ext_resource type="Texture2D" uid="uid://b4yycpa8gme1v" path="res://assets/casas/Casa 1.png" id="6_yac7d"]
+[ext_resource type="Texture2D" uid="uid://b2pee8j86k4c7" path="res://assets/casas/casa 2.png" id="7_7fs8f"]
+[ext_resource type="Texture2D" uid="uid://cf0bgqsidm58h" path="res://assets/casas/casa 3.png" id="8_yq2i5"]
+[ext_resource type="Texture2D" uid="uid://d0b1whe6dv5mc" path="res://assets/casas/casa 4.png" id="9_ia5l7"]
+[ext_resource type="PackedScene" uid="uid://cxr1iymhft5io" path="res://scenes/minijuegoPersecusion/manchaDeAceite.tscn" id="10_iwecp"]
+[ext_resource type="PackedScene" uid="uid://dliitigrsykd6" path="res://scenes/minijuegoPersecusion/obstaculosAleatorios.tscn" id="11_lrdd2"]
+[ext_resource type="PackedScene" uid="uid://b337s0x7lvipt" path="res://scenes/minijuegoPersecusion/auto_movil.tscn" id="12_stfwj"]
+[ext_resource type="PackedScene" uid="uid://b2rqldrk5bstu" path="res://scenes/minijuegoPersecusion/auto_enemigo.tscn" id="13_xubfe"]
+[ext_resource type="PackedScene" uid="uid://tm0yyxu7bp5u" path="res://scenes/minijuegoPersecusion/dialogosPersecucion.tscn" id="14_x2oy2"]
 
 [sub_resource type="Animation" id="Animation_2kyoa"]
 length = 2.0
@@ -53,7 +53,7 @@ _data = {
 }
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snkvc"]
-texture = ExtResource("1_5ltm1")
+texture = ExtResource("3_irxq3")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -456,7 +456,7 @@ texture = ExtResource("1_5ltm1")
 19:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oonmb"]
-texture = ExtResource("2_hbrp7")
+texture = ExtResource("4_wgjg7")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -859,7 +859,7 @@ texture = ExtResource("2_hbrp7")
 19:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_48w5o"]
-texture = ExtResource("3_vb0kc")
+texture = ExtResource("5_4xhbm")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1262,7 +1262,7 @@ texture = ExtResource("3_vb0kc")
 19:19/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7ses"]
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -3903,7 +3903,7 @@ texture = ExtResource("4_xa6qp")
 49:54/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xtwy5"]
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 26:1/0 = 0
 27:1/0 = 0
 28:1/0 = 0
@@ -6110,7 +6110,7 @@ texture = ExtResource("5_skb1k")
 39:59/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2453o"]
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 1:0/0 = 0
 2:0/0 = 0
 1:1/0 = 0
@@ -7973,7 +7973,7 @@ texture = ExtResource("6_he8mv")
 39:54/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2l75b"]
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 texture_region_size = Vector2i(10, 10)
 1:1/0 = 0
 2:1/0 = 0
@@ -10478,7 +10478,7 @@ size = Vector2(1865.95, 20)
 
 [node name="persecucion" type="Node2D"]
 position = Vector2(105, 326)
-script = ExtResource("1_ojhoy")
+script = ExtResource("1_nlgo6")
 
 [node name="Inicio" type="AnimationPlayer" parent="."]
 libraries = {
@@ -10488,7 +10488,7 @@ libraries = {
 [node name="Manzana" type="Sprite2D" parent="."]
 position = Vector2(714, -24)
 scale = Vector2(2.03107, 0.33881)
-texture = ExtResource("10_vl3te")
+texture = ExtResource("2_wl172")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_j7t10")
@@ -10497,22 +10497,22 @@ layer_0/tile_data = PackedInt32Array(65529, 0, 0, 131065, 0, 1, 196601, 0, 2, 26
 
 [node name="Trampas" type="Node2D" parent="."]
 
-[node name="ManchaDeAceite" parent="Trampas" instance=ExtResource("11_ptvo4")]
+[node name="ManchaDeAceite" parent="Trampas" instance=ExtResource("10_iwecp")]
 position = Vector2(589, 172)
 
-[node name="ObstaculosAleatorios" parent="." instance=ExtResource("12_kr5pj")]
+[node name="ObstaculosAleatorios" parent="." instance=ExtResource("11_lrdd2")]
 position = Vector2(-108, -323)
 
-[node name="DINOMOVIL" parent="." instance=ExtResource("8_0bce6")]
+[node name="DINOMOVIL" parent="." instance=ExtResource("12_stfwj")]
 position = Vector2(-94, 207)
-MAX_SPEED = 5000.0
-ACCELERATION = 800.0
+MAX_SPEED = 800.0
+ACCELERATION = 100.0
 
 [node name="Camera2D" type="Camera2D" parent="DINOMOVIL"]
 position = Vector2(288, 87)
 limit_bottom = 800
 
-[node name="autoEnemigo" parent="." instance=ExtResource("12_5vi4u")]
+[node name="autoEnemigo" parent="." instance=ExtResource("13_xubfe")]
 position = Vector2(197, 346)
 MAX_SPEED = 0
 ACCELERATION = 0.0
@@ -10526,37 +10526,37 @@ position = Vector2(46367, -198)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV11"]
 position = Vector2(5667.5, 68.5)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV11"]
 position = Vector2(5888.5, 58.5)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV11"]
 position = Vector2(5048.5, 3.49998)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV11"]
 position = Vector2(4842.5, 48.5)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV11"]
 position = Vector2(4604.5, 57.5)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV11"]
 position = Vector2(5462, 8.5)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV11"]
 position = Vector2(5246.5, 38.5)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasasV10" type="Node2D" parent="Casas"]
 position = Vector2(42607, -8.00003)
@@ -10564,57 +10564,57 @@ position = Vector2(42607, -8.00003)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(6144.22, -119.83)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(6365.22, -129.83)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(5525.22, -184.83)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(5319.22, -139.83)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(5081.22, -130.83)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(4687.22, -133.83)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(4493.59, -150.58)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(4879.97, -176.33)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(4310.22, -160.83)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(5938.72, -179.83)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV10"]
 position = Vector2(5723.22, -149.83)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasasV9" type="Node2D" parent="Casas"]
 position = Vector2(36846, -200)
@@ -10622,37 +10622,37 @@ position = Vector2(36846, -200)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV9"]
 position = Vector2(5667.5, 68.5)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV9"]
 position = Vector2(5888.5, 58.5)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV9"]
 position = Vector2(5048.5, 3.49998)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV9"]
 position = Vector2(4842.5, 48.5)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV9"]
 position = Vector2(4604.5, 57.5)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV9"]
 position = Vector2(5462, 8.5)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV9"]
 position = Vector2(5246.5, 38.5)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasasV8" type="Node2D" parent="Casas"]
 position = Vector2(50806, -210)
@@ -10660,37 +10660,37 @@ position = Vector2(50806, -210)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV8"]
 position = Vector2(5667.5, 68.5)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV8"]
 position = Vector2(5888.5, 58.5)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV8"]
 position = Vector2(5048.5, 3.49998)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV8"]
 position = Vector2(4842.5, 48.5)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV8"]
 position = Vector2(4604.5, 57.5)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV8"]
 position = Vector2(5462, 8.5)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV8"]
 position = Vector2(5246.5, 38.5)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasas3" type="Node2D" parent="Casas"]
 position = Vector2(13846, -24)
@@ -10698,202 +10698,202 @@ position = Vector2(13846, -24)
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(3216, -107)
 scale = Vector2(0.222636, 0.240534)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(2725, -179)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(2001, -127)
 scale = Vector2(0.316566, 0.264918)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(1823, -96)
 scale = Vector2(0.233831, 0.214922)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(2185, -159)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(2351, -125)
 scale = Vector2(0.260968, 0.261317)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(2542, -161)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(3056, -114)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(3553.5, -156.5)
 scale = Vector2(0.245387, 0.250791)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(2888, -108)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(3393, -142)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa12" type="Sprite2D" parent="Casas/LineaDeCasas3"]
 position = Vector2(3738, -156)
 scale = Vector2(0.297264, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Manzana6" type="Sprite2D" parent="Casas"]
 position = Vector2(36673, -176)
 scale = Vector2(0.766965, 0.646326)
-texture = ExtResource("10_vl3te")
+texture = ExtResource("2_wl172")
 
 [node name="Casa15" type="Sprite2D" parent="Casas/Manzana6"]
 position = Vector2(247.732, -242.911)
 scale = Vector2(0.331243, 0.402827)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/Manzana6"]
 position = Vector2(-307.706, -159.362)
 scale = Vector2(0.304857, 0.390402)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/Manzana6"]
 position = Vector2(-24.7731, -258.384)
 scale = Vector2(0.36591, 0.4398)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/Manzana6"]
 position = Vector2(-89.9651, 63.4355)
 scale = Vector2(0.382393, 0.510595)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/Manzana6"]
 position = Vector2(-317.818, 78.9076)
 scale = Vector2(0.321174, 0.342736)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa16" type="Sprite2D" parent="Casas/Manzana6"]
 position = Vector2(230.78, 43.3219)
 scale = Vector2(0.440649, 0.493343)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Manzana2" type="Sprite2D" parent="Casas"]
 position = Vector2(4170, -189)
 scale = Vector2(0.766965, 0.646326)
-texture = ExtResource("10_vl3te")
+texture = ExtResource("2_wl172")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/Manzana2"]
 position = Vector2(-307.706, -159.362)
 scale = Vector2(0.304857, 0.390402)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/Manzana2"]
 position = Vector2(226.868, -205.779)
 scale = Vector2(0.331243, 0.402827)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/Manzana2"]
 position = Vector2(199.488, 68.0771)
 scale = Vector2(0.457352, 0.506637)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/Manzana2"]
 position = Vector2(-24.7731, -258.384)
 scale = Vector2(0.36591, 0.4398)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/Manzana2"]
 position = Vector2(-89.9651, 63.4355)
 scale = Vector2(0.382393, 0.510595)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/Manzana2"]
 position = Vector2(-317.818, 78.9076)
 scale = Vector2(0.321174, 0.342736)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Manzana2" type="Sprite2D" parent="Casas/Manzana2"]
 position = Vector2(51561.7, 10.8304)
 scale = Vector2(0.984765, 0.941496)
-texture = ExtResource("10_vl3te")
+texture = ExtResource("2_wl172")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/Manzana2/Manzana2"]
 position = Vector2(-307.706, -159.362)
 scale = Vector2(0.304857, 0.390402)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/Manzana2/Manzana2"]
 position = Vector2(226.868, -205.779)
 scale = Vector2(0.331243, 0.402827)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/Manzana2/Manzana2"]
 position = Vector2(199.488, 68.0771)
 scale = Vector2(0.457352, 0.506637)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/Manzana2/Manzana2"]
 position = Vector2(-24.7731, -258.384)
 scale = Vector2(0.36591, 0.4398)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/Manzana2/Manzana2"]
 position = Vector2(-89.9651, 63.4355)
 scale = Vector2(0.382393, 0.510595)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/Manzana2/Manzana2"]
 position = Vector2(-317.818, 78.9076)
 scale = Vector2(0.321174, 0.342736)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Manzana" type="Sprite2D" parent="Casas"]
 position = Vector2(1458, -163)
 scale = Vector2(0.705919, 0.563943)
-texture = ExtResource("10_vl3te")
+texture = ExtResource("2_wl172")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/Manzana"]
 position = Vector2(260.654, -234.066)
 scale = Vector2(0.331243, 0.402827)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/Manzana"]
 position = Vector2(-266.674, -253.572)
 scale = Vector2(0.457352, 0.506637)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/Manzana"]
 position = Vector2(1.41699, -267.758)
 scale = Vector2(0.36591, 0.4398)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/Manzana"]
 position = Vector2(178.491, 56.7433)
 scale = Vector2(0.382393, 0.510595)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/Manzana"]
 position = Vector2(-106.244, 17.7323)
 scale = Vector2(0.363297, 0.41525)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/Manzana"]
 position = Vector2(-313.067, 97.5276)
 scale = Vector2(0.304857, 0.390402)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasas2" type="Node2D" parent="Casas"]
 position = Vector2(4611, -88)
@@ -10905,176 +10905,176 @@ position = Vector2(5479, -207)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(5732.13, 82.5)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(5953.13, 72.5)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(5113.12, 17.5)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(4907.13, 62.5)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(4669.13, 71.5)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(4275.13, 68.5)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(4081.5, 51.75)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(4467.88, 26)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(3898.13, 41.5)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(5526.63, 22.5)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV2"]
 position = Vector2(5311.13, 52.5)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasasV3" type="Node2D" parent="Casas"]
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(8519, -127)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(8740, -137)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(7900, -192)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(7694, -147)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(7456, -138)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(7062, -141)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(6868.38, -157.75)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(7254.75, -183.5)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(6685, -168)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(8313.5, -187)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV3"]
 position = Vector2(8098, -157)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasas" type="Node2D" parent="Casas"]
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(3216, -107)
 scale = Vector2(0.222636, 0.240534)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(2725, -179)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(2001, -127)
 scale = Vector2(0.316566, 0.264918)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(1823, -96)
 scale = Vector2(0.233831, 0.214922)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(2185, -159)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(2351, -125)
 scale = Vector2(0.260968, 0.261317)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(2542, -161)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(3056, -114)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(3553.5, -156.5)
 scale = Vector2(0.245387, 0.250791)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(2888, -108)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(3393, -142)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa12" type="Sprite2D" parent="Casas/LineaDeCasas"]
 position = Vector2(3738, -156)
 scale = Vector2(0.297264, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="LineaDeCasas" type="Node2D" parent="Casas/LineaDeCasas"]
 position = Vector2(37494, 6.99997)
@@ -11082,82 +11082,82 @@ position = Vector2(37494, 6.99997)
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(3216, -107)
 scale = Vector2(0.222636, 0.240534)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(2725, -179)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(2001, -127)
 scale = Vector2(0.316566, 0.264918)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(1823, -96)
 scale = Vector2(0.233831, 0.214922)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(2185, -159)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(2351, -125)
 scale = Vector2(0.260968, 0.261317)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(2542, -161)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(3056, -114)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(3553.5, -156.5)
 scale = Vector2(0.245387, 0.250791)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(2888, -108)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(3393, -142)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa12" type="Sprite2D" parent="Casas/LineaDeCasas/LineaDeCasas"]
 position = Vector2(3738, -156)
 scale = Vector2(0.297264, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa1" type="Sprite2D" parent="Casas"]
 position = Vector2(660, -129)
 scale = Vector2(0.268035, 0.287305)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa3" type="Sprite2D" parent="Casas"]
 position = Vector2(858.625, -137.75)
 scale = Vector2(0.282526, 0.28858)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa4" type="Sprite2D" parent="Casas"]
 position = Vector2(474.5, -159.75)
 scale = Vector2(0.304428, 0.251978)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas"]
 position = Vector2(-15, -138)
 scale = Vector2(0.302194, 0.282922)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasasV4" type="Node2D" parent="Casas"]
 position = Vector2(8184, -235)
@@ -11165,162 +11165,162 @@ position = Vector2(8184, -235)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(5732.13, 82.5)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(5953.13, 72.5)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(5113.12, 17.5)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(4907.13, 62.5)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(4669.13, 71.5)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(4275.13, 68.5)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(4081.5, 51.75)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(4467.88, 26)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(3898.13, 41.5)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(5526.63, 22.5)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV4"]
 position = Vector2(5311.13, 52.5)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Manzana3" type="Sprite2D" parent="Casas"]
 position = Vector2(15208, -202)
 scale = Vector2(0.766965, 0.646326)
-texture = ExtResource("10_vl3te")
+texture = ExtResource("2_wl172")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/Manzana3"]
 position = Vector2(-307.706, -159.362)
 scale = Vector2(0.304857, 0.390402)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/Manzana3"]
 position = Vector2(226.868, -205.779)
 scale = Vector2(0.331243, 0.402827)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/Manzana3"]
 position = Vector2(199.488, 68.0771)
 scale = Vector2(0.457352, 0.506637)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/Manzana3"]
 position = Vector2(-24.7731, -258.384)
 scale = Vector2(0.36591, 0.4398)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/Manzana3"]
 position = Vector2(-89.9651, 63.4355)
 scale = Vector2(0.382393, 0.510595)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/Manzana3"]
 position = Vector2(-317.818, 78.9076)
 scale = Vector2(0.321174, 0.342736)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Manzana3" type="Sprite2D" parent="Casas/Manzana3"]
 position = Vector2(44680, -1.54725)
 scale = Vector2(1.22591, 1.0899)
-texture = ExtResource("10_vl3te")
+texture = ExtResource("2_wl172")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/Manzana3/Manzana3"]
 position = Vector2(-307.706, -159.362)
 scale = Vector2(0.304857, 0.390402)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/Manzana3/Manzana3"]
 position = Vector2(226.868, -205.779)
 scale = Vector2(0.331243, 0.402827)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/Manzana3/Manzana3"]
 position = Vector2(199.488, 68.0771)
 scale = Vector2(0.457352, 0.506637)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/Manzana3/Manzana3"]
 position = Vector2(-24.7731, -258.384)
 scale = Vector2(0.36591, 0.4398)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/Manzana3/Manzana3"]
 position = Vector2(-89.9651, 63.4355)
 scale = Vector2(0.382393, 0.510595)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/Manzana3/Manzana3"]
 position = Vector2(-317.818, 78.9076)
 scale = Vector2(0.321174, 0.342736)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Manzana4" type="Sprite2D" parent="Casas"]
 position = Vector2(14581, -185)
 scale = Vector2(0.705919, 0.563943)
-texture = ExtResource("10_vl3te")
+texture = ExtResource("2_wl172")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/Manzana4"]
 position = Vector2(260.654, -234.066)
 scale = Vector2(0.331243, 0.402827)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/Manzana4"]
 position = Vector2(-266.674, -253.572)
 scale = Vector2(0.457352, 0.506637)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/Manzana4"]
 position = Vector2(1.41699, -267.758)
 scale = Vector2(0.36591, 0.4398)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/Manzana4"]
 position = Vector2(178.491, 56.7433)
 scale = Vector2(0.382393, 0.510595)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/Manzana4"]
 position = Vector2(-106.244, 17.7323)
 scale = Vector2(0.363297, 0.41525)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/Manzana4"]
 position = Vector2(-313.067, 97.5276)
 scale = Vector2(0.304857, 0.390402)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasas4" type="Node2D" parent="Casas"]
 position = Vector2(15982, -24)
@@ -11328,62 +11328,62 @@ position = Vector2(15982, -24)
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(3216, -107)
 scale = Vector2(0.222636, 0.240534)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(2725, -179)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(2001, -127)
 scale = Vector2(0.316566, 0.264918)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(1823, -96)
 scale = Vector2(0.233831, 0.214922)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(2185, -159)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(2351, -125)
 scale = Vector2(0.260968, 0.261317)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(2542, -161)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(3056, -114)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(3553.5, -156.5)
 scale = Vector2(0.245387, 0.250791)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(2888, -108)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(3393, -142)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa12" type="Sprite2D" parent="Casas/LineaDeCasas4"]
 position = Vector2(3738, -156)
 scale = Vector2(0.297264, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="LineaDeCasasV5" type="Node2D" parent="Casas"]
 position = Vector2(15404, -5)
@@ -11391,57 +11391,57 @@ position = Vector2(15404, -5)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(8519, -127)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(8740, -137)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(7900, -192)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(7694, -147)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(7456, -138)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(7062, -141)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(6868.38, -157.75)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(7254.75, -183.5)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(6685, -168)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(8313.5, -187)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV5"]
 position = Vector2(8098, -157)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasas5" type="Node2D" parent="Casas"]
 position = Vector2(18125, -5)
@@ -11449,117 +11449,117 @@ position = Vector2(18125, -5)
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(3216, -107)
 scale = Vector2(0.222636, 0.240534)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(2725, -179)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(2001, -127)
 scale = Vector2(0.316566, 0.264918)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(1823, -96)
 scale = Vector2(0.233831, 0.214922)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(2185, -159)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(2351, -125)
 scale = Vector2(0.260968, 0.261317)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(2542, -161)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(3056, -114)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(3553.5, -156.5)
 scale = Vector2(0.245387, 0.250791)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(2888, -108)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(3393, -142)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa12" type="Sprite2D" parent="Casas/LineaDeCasas5"]
 position = Vector2(3738, -156)
 scale = Vector2(0.297264, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas"]
 position = Vector2(25719, -180)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa5" type="Sprite2D" parent="Casas"]
 position = Vector2(29426.7, -168.625)
 scale = Vector2(0.424544, 0.346451)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa9" type="Sprite2D" parent="Casas"]
 position = Vector2(26519.8, -145.5)
 scale = Vector2(0.301615, 0.308463)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa7" type="Sprite2D" parent="Casas"]
 position = Vector2(24884, -124)
 scale = Vector2(0.329604, 0.271158)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa8" type="Sprite2D" parent="Casas"]
 position = Vector2(26275, -167)
 scale = Vector2(0.383131, 0.32716)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa10" type="Sprite2D" parent="Casas"]
 position = Vector2(24629, -169)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas"]
 position = Vector2(26069, -123)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa12" type="Sprite2D" parent="Casas"]
 position = Vector2(26916, -157)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa17" type="Sprite2D" parent="Casas"]
 position = Vector2(24379, -166)
 scale = Vector2(0.297264, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa13" type="Sprite2D" parent="Casas"]
 position = Vector2(25889, -117)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa14" type="Sprite2D" parent="Casas"]
 position = Vector2(26729, -163)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="LineaDeCasas6" type="Node2D" parent="Casas"]
 position = Vector2(25359.9, -4.66965)
@@ -11567,62 +11567,62 @@ position = Vector2(25359.9, -4.66965)
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(3216, -107)
 scale = Vector2(0.222636, 0.240534)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(2725, -179)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(2001, -127)
 scale = Vector2(0.316566, 0.264918)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(1823, -96)
 scale = Vector2(0.233831, 0.214922)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(2185, -159)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(2351, -125)
 scale = Vector2(0.260968, 0.261317)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(2542, -161)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(3056, -114)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(3553.5, -156.5)
 scale = Vector2(0.245387, 0.250791)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(2888, -108)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(3393, -142)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa12" type="Sprite2D" parent="Casas/LineaDeCasas6"]
 position = Vector2(3738, -156)
 scale = Vector2(0.297264, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="LineaDeCasas7" type="Node2D" parent="Casas"]
 position = Vector2(25359.9, -4.66965)
@@ -11630,62 +11630,62 @@ position = Vector2(25359.9, -4.66965)
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(3216, -107)
 scale = Vector2(0.222636, 0.240534)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(2725, -179)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(2001, -127)
 scale = Vector2(0.316566, 0.264918)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(1788.05, -135.415)
 scale = Vector2(0.320781, 0.302706)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(2185, -159)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(2351, -125)
 scale = Vector2(0.260968, 0.261317)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(2542, -161)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(3056, -114)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(3553.5, -156.5)
 scale = Vector2(0.245387, 0.250791)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(2888, -108)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(3393, -142)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa12" type="Sprite2D" parent="Casas/LineaDeCasas7"]
 position = Vector2(3773.8, -156)
 scale = Vector2(0.386308, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="LineaDeCasasV6" type="Node2D" parent="Casas"]
 position = Vector2(25359.9, -4.66965)
@@ -11693,57 +11693,57 @@ position = Vector2(25359.9, -4.66965)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(6144.22, -119.83)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(6365.22, -129.83)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(5525.22, -184.83)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(5319.22, -139.83)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(5081.22, -130.83)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(4687.22, -133.83)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(4493.59, -150.58)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(4879.97, -176.33)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(4310.22, -160.83)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(5938.72, -179.83)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV6"]
 position = Vector2(5723.22, -149.83)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasas8" type="Node2D" parent="Casas"]
 position = Vector2(30176, 9.99997)
@@ -11751,62 +11751,62 @@ position = Vector2(30176, 9.99997)
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(3216, -107)
 scale = Vector2(0.222636, 0.240534)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(2725, -179)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(2001, -127)
 scale = Vector2(0.316566, 0.264918)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(1788.05, -135.415)
 scale = Vector2(0.320781, 0.302706)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(2185, -159)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(2351, -125)
 scale = Vector2(0.260968, 0.261317)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(2542, -161)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(3056, -114)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(3553.5, -156.5)
 scale = Vector2(0.245387, 0.250791)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(2888, -108)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(3393, -142)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa12" type="Sprite2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(3773.8, -156)
 scale = Vector2(0.386308, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="LineaDeCasas8" type="Node2D" parent="Casas/LineaDeCasas8"]
 position = Vector2(12673, 2)
@@ -11814,97 +11814,97 @@ position = Vector2(12673, 2)
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(3249.91, -127.5)
 scale = Vector2(0.222636, 0.240534)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(2758.91, -199.5)
 scale = Vector2(0.267528, 0.285601)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(2034.91, -147.5)
 scale = Vector2(0.316566, 0.264918)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(1821.95, -155.915)
 scale = Vector2(0.320781, 0.302706)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(2218.91, -179.5)
 scale = Vector2(0.330259, 0.253165)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(2384.91, -145.5)
 scale = Vector2(0.260968, 0.261317)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(2575.91, -181.5)
 scale = Vector2(0.360429, 0.376116)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(3089.91, -134.5)
 scale = Vector2(0.248466, 0.258929)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(3587.41, -177)
 scale = Vector2(0.245387, 0.250791)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(2921.91, -128.5)
 scale = Vector2(0.245025, 0.252784)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(3426.91, -162.5)
 scale = Vector2(0.312784, 0.300412)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa12" type="Sprite2D" parent="Casas/LineaDeCasas8/LineaDeCasas8"]
 position = Vector2(3807.7, -176.5)
 scale = Vector2(0.386308, 0.355234)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Manzana5" type="Sprite2D" parent="Casas"]
 position = Vector2(25332, -195)
 scale = Vector2(0.766965, 0.646326)
-texture = ExtResource("10_vl3te")
+texture = ExtResource("2_wl172")
 
 [node name="Casa15" type="Sprite2D" parent="Casas/Manzana5"]
 position = Vector2(247.732, -242.911)
 scale = Vector2(0.331243, 0.402827)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/Manzana5"]
 position = Vector2(-307.706, -159.362)
 scale = Vector2(0.304857, 0.390402)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/Manzana5"]
 position = Vector2(-24.7731, -258.384)
 scale = Vector2(0.36591, 0.4398)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/Manzana5"]
 position = Vector2(-89.9651, 63.4355)
 scale = Vector2(0.382393, 0.510595)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/Manzana5"]
 position = Vector2(-317.818, 78.9076)
 scale = Vector2(0.321174, 0.342736)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa16" type="Sprite2D" parent="Casas/Manzana5"]
 position = Vector2(230.78, 43.3219)
 scale = Vector2(0.440649, 0.493343)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="LineaDeCasasV7" type="Node2D" parent="Casas"]
 position = Vector2(30284, -197)
@@ -11912,57 +11912,57 @@ position = Vector2(30284, -197)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(5732.13, 82.5)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(5953.13, 72.5)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(5113.12, 17.5)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(4907.13, 62.5)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(4669.13, 71.5)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(4275.13, 68.5)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(4081.5, 51.75)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(4467.88, 26)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(3898.13, 41.5)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(5526.63, 22.5)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(5311.13, 52.5)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasasV2" type="Node2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(2898, -17)
@@ -11970,57 +11970,57 @@ position = Vector2(2898, -17)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(5732.13, 82.5)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(5953.13, 72.5)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(5113.12, 17.5)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(4907.13, 62.5)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(4669.13, 71.5)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(4275.13, 68.5)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(4081.5, 51.75)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(4467.88, 26)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(3898.13, 41.5)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(5526.63, 22.5)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV2"]
 position = Vector2(5311.13, 52.5)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasasV3" type="Node2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(24282, -2)
@@ -12028,57 +12028,57 @@ position = Vector2(24282, -2)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(5732.13, 82.5)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(5953.13, 72.5)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(5113.12, 17.5)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(4907.13, 62.5)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(4669.13, 71.5)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(4275.13, 68.5)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(4081.5, 51.75)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(4467.88, 26)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(3898.13, 41.5)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(5526.63, 22.5)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV3"]
 position = Vector2(5311.13, 52.5)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="LineaDeCasasV4" type="Node2D" parent="Casas/LineaDeCasasV7"]
 position = Vector2(18299, -9)
@@ -12086,67 +12086,67 @@ position = Vector2(18299, -9)
 [node name="Casa11" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(5732.13, 82.5)
 scale = Vector2(0.278295, 0.299555)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa10" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(5953.13, 72.5)
 scale = Vector2(0.356593, 0.318638)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa9" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(5113.12, 17.5)
 scale = Vector2(0.331181, 0.298259)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa6" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(4907.13, 62.5)
 scale = Vector2(0.364264, 0.34096)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa3" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(4669.13, 71.5)
 scale = Vector2(0.369631, 0.321429)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa1" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(4275.13, 68.5)
 scale = Vector2(0.261194, 0.316258)
-texture = ExtResource("4_xa6qp")
+texture = ExtResource("6_yac7d")
 
 [node name="Casa2" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(4081.5, 51.75)
 scale = Vector2(0.29236, 0.329733)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa5" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(4467.88, 26)
 scale = Vector2(0.347786, 0.284019)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa4" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(3898.13, 41.5)
 scale = Vector2(0.332564, 0.265823)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa7" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(5526.63, 22.5)
 scale = Vector2(0.374538, 0.300633)
-texture = ExtResource("7_3w3bf")
+texture = ExtResource("9_ia5l7")
 
 [node name="Casa8" type="Sprite2D" parent="Casas/LineaDeCasasV7/LineaDeCasasV4"]
 position = Vector2(5311.13, 52.5)
 scale = Vector2(0.343041, 0.334362)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="Casa15" type="Sprite2D" parent="Casas"]
 position = Vector2(49995.5, -193)
 scale = Vector2(0.397234, 0.433036)
-texture = ExtResource("6_he8mv")
+texture = ExtResource("8_yq2i5")
 
 [node name="Casa16" type="Sprite2D" parent="Casas"]
 position = Vector2(50295.1, -215.75)
 scale = Vector2(0.495836, 0.463477)
-texture = ExtResource("5_skb1k")
+texture = ExtResource("7_7fs8f")
 
 [node name="CollitionShape" type="Node2D" parent="."]
 position = Vector2(170, 456)
@@ -12230,7 +12230,7 @@ shape = SubResource("RectangleShape2D_rtabt")
 position = Vector2(59306, -146)
 shape = SubResource("RectangleShape2D_rtabt")
 
-[node name="DialogosPersecusion" parent="." instance=ExtResource("13_p4iax")]
+[node name="DialogosPersecusion" parent="." instance=ExtResource("14_x2oy2")]
 offset_left = -172.0
 offset_top = 274.0
 offset_right = -172.0

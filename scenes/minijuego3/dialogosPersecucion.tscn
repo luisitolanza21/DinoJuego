@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1stwvqbpxedp"]
+
+[ext_resource type="Script" path="res://scripts/minijuegoPersecusion/dialogosPersecusion.gd" id="1_qvfel"]
+[ext_resource type="Texture2D" uid="uid://fslh4g4x3sw4" path="res://assets/dialogos/barra.png" id="2_ybj25"]
+
+[sub_resource type="Theme" id="Theme_of6ob"]
+
+[node name="DialogosPersecusion" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_qvfel")
+
+[node name="cuadradoTexto" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_of6ob")
+texture = ExtResource("2_ybj25")
+
+[node name="labelTexto" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 61.0
+offset_right = 796.0
+offset_bottom = 218.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true

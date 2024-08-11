@@ -1,0 +1,75 @@
+[gd_scene load_steps=9 format=3 uid="uid://dg112wc471hmd"]
+
+[ext_resource type="Script" path="res://scripts/minijuegoPersecusion/auto_movil2.gd" id="1_ieq2y"]
+[ext_resource type="Texture2D" uid="uid://03310y35g5x1" path="res://assets/autos/policia sprite sheet 490x300.png" id="2_f7rrj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvjkh"]
+atlas = ExtResource("2_f7rrj")
+region = Rect2(0, 0, 490, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72wkb"]
+atlas = ExtResource("2_f7rrj")
+region = Rect2(490, 0, 490, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuybi"]
+atlas = ExtResource("2_f7rrj")
+region = Rect2(980, 0, 490, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7833c"]
+atlas = ExtResource("2_f7rrj")
+region = Rect2(1470, 0, 490, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cu2s"]
+atlas = ExtResource("2_f7rrj")
+region = Rect2(0, 0, 490, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vgd5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvjkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72wkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xuybi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7833c")
+}],
+"loop": true,
+"name": &"adelante",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cu2s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-48, -40)
+script = ExtResource("1_ieq2y")
+
+[node name="avanzando" type="AnimatedSprite2D" parent="."]
+position = Vector2(53.5, 38)
+scale = Vector2(0.210204, 0.22)
+sprite_frames = SubResource("SpriteFrames_4vgd5")
+animation = &"idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(80.3749, 5.37969)
+scale = Vector2(1.01274, 1.00781)
+polygon = PackedVector2Array(-77, 17, -77, 51, -70, 58, -65, 57, -64, 63, -56, 65, -47, 57, -38, 58, -3, 58, 1, 65, 9, 65, 14, 62, 16, 58, 25, 58, 26, 28, 23, 17)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(80, 7)
+polygon = PackedVector2Array(-79, 14, -79, 51, -71, 59, -66, 58, -65, 64, -55, 65, -47, 57, -38, 58, -4, 58, 1, 65, 9, 66, 14, 63, 15, 59, 27, 59, 28, 27, 24, 14)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
