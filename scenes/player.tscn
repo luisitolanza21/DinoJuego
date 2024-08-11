@@ -226,6 +226,7 @@ script = SubResource("GDScript_i7yhm")
 [node name="SpriteDinoAnimated" type="AnimatedSprite2D" parent="."]
 position = Vector2(199.5, 260.5)
 sprite_frames = SubResource("SpriteFrames_jk01m")
+
 animation = &"idle_1"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
