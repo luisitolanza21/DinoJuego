@@ -5,7 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://cw7hrqmxjb3i1" path="res://assets/autos/auto 2.png" id="3_auob7"]
 
 [sub_resource type="GDScript" id="GDScript_cs50k"]
-script/source = "extends CharacterBody2D
+script/source = "class_name AutoObstaculo;
+extends CharacterBody2D
 
 @export var MAX_SPEED_REF= 1000;
 @export var MIN_SPEED_REF= 200;
@@ -69,25 +70,36 @@ func detectarCosas(delta):
 	var colisionFrontalInferior=  raycastFrontalInferior.is_colliding() 
 	var colisionFrontal = raycastFrontal.is_colliding() or raycastFrontalSuperior.is_colliding() or raycastFrontalInferior.is_colliding();
 
+	# Depuración de cada colisión
+	print(\"colisionFrontal:\", colisionFrontal)
+	print(\"colisionSuperior:\", colisionSuperior)
+	print(\"colisionInferior:\", colisionInferior)
+	print(\"colisionFrontalSuperior:\", colisionFrontalSuperior)
+	print(\"colisionFrontalInferior:\", colisionFrontalInferior)
+
 	if colisionFrontal:
-		if (colisionSuperior and colisionInferior) or (raycastFrontal.is_colliding() and raycastFrontalSuperior.is_colliding() and raycastFrontalInferior.is_colliding()):
-			print(\"Detección frontal, superior e inferior:\")
+		if (colisionSuperior and colisionInferior) or (colisionFrontal and colisionFrontalSuperior and colisionFrontalInferior):
+			#print(\"Detección frontal, superior e inferior\")
 			freno = 1
 		elif colisionSuperior:
-			freno=1;
+			#print(\"Detección superior\")
+			freno = 1
 		elif colisionInferior:
-			freno=1;
+			#print(\"Detección inferior\")
+			freno = 1
 		elif colisionFrontalSuperior or (colisionFrontalSuperior and colisionFrontal):
-			print(\"Detección frontal y superior:\")
+			#print(\"Detección frontal y superior\")
 			dirVertical = 1
-		elif colisionFrontalInferior  or (colisionFrontalInferior and colisionFrontal):
-			print(\"Detección frontal e inferior:\")
+		elif colisionFrontalInferior or (colisionFrontalInferior and colisionFrontal):
+			#print(\"Detección frontal e inferior\")
 			dirVertical = -1
 	else:
-		print(\"Sin detección frontal\")
+		#print(\"Sin detección frontal\")
 		dirVertical = 0
 		freno = 0
-	moverAutomovil(delta, 1, dirVertical, freno);
+
+	moverAutomovil(delta, 1, dirVertical, freno)
+
 	
 func moverAutomovil(delta, dirHorizontal, dirVertical, freno):
 	var input_direction = dirHorizontal;
@@ -96,10 +108,10 @@ func moverAutomovil(delta, dirHorizontal, dirVertical, freno):
 	
 	if input_vertical > 0:
 		velocity.y = 10000 * delta;
-		print(\"MOviendo abajo\")
+		#print(\"MOviendo abajo\")
 	elif input_vertical < 0:
 		velocity.y = -10000 * delta;
-		print(\"Moviendo arriba\")
+		#print(\"Moviendo arriba\")
 	else:
 		velocity.y = 0  # Detener el movimiento vertical si no hay entrada
 	# Aceleración horizontal
@@ -113,9 +125,6 @@ func moverAutomovil(delta, dirHorizontal, dirVertical, freno):
 
 	# Aceleración vertical (solo si hay movimiento horizontal)
 
-
-
-
 	if is_braking:
 		velocity_target.x = move_toward(velocity_target.x, 0, DECELERATION * delta * 2)  # Frenado más rápido
 		velocity_target.y = move_toward(velocity_target.y, 0, DECELERATION * delta * 2)
@@ -125,6 +134,8 @@ func moverAutomovil(delta, dirHorizontal, dirVertical, freno):
 	velocity.x = move_toward(velocity.x, velocity_target.x, ACCELERATION * delta)
 
 	move_and_slide()
+func destruiAuto():
+	queue_free();
 
 func _physics_process(delta):
 	detectarCosas(delta);
@@ -166,10 +177,10 @@ polygon = PackedVector2Array(-165, -119, -164, -79, -157, -75, -153, -75, -152, 
 shape = SubResource("RectangleShape2D_3bs7c")
 
 [node name="RayCastFrontal" type="RayCast2D" parent="."]
-target_position = Vector2(0, 46)
+target_position = Vector2(188, -1)
 
 [node name="RayCastInferior" type="RayCast2D" parent="."]
-target_position = Vector2(196, 0)
+target_position = Vector2(0, 33)
 
 [node name="RayCastSuperior" type="RayCast2D" parent="."]
 target_position = Vector2(0, -42)

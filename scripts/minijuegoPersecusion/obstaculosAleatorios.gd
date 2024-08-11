@@ -7,14 +7,11 @@ var autoObstaculo=load("res://scenes/minijuegoPersecusion/autoObstaculo.tscn")
 func _ready():
 	pass # Replace with function body.
 
-var a=1
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-
-	
-	if $TiempoGen.is_stopped() and a==1:
+	if $TiempoGen.is_stopped():
 		create_obstacles();
-		a=2;
 		$TiempoGen.start();
 
 		

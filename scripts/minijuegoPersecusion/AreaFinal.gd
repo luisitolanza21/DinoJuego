@@ -14,4 +14,5 @@ func _process(delta):
 func _on_body_entered(body):
 	if body is AutoPolicia:
 		Transicion.cambiar_escena("res://scenes/world.tscn");
+
 	pass # Replace with function body.

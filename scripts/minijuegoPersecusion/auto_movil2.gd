@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var MAX_SPEED = 500.0
 @export var ACCELERATION = 500.0
 @export var DECELERATION = 200.0
+@export var vida=3;
 
 @onready var animacionAdelante=$avanzando;
 
@@ -29,6 +30,8 @@ func _physics_process(delta):
 		# Desaceleración horizontal
 		velocity_target.x = move_toward(velocity_target.x, 0, DECELERATION * delta)
 
+	if velocity_target.x==0:
+		animacionAdelante.play("idle");
 
 	if input_vertical > 0:
 		velocity_target.y = clamp(velocity_target.y + ACCELERATION * delta, 0, MAX_SPEED)
