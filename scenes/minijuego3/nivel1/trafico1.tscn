@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bfomrkdrrn7a7"]
+[gd_scene load_steps=19 format=3 uid="uid://bfomrkdrrn7a7"]
 
 [ext_resource type="Texture2D" uid="uid://b06lu8i140l61" path="res://assets/calles/calles.png" id="1_v6b3k"]
 [ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="2_ualga"]
@@ -50,6 +50,9 @@ tile_size = Vector2i(320, 320)
 sources/0 = SubResource("TileSetAtlasSource_s86cj")
 sources/1 = SubResource("TileSetAtlasSource_w2m7p")
 sources/2 = SubResource("TileSetAtlasSource_mk7xt")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcwtj"]
+size = Vector2(1612, 1290)
 
 [node name="Trafico1" type="StaticBody2D"]
 
@@ -111,3 +114,7 @@ position = Vector2(1599, 714)
 
 [node name="Node2D7" parent="." instance=ExtResource("4_wlsj3")]
 position = Vector2(2339, 684)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(1772, -635)
+shape = SubResource("RectangleShape2D_tcwtj")
