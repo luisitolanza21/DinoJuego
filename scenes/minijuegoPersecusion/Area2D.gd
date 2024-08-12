@@ -1,5 +1,4 @@
-class_name manchaAceite;
-extends Node2D
+extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
@@ -12,8 +11,6 @@ func _process(delta):
 	pass
 
 
-func _on_area_2d_body_entered(body):
-	if body is AutoPolicia:
-		body.efecto_por_pisar_aceite();
-		print("Procede a resbalarce");
+func _on_area_entered(area):
+	print("Choco con la acera")
 	pass # Replace with function body.

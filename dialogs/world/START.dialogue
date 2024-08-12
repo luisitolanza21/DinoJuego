@@ -13,5 +13,6 @@ Dino: Entendido, Coronel. ¡Voy en camino!
 
 set Misiones.mision = 1
 set Misiones.cargar_mision(Misiones.mision)
+set Misiones.posicion_indicador = Misiones.coronel_position 
 set Global.botones = true
 => END

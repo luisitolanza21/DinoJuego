@@ -1,9 +1,10 @@
-class_name manchaAceite;
-extends Node2D
+class_name Aceras;
+extends StaticBody2D
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
 	pass # Replace with function body.
 
 
@@ -11,9 +12,3 @@ func _ready():
 func _process(delta):
 	pass
 
-
-func _on_area_2d_body_entered(body):
-	if body is AutoPolicia:
-		body.efecto_por_pisar_aceite();
-		print("Procede a resbalarce");
-	pass # Replace with function body.

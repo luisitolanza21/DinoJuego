@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://qsstncaxcthf"
+path="res://.godot/imported/mision_3.dialogue-40a04200698d1f25905ae4558f0af28a.tres"
+
+[deps]
+
+source_file="res://dialogs/world/mision_3.dialogue"
+dest_files=["res://.godot/imported/mision_3.dialogue-40a04200698d1f25905ae4558f0af28a.tres"]
+
+[params]
+
+defaults=true

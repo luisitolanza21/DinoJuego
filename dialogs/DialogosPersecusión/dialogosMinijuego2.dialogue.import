@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cugc77rkwcfii"
+path="res://.godot/imported/dialogosMinijuego2.dialogue-1becb95663d9e834dc2ab90bcbc8bf36.tres"
+
+[deps]
+
+source_file="res://dialogs/DialogosPersecusión/dialogosMinijuego2.dialogue"
+dest_files=["res://.godot/imported/dialogosMinijuego2.dialogue-1becb95663d9e834dc2ab90bcbc8bf36.tres"]
+
+[params]
+
+defaults=true
