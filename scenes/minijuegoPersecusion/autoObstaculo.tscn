@@ -8,7 +8,7 @@
 script/source = "class_name AutoObstaculo;
 extends CharacterBody2D
 
-@export var MAX_SPEED_REF= 1500;
+@export var MAX_SPEED_REF= 650;
 @export var MIN_SPEED_REF= 200;
 
 @export var ACCELERATION = 1500;
@@ -120,7 +120,7 @@ func detectarCosas(delta):
 		dirVertical = 0
 		freno = 0
 
-	moverAutomovil(delta, 1, dirVertical, freno)
+	moverAutomovil(delta, -1, dirVertical, freno)
 
 	
 func moverAutomovil(delta, dirHorizontal, dirVertical, freno):
@@ -176,23 +176,28 @@ func _on_area_2d_body_entered(body):
 size = Vector2(115, 60)
 
 [node name="autoMovil1" type="CharacterBody2D"]
+rotation = -6.28319
 script = SubResource("GDScript_cs50k")
 
 [node name="auto_verde" type="Sprite2D" parent="."]
 visible = false
-scale = Vector2(0.208743, 0.251633)
+position = Vector2(-0.794584, 0)
+scale = Vector2(0.205621, 0.251633)
 texture = ExtResource("1_jb8yw")
+flip_h = true
 
 [node name="auto_rojo" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(0.207317, 0.24911)
 texture = ExtResource("2_xfjj6")
+flip_h = true
 
 [node name="auto_amarillo" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1, 1)
 scale = Vector2(0.206413, 0.248476)
 texture = ExtResource("3_auob7")
+flip_h = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(113, 97)
@@ -204,7 +209,7 @@ polygon = PackedVector2Array(-165, -119, -164, -79, -157, -75, -153, -75, -152, 
 shape = SubResource("RectangleShape2D_3bs7c")
 
 [node name="RayCastFrontal" type="RayCast2D" parent="."]
-target_position = Vector2(188, -1)
+target_position = Vector2(-181, -3.1647e-05)
 
 [node name="RayCastInferior" type="RayCast2D" parent="."]
 target_position = Vector2(0, 33)
@@ -214,10 +219,10 @@ target_position = Vector2(0, -42)
 
 [node name="RayCastFrontalSuperior" type="RayCast2D" parent="."]
 position = Vector2(-2, -23)
-target_position = Vector2(185, -1)
+target_position = Vector2(-176, 0.999969)
 
 [node name="RayCastFrontalInferior" type="RayCast2D" parent="."]
 position = Vector2(-4, 33)
-target_position = Vector2(188, -10)
+target_position = Vector2(-171, -7.00003)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
