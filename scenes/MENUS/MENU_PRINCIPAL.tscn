@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://byof5d83djcet"]
+
+[ext_resource type="Texture2D" uid="uid://bwxlkrp4su2a6" path="res://assets/Menu principal (1).png" id="1_n27ov"]
+[ext_resource type="Script" path="res://scenes/MENUS/MENU_PRINCIPAL.gd" id="1_yu70o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_huvx4"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_yu70o")
+
+[node name="MenuPrincipal(1)" type="Sprite2D" parent="."]
+position = Vector2(580, 327)
+scale = Vector2(0.606971, 0.606971)
+texture = ExtResource("1_n27ov")
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(302, 443)
+scale = Vector2(-11.7022, -5.02263)
+shape = SubResource("RectangleShape2D_huvx4")
+action = "ui_accept"

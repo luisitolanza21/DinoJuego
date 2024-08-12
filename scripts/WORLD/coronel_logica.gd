@@ -25,14 +25,24 @@ func player_interacted():
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
 		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_1_3")
 
-	elif Misiones.mision == 1: #mision 1 mostrar dialogo "MISION_1"
+	elif Misiones.mision == 1 && Misiones.continuacion == 1: #mision 1 mostrar dialogo "MISION_1"
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
 		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_1")
 	
 	
 	##### MISION 2 ########
-	if Misiones.mision == 2: 
-		print("HOLA")
+	if Misiones.mision == 2 && Misiones.continuacion == 1: 
 		Misiones.cargar_mision(Misiones.mision)
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
 		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_2")
+	if Misiones.mision == 2 && Misiones.continuacion == 3:
+		Misiones.cargar_mision(Misiones.mision)
+		var dialogue_resource = load(Misiones.get_current_dialogue_path())
+		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_2_5")
+	
+	###### MISION 3 ###########
+	if Misiones.mision == 3 && Misiones.continuacion == 1:
+		Misiones.cargar_mision(Misiones.mision)
+		var dialogue_resource = load(Misiones.get_current_dialogue_path())
+		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_3")
+		Global.dino_position = $"../../player".position #guardar posicion para persistencia en la escena

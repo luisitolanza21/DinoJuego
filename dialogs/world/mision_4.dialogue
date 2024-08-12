@@ -1,0 +1,22 @@
+~ MISION_4
+set Global.botones = false
+Ciudadano: "¡Dino, necesito su ayuda! Me han robado mi cartera y mi teléfono."
+Dino: "¡Tranquilo, señor! Voy a ayudarle a recuperarlos, vamos."
+do Transicion.cambiar_escena("res://scenes/minijuego1/nivel3/mundominijuego3.tscn")
+set Misiones.continuacion = 2
+set Global.botones = true
+=> END
+
+~ MISION_4_2
+set Global.botones = false
+Dino: "¡Aquí tiene, señor! Recuperé su cartera y teléfono."
+
+Ciudadano: "¡No lo puedo creer! ¡Gracias, Dino! No sé cómo agradecerle. Usted siempre está ahí cuando más lo necesitamos."
+
+Dino: "Es mi deber asegurarme de que todos en la ciudad estén seguros. Recuerde, siempre decimos: ¡DI-NO a la violencia!"
+
+Ciudadano: "¡Así es! Gracias nuevamente, Dino. La ciudad es un lugar mejor gracias a usted."
+
+
+set Global.botones = true
+=> END

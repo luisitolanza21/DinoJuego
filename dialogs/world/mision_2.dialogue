@@ -7,9 +7,13 @@ MISION: "¿Deseas continuar a la siguiente mision?"
 	=> MISION_2_1
 - no
 	Coronel: Regresa cuando estes preparado
-=> END!
+	set Misiones.posicion_indicador = Misiones.coronel_position
+set Global.botones = true
+=> END
 
 ~ MISION_2_1
+
+set Global.botones = false
 Coronel: "hemos recibido informes de un individuo sospechoso que ha estado causando problemas en las calles. Se dedica a intimidar a los vecinos y ha escapado de nuestros agentes más de una vez. No podemos permitir que siga sembrando el miedo. Quiero que lo encuentres y lo detengas antes de que cause más daño."
 
 Dino: "Entendido, Coronel. Nadie escapa de Dino. DI-NO a la inseguridad! ¿Alguna pista sobre su paradero?"
@@ -19,25 +23,59 @@ Coronel: "Lo vimos por última vez en las cercanías del castillo azul. Es rápi
 Dino: "Voy a necesitar estar en mi mejor forma. ¡Esta ciudad merece estar en paz y tranquilidad!"
 
 Coronel: "Buena suerte, Dino. Te estaré apoyando desde aquí."
+
+set Misiones.posicion_indicador = Misiones.npc_mision2_position 
 set Misiones.continuacion = 2
-=> END!
+set Global.botones = true
+=> END
 
 ~ MISION_2_2
+set Global.botones = false
 Dino: "Alto ahí!!"
 Conducto: "No me atraparas jamas Dino!!" 
+set Misiones.continuacion = 3
 do Transicion.cambiar_escena("res://scenes/minijuegoPersecusion/persecucion_(main).tscn")
 set Global.botones = true
-=> END!  
+=> END
 
 ~ MISION_2_3
+
+set Global.botones = false
+
 Conductor: "Está bien, está bien... me atrapaste. No puedo correr más."
 
-Dino: "Sabías que esto iba a pasar. No hay lugar para la violencia y el caos en Tarija. Aquí decimos ¡DI-NO al crimen!"
+Dino: "Sabías que esto iba a pasar. No hay lugar para la violencia y el caos en la ciudad. Aquí decimos ¡DI-NO al crimen!"
 
 Conductor: "Solo quería... escapar, pero ahora veo que no vale la pena."
 
 Dino: "Siempre hay otra opción. El camino que elegiste solo lleva a más problemas. Ahora, enfrentaremos las consecuencias, pero también es una oportunidad para cambiar."
 
-Dino: Deberia ir a comunicarle al coronel
+Dino: DI-NO a la inseguridad! Debería ir a comunicarle al coronel
+set Misiones.posicion_indicador = Misiones.coronel_position
+set Global.botones = true
+=> END 
 
-=> END!  
+~ MISION_2_4
+set Global.botones = false
+Dino: DI-NO a la inseguridad!, Debería ir a comunicarle al coronel
+set Misiones.posicion_indicador = Misiones.coronel_position
+set Global.botones = true
+=> END
+
+~ MISION_2_5
+set Global.botones = false
+set Misiones.posicion_indicador = Misiones.coronel_position
+Dino: Coronel, he atrapado al conductor. Está bajo custodia.
+
+Coronel: Excelente trabajo, Dino. Esto traerá algo de paz a la ciudad.
+
+Dino: Sí, pero aún queda trabajo por hacer. Seguimos adelante.
+
+Coronel: Correcto. Mantén la guardia alta.
+
+Coronel: Vuelve a hablar conmigo para tu siguiente tarea sobre el control del tráfico en la ciudad.
+set Misiones.posicion_indicador = Misiones.coronel_position
+set Misiones.mision = 3
+set Misiones.continuacion = 1
+set Global.botones = true
+=> END  

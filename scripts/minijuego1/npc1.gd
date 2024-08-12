@@ -20,7 +20,12 @@ func _on_body_exited(body):
 		body.set("current_npc", null)
 
 func player_interacted():
+	######## MISION 2 #############
 	if Misiones.mision == 2 && Misiones.continuacion == 2:
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
 		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_2_2")
 		Global.dino_position = $"../../player".position #guardar posicion para persistencia en la escena
+	if Misiones.mision == 2 && Misiones.continuacion == 3:
+		var dialogue_resource = load(Misiones.get_current_dialogue_path())
+		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_2_4")
+		

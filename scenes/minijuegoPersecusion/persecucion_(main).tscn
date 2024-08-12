@@ -10541,12 +10541,15 @@ rotation = 0.0231387
 position = Vector2(136.728, 186.213)
 
 [node name="DINOMOVIL" parent="." instance=ExtResource("8_0bce6")]
-
 position = Vector2(-85, 143)
 floor_max_angle = 0.0
 MAX_SPEED = 1000.0
 ACCELERATION = 150.0
 DECELERATION = 500.0
+
+[node name="Camera2D" type="Camera2D" parent="DINOMOVIL"]
+position = Vector2(288, 87)
+limit_bottom = 800
 
 [node name="autoEnemigo" parent="." instance=ExtResource("12_5vi4u")]
 position = Vector2(375, 345)
@@ -12347,7 +12350,7 @@ position = Vector2(4347, -146)
 shape = SubResource("RectangleShape2D_j5co3")
 
 [node name="AreaFinal" type="Area2D" parent="."]
-position = Vector2(60438, 181)
+position = Vector2(773, 173)
 script = ExtResource("19_x4iyv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaFinal"]
@@ -12356,9 +12359,5 @@ shape = SubResource("CapsuleShape2D_pgh5i")
 
 [node name="autoMovil1" parent="." instance=ExtResource("20_52ed3")]
 position = Vector2(-223, 167)
-
-[node name="Camera2D" type="Camera2D" parent="autoMovil1"]
-position = Vector2(426, 63)
-limit_bottom = 800
 
 [connection signal="body_entered" from="AreaFinal" to="AreaFinal" method="_on_body_entered"]

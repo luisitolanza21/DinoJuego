@@ -1,0 +1,39 @@
+~ MISION_3
+set Global.botones = false
+Dino: Coronel, estoy en la zona. Listo para controlar el tráfico.
+
+Coronel: Recuerda, Dino, no todo es combatir el crimen. Mantener el orden en las calles también es crucial.
+
+Dino: Entendido. A veces, solo se trata de asegurarse de que todos lleguen a casa a salvo.
+
+Coronel: Exactamente. Haz lo necesario para que el tráfico fluya sin problemas.
+
+Dino: En eso estoy, Coronel. ¡A trabajar!
+
+set Misiones.continuacion = 2
+set Global.botones = true
+do Transicion.cambiar_escena("res://scenes/minijuego3/nivel1/ciudadminijuego3_1.tscn")
+=> END!
+
+~ MISION_3_2
+set Global.botones = false
+Dino: Misión cumplida, Coronel. El tráfico fluye sin problemas.
+
+Coronel: Bien hecho, Dino. Has demostrado la importancia de mantener el orden.
+
+Dino: La gente cooperó y respetó las señales. Todo salió según lo planeado.
+
+Coronel: Así se logra la seguridad de los ciudadanos. Mantén el buen trabajo.
+
+Dino: Gracias, Coronel. Estoy listo para la próxima misión.
+
+Coronel: Perfecto. Necesitamos agentes que mantengan la ciudad segura.
+
+Dino: ¡Daré mi mejor esfuerzo!
+
+set Misiones.continuacion =  1
+set Misiones.mision = 4
+set Misiones.posicion_indicador = Misiones.npc_mision4_position
+do Misiones.cargar_mision(Misiones.mision)
+set Global.botones = true
+=> END!

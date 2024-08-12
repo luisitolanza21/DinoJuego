@@ -214,7 +214,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k5j4j"]
-radius = 54.0041
+radius = 83.7992
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkgcl"]
 radius = 256.0
@@ -227,9 +227,10 @@ script = SubResource("GDScript_i7yhm")
 position = Vector2(199.5, 260.5)
 sprite_frames = SubResource("SpriteFrames_jk01m")
 animation = &"idle_1"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(201.5, 424.34)
-scale = Vector2(1, 0.24)
+scale = Vector2(1, 0.277056)
 shape = SubResource("CircleShape2D_k5j4j")
 
 [node name="Area2D" type="Area2D" parent="."]

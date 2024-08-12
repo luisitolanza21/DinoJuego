@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://r2dkqlpd5lm"]
+
+[ext_resource type="Script" path="res://scripts/WORLD/misiones/mision_indicator/mision_indicator.gd" id="1_qwy3o"]
+[ext_resource type="Texture2D" uid="uid://cjlrjw36xoicn" path="res://assets/flecha/File1.png" id="2_o7h20"]
+
+[node name="MisionIndicator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = -9.0
+offset_right = 3.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qwy3o")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -15.0
+offset_top = -15.0
+offset_right = 15.0
+offset_bottom = 15.0
+
+[node name="arrow" type="Sprite2D" parent="."]
+position = Vector2(-34, 0)
+scale = Vector2(0.260505, 0.237461)
+texture = ExtResource("2_o7h20")
+
+[node name="cross" type="Sprite2D" parent="."]
+position = Vector2(1.20792e-13, -34)
+rotation = 1.5708
+scale = Vector2(0.260505, 0.237461)
+texture = ExtResource("2_o7h20")

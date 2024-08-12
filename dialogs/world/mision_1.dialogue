@@ -11,8 +11,10 @@ Coronel: "Habla con los testigos, revisa el lugar del crimen y sigue cualquier p
 
 Dino: "¡Lo tengo, Coronel! No descansaré hasta resolver este caso y devolver la paz a nuestro querido parque."
 set Global.botones = true
+set Misiones.posicion_indicador = Misiones.npc_mision1_position 
 set Misiones.continuacion = 3
 => END
+
 
 
 
@@ -31,6 +33,7 @@ set Global.botones = true
 	
 ~ MISION_1_2
 set Global.botones = false
+set Misiones.posicion_indicador = Misiones.coronel_position 
 Ciudadano: "Gracias Dino!! he recuperado mis pertenencias"
 	
 Dino: "No te preocupes, solo recuerda ¡DI-NO a la injusticia!"

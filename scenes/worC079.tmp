@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b7ou5ofnlklr1"]
+[gd_scene load_steps=35 format=3 uid="uid://b7ou5ofnlklr1"]
 
 [ext_resource type="Script" path="res://scripts/WORLD/logica_world.gd" id="1_bm47p"]
 [ext_resource type="PackedScene" uid="uid://c66vv04fsnrtl" path="res://scenes/world_scenes/comisaría.tscn" id="1_i5a5j"]
@@ -23,7 +23,6 @@
 [ext_resource type="PackedScene" uid="uid://dannjbdl61ghk" path="res://scenes/world_scenes/casa_3.tscn" id="19_ix82e"]
 [ext_resource type="PackedScene" uid="uid://c3r2q1twsx2mb" path="res://scenes/world_scenes/vehiculo_persecusion.tscn" id="21_gfj67"]
 [ext_resource type="Script" path="res://scripts/minijuego1/npc1.gd" id="21_w5xux"]
-[ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="24_ym3pn"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cfrkf"]
 load_path = "res://.godot/imported/calles.png-639fa4fc523d83555037d84d55c0617a.ctex"
@@ -77,14 +76,15 @@ size = Vector2(10410, 1142.75)
 size = Vector2(4763.25, 6638.5)
 
 [node name="Node2D" type="Node2D"]
-position = Vector2(-110, 0)
+position = Vector2(-30, 0)
 script = ExtResource("1_bm47p")
-metadata/_edit_horizontal_guides_ = [626.0, 2408.0]
-metadata/_edit_vertical_guides_ = [243.0, 3075.0]
+metadata/_edit_horizontal_guides_ = [626.0]
+metadata/_edit_vertical_guides_ = [243.0]
 
 [node name="Botones" parent="." instance=ExtResource("2_71bc5")]
 
 [node name="MisionIndicator" parent="Botones" instance=ExtResource("3_a2l4i")]
+quest_target_position = Vector2(395, 2790)
 
 [node name="calles" type="TileMap" parent="."]
 position = Vector2(13, -6)
@@ -400,22 +400,17 @@ scale = Vector2(0.683015, 0.807617)
 script = ExtResource("13_yblo1")
 
 [node name="NPC_mision1" parent="NPCS" instance=ExtResource("14_vkwj7")]
-position = Vector2(499, 2928)
+position = Vector2(421, 2922)
 scale = Vector2(1.40102, 1.39137)
 
 [node name="vehiculo_persecusion_npc_mision2" parent="NPCS" instance=ExtResource("21_gfj67")]
-position = Vector2(-2178, 2535)
+position = Vector2(-2254, 2535)
 script = ExtResource("21_w5xux")
 dialogueResource = null
-
-[node name="NPC_mision4" parent="NPCS" instance=ExtResource("24_ym3pn")]
-position = Vector2(3096, 2504)
-scale = Vector2(1.22557, 1.22557)
 
 [node name="player" parent="." instance=ExtResource("2_7d60p")]
 position = Vector2(-2084, -1066)
 scale = Vector2(0.761783, 0.67924)
-speed = 3905
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(53.9607, 22.2191)

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://boac50tewthe"
+path="res://.godot/imported/mision_4.dialogue-30a63540910bde96a984d693883ee489.tres"
+
+[deps]
+
+source_file="res://dialogs/world/mision_4.dialogue"
+dest_files=["res://.godot/imported/mision_4.dialogue-30a63540910bde96a984d693883ee489.tres"]
+
+[params]
+
+defaults=true
