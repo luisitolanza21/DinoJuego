@@ -10,12 +10,12 @@ func _ready():
 	$Area2D.connect("body_exited", Callable(self, "_on_body_exited"))
 
 func _on_body_entered(body):
-	print(listo)
+	#print(listo)
 	if body.name == player_name:
 		body.set("current_npc", self)
 
 func _on_body_exited(body):
-	print(listo)
+#	print(listo)
 	if body.name == player_name:
 		body.set("current_npc", null)
 

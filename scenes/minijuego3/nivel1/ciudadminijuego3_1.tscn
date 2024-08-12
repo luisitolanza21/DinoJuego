@@ -1,15 +1,25 @@
-[gd_scene load_steps=5 format=3 uid="uid://cjnb0fqoym018"]
+[gd_scene load_steps=11 format=3 uid="uid://cjnb0fqoym018"]
 
 [ext_resource type="PackedScene" uid="uid://bfomrkdrrn7a7" path="res://scenes/minijuego3/nivel1/trafico1.tscn" id="1_2f0t2"]
+[ext_resource type="Script" path="res://scripts/minijuego3/puntajes.gd" id="1_ibnjl"]
 [ext_resource type="PackedScene" uid="uid://c4gh8fcpca48m" path="res://scenes/minijuego3/obstaculosAleatorios.tscn" id="1_upcbk"]
 [ext_resource type="PackedScene" uid="uid://dg1pjqbfr2u08" path="res://scenes/minijuego3/dinotrafico_1.tscn" id="3_fkpsw"]
+[ext_resource type="Script" path="res://scripts/minijuego3/generaciondeautosvertical.gd" id="3_ieuee"]
+[ext_resource type="Script" path="res://scripts/minijuego3/contador2.gd" id="4_2pg8o"]
+[ext_resource type="Texture2D" uid="uid://dhfw8gn5fjrr8" path="res://assets/UI/negro.png" id="7_8yu72"]
+[ext_resource type="Script" path="res://scripts/minijuego3/puntos.gd" id="7_tnnhm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwe5t"]
-size = Vector2(228, 62)
+size = Vector2(444, 435)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3dc7"]
+size = Vector2(94, 130)
 
 [node name="Ciudadminijuego31" type="StaticBody2D"]
+script = ExtResource("1_ibnjl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -80)
 
 [node name="Trafico1" parent="." instance=ExtResource("1_2f0t2")]
 position = Vector2(-551, -57)
@@ -17,12 +27,63 @@ scale = Vector2(0.35, 0.35)
 
 [node name="ObstaculosAleatorios2" parent="." instance=ExtResource("1_upcbk")]
 
+[node name="ObstaculosAleatorioshorizontal" parent="." instance=ExtResource("1_upcbk")]
+script = ExtResource("3_ieuee")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(354, 545)
+position = Vector2(678, 272.5)
 shape = SubResource("RectangleShape2D_pwe5t")
 
 [node name="dinotrafico1" parent="." instance=ExtResource("3_fkpsw")]
+offset_left = -319.0
+offset_right = -231.0
+defrente = Vector2(12, 0)
+area2Ddefrente = Vector2(2000, -6)
+vista = "arriba"
 
 [node name="dinotrafico2" parent="." instance=ExtResource("3_fkpsw")]
-offset_left = 356.0
-offset_right = 444.0
+offset_left = 344.0
+offset_right = 432.0
+defrente = Vector2(10, 110)
+area2Ddefrente = Vector2(2000, 230)
+
+[node name="interfaz3" type="CanvasLayer" parent="."]
+script = ExtResource("4_2pg8o")
+
+[node name="negro" type="Sprite2D" parent="interfaz3"]
+self_modulate = Color(1, 1, 1, 0.670588)
+position = Vector2(987, 80)
+scale = Vector2(0.240234, 0.213542)
+texture = ExtResource("7_8yu72")
+
+[node name="textodelcontador" type="RichTextLabel" parent="interfaz3"]
+offset_left = 891.0
+offset_top = 3.0
+offset_right = 1075.0
+offset_bottom = 106.0
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "1:20"
+
+[node name="contador" type="Timer" parent="interfaz3"]
+wait_time = 120.0
+
+[node name="puntos" type="RichTextLabel" parent="interfaz3"]
+offset_left = 895.0
+offset_top = 94.0
+offset_right = 1083.0
+offset_bottom = 181.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "autos restantes: 20"
+script = ExtResource("7_tnnhm")
+
+[node name="puntajes" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puntajes"]
+position = Vector2(-269, 518)
+shape = SubResource("RectangleShape2D_a3dc7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="puntajes"]
+position = Vector2(401, -506)
+shape = SubResource("RectangleShape2D_a3dc7")

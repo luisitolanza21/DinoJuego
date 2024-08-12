@@ -1,7 +1,6 @@
 extends Node2D
 
 var autoObstaculo=load("res://scenes/minijuego3/autos.tscn")
-var autoObstaculovertical=load("res://scenes/minijuego3/autosvertical.tscn")
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,48 +10,28 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Global.listo == "si":
-		if $TiempoGen.is_stopped():
-			var ubicacion = randi() % 3 +1
-			var tiempo = randi() % 2 + 1
-			create_obstacles(ubicacion);
-			$TiempoGen.wait_time = tiempo
-			$TiempoGen.start();
+	if $TiempoGen.is_stopped():
+		var tiempo = randi() % 3 + 1
+		create_obstacles();
+		$TiempoGen.wait_time = tiempo
+		$TiempoGen.start();
 		
-func create_obstacles(ubicacion):
+func create_obstacles():
 	var position: Vector2
 	var positionrelative: Vector2
-	
-	match ubicacion:
-		0:
-			position = Vector2(-780, -20)
-		1:
-			position = Vector2(-250, -460)
-			positionrelative = Vector2(-250, -550)
-		2:
-			position = Vector2(410, 550)
-			positionrelative = Vector2(410, 650)
-	
+	position = Vector2(-780, -20)
+
 	# Verificar si hay un objeto en la posición
 	if is_position_occupied(position):
-	#	print(position)
-	#	print("La posición ya está ocupada.")
+		print(position)
+		print("La posición ya está ocupada.")
 		return  # No se instancia nada si la posición está ocupada
 	
 	# Instanciar la escena del auto obstáculo
 	var new_obs
-	match ubicacion:
-		0:
-			new_obs = autoObstaculo.instantiate()
-			new_obs.position = position
-			add_child(new_obs)
-		1, 2:
-			new_obs = autoObstaculovertical.instantiate()
-			new_obs.position = positionrelative
-			if ubicacion == 2:
-				new_obs.POSICION = -1
-				new_obs.scale.x = -1
-			add_child(new_obs)
+	new_obs = autoObstaculo.instantiate()
+	new_obs.position = position
+	add_child(new_obs)
 
 func is_position_occupied(position: Vector2) -> bool:
 	# Crear un objeto de parámetros de consulta

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dkaaid07t46a8"]
+[gd_scene load_steps=9 format=3 uid="uid://dkaaid07t46a8"]
 
 [ext_resource type="Texture2D" uid="uid://x2x3tmmxwbtf" path="res://assets/autos/auto 3.png" id="1_aluu4"]
 [ext_resource type="Texture2D" uid="uid://2wup3i4wbx2h" path="res://assets/autos/auto 1.png" id="2_6w3ro"]
@@ -8,11 +8,11 @@
 script/source = "extends CharacterBody2D
 
 @export var MAX_SPEED_REF= 500;
-@export var MIN_SPEED_REF= 200;
+@export var MIN_SPEED_REF= 250;
 
 @export var ACCELERATION = 400;
 
-@export var DECELERATION = 200.0;
+@export var DECELERATION = 300.0;
 
 @export var SUBIR=false;
 @export var BAJAR=false;
@@ -20,6 +20,7 @@ script/source = "extends CharacterBody2D
 @export var RETROCEDER=false;
 @export var posicionParaDesaparecerX=-400;
 
+var MAX_SPEED_VERTICAL = -1;
 var MAX_SPEED;
 var chocan = false
 
@@ -61,8 +62,9 @@ func _ready():
 	# Make sure the chosen sprite is visible
 	current_sprite.visible = true
 	
-func _on_area_choqueperder(area):		
-		Transicion.cambiar_escena(\"res://scenes/world.tscn\")
+func _on_area_choqueperder(area):
+	MAX_SPEED_VERTICAL = 0
+	Transicion.cambiar_escena(\"res://scenes/minijuego3/perdiste.tscn\")
 		#DialogueManager.show_dialogue_balloon(load(\"res://dialogs/dinodetective1/minijuego1_1.dialogue\"), \"npc1\")
 
 func _on_area_front_entered(area):
@@ -76,18 +78,19 @@ func _on_area_front_exited(area):
 func _on_area_back_entered(area):
 	if area.get_parent() != self:
 		var other_car = area.get_parent()
-		other_car.MAX_SPEED = MAX_SPEED
+	#	other_car.MAX_SPEED = MAX_SPEED
 	#	print(\"MAX_SPEED enviado al auto de atrás: \", MAX_SPEED)
 
 func _process(delta):
 	#print($\".\".position.x)
 	if chocan:
 		var other_car = $adelante.get_overlapping_areas()[0].get_parent()
-		if other_car and other_car != self and other_car.MAX_SPEED != MAX_SPEED:
-			MAX_SPEED = other_car.MAX_SPEED
-		#	print(\"MAX_SPEED actualizado desde el auto de delante: \", MAX_SPEED)
+		if other_car.MAX_SPEED > -1:
+			if other_car and other_car != self and other_car.MAX_SPEED != MAX_SPEED:
+				MAX_SPEED = other_car.MAX_SPEED
+			#	print(\"MAX_SPEED actualizado desde el auto de delante: \", MAX_SPEED)
 		
-	if $\".\".position.x > 750:
+	if $\".\".position.x > 750 or $\".\".position.x < -1200:
 		$\".\".queue_free()
 	
 
@@ -130,62 +133,58 @@ func _physics_process(delta):
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_50ebw"]
-size = Vector2(133, 6)
+size = Vector2(92.1251, 5.89067)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0pj84"]
-size = Vector2(22, 7)
+size = Vector2(25.8749, 7)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cne2i"]
-size = Vector2(118, 27)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7kqrn"]
-size = Vector2(0, 17.5)
+size = Vector2(119, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kpkmo"]
 size = Vector2(101, 48)
 
 [node name="autos" type="CharacterBody2D"]
-position = Vector2(113, 90)
 script = SubResource("GDScript_cs50k")
 
 [node name="auto_verde" type="Sprite2D" parent="."]
-position = Vector2(-112, -88)
+visible = false
+position = Vector2(-0.874908, -10.8907)
 scale = Vector2(0.208743, 0.251633)
 texture = ExtResource("1_aluu4")
 
 [node name="auto_rojo" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-112, -87)
+position = Vector2(-0.874908, -9.89067)
 scale = Vector2(0.207317, 0.24911)
 texture = ExtResource("2_6w3ro")
 
 [node name="auto_amarillo" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-112, -87)
+position = Vector2(-0.874893, -9.89067)
 scale = Vector2(0.206413, 0.248476)
 texture = ExtResource("3_xgvwq")
 
 [node name="atras" type="Area2D" parent="."]
+position = Vector2(111.125, 77.1093)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="atras"]
-position = Vector2(-236.5, -87)
+position = Vector2(-216.063, -87.0547)
 shape = SubResource("RectangleShape2D_50ebw")
 
 [node name="adelante" type="Area2D" parent="."]
+position = Vector2(111.125, 77.1093)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="adelante"]
-position = Vector2(-48, -86.5)
+position = Vector2(-46.0625, -86.5)
 shape = SubResource("RectangleShape2D_0pj84")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-111, -79.5)
+position = Vector2(-11.5, -2)
 shape = SubResource("RectangleShape2D_cne2i")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-50, -97.75)
-shape = SubResource("RectangleShape2D_7kqrn")
-
 [node name="choqueperder" type="Area2D" parent="."]
+position = Vector2(111.125, 77.1093)
 collision_layer = 2
 collision_mask = 2
 

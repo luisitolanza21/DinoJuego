@@ -1,25 +1,57 @@
-[gd_scene load_steps=9 format=3 uid="uid://dg1pjqbfr2u08"]
+[gd_scene load_steps=13 format=3 uid="uid://dg1pjqbfr2u08"]
 
 [ext_resource type="Script" path="res://scripts/minijuego3/dinotrafico1.gd" id="1_x7syd"]
-[ext_resource type="Texture2D" uid="uid://bbjq0fgq0j7pl" path="res://assets/player/sprite dino.png" id="2_47yv3"]
-[ext_resource type="Texture2D" uid="uid://k5qyfawkip7u" path="res://assets/player/idle 2 (1).png" id="3_fwgb5"]
+[ext_resource type="Texture2D" uid="uid://br3jcod3krhtn" path="res://assets/player/dino transito back.png" id="2_65juf"]
+[ext_resource type="Texture2D" uid="uid://cn5t6vbdhdybs" path="res://assets/player/dino transito front.png" id="2_t2atq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pttd"]
+atlas = ExtResource("2_65juf")
+region = Rect2(0, 0, 325, 385)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01p1e"]
+atlas = ExtResource("2_65juf")
+region = Rect2(325, 0, 325, 385)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s28l3"]
+atlas = ExtResource("2_t2atq")
+region = Rect2(0, 0, 343, 390)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlfxd"]
+atlas = ExtResource("2_t2atq")
+region = Rect2(343, 0, 343, 390)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jmyou"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_47yv3")
+"texture": SubResource("AtlasTexture_6pttd")
 }],
 "loop": true,
-"name": &"frente",
+"name": &"frente_no_pasar",
 "speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_fwgb5")
+"texture": SubResource("AtlasTexture_01p1e")
 }],
 "loop": true,
-"name": &"lado",
+"name": &"frente_pasar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s28l3")
+}],
+"loop": true,
+"name": &"no_pasar",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlfxd")
+}],
+"loop": true,
+"name": &"pasar",
 "speed": 5.0
 }]
 
@@ -27,13 +59,13 @@ animations = [{
 size = Vector2(126, 83.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nq815"]
-size = Vector2(90, 73.5)
+size = Vector2(90, 110.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8kdcg"]
 size = Vector2(22.5, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f1lbi"]
-size = Vector2(1, 16)
+size = Vector2(0, 16)
 
 [node name="dinotrafico1" type="Button"]
 self_modulate = Color(1, 1, 1, 0)
@@ -47,7 +79,7 @@ script = ExtResource("1_x7syd")
 position = Vector2(39, 41)
 scale = Vector2(0.18, 0.18)
 sprite_frames = SubResource("SpriteFrames_jmyou")
-animation = &"lado"
+animation = &"pasar"
 
 [node name="izquierda" type="Area2D" parent="."]
 
@@ -58,19 +90,21 @@ shape = SubResource("RectangleShape2D_gky4y")
 [node name="arriba" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="arriba"]
-position = Vector2(234, -63)
+position = Vector2(58, -81.625)
 shape = SubResource("RectangleShape2D_nq815")
 
 [node name="frenoarriba" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="frenoarriba"]
-position = Vector2(89.25, -10.5)
+position = Vector2(89.25, -21.5)
 shape = SubResource("RectangleShape2D_8kdcg")
 
 [node name="frenoizquierdo" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="frenoizquierdo"]
-position = Vector2(-3.5, 6)
+position = Vector2(-4, 6)
 shape = SubResource("RectangleShape2D_f1lbi")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

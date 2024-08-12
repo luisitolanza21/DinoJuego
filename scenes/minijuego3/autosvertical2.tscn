@@ -1,13 +1,13 @@
-[gd_scene load_steps=17 format=3 uid="uid://cs54pkhycebsn"]
+[gd_scene load_steps=17 format=3 uid="uid://cwl1axra76q3p"]
 
-[ext_resource type="Script" path="res://scripts/minijuego3/autosvertical.gd" id="1_0jaw3"]
-[ext_resource type="Texture2D" uid="uid://x2x3tmmxwbtf" path="res://assets/autos/auto 3.png" id="1_oapom"]
-[ext_resource type="Texture2D" uid="uid://djtoigx3leht5" path="res://assets/autos/autos vista de arriba.png" id="2_fpk5l"]
-[ext_resource type="Texture2D" uid="uid://2wup3i4wbx2h" path="res://assets/autos/auto 1.png" id="2_o828y"]
-[ext_resource type="Texture2D" uid="uid://cw7hrqmxjb3i1" path="res://assets/autos/auto 2.png" id="3_l5lt0"]
+[ext_resource type="Script" path="res://scripts/minijuego3/autosvertical.gd" id="1_4juye"]
+[ext_resource type="Texture2D" uid="uid://djtoigx3leht5" path="res://assets/autos/autos vista de arriba.png" id="2_sxs8i"]
+[ext_resource type="Texture2D" uid="uid://x2x3tmmxwbtf" path="res://assets/autos/auto 3.png" id="3_rbdas"]
+[ext_resource type="Texture2D" uid="uid://2wup3i4wbx2h" path="res://assets/autos/auto 1.png" id="4_qu522"]
+[ext_resource type="Texture2D" uid="uid://cw7hrqmxjb3i1" path="res://assets/autos/auto 2.png" id="5_bktjb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ltkxx"]
-atlas = ExtResource("2_fpk5l")
+atlas = ExtResource("2_sxs8i")
 region = Rect2(0, 0, 234, 522)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ef6km"]
@@ -22,7 +22,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f2bhh"]
-atlas = ExtResource("2_fpk5l")
+atlas = ExtResource("2_sxs8i")
 region = Rect2(234, 0, 234, 522)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_manlf"]
@@ -37,7 +37,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h6b7k"]
-atlas = ExtResource("2_fpk5l")
+atlas = ExtResource("2_sxs8i")
 region = Rect2(468, 0, 234, 522)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6hipr"]
@@ -58,84 +58,81 @@ size = Vector2(111.5, 76)
 size = Vector2(30, 9.00004)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onpqj"]
-size = Vector2(102, 43.9996)
+size = Vector2(104, 44.9998)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cne2i"]
-size = Vector2(107, 37)
+size = Vector2(107, 39)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7kqrn"]
 size = Vector2(1.00005, 22)
 
 [node name="autos" type="CharacterBody2D"]
 rotation = 1.5708
-script = ExtResource("1_0jaw3")
+script = ExtResource("1_4juye")
 
 [node name="rojo" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(-75.1899, -1.57034)
-rotation = 1.5708
+position = Vector2(71.81, -3.57092)
+rotation = 4.71239
 scale = Vector2(0.21, 0.21)
 sprite_frames = SubResource("SpriteFrames_ef6km")
 
 [node name="verde" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(-75.1899, -1.57034)
-rotation = 1.5708
+position = Vector2(71.8101, -1.57092)
+rotation = 4.71239
 scale = Vector2(0.21, 0.21)
 sprite_frames = SubResource("SpriteFrames_manlf")
 
 [node name="amarillo" type="AnimatedSprite2D" parent="."]
 visible = false
-position = Vector2(-75.1899, -1.57034)
-rotation = 1.5708
+position = Vector2(71.8101, 0.429077)
+rotation = 4.71239
 scale = Vector2(0.21, 0.21)
 sprite_frames = SubResource("SpriteFrames_6hipr")
 
 [node name="auto_verde" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-76, -4.00013)
+position = Vector2(71.0671, -4.00055)
 scale = Vector2(0.208743, 0.251633)
-texture = ExtResource("1_oapom")
+texture = ExtResource("3_rbdas")
 
 [node name="auto_rojo" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-75.4999, -4.00014)
+position = Vector2(71.0941, -4.00058)
 scale = Vector2(0.207317, 0.24911)
-texture = ExtResource("2_o828y")
+texture = ExtResource("4_qu522")
 
 [node name="auto_amarillo" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(-75.4999, -4.00014)
+position = Vector2(71.3614, -4.00063)
 scale = Vector2(0.206413, 0.248476)
-texture = ExtResource("3_l5lt0")
+texture = ExtResource("5_bktjb")
 
 [node name="atras" type="Area2D" parent="."]
-position = Vector2(36.5, 82.9999)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="atras"]
-position = Vector2(-225.5, -79.9992)
+position = Vector2(179, 0.999359)
 shape = SubResource("RectangleShape2D_50ebw")
 
 [node name="adelante" type="Area2D" parent="."]
-position = Vector2(36.5, 82.9999)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="adelante"]
-position = Vector2(-45.5, -82.9999)
+position = Vector2(6, -1.00002)
 shape = SubResource("RectangleShape2D_0pj84")
 
 [node name="choquebien" type="Area2D" parent="."]
-position = Vector2(-77, 2.99987)
 collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="choquebien"]
-position = Vector2(3.00002, -2.9998)
+position = Vector2(71, -1.50035)
 shape = SubResource("RectangleShape2D_onpqj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-81.5, 0.500297)
+position = Vector2(75.5, -1.50027)
 shape = SubResource("RectangleShape2D_cne2i")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(-24.5001, -17.9999)
+position = Vector2(4.49992, -18)
 shape = SubResource("RectangleShape2D_7kqrn")
