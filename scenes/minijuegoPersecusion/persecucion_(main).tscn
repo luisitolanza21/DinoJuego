@@ -12354,7 +12354,7 @@ position = Vector2(773, 173)
 script = ExtResource("19_x4iyv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaFinal"]
-position = Vector2(-71, -6)
+position = Vector2(-641, 20)
 shape = SubResource("CapsuleShape2D_pgh5i")
 
 [node name="autoMovil1" parent="." instance=ExtResource("20_52ed3")]

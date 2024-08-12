@@ -415,7 +415,6 @@ scale = Vector2(1.22557, 1.22557)
 [node name="player" parent="." instance=ExtResource("2_7d60p")]
 position = Vector2(-2084, -1066)
 scale = Vector2(0.761783, 0.67924)
-speed = 3905
 
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(53.9607, 22.2191)
