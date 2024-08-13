@@ -17,6 +17,7 @@ func create_obstacles():
 	while(numeroDeManchasAleatorias > 0):
 
 		var new_obs = manchaAceite.instantiate()
+		
 		var y=randf_range(377, 613);
 		var x=randf_range(0, 59000);
 		new_obs.position = Vector2(x, y);

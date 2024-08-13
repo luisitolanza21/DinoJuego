@@ -11,6 +11,8 @@ func _process(delta):
 	pass
 
 
-func _on_area_entered(area):
-	print("Choco con la acera")
-	pass # Replace with function body.
+
+func _on_body_entered(body):
+	if body is AutoPolicia:
+		print("Choco con la acera")
+

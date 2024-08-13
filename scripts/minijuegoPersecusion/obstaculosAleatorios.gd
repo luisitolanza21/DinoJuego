@@ -20,7 +20,7 @@ func _process(delta):
 		
 func create_obstacles():
 	# Instanciar la escena del auto obstáculo
-	var new_obs = autoObstaculo.instantiate()
+
 
 	# Asignar una posición aleatoria en y
 	var x=-100;
@@ -33,21 +33,64 @@ func create_obstacles():
 	print("Generado delante del dinomovil")
 	x=autoPolicia.position.x + 1200;
 	
+	var vec_carriles=[false, false, false, false, false]
+	
+	
 	var y=396;
+	var new_obs = autoObstaculo.instantiate()
 	
-	var aleatoriedad=randi_range(1, 5);
-	if aleatoriedad==1:
+	
+	var nroCarrilesAparecer=randi_range(1, 3);
+	while(nroCarrilesAparecer>0):
+		var carrilSeleccionado=randi_range(0, 3);
+		vec_carriles[carrilSeleccionado]=true;
+		nroCarrilesAparecer=nroCarrilesAparecer-1;
+		
+	if vec_carriles[0]:
 		y=396;
-	elif aleatoriedad==2:
+		
+		new_obs = autoObstaculo.instantiate()
+		new_obs.collision_layer = 1 << 2;
+		new_obs.collision_mask = (1 << 0) | (1 << 1) | (1 << 2);
+		new_obs.position = Vector2(x, y);
+		
+		# Añadir el nuevo obstáculo a la escena actual
+		add_child(new_obs)
+		vec_carriles[0]=false;
+	if vec_carriles[1]:
 		y=466;
-	elif aleatoriedad==3:
+		new_obs = autoObstaculo.instantiate()
+		new_obs.collision_layer = 1 << 2;
+		new_obs.collision_mask = (1 << 0) | (1 << 1) | (1 << 2);
+		new_obs.position = Vector2(x, y);
+		# Añadir el nuevo obstáculo a la escena actual
+		add_child(new_obs)
+		vec_carriles[1]=false;
+		
+	if vec_carriles[2]:
 		y=530;
-	elif aleatoriedad==5:
+
+		new_obs = autoObstaculo.instantiate()
+		
+		new_obs.collision_layer = 1 << 2;
+		new_obs.collision_mask = (1 << 0) | (1 << 1) | (1 << 2);
+		new_obs.position = Vector2(x, y);
+		# Añadir el nuevo obstáculo a la escena actual
+		add_child(new_obs)
+		vec_carriles[2]=false;
+		
+	if vec_carriles[3]:
 		y=589;
+		new_obs = autoObstaculo.instantiate()
+		
+		new_obs.collision_layer = 1 << 2;
+		new_obs.collision_mask = (1 << 0) | (1 << 1) | (1 << 2);
+		
+		new_obs.position = Vector2(x, y);
+		# Añadir el nuevo obstáculo a la escena actual
+		add_child(new_obs)
+		vec_carriles[3]=false;
 	
-	
-	new_obs.position = Vector2(x, y);
-	# Añadir el nuevo obstáculo a la escena actual
-	add_child(new_obs)
+
 
 

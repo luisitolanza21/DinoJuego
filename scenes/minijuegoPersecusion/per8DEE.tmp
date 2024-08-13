@@ -12310,23 +12310,23 @@ position = Vector2(10375, -440)
 shape = SubResource("RectangleShape2D_jmmlu")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(59301, -154)
+position = Vector2(59306, -146)
 shape = SubResource("RectangleShape2D_rtabt")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(59293, -423)
+position = Vector2(59290, -430)
 shape = SubResource("RectangleShape2D_rtabt")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(57899, -147)
+position = Vector2(57900, -140)
 shape = SubResource("RectangleShape2D_bfwqm")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(57279, -152)
+position = Vector2(57278, -141)
 shape = SubResource("RectangleShape2D_l650g")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(53791, -152)
+position = Vector2(53787, -148)
 shape = SubResource("RectangleShape2D_wxpli")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Aceras/Area2D"]
@@ -12334,27 +12334,27 @@ position = Vector2(57892.4, -430.865)
 shape = SubResource("RectangleShape2D_bfwqm")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(47466, -151)
+position = Vector2(47464, -144)
 shape = SubResource("RectangleShape2D_w1cqj")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(57279, -428)
+position = Vector2(57278.1, -434)
 shape = SubResource("RectangleShape2D_l650g")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(53780, -424)
+position = Vector2(53780.3, -434)
 shape = SubResource("RectangleShape2D_wxpli")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(43658, -149)
+position = Vector2(43658, -146.063)
 shape = SubResource("RectangleShape2D_rppcu")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(47431, -425)
+position = Vector2(47431.1, -420)
 shape = SubResource("RectangleShape2D_w1cqj")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(43666, -432)
+position = Vector2(43662.1, -439.125)
 shape = SubResource("RectangleShape2D_rppcu")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Aceras/Area2D"]
@@ -12362,7 +12362,7 @@ position = Vector2(87324.3, -878.25)
 shape = SubResource("RectangleShape2D_rppcu")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(27418, -427)
+position = Vector2(27416.3, -432)
 shape = SubResource("RectangleShape2D_ysrty")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Aceras/Area2D"]
@@ -12378,7 +12378,7 @@ position = Vector2(4347, -146)
 shape = SubResource("RectangleShape2D_j5co3")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Aceras/Area2D"]
-position = Vector2(27386, -153)
+position = Vector2(27380, -157)
 shape = SubResource("RectangleShape2D_ysrty")
 
 [node name="AreaFinal" type="Area2D" parent="."]

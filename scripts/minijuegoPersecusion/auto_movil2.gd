@@ -11,6 +11,7 @@ extends CharacterBody2D
 var velocity_target = Vector2.ZERO
 var is_immune = false  # Bandera para indicar si el coche es inmune
 
+var blink_timer : Timer
 
 	
 func _physics_process(delta):
@@ -61,10 +62,17 @@ func efecto_por_pisar_aceite():
 	ACCELERATION = 500.0
 	DECELERATION = 200.0
 	
+func parpadear():
+	
+	for _i in range(10): # Ajusta el número de parpadeos aquí
+		$avanzando.visible = not $avanzando.visible
+		await get_tree().create_timer(0.3).timeout # Ajusta la velocidad de parpadeo aquí
+	$avanzando.visible=true;
+	
+func bajar_vida():
+	vida=vida-1;
+	parpadear();
 
-func _on_area_2d_area_entered(area):
-	print("Chocó con algo")
-
-
+	
 
 
