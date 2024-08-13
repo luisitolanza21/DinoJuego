@@ -31,7 +31,7 @@ func create_obstacles():
 	#	x=autoPolicia.position.x -200;
 	#else:
 	print("Generado delante del dinomovil")
-	x=autoPolicia.position.x + 1200;
+	x=autoPolicia.position.x + 1600;
 	
 	var vec_carriles=[false, false, false, false, false]
 	
@@ -50,8 +50,7 @@ func create_obstacles():
 		y=396;
 		
 		new_obs = autoObstaculo.instantiate()
-		new_obs.collision_layer = 1 << 2;
-		new_obs.collision_mask = (1 << 0) | (1 << 1) | (1 << 2);
+
 		new_obs.position = Vector2(x, y);
 		
 		# Añadir el nuevo obstáculo a la escena actual
@@ -60,8 +59,7 @@ func create_obstacles():
 	if vec_carriles[1]:
 		y=466;
 		new_obs = autoObstaculo.instantiate()
-		new_obs.collision_layer = 1 << 2;
-		new_obs.collision_mask = (1 << 0) | (1 << 1) | (1 << 2);
+
 		new_obs.position = Vector2(x, y);
 		# Añadir el nuevo obstáculo a la escena actual
 		add_child(new_obs)
@@ -69,11 +67,7 @@ func create_obstacles():
 		
 	if vec_carriles[2]:
 		y=530;
-
 		new_obs = autoObstaculo.instantiate()
-		
-		new_obs.collision_layer = 1 << 2;
-		new_obs.collision_mask = (1 << 0) | (1 << 1) | (1 << 2);
 		new_obs.position = Vector2(x, y);
 		# Añadir el nuevo obstáculo a la escena actual
 		add_child(new_obs)
@@ -82,10 +76,6 @@ func create_obstacles():
 	if vec_carriles[3]:
 		y=589;
 		new_obs = autoObstaculo.instantiate()
-		
-		new_obs.collision_layer = 1 << 2;
-		new_obs.collision_mask = (1 << 0) | (1 << 1) | (1 << 2);
-		
 		new_obs.position = Vector2(x, y);
 		# Añadir el nuevo obstáculo a la escena actual
 		add_child(new_obs)

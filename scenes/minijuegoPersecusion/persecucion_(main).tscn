@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://buwkurjm8i2x"]
+[gd_scene load_steps=54 format=3 uid="uid://buwkurjm8i2x"]
 
 [ext_resource type="Texture2D" uid="uid://djsdw8qfrcvd8" path="res://assets/calles/calle 1.png" id="1_5ltm1"]
 [ext_resource type="Script" path="res://scripts/minijuegoPersecusion/persecucion_(main).gd" id="1_ojhoy"]
@@ -16,12 +16,15 @@
 [ext_resource type="PackedScene" uid="uid://cxr1iymhft5io" path="res://scenes/minijuegoPersecusion/manchaDeAceite.tscn" id="11_ptvo4"]
 [ext_resource type="PackedScene" uid="uid://b2rqldrk5bstu" path="res://scenes/minijuegoPersecusion/auto_enemigo.tscn" id="12_5vi4u"]
 [ext_resource type="PackedScene" uid="uid://dliitigrsykd6" path="res://scenes/minijuegoPersecusion/obstaculosAleatorios.tscn" id="12_kr5pj"]
+[ext_resource type="Script" path="res://scenes/minijuegoPersecusion/PathFollow2D.gd" id="12_uy0x8"]
 [ext_resource type="Script" path="res://scenes/minijuegoPersecusion/Aceras.gd" id="14_q3v1s"]
 [ext_resource type="Script" path="res://scenes/minijuegoPersecusion/Area2D.gd" id="15_34d37"]
 [ext_resource type="Script" path="res://scripts/minijuegoPersecusion/AreaFinal.gd" id="19_x4iyv"]
 [ext_resource type="PackedScene" uid="uid://tx0rn48uy3po" path="res://scenes/minijuegoPersecusion/autoObstaculo.tscn" id="20_52ed3"]
 [ext_resource type="Texture2D" uid="uid://fslh4g4x3sw4" path="res://assets/dialogos/barra.png" id="21_vlqg1"]
 [ext_resource type="Texture2D" uid="uid://djq5wvxdanj5e" path="res://assets/autos/Auto policia.png" id="22_keo48"]
+[ext_resource type="Script" path="res://scenes/minijuegoPersecusion/CanvasLayer.gd" id="22_n6hhg"]
+[ext_resource type="Script" path="res://scenes/minijuegoPersecusion/GameController.gd" id="24_to1os"]
 
 [sub_resource type="Animation" id="Animation_2kyoa"]
 length = 2.0
@@ -35,7 +38,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1.7, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(24470, 348), Vector2(25034, 244), Vector2(59977, 193)]
+"values": [Vector2(23716, 172), Vector2(25034, 244), Vector2(59977, 193)]
 }
 
 [sub_resource type="Animation" id="Animation_53way"]
@@ -10457,11 +10460,35 @@ sources/4 = SubResource("TileSetAtlasSource_xtwy5")
 sources/5 = SubResource("TileSetAtlasSource_2453o")
 sources/6 = SubResource("TileSetAtlasSource_2l75b")
 
+[sub_resource type="Curve2D" id="Curve2D_v7njj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -144.254, -998.17, 0, 0, 0, 0, -144.254, -605.17, 0, 0, 0, 0, -138.254, -410.17, 0, 0, 0, 0, -117.254, -314.17, 0, 0, 0, 0, -126.254, -42.1703, 0, 0, 0, 0, -141.254, 161.83, 0, 0, 0, 0, -141.254, 305.83, 0, 0, 0, 0, -175, 501, 0, 0, 0, 0, -152, 645)
+}
+point_count = 9
+
 [sub_resource type="Curve2D" id="Curve2D_7mutb"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 9019, 1182, 0, 0, 0, 0, 9025, 315, 0, 0, 0, 0, 9034, 65, 0, 0, 0, 0, 9024, -485)
+"points": PackedVector2Array(0, 0, 0, 0, 9019, 1182, 0, 0, 0, 0, 9026.36, 1005.43, 0, -4.23785, 0, 4.23785, 9019.57, 800.427, 0, 0, 0, 0, 9025, 315, 0, 0, 0, 0, 9034, 65, 0, 0, 0, 0, 9024, -485)
 }
-point_count = 4
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_byvpr"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 141.297, 287.901, 0, 0, 0, 0, 129.297, 35.9006, 0, 0, 0, 0, 135.297, -225.099, 0, 0, 0, 0, 159.297, -494.099, 0, 0, 0, 0, 126.297, -938.099, 0, 0, 0, 0, 138.297, -1082.1)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_ni78g"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 355.914, -1462.34, 0, 0, 0, 0, 325.914, -1263.34, 0, 0, 0, 0, 334.914, -949.341, 0, 0, 0, 0, 325.914, -542.341, 0, 0, 0, 0, 308.914, -67.3413, 0, 0, 0, 0, 321.914, 338.659, 0, 0, 0, 0, 317.914, 521.659, 0, 0, 0, 0, 444.914, 474.659, 0, 0, 0, 0, 448.914, 54.6587, 0, 0, 0, 0, 431.914, -385.341, 0, 0, 0, 0, 469.914, -1140.34, 0, 0, 0, 0, 486.914, -1572.34, 0, 0, 0, 0, 423.914, -1712.34, 0, 0, 0, 0, 359.914, -1551.34, 0, 0, 0, 0, 355.914, -1462.34)
+}
+point_count = 15
+
+[sub_resource type="Curve2D" id="Curve2D_7m78r"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 200.766, 305.508, 0, 0, 0, 0, 196.766, 21.5078, 0, 0, 0, 0, 216.766, -410.492, 0, 0, 0, 0, 196.766, -882.492, 0, 0, 0, 0, 236.766, -1482.49, 0, 0, 0, 0, 208, -100, 0, 0, 0, 0, 204.461, 172.232)
+}
+point_count = 7
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmmlu"]
 size = Vector2(2507.5, 31.5)
@@ -10493,10 +10520,19 @@ size = Vector2(8961.88, 24.75)
 [sub_resource type="CircleShape2D" id="CircleShape2D_wffro"]
 radius = 239.37
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rfhfe"]
+a = Vector2(-2, -293)
+b = Vector2(-2, 272)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3wl37"]
+a = Vector2(16637, 108)
+b = Vector2(-551, 105)
+
 [node name="persecucion" type="Node2D"]
 position = Vector2(105, 326)
 script = ExtResource("1_ojhoy")
-metadata/_edit_horizontal_guides_ = [372.0, 585.0, 377.0, 396.0, 467.0, 463.0, 530.0, 585.0, 589.0]
+metadata/_edit_horizontal_guides_ = [372.0, 585.0, 377.0, 396.0, 467.0, 463.0, 530.0, 585.0, 589.0, 28.0]
+metadata/_edit_vertical_guides_ = [21667.0]
 
 [node name="Inicio" type="AnimationPlayer" parent="."]
 libraries = {
@@ -10515,17 +10551,111 @@ layer_0/tile_data = PackedInt32Array(65529, 0, 0, 131065, 0, 1, 196601, 0, 2, 26
 
 [node name="Paths" type="Node2D" parent="."]
 
+[node name="Path2D4" type="Path2D" parent="Paths"]
+position = Vector2(44529, 541)
+curve = SubResource("Curve2D_v7njj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/Path2D4"]
+position = Vector2(-144.254, -998.17)
+rotation = 1.5708
+script = ExtResource("12_uy0x8")
+
+[node name="AutoEstatico" parent="Paths/Path2D4/PathFollow2D" instance=ExtResource("11_71oh0")]
+position = Vector2(19, -2)
+rotation = -0.0261799
+
 [node name="Path2D" type="Path2D" parent="Paths"]
-position = Vector2(49, -9)
+position = Vector2(41699, -209)
 curve = SubResource("Curve2D_7mutb")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Paths/Path2D"]
 position = Vector2(9019, 1182)
-rotation = -1.56388
+rotation = -1.52915
 script = ExtResource("10_ciiyr")
 
 [node name="AutoEstatico" parent="Paths/Path2D/PathFollow2D" instance=ExtResource("11_71oh0")]
-position = Vector2(178.927, -11.2385)
+position = Vector2(48.9576, -2.03833)
+
+[node name="Path2D2" type="Path2D" parent="Paths"]
+position = Vector2(42877.7, 563.099)
+curve = SubResource("Curve2D_byvpr")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/Path2D2"]
+position = Vector2(141.297, 287.901)
+rotation = -1.61838
+script = ExtResource("12_uy0x8")
+
+[node name="AutoEstatico" parent="Paths/Path2D2/PathFollow2D" instance=ExtResource("11_71oh0")]
+position = Vector2(22.0702, -0.951691)
+rotation = -6.28319
+
+[node name="Path2D3" type="Path2D" parent="Paths"]
+position = Vector2(43279.3, 500.17)
+curve = SubResource("Curve2D_v7njj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/Path2D3"]
+position = Vector2(-144.254, -998.17)
+rotation = 1.5708
+script = ExtResource("12_uy0x8")
+
+[node name="AutoEstatico" parent="Paths/Path2D3/PathFollow2D" instance=ExtResource("11_71oh0")]
+position = Vector2(19, -2)
+rotation = -0.0261799
+
+[node name="Path2D5" type="Path2D" parent="Paths"]
+position = Vector2(44390, 747)
+curve = SubResource("Curve2D_v7njj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/Path2D5"]
+position = Vector2(-144.254, -998.17)
+rotation = 1.5708
+script = ExtResource("12_uy0x8")
+
+[node name="AutoEstatico" parent="Paths/Path2D5/PathFollow2D" instance=ExtResource("11_71oh0")]
+position = Vector2(19, -2)
+rotation = -0.0261799
+
+[node name="Path2D6" type="Path2D" parent="Paths"]
+position = Vector2(56621.1, 746.341)
+curve = SubResource("Curve2D_ni78g")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/Path2D6"]
+position = Vector2(355.914, -1462.34)
+rotation = 1.72042
+script = ExtResource("12_uy0x8")
+
+[node name="AutoEstatico" parent="Paths/Path2D6/PathFollow2D" instance=ExtResource("11_71oh0")]
+position = Vector2(1736.56, -347.755)
+rotation = -3.30216
+scale = Vector2(1, 1)
+
+[node name="Path2D7" type="Path2D" parent="Paths"]
+position = Vector2(57354.2, 606.492)
+curve = SubResource("Curve2D_7m78r")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/Path2D7"]
+position = Vector2(200.766, 305.508)
+rotation = -1.58488
+script = ExtResource("12_uy0x8")
+
+[node name="AutoEstatico" parent="Paths/Path2D7/PathFollow2D" instance=ExtResource("11_71oh0")]
+position = Vector2(10.9285, 5.15295)
+rotation = 0.00523599
+scale = Vector2(1, 1)
+
+[node name="Path2D8" type="Path2D" parent="Paths"]
+position = Vector2(58011, 672)
+curve = SubResource("Curve2D_7m78r")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Paths/Path2D8"]
+position = Vector2(200.766, 305.508)
+rotation = -1.58488
+script = ExtResource("12_uy0x8")
+
+[node name="AutoEstatico" parent="Paths/Path2D8/PathFollow2D" instance=ExtResource("11_71oh0")]
+position = Vector2(-91.3022, -104.759)
+rotation = 0.00523599
+scale = Vector2(1, 1)
 
 [node name="Trampas" type="Node2D" parent="."]
 light_mask = 7
@@ -10535,8 +10665,6 @@ rotation = -0.0231387
 [node name="autoMovil1" parent="Trampas" instance=ExtResource("20_52ed3")]
 position = Vector2(26258.3, 678.711)
 rotation = 0.0231387
-collision_layer = 4
-collision_mask = 7
 
 [node name="ObstaculosAleatorios" parent="Trampas" instance=ExtResource("12_kr5pj")]
 position = Vector2(-166.48, -326.939)
@@ -10550,16 +10678,16 @@ rotation = 0.0231387
 position = Vector2(136.728, 186.213)
 
 [node name="DINOMOVIL" parent="." instance=ExtResource("8_0bce6")]
-position = Vector2(23960, 213)
-collision_mask = 7
+position = Vector2(23527, 177)
+collision_mask = 15
 floor_max_angle = 0.0
 MAX_SPEED = 1000.0
 ACCELERATION = 150.0
 DECELERATION = 500.0
-vida = 3
 
 [node name="Camera2D" type="Camera2D" parent="DINOMOVIL"]
-position = Vector2(256, 82)
+position = Vector2(534, -177)
+limit_top = 28
 limit_bottom = 800
 
 [node name="Casas" type="Node2D" parent="."]
@@ -12203,102 +12331,82 @@ collision_mask = 7
 script = ExtResource("14_q3v1s")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(10375, -440)
 shape = SubResource("RectangleShape2D_jmmlu")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(59306, -146)
 shape = SubResource("RectangleShape2D_rtabt")
 
 [node name="CollisionShape2D19" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(59290, -430)
 shape = SubResource("RectangleShape2D_rtabt")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(57900, -140)
 shape = SubResource("RectangleShape2D_bfwqm")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(57278, -141)
 shape = SubResource("RectangleShape2D_l650g")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(53787, -148)
 shape = SubResource("RectangleShape2D_wxpli")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(57892.4, -430.865)
 shape = SubResource("RectangleShape2D_bfwqm")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(47464, -144)
 shape = SubResource("RectangleShape2D_w1cqj")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(27401.1, -147)
 shape = SubResource("RectangleShape2D_ysrty")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(57278.1, -434)
 shape = SubResource("RectangleShape2D_l650g")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(53780.3, -434)
 shape = SubResource("RectangleShape2D_wxpli")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(43658, -146.063)
 shape = SubResource("RectangleShape2D_rppcu")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(47431.1, -420)
 shape = SubResource("RectangleShape2D_w1cqj")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(43662.1, -439.125)
 shape = SubResource("RectangleShape2D_rppcu")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(87324.3, -878.25)
 shape = SubResource("RectangleShape2D_rppcu")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(27416.3, -432)
 shape = SubResource("RectangleShape2D_ysrty")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(27401.1, -147)
 shape = SubResource("RectangleShape2D_ysrty")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(10357, -149)
 shape = SubResource("RectangleShape2D_jmmlu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(4343, -435)
 shape = SubResource("RectangleShape2D_j5co3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Aceras"]
-visible = false
 position = Vector2(4347, -146)
 shape = SubResource("RectangleShape2D_j5co3")
 
@@ -12393,10 +12501,11 @@ shape = SubResource("CircleShape2D_wffro")
 position = Vector2(26264, 265)
 
 [node name="AutoEnemigo" parent="." instance=ExtResource("12_5vi4u")]
-position = Vector2(24470, 348)
+position = Vector2(23716, 172)
 script = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("22_n6hhg")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_right = 197.0
@@ -12428,20 +12537,54 @@ offset_left = -199.0
 offset_bottom = 40.0
 grow_horizontal = 0
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+[node name="vida1" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("22_keo48")
 expand_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+[node name="vida2" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("22_keo48")
 expand_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
+[node name="vida3" type="TextureRect" parent="CanvasLayer/HBoxContainer"]
 layout_mode = 2
 texture = ExtResource("22_keo48")
 expand_mode = 2
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(22137, 165)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("SegmentShape2D_rfhfe")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(21286, 29)
+shape = SubResource("SegmentShape2D_3wl37")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(21216, -241)
+shape = SubResource("SegmentShape2D_3wl37")
+
+[node name="GameController" type="Node2D" parent="."]
+script = ExtResource("24_to1os")
+
+[node name="Path2D4" type="Path2D" parent="."]
+position = Vector2(44454, 368)
+curve = SubResource("Curve2D_v7njj")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D4"]
+position = Vector2(-144.254, -998.17)
+rotation = 1.5708
+script = ExtResource("12_uy0x8")
+
+[node name="AutoEstatico" parent="Path2D4/PathFollow2D" instance=ExtResource("11_71oh0")]
+position = Vector2(19, -2)
+rotation = -0.0261799
+
+[connection signal="player_hit" from="DINOMOVIL" to="GameController" method="_on_dinomovil_player_hit"]
+[connection signal="velocidad_player" from="DINOMOVIL" to="CanvasLayer" method="_on_dinomovil_velocidad_player"]
 [connection signal="body_entered" from="Aceras/Area2D" to="Aceras/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="AreaFinal" to="AreaFinal" method="_on_body_entered"]
+[connection signal="vidas_actualizadas_jugador" from="GameController" to="CanvasLayer" method="_on_game_controller_vidas_actualizadas_jugador"]

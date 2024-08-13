@@ -4,16 +4,18 @@ extends CharacterBody2D
 @export var MAX_SPEED = 700.0;
 @export var ACCELERATION = 500.0;
 @export var DECELERATION = 200.0;
-@export var vida=3;
+
 
 @onready var animacionAdelante=$avanzando;
+signal player_hit();
+signal velocidad_player(velocidad);
 
 var velocity_target = Vector2.ZERO
 var is_immune = false  # Bandera para indicar si el coche es inmune
 
 var blink_timer : Timer
-
-	
+var invulnerable = false
+var pisoAceite=false;
 func _physics_process(delta):
 	var input_direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	var input_vertical = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
@@ -35,44 +37,55 @@ func _physics_process(delta):
 		animacionAdelante.play("idle");
 
 	if input_vertical > 0:
-		velocity_target.y = clamp(velocity_target.y + ACCELERATION * delta, 0, MAX_SPEED)
+		velocity_target.y = clamp(velocity_target.y + 1000 * delta, 0, MAX_SPEED)
 	elif input_vertical < 0:
-		velocity_target.y = clamp(velocity_target.y - ACCELERATION * delta, -MAX_SPEED, 0)
+		velocity_target.y = clamp(velocity_target.y - 1000 * delta, -MAX_SPEED, 0)
 	else:
 		# Desaceleración vertical
-		velocity_target.y = move_toward(velocity_target.y, 0, DECELERATION * delta)
+		velocity_target.y = 0;
 
 			# Frenado (se aplica si se presiona la barra espaciadora)
 	if is_braking:
 		velocity_target.x = move_toward(velocity_target.x, 0, DECELERATION * delta * 2)  # Frenado más rápido
 		velocity_target.y = move_toward(velocity_target.y, 0, DECELERATION * delta * 2)
 		# Aplicamos la velocidad
+	velocidad_player.emit(move_toward(velocity.x, velocity_target.x, ACCELERATION * delta));
 	velocity.x = move_toward(velocity.x, velocity_target.x, ACCELERATION * delta)
-	velocity.y = move_toward(velocity.y, velocity_target.y, ACCELERATION * delta)
+	if(pisoAceite):
+		velocity.y = move_toward(velocity.y, velocity_target.y, ACCELERATION * delta)
+	else:
+		velocity.y =  velocity_target.y
+	#
 	move_and_slide()
 	
 func efecto_por_pisar_aceite():
-	velocity_target = velocity_target.rotated(randf_range(-0.1, 0.1))  # Aceleración en dirección aleatoria
-	velocity_target *= 1.2  # Incremento repentino de velocidad para simular la falta de control
-	ACCELERATION *= 0.2  # Menos tracción
-	DECELERATION *= 0.1  # Deslizamiento prolongado
-
+	# Aumentar la velocidad y reducir la aceleración para simular deslizamiento
+	velocity_target *= 1.3  # Incremento de velocidad para simular falta de control
+	ACCELERATION *= 0.5  # Reducción de tracción
+	DECELERATION *= 0.5  # Deslizamiento prolongado
+   
+	# Aplicar un leve desvío en la dirección horizontal para simular el deslizamiento
+	velocity_target.x += randf_range(-100, 100)  # Desvío aleatorio en el eje X
+	pisoAceite=true;
 	# Recuperar lentamente las propiedades normales después de 2 segundos
 	await get_tree().create_timer(2.0).timeout
+	pisoAceite=false;
 	ACCELERATION = 500.0
 	DECELERATION = 200.0
-	
+
+
 func parpadear():
-	
+	invulnerable = true  # Hacer invulnerable al jugador
 	for _i in range(10): # Ajusta el número de parpadeos aquí
 		$avanzando.visible = not $avanzando.visible
 		await get_tree().create_timer(0.3).timeout # Ajusta la velocidad de parpadeo aquí
-	$avanzando.visible=true;
+	$avanzando.visible = true
 	
-func bajar_vida():
-	vida=vida-1;
-	parpadear();
+	invulnerable = false  # Finaliza la invulnerabilidad
 
-	
+func bajar_vida():
+	if not invulnerable:
+		player_hit.emit()
+		parpadear()
 
 

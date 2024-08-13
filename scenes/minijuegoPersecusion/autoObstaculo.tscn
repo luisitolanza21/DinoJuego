@@ -164,13 +164,13 @@ func destruiAuto():
 func _physics_process(delta):
 	detectarCosas(delta);
 	#Condicion para destruir auto
-	if(position.x>60000):
+	if(position.x<21660):
 		destruiAuto();
 
 func _on_area_2d_body_entered(body):
 	if body is AutoPolicia:
 		print(\"Chocaste con un auto\")
-		body.parpadear();
+		body.bajar_vida();
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bs7c"]
@@ -178,6 +178,8 @@ size = Vector2(107, 54)
 
 [node name="autoMovil1" type="CharacterBody2D"]
 rotation = -6.28319
+collision_layer = 4
+collision_mask = 6
 script = SubResource("GDScript_cs50k")
 
 [node name="auto_verde" type="Sprite2D" parent="."]
