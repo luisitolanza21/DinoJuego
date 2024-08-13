@@ -10570,7 +10570,7 @@ curve = SubResource("Curve2D_7mutb")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Paths/Path2D"]
 position = Vector2(9019, 1182)
-rotation = -1.52915
+rotation = -1.52914
 script = ExtResource("10_ciiyr")
 
 [node name="AutoEstatico" parent="Paths/Path2D/PathFollow2D" instance=ExtResource("11_71oh0")]
@@ -10627,7 +10627,6 @@ script = ExtResource("12_uy0x8")
 [node name="AutoEstatico" parent="Paths/Path2D6/PathFollow2D" instance=ExtResource("11_71oh0")]
 position = Vector2(1736.56, -347.755)
 rotation = -3.30216
-scale = Vector2(1, 1)
 
 [node name="Path2D7" type="Path2D" parent="Paths"]
 position = Vector2(57354.2, 606.492)
@@ -10641,7 +10640,6 @@ script = ExtResource("12_uy0x8")
 [node name="AutoEstatico" parent="Paths/Path2D7/PathFollow2D" instance=ExtResource("11_71oh0")]
 position = Vector2(10.9285, 5.15295)
 rotation = 0.00523599
-scale = Vector2(1, 1)
 
 [node name="Path2D8" type="Path2D" parent="Paths"]
 position = Vector2(58011, 672)
@@ -10655,7 +10653,6 @@ script = ExtResource("12_uy0x8")
 [node name="AutoEstatico" parent="Paths/Path2D8/PathFollow2D" instance=ExtResource("11_71oh0")]
 position = Vector2(-91.3022, -104.759)
 rotation = 0.00523599
-scale = Vector2(1, 1)
 
 [node name="Trampas" type="Node2D" parent="."]
 light_mask = 7
