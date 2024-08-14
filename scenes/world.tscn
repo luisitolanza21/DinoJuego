@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://b7ou5ofnlklr1"]
+[gd_scene load_steps=38 format=3 uid="uid://b7ou5ofnlklr1"]
 
 [ext_resource type="Script" path="res://scripts/WORLD/logica_world.gd" id="1_bm47p"]
 [ext_resource type="PackedScene" uid="uid://c66vv04fsnrtl" path="res://scenes/world_scenes/comisaría.tscn" id="1_i5a5j"]
@@ -24,6 +24,8 @@
 [ext_resource type="PackedScene" uid="uid://c3r2q1twsx2mb" path="res://scenes/world_scenes/vehiculo_persecusion.tscn" id="21_gfj67"]
 [ext_resource type="Script" path="res://scripts/minijuego1/npc1.gd" id="21_w5xux"]
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="24_ym3pn"]
+[ext_resource type="PackedScene" path="res://scenes/world_scenes/farola.tscn" id="25_i0rna"]
+[ext_resource type="Texture2D" uid="uid://cn4j2b6y5udfn" path="res://assets/edificios_unicos/banca (1).png" id="26_dxgn0"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cfrkf"]
 load_path = "res://.godot/imported/calles.png-639fa4fc523d83555037d84d55c0617a.ctex"
@@ -179,6 +181,17 @@ texture = ExtResource("9_xuyk7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="edificios/castillo_azul"]
 position = Vector2(-1604.5, 1759.5)
 shape = SubResource("RectangleShape2D_1gdx0")
+
+[node name="Banca(1)2" type="Sprite2D" parent="."]
+position = Vector2(618, 2231)
+scale = Vector2(0.721698, 0.721698)
+texture = ExtResource("26_dxgn0")
+flip_h = true
+
+[node name="Banca(1)" type="Sprite2D" parent="."]
+position = Vector2(25, 2754)
+scale = Vector2(0.707547, 0.707547)
+texture = ExtResource("26_dxgn0")
 
 [node name="parque" type="Node2D" parent="."]
 
@@ -410,8 +423,38 @@ dialogueResource = null
 position = Vector2(3096, 2504)
 scale = Vector2(1.22557, 1.22557)
 
+[node name="farolas" type="Node" parent="."]
+
+[node name="Farola" parent="farolas" instance=ExtResource("25_i0rna")]
+position = Vector2(-1192, 989)
+
+[node name="Farola2" parent="farolas" instance=ExtResource("25_i0rna")]
+position = Vector2(-2987, 1043)
+
+[node name="Farola3" parent="farolas" instance=ExtResource("25_i0rna")]
+position = Vector2(-719, 3485)
+scale = Vector2(1.00787, 1.14678)
+
+[node name="Farola4" parent="farolas" instance=ExtResource("25_i0rna")]
+position = Vector2(398, 3480)
+
+[node name="Farola5" parent="farolas" instance=ExtResource("25_i0rna")]
+position = Vector2(928, 1901)
+
+[node name="Farola6" parent="farolas" instance=ExtResource("25_i0rna")]
+position = Vector2(2329, 1896)
+
+[node name="Farola7" parent="farolas" instance=ExtResource("25_i0rna")]
+position = Vector2(-1210, -2038)
+
+[node name="Farola8" parent="farolas" instance=ExtResource("25_i0rna")]
+position = Vector2(-3406, 4453)
+
+[node name="Farola9" parent="farolas" instance=ExtResource("25_i0rna")]
+position = Vector2(841, -1997)
+
 [node name="player" parent="." instance=ExtResource("2_7d60p")]
-position = Vector2(-2084, -1066)
+position = Vector2(-2072, -1052)
 scale = Vector2(0.761783, 0.67924)
 
 [node name="Camera2D" type="Camera2D" parent="player"]

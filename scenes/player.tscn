@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://b3carl8xavxf6"]
+[gd_scene load_steps=26 format=3 uid="uid://b3carl8xavxf6"]
 
 [ext_resource type="Texture2D" uid="uid://bnr1ov8vp2x44" path="res://assets/player/back walk animation.png" id="2_5xywp"]
 [ext_resource type="Texture2D" uid="uid://kcnbisxk363g" path="res://assets/player/front walk animation.png" id="2_kjpj3"]
 [ext_resource type="Texture2D" uid="uid://bbjq0fgq0j7pl" path="res://assets/player/sprite dino.png" id="4_6kjst"]
 [ext_resource type="Texture2D" uid="uid://ccrageo0w1bjm" path="res://assets/player/Side walk animation.png" id="4_clt7v"]
 [ext_resource type="Texture2D" uid="uid://k5qyfawkip7u" path="res://assets/player/idle 2 (1).png" id="5_mosdi"]
+[ext_resource type="AudioStream" uid="uid://bi0htp31kow6c" path="res://sounds/caminar.wav" id="6_c8j68"]
 
 [sub_resource type="GDScript" id="GDScript_i7yhm"]
 script/source = "extends CharacterBody2D
@@ -15,6 +16,8 @@ var direction = Vector2()
 var idle_position: int = 0
 
 var current_npc = null
+
+@onready var caminar_sonido = $caminar
 
 func _ready():
 	$Area2D.connect(\"body_entered\", Callable(self, \"_on_body_entered\"))
@@ -35,22 +38,35 @@ func _input(event):
 	if direction.y > 0:
 		animated.play(\"front_walk\")
 		idle_position = 1
+
 	if direction.y < 0:
 		animated.play(\"back_walk\")
 		idle_position = 2
+
 	if direction.x > 0:
 		$SpriteDinoAnimated.flip_h = false
 		animated.play(\"side_walk\")
 		idle_position = 3
+
 	if direction.x < 0:
 		$SpriteDinoAnimated.flip_h = true
 		animated.play(\"side_walk\")
 		idle_position = 3
 
+
 	direction = direction.normalized()
 
 func _physics_process(delta):
 	velocity = speed * direction
+	
+	if velocity != Vector2.ZERO:
+		if not caminar_sonido.playing:
+			caminar_sonido.play()
+	else:
+		if caminar_sonido.playing:
+			caminar_sonido.stop()
+			
+			
 	if velocity == Vector2(0, 0):
 		if idle_position == 1:
 			animated.play(\"idle_1\")
@@ -238,3 +254,8 @@ shape = SubResource("CircleShape2D_k5j4j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(195, 268)
 shape = SubResource("CapsuleShape2D_fkgcl")
+
+[node name="caminar" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_c8j68")
+volume_db = -8.6
+pitch_scale = 1.22
