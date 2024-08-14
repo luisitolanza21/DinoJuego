@@ -17,6 +17,18 @@ var listo: String:
 		_listo = value
 		emit_signal("listo_changed", _listo)
 		
+#var listo: String = "no"
+signal listo2_changed(new_value)
+
+var _listo2: String = "no"
+var listo2: String:
+	get:
+		return _listo2
+	set(value):
+		_listo2 = value
+		emit_signal("listo2_changed", _listo2)
+		
+
 signal puntaje_changed(new_value)
 
 var puntaje: int = 0

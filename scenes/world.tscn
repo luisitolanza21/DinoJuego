@@ -79,8 +79,6 @@ size = Vector2(4763.25, 6638.5)
 [node name="Node2D" type="Node2D"]
 position = Vector2(-110, 0)
 script = ExtResource("1_bm47p")
-metadata/_edit_horizontal_guides_ = [626.0, 2408.0]
-metadata/_edit_vertical_guides_ = [243.0, 3075.0]
 
 [node name="Botones" parent="." instance=ExtResource("2_71bc5")]
 
@@ -419,4 +417,4 @@ scale = Vector2(0.761783, 0.67924)
 [node name="Camera2D" type="Camera2D" parent="player"]
 position = Vector2(53.9607, 22.2191)
 scale = Vector2(3.17414, 3.17414)
-zoom = Vector2(0.34, 0.34)
+zoom = Vector2(0.5, 0.5)

@@ -228,8 +228,6 @@ position = Vector2(199.5, 260.5)
 sprite_frames = SubResource("SpriteFrames_jk01m")
 animation = &"idle_1"
 
-animation = &"idle_1"
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(201.5, 424.34)
 scale = Vector2(1, 0.277056)

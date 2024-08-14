@@ -98,6 +98,7 @@ Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?.
 		=> npc3_second
 -  ¿viste lo que paso aqui?
 	Ciudadano: No vi con claridad pero una perosna salio corriendo hace poco
+	=> npc3_second
 -  ¡Gracias por la información!
 	Ciudadano: ¡Con gusto! Ojalá eso ayude en su investigación.
 	set npc3 = 1
@@ -117,6 +118,7 @@ Ciudadano: ¿en que mas puedo ayudarlo?.
 	=> npc3_second
 -  ¿viste lo que paso aqui?
 	Ciudadano: No vi con claridad pero esa perosna que te describi salio corriendo hace poco
+	=> npc3_second
 -  ¡Gracias por la información!
 	Ciudadano: ¡Con gusto! Ojalá eso ayude en su investigación.
 	set npc3 = 1

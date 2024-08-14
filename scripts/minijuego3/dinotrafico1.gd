@@ -4,6 +4,8 @@ extends Button
 @export var defrente : Vector2 = Vector2(0,0)
 @export var area2Ddefrente : Vector2 = Vector2(0,0)
 @export var vista : String = "abajo"
+@export var izquierda : String = "si"
+
 var animacion1 : String
 var animacion2 : String
 
@@ -23,6 +25,19 @@ func _ready():
 	$frenoizquierdo.position = Vector2(0,2200)
 	$izquierda.position = Vector2(0,2200)
 	$arriba.position = area2Ddefrente
+	
+	if izquierda == "si":
+		Global.connect("listo_changed", Callable(self, "_on_listo_changed"))
+	else:
+		Global.connect("listo2_changed", Callable(self, "_on_listo2_changed"))
+	
+	
+	
+func _on_listo_changed(new_value):
+	_on_pressed()
+	
+func _on_listo2_changed(new_value):
+	_on_pressed()
 
 func _on_pressed():
 

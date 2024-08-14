@@ -1,14 +1,16 @@
 ~ start
+set Global.botones = false
 coronel: ¿Ya terminaste de investigar?
 - si
 	coronel: Esta bien dime quien fue
 	set listo = "si"
 - No
 	coronel: Avisame cuando estes listo
-
+set Global.botones = true
 => END
 
 ~ again
+set Global.botones = false
 coronel: Ve a recoger pistas, creo que aun quedan testigos por aqui
-
+set Global.botones = true
 => END

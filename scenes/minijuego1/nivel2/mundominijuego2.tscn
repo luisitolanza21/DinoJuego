@@ -26,8 +26,7 @@ position = Vector2(687.5, 2021.25)
 position = Vector2(-254, 386)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objetct_follow")]
-position = Vector2(224, 1164)
-zoom = Vector2(0.4, 0.4)
+zoom = Vector2(0.5, 0.5)
 limit_left = -2190
 limit_top = -1495
 limit_right = 3250
@@ -63,4 +62,4 @@ dialogo = "res://dialogs/dinodetective1/minijuego1_2.dialogue"
 flag = "npc3"
 
 [node name="player" parent="." instance=ExtResource("8_wbi1m")]
-position = Vector2(456, 864)
+position = Vector2(43, 869)

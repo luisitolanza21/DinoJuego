@@ -25,12 +25,15 @@ Misiones="*res://scripts/WORLD/misiones/misiones.gd"
 [dialogue_manager]
 
 general/states=["Global"]
+general/balloon_path="res://dialogs/balloon.tscn"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-window/stretch/mode="viewport"
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_width"
+window/vsync/vsync_mode=0
 
 [editor_plugins]
 

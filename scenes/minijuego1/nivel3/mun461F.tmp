@@ -20,21 +20,23 @@ script = ExtResource("1_ulh80")
 
 [node name="Botones" parent="." instance=ExtResource("2_k4muk")]
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objetct_follow")]
-position = Vector2(224, 1164)
+[node name="ciudad3" parent="." instance=ExtResource("2_g017b")]
+position = Vector2(-1393, 1350)
+
+[node name="autopolicia" parent="." instance=ExtResource("4_lcrn1")]
+position = Vector2(-153, 897)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_f1wgs")]
+position = Vector2(399, 825)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-175, 339)
 zoom = Vector2(0.5, 0.5)
 limit_left = -2190
 limit_top = -1495
 limit_right = 3250
 limit_bottom = 3630
 script = ExtResource("2_h4kpg")
-objetct_follow = NodePath("../CharacterBody2D")
-
-[node name="ciudad3" parent="." instance=ExtResource("2_g017b")]
-position = Vector2(-1393, 1350)
-
-[node name="autopolicia" parent="." instance=ExtResource("4_lcrn1")]
-position = Vector2(-153, 897)
 
 [node name="NPC_1" parent="." instance=ExtResource("4_hd2ly")]
 position = Vector2(-287, 1132)
@@ -80,6 +82,3 @@ position = Vector2(1055, -1031)
 
 [node name="Farola6" parent="." instance=ExtResource("14_j2lt8")]
 position = Vector2(1499, -1017)
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_f1wgs")]
-position = Vector2(399, 825)

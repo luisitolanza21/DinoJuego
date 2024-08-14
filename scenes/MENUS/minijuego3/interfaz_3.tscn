@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://0q0vock3f85y"]
+
+[ext_resource type="Script" path="res://scripts/minijuego3/contador2.gd" id="1_hhbkw"]
+[ext_resource type="Texture2D" uid="uid://dhfw8gn5fjrr8" path="res://assets/UI/negro.png" id="2_djc2l"]
+[ext_resource type="Script" path="res://scripts/minijuego3/puntos.gd" id="3_8ti1l"]
+[ext_resource type="Script" path="res://scripts/minijuego3/Button.gd" id="4_q2qfd"]
+[ext_resource type="Texture2D" uid="uid://cusw8asuboaw" path="res://assets/UI/boton rojo.png" id="5_vtpcm"]
+[ext_resource type="Texture2D" uid="uid://dtfh6tlk2dsw4" path="res://assets/UI/boton verde.png" id="6_yr4ko"]
+[ext_resource type="Script" path="res://scripts/minijuego3/Button2.gd" id="7_653ix"]
+
+[node name="interfaz3" type="CanvasLayer"]
+script = ExtResource("1_hhbkw")
+
+[node name="negro" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.670588)
+position = Vector2(1663, 110)
+scale = Vector2(0.240234, 0.213542)
+texture = ExtResource("2_djc2l")
+
+[node name="textodelcontador" type="RichTextLabel" parent="."]
+offset_left = 1567.0
+offset_top = 33.0001
+offset_right = 1751.0
+offset_bottom = 136.0
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "1:20"
+
+[node name="contador" type="Timer" parent="."]
+wait_time = 60.0
+
+[node name="puntos" type="RichTextLabel" parent="."]
+offset_left = 1571.0
+offset_top = 124.0
+offset_right = 1759.0
+offset_bottom = 211.0
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "autos restantes: 20"
+script = ExtResource("3_8ti1l")
+
+[node name="Button" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -598.0
+offset_top = -329.0
+offset_right = -345.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("4_q2qfd")
+
+[node name="rojo" type="Sprite2D" parent="Button"]
+position = Vector2(126, 113)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_vtpcm")
+
+[node name="verde" type="Sprite2D" parent="Button"]
+visible = false
+position = Vector2(126, 113)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_yr4ko")
+
+[node name="Button2" type="Button" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 432.0
+offset_top = -329.0
+offset_right = 685.0
+offset_bottom = -108.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("7_653ix")
+
+[node name="rojo" type="Sprite2D" parent="Button2"]
+position = Vector2(126, 113)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_vtpcm")
+
+[node name="verde" type="Sprite2D" parent="Button2"]
+visible = false
+position = Vector2(126, 113)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("6_yr4ko")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]

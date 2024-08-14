@@ -9,12 +9,13 @@
 script = ExtResource("1_yu70o")
 
 [node name="MenuPrincipal(1)" type="Sprite2D" parent="."]
-position = Vector2(694.771, 356.059)
-scale = Vector2(0.651743, 0.651743)
+position = Vector2(658, 373)
+scale = Vector2(0.684259, 0.684259)
 texture = ExtResource("1_n27ov")
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(397, 484)
-scale = Vector2(-11.7022, -5.02263)
+[node name="TouchScreenButton" type="TouchScreenButton" parent="MenuPrincipal(1)"]
+position = Vector2(-456.884, 196.306)
+rotation = 3.14159
+scale = Vector2(17.9552, 7.70646)
 shape = SubResource("RectangleShape2D_huvx4")
 action = "ui_accept"
