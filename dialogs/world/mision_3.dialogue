@@ -27,9 +27,9 @@ Coronel: Así se logra la seguridad de los ciudadanos. Mantén el buen trabajo.
 
 Dino: Gracias, Coronel. Estoy listo para la próxima misión.
 
-Coronel: Perfecto. Necesitamos agentes que mantengan la ciudad segura.
+Coronel: Perfecto. Ahora ve a la Casa Dorada, un ciudadano esta llamando.
 
-Dino: ¡Daré mi mejor esfuerzo!
+Dino: Entendido, ¡Daré mi mejor esfuerzo!
 
 set Misiones.continuacion =  1
 set Misiones.mision = 4

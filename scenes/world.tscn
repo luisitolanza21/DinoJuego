@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://b7ou5ofnlklr1"]
+[gd_scene load_steps=39 format=3 uid="uid://b7ou5ofnlklr1"]
 
 [ext_resource type="Script" path="res://scripts/WORLD/logica_world.gd" id="1_bm47p"]
 [ext_resource type="PackedScene" uid="uid://c66vv04fsnrtl" path="res://scenes/world_scenes/comisaría.tscn" id="1_i5a5j"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="24_ym3pn"]
 [ext_resource type="PackedScene" uid="uid://ce5xo8gv0kfxn" path="res://scenes/world_scenes/farola.tscn" id="25_i0rna"]
 [ext_resource type="Texture2D" uid="uid://cn4j2b6y5udfn" path="res://assets/edificios_unicos/banca (1).png" id="26_dxgn0"]
+[ext_resource type="AudioStream" uid="uid://ddve2bv4d0cbf" path="res://sounds/ambiente_recortada.wav" id="27_a10jd"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cfrkf"]
 load_path = "res://.godot/imported/calles.png-639fa4fc523d83555037d84d55c0617a.ctex"
@@ -159,9 +160,10 @@ position = Vector2(2240.5, -2)
 shape = SubResource("RectangleShape2D_bjhql")
 
 [node name="cuadra2" parent="edificios" instance=ExtResource("9_xguyn")]
-position = Vector2(-3852, 3520)
+position = Vector2(-3831, 3520)
 
 [node name="cuadra3" parent="edificios" instance=ExtResource("7_kvecl")]
+position = Vector2(11, -11)
 
 [node name="cuadra4" parent="edificios" instance=ExtResource("7_kvecl")]
 position = Vector2(3851, 3503)
@@ -169,8 +171,8 @@ position = Vector2(3851, 3503)
 [node name="castillo_azul" type="StaticBody2D" parent="edificios"]
 
 [node name="Manzana" type="Sprite2D" parent="edificios/castillo_azul"]
-position = Vector2(-1600, 1760)
-scale = Vector2(2.36005, 2.83126)
+position = Vector2(-1585, 1760)
+scale = Vector2(2.39704, 2.83126)
 texture = ExtResource("3_bvxdc")
 
 [node name="castillo sprite" type="Sprite2D" parent="edificios/castillo_azul"]
@@ -423,20 +425,20 @@ dialogueResource = null
 position = Vector2(3096, 2504)
 scale = Vector2(1.22557, 1.22557)
 
-[node name="farolas" type="Node" parent="."]
+[node name="farolas" type="Node2D" parent="."]
 
 [node name="Farola" parent="farolas" instance=ExtResource("25_i0rna")]
-position = Vector2(-1192, 989)
+position = Vector2(-1096, 1027)
 
 [node name="Farola2" parent="farolas" instance=ExtResource("25_i0rna")]
-position = Vector2(-2987, 1043)
+position = Vector2(-2879, 1034)
 
 [node name="Farola3" parent="farolas" instance=ExtResource("25_i0rna")]
-position = Vector2(-719, 3485)
+position = Vector2(-628, 3394)
 scale = Vector2(1.00787, 1.14678)
 
 [node name="Farola4" parent="farolas" instance=ExtResource("25_i0rna")]
-position = Vector2(398, 3480)
+position = Vector2(519, 3480)
 
 [node name="Farola5" parent="farolas" instance=ExtResource("25_i0rna")]
 position = Vector2(928, 1901)
@@ -445,13 +447,13 @@ position = Vector2(928, 1901)
 position = Vector2(2329, 1896)
 
 [node name="Farola7" parent="farolas" instance=ExtResource("25_i0rna")]
-position = Vector2(-1210, -2038)
+position = Vector2(-1086, -1642)
 
 [node name="Farola8" parent="farolas" instance=ExtResource("25_i0rna")]
-position = Vector2(-3406, 4453)
+position = Vector2(-3297, 4498)
 
 [node name="Farola9" parent="farolas" instance=ExtResource("25_i0rna")]
-position = Vector2(841, -1997)
+position = Vector2(945, -1957)
 
 [node name="player" parent="." instance=ExtResource("2_7d60p")]
 position = Vector2(-2072, -1052)
@@ -461,3 +463,7 @@ scale = Vector2(0.761783, 0.67924)
 position = Vector2(53.9607, 22.2191)
 scale = Vector2(3.17414, 3.17414)
 zoom = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_a10jd")
+autoplay = true

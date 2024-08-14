@@ -62,7 +62,7 @@ size = Vector2(203, 91.75)
 [node name="ciudad3" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1067, 640)
+position = Vector2(1335, 801)
 shape = SubResource("RectangleShape2D_sqa3l")
 
 [node name="TileMap" type="TileMap" parent="."]
