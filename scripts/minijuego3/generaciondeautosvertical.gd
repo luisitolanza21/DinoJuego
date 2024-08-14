@@ -11,7 +11,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $TiempoGen.is_stopped():
-		var tiempo = randi() % 3 + 1
+		var tiempo = randi() % 4 + 1.5
 		create_obstacles();
 		$TiempoGen.wait_time = tiempo
 		$TiempoGen.start();
@@ -19,7 +19,7 @@ func _process(delta):
 func create_obstacles():
 	var position: Vector2
 	var positionrelative: Vector2
-	position = Vector2(-780, -20)
+	position = Vector2(-1080, -20)
 
 	# Verificar si hay un objeto en la posición
 	if is_position_occupied(position):

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://ck31j2jcwjljl"
+path="res://.godot/imported/minijuego1_2.dialogue-0de295c9920c21450738ef1c84e79cde.tres"
+
+[deps]
+
+source_file="res://dialogs/dinodetective1/minijuego1_2.dialogue"
+dest_files=["res://.godot/imported/minijuego1_2.dialogue-0de295c9920c21450738ef1c84e79cde.tres"]
+
+[params]
+
+defaults=true

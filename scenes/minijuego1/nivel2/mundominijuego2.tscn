@@ -16,13 +16,14 @@
 
 [node name="nivel2" type="Node2D"]
 script = ExtResource("1_8fn0v")
-metadata/_edit_horizontal_guides_ = [22.0, -69.0, 1944.0, 1935.0, -1495.0, 3631.0]
-metadata/_edit_vertical_guides_ = [-460.0, 2574.0, 390.0, 2415.0, 3250.0, -2193.0]
 
 [node name="Botones" parent="." instance=ExtResource("2_dplpr")]
 
 [node name="Ciudad2" parent="." instance=ExtResource("2_jy2xc")]
 position = Vector2(687.5, 2021.25)
+
+[node name="autopolicia" parent="." instance=ExtResource("13_e06hn")]
+position = Vector2(-254, 386)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objetct_follow")]
 position = Vector2(224, 1164)
@@ -35,34 +36,31 @@ script = ExtResource("7_x8fyf")
 objetct_follow = NodePath("../player")
 
 [node name="NPC_1" parent="." instance=ExtResource("10_bi6r4")]
-position = Vector2(-417, 1165)
+position = Vector2(-255, 981)
 script = ExtResource("6_enmuw")
 escena = "res://scenes/minijuego1/nivel2/seleccion_culpable2.tscn"
 dialogueResource = ExtResource("12_ffytw")
 
-[node name="player" parent="." instance=ExtResource("8_wbi1m")]
-position = Vector2(456, 864)
-
 [node name="npc1" parent="." instance=ExtResource("2_tdyoa")]
-position = Vector2(2386, 133)
+position = Vector2(2326, 158)
 scale = Vector2(2, 2)
 script = ExtResource("9_n3pfg")
-dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+dialogo = "res://dialogs/dinodetective1/minijuego1_2.dialogue"
 flag = "npc1"
 
 [node name="npc2" parent="." instance=ExtResource("3_gq8kw")]
-position = Vector2(-1548, 1387)
+position = Vector2(-1236, 1705)
 scale = Vector2(2, 2)
 script = ExtResource("9_n3pfg")
-dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+dialogo = "res://dialogs/dinodetective1/minijuego1_2.dialogue"
 flag = "npc2"
 
 [node name="npc3" parent="." instance=ExtResource("4_eijhw")]
-position = Vector2(113, 3025)
+position = Vector2(564, 3060)
 scale = Vector2(2, 2)
 script = ExtResource("9_n3pfg")
-dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+dialogo = "res://dialogs/dinodetective1/minijuego1_2.dialogue"
 flag = "npc3"
 
-[node name="autopolicia" parent="." instance=ExtResource("13_e06hn")]
-position = Vector2(-254, 386)
+[node name="player" parent="." instance=ExtResource("8_wbi1m")]
+position = Vector2(456, 864)

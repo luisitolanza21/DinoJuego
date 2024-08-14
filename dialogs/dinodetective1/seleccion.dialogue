@@ -3,6 +3,9 @@ policia: ¿Este es el culpable?
 - si
 	policia: ¡eres increible lo atrapaste!
 	set listo = "si"
+	set npc1 = 0
+	set npc2 = 0
+	set npc3 = 0
 - no
 => END
 

@@ -90,7 +90,7 @@ func _process(delta):
 				MAX_SPEED = other_car.MAX_SPEED
 			#	print(\"MAX_SPEED actualizado desde el auto de delante: \", MAX_SPEED)
 		
-	if $\".\".position.x > 750 or $\".\".position.x < -1200:
+	if $\".\".position.x > 750 or $\".\".position.x < -1600:
 		$\".\".queue_free()
 	
 

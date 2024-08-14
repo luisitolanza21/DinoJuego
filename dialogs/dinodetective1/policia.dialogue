@@ -1,9 +1,14 @@
 ~ start
-policia: ¿Ya terminaste de investigar?
+coronel: ¿Ya terminaste de investigar?
 - si
-	policia: Esta bien dime quien fue
+	coronel: Esta bien dime quien fue
 	set listo = "si"
 - No
-	policia: Avisame cuando estes listo
+	coronel: Avisame cuando estes listo
+
+=> END
+
+~ again
+coronel: Ve a recoger pistas, creo que aun quedan testigos por aqui
 
 => END

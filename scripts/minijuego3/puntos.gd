@@ -1,5 +1,5 @@
 extends RichTextLabel
-var puntos = 20
+var puntos = 10
 var prev_puntaje = 0
 
 func _ready():

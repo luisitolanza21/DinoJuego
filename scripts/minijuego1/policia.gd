@@ -13,9 +13,9 @@ func _ready():
 	Global.connect("listo_changed", Callable(self, "_on_listo_changed"))
 	
 # Esta función se llamará cuando 'listo' cambie en el script global
-func _on_listo_changed(new_value):
+#func _on_listo_changed(new_value):
 	#print("Global.listo ha cambiado a: ", new_value)
-	Transicion.cambiar_escena(escena)
+	#Transicion.cambiar_escena(escena)
 	# Aquí puedes añadir el código que deseas ejecutar cuando 'listo' cambie
 
 
@@ -30,5 +30,9 @@ func _on_body_exited(body):
 		body.set("current_npc", null)
 
 func player_interacted():
-	DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/policia.dialogue"), "start")
-	
+	Global.todos_los_npc()
+	print(Global.puntaje)
+	if Global.puntaje > 2:	
+		DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/policia.dialogue"), "start")
+	else:
+		DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/policia.dialogue"), "again")

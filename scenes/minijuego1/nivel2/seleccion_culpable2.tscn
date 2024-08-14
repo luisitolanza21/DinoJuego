@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://crsp24sspb4md"]
 
-[ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles/calles.png" id="1_c4q7b"]
+[ext_resource type="Texture2D" uid="uid://b06lu8i140l61" path="res://assets/calles/calles.png" id="1_c4q7b"]
 [ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="2_d1a12"]
 [ext_resource type="Script" path="res://scripts/minijuego1/sospechosos.gd" id="3_ywmym"]
 [ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="4_1egsc"]
@@ -112,7 +112,10 @@ metadata/_edit_horizontal_guides_ = [491.0]
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_rf48b")
 format = 2
-layer_0/tile_data = PackedInt32Array(65539, 0, 0, 65537, 0, 0, 65536, 0, 0, 65538, 0, 0, 131071, 0, 0, 131070, 0, 0)
+layer_0/tile_data = PackedInt32Array(65539, 0, 0, 65537, 0, 0, 65536, 0, 0, 65538, 0, 0, 131071, 0, 0, 131070, 0, 0, 65540, 0, 0, 65541, 0, 0)
+
+[node name="cuadra2" parent="." instance=ExtResource("2_d1a12")]
+position = Vector2(-6, -312)
 
 [node name="cuadra" parent="." instance=ExtResource("2_d1a12")]
 position = Vector2(-1922, -312)
@@ -125,6 +128,7 @@ offset_bottom = 486.0
 script = ExtResource("3_ywmym")
 dialogo = "res://dialogs/dinodetective1/seleccion.dialogue"
 flag = "incorrecto"
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sospechoso1"]
 position = Vector2(121, 214)
@@ -138,6 +142,7 @@ offset_bottom = 487.0
 script = ExtResource("3_ywmym")
 dialogo = "res://dialogs/dinodetective1/seleccion.dialogue"
 flag = "incorrecto"
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sospechoso2"]
 position = Vector2(141, 179)
@@ -151,6 +156,7 @@ offset_bottom = 486.0
 script = ExtResource("3_ywmym")
 dialogo = "res://dialogs/dinodetective1/seleccion.dialogue"
 flag = "correcto"
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="sospechoso3"]
 position = Vector2(122, 186)
@@ -168,6 +174,7 @@ text = "[wave amp=40 freq =6
 ]ELIGE AL CULPABLE[/wave]"
 tab_size = 10
 script = ExtResource("7_nuu1s")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="sospechoso1" to="sospechoso1" method="_on_pressed"]
 [connection signal="pressed" from="sospechoso2" to="sospechoso2" method="_on_pressed"]

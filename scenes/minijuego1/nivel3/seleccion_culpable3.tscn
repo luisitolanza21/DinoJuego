@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://27tulq4wahh4"]
 
-[ext_resource type="Texture2D" uid="uid://b0tt8njne6hex" path="res://assets/calles/calles.png" id="1_xwcaa"]
+[ext_resource type="Texture2D" uid="uid://b06lu8i140l61" path="res://assets/calles/calles.png" id="1_xwcaa"]
 [ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="2_3eam2"]
 [ext_resource type="Script" path="res://scripts/minijuego1/sospechosos.gd" id="3_ew5dn"]
 [ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="4_ol482"]
@@ -48,6 +48,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_25do7"]
+atlas = ExtResource("4_ol482")
+region = Rect2(0, 428, 246, 428)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_etqxa"]
 atlas = ExtResource("4_ol482")
 region = Rect2(492, 428, 246, 428)
@@ -56,34 +60,30 @@ region = Rect2(492, 428, 246, 428)
 atlas = ExtResource("4_ol482")
 region = Rect2(246, 428, 246, 428)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_25do7"]
-atlas = ExtResource("4_ol482")
-region = Rect2(0, 428, 246, 428)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_bomwd"]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25do7")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_etqxa")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_yrpc3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_25do7")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qqid4"]
-atlas = ExtResource("4_ol482")
-region = Rect2(984, 428, 246, 428)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_xahbc"]
 atlas = ExtResource("4_ol482")
 region = Rect2(738, 428, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqid4"]
+atlas = ExtResource("4_ol482")
+region = Rect2(984, 428, 246, 428)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7n64x"]
 atlas = ExtResource("4_ol482")
@@ -93,10 +93,10 @@ region = Rect2(1230, 428, 246, 428)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qqid4")
+"texture": SubResource("AtlasTexture_xahbc")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xahbc")
+"texture": SubResource("AtlasTexture_qqid4")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7n64x")

@@ -1,44 +1,57 @@
-~ npc1
+~ start  
+set Global.botones = false
+Coronel: Este es el lugar del crimen. Explora cada rincón y encuentra las pistas que nos llevarán al culpable. No dejes que nada pase desapercibido.
+set Global.botones = true
+=> END!
 
+~ npc1
+set Global.botones = false
 Ciudadano: [[hola|buenos dias oficial]], ¿en que puedo ayudarlo?.
 -  ¿Has visto a alguien sospechoso por aquí?
 	Ciudadano: Sí, vi a alguien extraño merodeando por la zona.
-	=> npc1_second
--  ¿Puedes describir al sospechoso?
-	Ciudadano: Claro, el sospechoso tenía una *nariz grande*.
-	=> npc1_second
--  ¿Qué hacía el sospechoso?
-	Ciudadano: Parecía estar mirando a su alrededor con nerviosismo, como si estuviera buscando algo o a alguien.
-	=> npc1_second
+	-  ¿Puedes describir al sospechoso?
+		Ciudadano: Claro, el sospechoso tenía unos colmillos que daban miedo.
+		=> npc1_second
+	-  ¿Qué hacía el sospechoso?
+		Ciudadano: Parecía estar mirando a su alrededor con nerviosismo, como si estuviera buscando algo o a alguien.
+		=> npc1_second
+-  ¿sabes que paso?
+	Ciudadano: No oficial, pero si vi gente que no es de por aqui.
 -  ¡Gracias por tu ayuda!
-	=> END
 	Ciudadano: ¡De nada! Espero que encuentres lo que buscas.
+	set npc1 = 1
+	set Global.botones = true
+	=> END
 => END
 
 ~ npc1_second 
+set Global.botones = false
 Ciudadano: ¿en que mas puedo ayudarlo?.
 -  ¿Has visto a alguien sospechoso por aquí?
 	Ciudadano: Sí, vi a alguien extraño merodeando por la zona.
-	=> npc1_second
--  ¿Puedes describir al sospechoso?
-	Ciudadano: Claro, el sospechoso llevaba un *sombrero de copa negro* y tenía una nariz grande y 2 cuernos.
-	=> npc1_second
--  ¿Qué hacía el sospechoso?
-	Ciudadano: Parecía estar mirando a su alrededor con nerviosismo, como si estuviera buscando algo o a alguien.
-	=> npc1_second
+	-  ¿Puedes describir al sospechoso?
+		Ciudadano: Claro, el sospechoso tenía unos colmillos que daban miedo.
+		=> npc1_second
+	-  ¿Qué hacía el sospechoso?
+		Ciudadano: Parecía estar mirando a su alrededor con nerviosismo, como si estuviera buscando algo o a alguien.
+		=> npc1_second
+-  ¿sabes que paso?
+	Ciudadano: No oficial, pero si vi gente que no es de por aqui.
 -  ¡Gracias por tu ayuda!
-	=> END
+
 	Ciudadano: ¡De nada! Espero que encuentres lo que buscas.
+	set npc1 = 1
+	set Global.botones = true
 => END
 
 
 ~ npc2
-
+set Global.botones = false
 Ciudadano: Buenas tardes, oficial. ¿En qué puedo servirle?
 -  ¿Has visto a alguien sospechoso últimamente?
 	Ciudadano: Creo que vi a alguien raro por aquí hace un rato.
 	-  ¿Cómo era esa persona?
-		Ciudadano: Tenía una camiseta roja que llamó bastante la atención.
+		Ciudadano: Tenía una camiseta naranja que llamó bastante la atención.
 		=> npc2_second
 	-  ¿Qué estaba haciendo?
 		Ciudadano: Parecía estar caminando lentamente, observando cada detalle a su alrededor.
@@ -48,14 +61,17 @@ Ciudadano: Buenas tardes, oficial. ¿En qué puedo servirle?
 	=> npc2_second
 -  ¡Gracias por tu ayuda!
 	Ciudadano: ¡De nada! Espero que eso te sirva de algo.
+	set npc2= 1
+	set Global.botones = true
 => END
 
 ~ npc2_second 
+set Global.botones = false
 Ciudadano: ¿en que mas puedo ayudarlo?.
 -  ¿Has visto a alguien sospechoso últimamente?
 	Ciudadano: Creo que vi a alguien raro por aquí hace un rato.
 	-  ¿Cómo era esa persona?
-		Ciudadano: Tenía una camiseta roja que llamó bastante la atención.
+		Ciudadano: Tenía una camiseta naranja que llamó bastante la atención.
 		=> npc2_second
 	-  ¿Qué estaba haciendo?
 		Ciudadano: Parecía estar caminando lentamente, observando cada detalle a su alrededor.
@@ -65,15 +81,17 @@ Ciudadano: ¿en que mas puedo ayudarlo?.
 	=> npc2_second
 -  ¡Gracias por tu ayuda!
 	Ciudadano: ¡De nada! Espero que eso te sirva de algo.
+	set npc2= 1
+	set Global.botones = true
 => END
 
 ~ npc3
-
+set Global.botones = false
 Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?.
 -  ¿Has notado a alguien que se vea sospechoso?
 	Ciudadano: Sí, vi a alguien que no me pareció muy confiable.
 	-  ¿Cómo era?
-		Ciudadano: Lo más destacable eran sus cuernos y pantalones verdes, no es algo que se vea todos los días.
+		Ciudadano: Lo más destacable eran sus cuernos y pantalones morados, no es algo que se vea todos los días.
 		=> npc3_second
 	-  ¿Qué estaba haciendo?
 		Ciudadano: Estaba parado en la esquina, como si estuviera esperando a alguien.
@@ -82,14 +100,17 @@ Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?.
 	Ciudadano: No vi con claridad pero una perosna salio corriendo hace poco
 -  ¡Gracias por la información!
 	Ciudadano: ¡Con gusto! Ojalá eso ayude en su investigación.
+	set npc3 = 1
+	set Global.botones = true
 => END
 
 ~ npc3_second 
+set Global.botones = false
 Ciudadano: ¿en que mas puedo ayudarlo?.
 -  ¿Has notado a alguien que se vea sospechoso?
 	Ciudadano: Sí, vi a alguien que no me pareció muy confiable.
 	-  ¿Cómo era?
-	Ciudadano: Lo más destacable eran sus cuernos y pantalones verdes, no es algo que se vea todos los días.
+	Ciudadano: Lo más destacable eran sus cuernos y pantalones morados, no es algo que se vea todos los días.
 	=> npc3_second
 	-  ¿Qué estaba haciendo?
 	Ciudadano: Estaba parado en la esquina, como si estuviera esperando a alguien.
@@ -98,4 +119,6 @@ Ciudadano: ¿en que mas puedo ayudarlo?.
 	Ciudadano: No vi con claridad pero esa perosna que te describi salio corriendo hace poco
 -  ¡Gracias por la información!
 	Ciudadano: ¡Con gusto! Ojalá eso ayude en su investigación.
+	set npc3 = 1
+	set Global.botones = true
 => END

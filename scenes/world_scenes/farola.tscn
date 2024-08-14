@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce5xo8gv0kfxn"]
+
+[ext_resource type="Texture2D" uid="uid://barwgcrqx3dix" path="res://assets/edificios_unicos/farola (1).png" id="1_4mirm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_om1p7"]
+size = Vector2(84, 764.199)
+
+[node name="Farola" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Farola(1)" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(384, 331.75)
+scale = Vector2(1, 0.824393)
+texture = ExtResource("1_4mirm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(382, 330)
+scale = Vector2(1, 0.824393)
+shape = SubResource("RectangleShape2D_om1p7")
