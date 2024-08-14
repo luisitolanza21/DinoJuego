@@ -17,6 +17,7 @@ Ciudadano: [[hola|buenos dias oficial]], ¿en que puedo ayudarlo?.
 		=> npc1_second
 -  ¿sabes que paso?
 	Ciudadano: No oficial, pero si vi gente que no es de por aqui.
+	=> npc1_second
 -  ¡Gracias por tu ayuda!
 	Ciudadano: ¡De nada! Espero que encuentres lo que buscas.
 	set npc1 = 1
@@ -37,8 +38,8 @@ Ciudadano: ¿en que mas puedo ayudarlo?.
 		=> npc1_second
 -  ¿sabes que paso?
 	Ciudadano: No oficial, pero si vi gente que no es de por aqui.
+	=> npc1_second
 -  ¡Gracias por tu ayuda!
-
 	Ciudadano: ¡De nada! Espero que encuentres lo que buscas.
 	set npc1 = 1
 	set Global.botones = true

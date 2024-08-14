@@ -106,5 +106,3 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="frenoizquierdo"]
 position = Vector2(-4, 6)
 shape = SubResource("RectangleShape2D_f1lbi")
-
-[connection signal="pressed" from="." to="." method="_on_pressed"]

@@ -13,15 +13,15 @@ script = ExtResource("1_hhbkw")
 
 [node name="negro" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.670588)
-position = Vector2(1663, 110)
+position = Vector2(1039, 137)
 scale = Vector2(0.240234, 0.213542)
 texture = ExtResource("2_djc2l")
 
 [node name="textodelcontador" type="RichTextLabel" parent="."]
-offset_left = 1567.0
-offset_top = 33.0001
-offset_right = 1751.0
-offset_bottom = 136.0
+offset_left = 943.0
+offset_top = 60.0001
+offset_right = 1127.0
+offset_bottom = 163.0
 theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
 text = "1:20"
@@ -30,10 +30,10 @@ text = "1:20"
 wait_time = 60.0
 
 [node name="puntos" type="RichTextLabel" parent="."]
-offset_left = 1571.0
-offset_top = 124.0
-offset_right = 1759.0
-offset_bottom = 211.0
+offset_left = 947.0
+offset_top = 151.0
+offset_right = 1135.0
+offset_bottom = 238.0
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
 text = "autos restantes: 20"
@@ -46,12 +46,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -598.0
-offset_top = -329.0
-offset_right = -345.0
-offset_bottom = -108.0
+offset_left = -567.0
+offset_top = -241.0
+offset_right = -314.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.7, 0.7)
 script = ExtResource("4_q2qfd")
 
 [node name="rojo" type="Sprite2D" parent="Button"]
@@ -72,12 +73,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 432.0
-offset_top = -329.0
-offset_right = 685.0
-offset_bottom = -108.0
+offset_left = 313.0
+offset_top = -241.0
+offset_right = 566.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.7, 0.7)
 script = ExtResource("7_653ix")
 
 [node name="rojo" type="Sprite2D" parent="Button2"]

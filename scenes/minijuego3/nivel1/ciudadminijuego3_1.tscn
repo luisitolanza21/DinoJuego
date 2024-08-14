@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://cjnb0fqoym018"]
 
-[ext_resource type="PackedScene" uid="uid://bfomrkdrrn7a7" path="res://scenes/MENUS/minijuego3/nivel1/trafico1.tscn" id="1_2f0t2"]
+[ext_resource type="PackedScene" uid="uid://bfomrkdrrn7a7" path="res://scenes/minijuego3/nivel1/trafico1.tscn" id="1_2f0t2"]
 [ext_resource type="Script" path="res://scripts/minijuego3/puntajes.gd" id="1_ibnjl"]
-[ext_resource type="PackedScene" uid="uid://c4gh8fcpca48m" path="res://scenes/MENUS/minijuego3/obstaculosAleatorios.tscn" id="1_upcbk"]
-[ext_resource type="PackedScene" uid="uid://dg1pjqbfr2u08" path="res://scenes/MENUS/minijuego3/dinotrafico_1.tscn" id="3_fkpsw"]
+[ext_resource type="PackedScene" uid="uid://c4gh8fcpca48m" path="res://scenes/minijuego3/obstaculosAleatorios.tscn" id="1_upcbk"]
+[ext_resource type="PackedScene" uid="uid://dg1pjqbfr2u08" path="res://scenes/minijuego3/dinotrafico_1.tscn" id="3_fkpsw"]
 [ext_resource type="Script" path="res://scripts/minijuego3/generaciondeautosvertical.gd" id="3_ieuee"]
-[ext_resource type="PackedScene" uid="uid://0q0vock3f85y" path="res://scenes/MENUS/minijuego3/interfaz_3.tscn" id="6_jvgyj"]
+[ext_resource type="PackedScene" uid="uid://0q0vock3f85y" path="res://scenes/minijuego3/interfaz_3.tscn" id="6_jvgyj"]
 [ext_resource type="PackedScene" uid="uid://ce5xo8gv0kfxn" path="res://scenes/world_scenes/farola.tscn" id="7_62q3q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwe5t"]
@@ -19,7 +19,6 @@ script = ExtResource("1_ibnjl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(-100, 0)
-zoom = Vector2(1.5, 1.5)
 
 [node name="Trafico1" parent="." instance=ExtResource("1_2f0t2")]
 position = Vector2(-551, -57)

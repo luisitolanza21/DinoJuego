@@ -13,7 +13,7 @@ config_version=5
 config/name="prueba 2"
 run/main_scene="res://scenes/MENUS/MENU_PRINCIPAL.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://assets/UI/lol.png"
 
 [autoload]
 

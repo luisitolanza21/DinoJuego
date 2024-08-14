@@ -11,7 +11,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if $TiempoGen.is_stopped():
-		var tiempo = randi() % 4 + 1.5
+		var tiempo = randi() % 4 + 1
 		create_obstacles();
 		$TiempoGen.wait_time = tiempo
 		$TiempoGen.start();
