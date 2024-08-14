@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://buwkurjm8i2x"]
+[gd_scene load_steps=55 format=3 uid="uid://buwkurjm8i2x"]
 
 [ext_resource type="Texture2D" uid="uid://djsdw8qfrcvd8" path="res://assets/calles/calle 1.png" id="1_5ltm1"]
 [ext_resource type="Script" path="res://scripts/minijuegoPersecusion/persecucion_(main).gd" id="1_ojhoy"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://djq5wvxdanj5e" path="res://assets/autos/Auto policia.png" id="22_keo48"]
 [ext_resource type="Script" path="res://scenes/minijuegoPersecusion/CanvasLayer.gd" id="22_n6hhg"]
 [ext_resource type="Script" path="res://scenes/minijuegoPersecusion/GameController.gd" id="24_to1os"]
+[ext_resource type="PackedScene" uid="uid://rw3bsew4meqa" path="res://scenes/minijuegoPersecusion/botones_persecusion.tscn" id="26_xlwjh"]
 
 [sub_resource type="Animation" id="Animation_2kyoa"]
 length = 2.0
@@ -10683,7 +10684,7 @@ ACCELERATION = 150.0
 DECELERATION = 500.0
 
 [node name="Camera2D" type="Camera2D" parent="DINOMOVIL"]
-position = Vector2(534, -177)
+position = Vector2(270, 89)
 limit_top = 28
 limit_bottom = 800
 
@@ -12579,6 +12580,8 @@ script = ExtResource("12_uy0x8")
 [node name="AutoEstatico" parent="Path2D4/PathFollow2D" instance=ExtResource("11_71oh0")]
 position = Vector2(19, -2)
 rotation = -0.0261799
+
+[node name="botones_persecusion" parent="." instance=ExtResource("26_xlwjh")]
 
 [connection signal="player_hit" from="DINOMOVIL" to="GameController" method="_on_dinomovil_player_hit"]
 [connection signal="velocidad_player" from="DINOMOVIL" to="CanvasLayer" method="_on_dinomovil_velocidad_player"]

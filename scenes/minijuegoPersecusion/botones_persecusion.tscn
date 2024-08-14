@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://rw3bsew4meqa"]
+
+[ext_resource type="Texture2D" uid="uid://crnfum4wmbv7v" path="res://assets/UI/shadedLight27.png" id="1_2ob0w"]
+[ext_resource type="Texture2D" uid="uid://x8fxp4451jpj" path="res://assets/UI/shadedLight26.png" id="2_or7rr"]
+[ext_resource type="Texture2D" uid="uid://c83vjulsliu2v" path="res://assets/UI/shadedLight36.png" id="3_f4ftl"]
+[ext_resource type="Texture2D" uid="uid://dvhfh1pwm37c5" path="res://icon.svg" id="4_fwqjd"]
+
+[node name="botones_persecusion" type="CanvasLayer"]
+
+[node name="arriba_abajo" type="Node2D" parent="."]
+
+[node name="abajo" type="Sprite2D" parent="arriba_abajo"]
+position = Vector2(117, 638)
+scale = Vector2(1.5875, 1.5875)
+texture = ExtResource("1_2ob0w")
+
+[node name="arriba" type="Sprite2D" parent="arriba_abajo/abajo"]
+position = Vector2(0, -85)
+texture = ExtResource("2_or7rr")
+
+[node name="arriba" type="TouchScreenButton" parent="arriba_abajo/abajo/arriba"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(-32.126, -30.2756)
+scale = Vector2(0.487205, 0.487205)
+texture_normal = ExtResource("4_fwqjd")
+action = "ui_up"
+
+[node name="abajo" type="TouchScreenButton" parent="arriba_abajo/abajo"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-32.7559, -30.8661)
+scale = Vector2(0.501969, 0.501969)
+texture_normal = ExtResource("4_fwqjd")
+action = "ui_down"
+
+[node name="acelerar" type="Sprite2D" parent="."]
+position = Vector2(1180, 633)
+scale = Vector2(1.75, 1.75)
+texture = ExtResource("3_f4ftl")
+
+[node name="acelerar" type="TouchScreenButton" parent="acelerar"]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(-32.5715, -29.7143)
+scale = Vector2(0.491071, 0.491071)
+texture_normal = ExtResource("4_fwqjd")
+action = "ui_right"
