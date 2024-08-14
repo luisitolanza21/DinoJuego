@@ -8,12 +8,12 @@
 script/source = "class_name AutoObstaculo;
 extends CharacterBody2D
 
-@export var MAX_SPEED_REF= 1000;
+@export var MAX_SPEED_REF= 650;
 @export var MIN_SPEED_REF= 200;
 
-@export var ACCELERATION = 400;
+@export var ACCELERATION = 1500;
 
-@export var DECELERATION = 200.0;
+@export var DECELERATION = 500.0;
 
 @export var SUBIR=false;
 @export var BAJAR=false;
@@ -21,7 +21,8 @@ extends CharacterBody2D
 @export var RETROCEDER=false;
 @export var posicionParaDesaparecerX=-400;
 
-var MAX_SPEED;
+@export var MAX_SPEED=randf_range(MIN_SPEED_REF, MAX_SPEED_REF);
+
 #ALEATORIZANDO SPRITESÇ
 var current_sprite: Sprite2D;
 var sprite_auto_rojo: Sprite2D
@@ -48,7 +49,7 @@ func _ready():
 	raycastFrontalSuperior=$RayCastFrontalSuperior;
 	raycastFrontalInferior=$RayCastFrontalInferior;
 	
-	MAX_SPEED=randf_range(MIN_SPEED_REF, MAX_SPEED_REF);
+	
 	
 	
 	var random_choice =  randi() % 3  # Generate a random number between 0 and 2
@@ -69,14 +70,34 @@ func detectarCosas(delta):
 	var colisionFrontalSuperior= raycastFrontalSuperior.is_colliding() 
 	var colisionFrontalInferior=  raycastFrontalInferior.is_colliding() 
 	var colisionFrontal = raycastFrontal.is_colliding() or raycastFrontalSuperior.is_colliding() or raycastFrontalInferior.is_colliding();
-
+	
+	var colisionMultiple = (raycastFrontal.is_colliding() and raycastFrontalSuperior.is_colliding() and raycastFrontalInferior.is_colliding());
+	var colisionMultipleSuperior = (raycastFrontal.is_colliding() and raycastFrontalSuperior.is_colliding());
+	var colisionMultipleInferior = (raycastFrontal.is_colliding() and raycastFrontalInferior.is_colliding());
 	# Depuración de cada colisión
-	print(\"colisionFrontal:\", colisionFrontal)
-	print(\"colisionSuperior:\", colisionSuperior)
-	print(\"colisionInferior:\", colisionInferior)
-	print(\"colisionFrontalSuperior:\", colisionFrontalSuperior)
-	print(\"colisionFrontalInferior:\", colisionFrontalInferior)
-
+	#print(\"colisionFrontal:\", colisionFrontal)
+	#print(\"colisionSuperior:\", colisionSuperior)
+	#print(\"colisionInferior:\", colisionInferior)
+	#print(\"colisionFrontalSuperior:\", colisionFrontalSuperior)
+	#print(\"colisionFrontalInferior:\", colisionFrontalInferior)
+# Verifica si alguna de las colisiones ocurre
+	if raycastFrontal.is_colliding() or colisionMultipleInferior or colisionMultipleSuperior:
+		var other_car = raycastFrontal.get_collider() if raycastFrontal.is_colliding() else null
+		if other_car is AutoObstaculo:
+			if other_car == null and raycastFrontalSuperior.is_colliding():
+				other_car = raycastFrontalSuperior.get_collider()
+			if other_car == null and raycastFrontalInferior.is_colliding():
+				other_car = raycastFrontalInferior.get_collider()
+			if other_car and other_car != self:
+				var eleccion=randi_range(0, 2);
+				if eleccion == 1:
+					MAX_SPEED = other_car.MAX_SPEED;
+				else:
+					other_car.MAX_SPEED = MAX_SPEED;
+				print(\"================ Igualando velocidad\");
+			
+		# print(\"MAX_SPEED enviado al auto de atrás: \", MAX_SPEED)
+	#	print(\"MAX_SPEED enviado al auto de atrás: \", MAX_SPEED)
 	if colisionFrontal:
 		if (colisionSuperior and colisionInferior) or (colisionFrontal and colisionFrontalSuperior and colisionFrontalInferior):
 			#print(\"Detección frontal, superior e inferior\")
@@ -93,12 +114,13 @@ func detectarCosas(delta):
 		elif colisionFrontalInferior or (colisionFrontalInferior and colisionFrontal):
 			#print(\"Detección frontal e inferior\")
 			dirVertical = -1
+		
 	else:
 		#print(\"Sin detección frontal\")
 		dirVertical = 0
 		freno = 0
 
-	moverAutomovil(delta, 1, dirVertical, freno)
+	moverAutomovil(delta, -1, dirVertical, freno)
 
 	
 func moverAutomovil(delta, dirHorizontal, dirVertical, freno):
@@ -135,37 +157,50 @@ func moverAutomovil(delta, dirHorizontal, dirVertical, freno):
 
 	move_and_slide()
 func destruiAuto():
+
+	print(\"Destruido\")
 	queue_free();
 
 func _physics_process(delta):
 	detectarCosas(delta);
+	#Condicion para destruir auto
+	if(position.x<21660):
+		destruiAuto();
 
 func _on_area_2d_body_entered(body):
 	if body is AutoPolicia:
 		print(\"Chocaste con un auto\")
+		body.bajar_vida();
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3bs7c"]
-size = Vector2(115, 60)
+size = Vector2(107, 54)
 
 [node name="autoMovil1" type="CharacterBody2D"]
+rotation = -6.28319
+collision_layer = 4
+collision_mask = 6
 script = SubResource("GDScript_cs50k")
 
 [node name="auto_verde" type="Sprite2D" parent="."]
 visible = false
-scale = Vector2(0.208743, 0.251633)
+position = Vector2(-0.794584, 0)
+scale = Vector2(0.205621, 0.251633)
 texture = ExtResource("1_jb8yw")
+flip_h = true
 
 [node name="auto_rojo" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(0.207317, 0.24911)
 texture = ExtResource("2_xfjj6")
+flip_h = true
 
 [node name="auto_amarillo" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(1, 1)
 scale = Vector2(0.206413, 0.248476)
 texture = ExtResource("3_auob7")
+flip_h = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(113, 97)
@@ -174,10 +209,11 @@ polygon = PackedVector2Array(-165, -119, -164, -79, -157, -75, -153, -75, -152, 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.500019, 4)
 shape = SubResource("RectangleShape2D_3bs7c")
 
 [node name="RayCastFrontal" type="RayCast2D" parent="."]
-target_position = Vector2(188, -1)
+target_position = Vector2(-181, -3.1647e-05)
 
 [node name="RayCastInferior" type="RayCast2D" parent="."]
 target_position = Vector2(0, 33)
@@ -187,10 +223,10 @@ target_position = Vector2(0, -42)
 
 [node name="RayCastFrontalSuperior" type="RayCast2D" parent="."]
 position = Vector2(-2, -23)
-target_position = Vector2(185, -1)
+target_position = Vector2(-176, 0.999969)
 
 [node name="RayCastFrontalInferior" type="RayCast2D" parent="."]
 position = Vector2(-4, 33)
-target_position = Vector2(188, -10)
+target_position = Vector2(-171, -7.00003)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
