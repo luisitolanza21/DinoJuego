@@ -1,7 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://27tulq4wahh4"]
+[gd_scene load_steps=22 format=3 uid="uid://27tulq4wahh4"]
 
 [ext_resource type="Texture2D" uid="uid://b06lu8i140l61" path="res://assets/calles/calles.png" id="1_xwcaa"]
 [ext_resource type="PackedScene" uid="uid://btmismeikf0kw" path="res://scenes/world_scenes/cuadra_estilo_1.tscn" id="2_3eam2"]
+[ext_resource type="Texture2D" uid="uid://bp004ykc5rsp6" path="res://assets/calles/manzana.png" id="2_l2qlw"]
 [ext_resource type="Script" path="res://scripts/minijuego1/sospechosos.gd" id="3_ew5dn"]
 [ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="4_ol482"]
 [ext_resource type="Script" path="res://scripts/minijuego1/texto.gd" id="5_7k4k6"]
@@ -15,9 +16,16 @@ texture_region_size = Vector2i(320, 320)
 1:0/0 = 0
 2:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o1dwt"]
+texture = ExtResource("2_l2qlw")
+texture_region_size = Vector2i(320, 320)
+0:0/0 = 0
+1:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_rf48b"]
 tile_size = Vector2i(320, 320)
 sources/0 = SubResource("TileSetAtlasSource_73bjr")
+sources/1 = SubResource("TileSetAtlasSource_o1dwt")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18g83"]
 atlas = ExtResource("4_ol482")
@@ -109,13 +117,20 @@ animations = [{
 [node name="SeleccionCulpable" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [491.0]
 
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(556, 270)
+zoom = Vector2(0.8, 0.8)
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_rf48b")
 format = 2
-layer_0/tile_data = PackedInt32Array(65539, 0, 0, 65537, 0, 0, 65536, 0, 0, 65538, 0, 0, 131071, 0, 0, 131070, 0, 0)
+layer_0/tile_data = PackedInt32Array(65539, 0, 0, 65537, 0, 0, 65536, 0, 0, 65538, 0, 0, 131071, 0, 0, 131070, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 196606, 1, 0, 196607, 65537, 0, 131072, 1, 0, 131073, 65537, 0, 131074, 1, 0, 131075, 65537, 0, 131076, 1, 0, 131077, 65537, 0, 131078, 1, 0, 131079, 65537, 0, 131080, 1, 0, 131081, 65537, 0)
 
 [node name="cuadra" parent="." instance=ExtResource("2_3eam2")]
 position = Vector2(-1922, -312)
+
+[node name="cuadra2" parent="." instance=ExtResource("2_3eam2")]
+position = Vector2(-14, -312)
 
 [node name="sospechoso1" type="Button" parent="."]
 offset_left = 100.0

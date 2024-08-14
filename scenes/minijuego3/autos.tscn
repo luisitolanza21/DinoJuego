@@ -53,13 +53,17 @@ func _ready():
 	
 	
 	var random_choice =  randi() % 3  # Generate a random number between 0 and 2
-	if random_choice == 0:
-		current_sprite = sprite_auto_verde
-	if random_choice == 1:
-		current_sprite = sprite_auto_amarillo;
-	else:
-		current_sprite = sprite_auto_rojo
-	# Make sure the chosen sprite is visible
+	
+	
+	match random_choice:
+		0:
+			current_sprite = sprite_auto_verde;
+		1:
+			current_sprite = sprite_auto_amarillo;
+		2:
+			current_sprite = sprite_auto_rojo;
+	
+	
 	current_sprite.visible = true
 	
 func _on_area_choqueperder(area):
@@ -145,6 +149,7 @@ size = Vector2(119, 30)
 size = Vector2(101, 48)
 
 [node name="autos" type="CharacterBody2D"]
+position = Vector2(157, 129)
 script = SubResource("GDScript_cs50k")
 
 [node name="auto_verde" type="Sprite2D" parent="."]

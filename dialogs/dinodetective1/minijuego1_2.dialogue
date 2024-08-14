@@ -107,7 +107,7 @@ Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?.
 => END
 
 ~ npc3_second 
-set Global.botones = false
+
 Ciudadano: ¿en que mas puedo ayudarlo?.
 -  ¿Has notado a alguien que se vea sospechoso?
 	Ciudadano: Sí, vi a alguien que no me pareció muy confiable.

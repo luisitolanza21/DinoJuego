@@ -13,8 +13,8 @@ script = ExtResource("1_hhbkw")
 
 [node name="negro" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.670588)
-position = Vector2(1039, 137)
-scale = Vector2(0.240234, 0.213542)
+position = Vector2(1045.5, 137)
+scale = Vector2(0.25293, 0.213542)
 texture = ExtResource("2_djc2l")
 
 [node name="textodelcontador" type="RichTextLabel" parent="."]
@@ -30,9 +30,9 @@ text = "1:20"
 wait_time = 60.0
 
 [node name="puntos" type="RichTextLabel" parent="."]
-offset_left = 947.0
+offset_left = 938.0
 offset_top = 151.0
-offset_right = 1135.0
+offset_right = 1163.0
 offset_bottom = 238.0
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true

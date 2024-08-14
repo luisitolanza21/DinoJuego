@@ -5,7 +5,7 @@ extends Node2D
 # Esta función se llamará cuando 'listo' cambie en el script global
 func _on_listo_changed(new_value):
 	#print("Global.listo ha cambiado a: ", new_value)
-	Transicion.cambiar_escena("res://scenes/minijuego1/nivel2/seleccion_culpable2.tscn")
+	Transicion.cambiar_escena("res://scenes/minijuego1/nivel3/seleccion_culpable3.tscn")
 	# Aquí puedes añadir el código que deseas ejecutar cuando 'listo' cambie
 
 # Called when the node enters the scene tree for the first time.

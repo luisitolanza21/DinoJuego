@@ -79,7 +79,7 @@ script = ExtResource("1_x7syd")
 position = Vector2(39, 41)
 scale = Vector2(0.18, 0.18)
 sprite_frames = SubResource("SpriteFrames_jmyou")
-animation = &"pasar"
+animation = &"frente_no_pasar"
 
 [node name="izquierda" type="Area2D" parent="."]
 

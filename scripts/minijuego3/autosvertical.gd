@@ -49,14 +49,16 @@ func _ready():
 	MAX_SPEED_VERTICAL= 300;
 	
 	
-	var random_choice =  randi() % 3  # Generate a random number between 0 and 2
-	if random_choice == 0:
-		sprite = $verde;
-	if random_choice == 1:
-		sprite = $amarillo;
-	else:
-		sprite = $rojo;
-	# Make sure the chosen sprite is visible
+	var random_choice =  randi() % 3  # Generate a random number between 0 and 2	
+	match random_choice:
+		0:
+			sprite = $verde;
+		1:
+			sprite = $amarillo;
+		2:
+			sprite = $rojo;
+	
+	
 	sprite.visible = true
 	
 func _on_area_front_entered(area):

@@ -39,6 +39,7 @@ func _on_timeout():
 	# Si el tiempo llega a 0, detener el Timer
 	if time_remaining <= 0:
 		timer.stop()
+		Transicion.cambiar_escena("res://scenes/minijuego3/sintiempo.tscn")
 
 func update_timer_label():
 	# Convertir el tiempo restante en minutos y segundos

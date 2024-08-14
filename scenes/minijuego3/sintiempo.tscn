@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://c562jqct5o61c"]
+
+[ext_resource type="Script" path="res://scripts/minijuego3/textoperdedor.gd" id="1_8bw3n"]
+[ext_resource type="Texture2D" uid="uid://dhfw8gn5fjrr8" path="res://assets/UI/negro.png" id="2_n80wa"]
+[ext_resource type="Script" path="res://scripts/minijuego3/perdiste.gd" id="3_d0pk3"]
+
+[node name="Perdiste" type="Node2D"]
+scale = Vector2(0.654907, 0.665536)
+script = ExtResource("1_8bw3n")
+
+[node name="Negro" type="Sprite2D" parent="."]
+position = Vector2(969.25, 541)
+scale = Vector2(1.98584, 1.56771)
+texture = ExtResource("2_n80wa")
+
+[node name="reiniciar" type="Button" parent="."]
+offset_left = 817.0
+offset_top = 621.0
+offset_right = 1115.0
+offset_bottom = 750.0
+theme_override_font_sizes/font_size = 40
+text = "REINICIAR"
+script = ExtResource("3_d0pk3")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 644.366
+offset_top = 247.92
+offset_right = 1301.37
+offset_bottom = 541.92
+theme_override_font_sizes/font_size = 90
+text = "Se te acabo el 
+       tiempo"
+
+[connection signal="pressed" from="reiniciar" to="reiniciar" method="_on_pressed"]

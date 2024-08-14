@@ -15,7 +15,7 @@ func _ready():
 # Esta función se llamará cuando 'listo' cambie en el script global
 #func _on_listo_changed(new_value):
 	#print("Global.listo ha cambiado a: ", new_value)
-	#Transicion.cambiar_escena(escena)
+#	Transicion.cambiar_escena(escena)
 	# Aquí puedes añadir el código que deseas ejecutar cuando 'listo' cambie
 
 

@@ -42,25 +42,25 @@ script = ExtResource("5_acl8n")
 escena = "res://scenes/minijuego1/nivel3/seleccion_culpable3.tscn"
 dialogueResource = ExtResource("6_kvh7q")
 
-[node name="CharacterBody2D2" parent="." instance=ExtResource("7_dvapl")]
+[node name="npc1" parent="." instance=ExtResource("7_dvapl")]
 position = Vector2(2190, 417)
 scale = Vector2(2, 2)
 script = ExtResource("8_0yky4")
-dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+dialogo = "res://dialogs/dinodetective1/minijuego1_3.dialogue"
 flag = "npc1"
 
-[node name="CharacterBody2D3" parent="." instance=ExtResource("9_wugut")]
+[node name="npc2" parent="." instance=ExtResource("9_wugut")]
 position = Vector2(-216, 2575)
 scale = Vector2(2, 2)
 script = ExtResource("8_0yky4")
-dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+dialogo = "res://dialogs/dinodetective1/minijuego1_3.dialogue"
 flag = "npc2"
 
-[node name="CharacterBody2D4" parent="." instance=ExtResource("10_8t2qb")]
+[node name="npc3" parent="." instance=ExtResource("10_8t2qb")]
 position = Vector2(2061, 2781)
 scale = Vector2(2, 2)
 script = ExtResource("8_0yky4")
-dialogo = "res://dialogs/dinodetective1/minijuego1_1.dialogue"
+dialogo = "res://dialogs/dinodetective1/minijuego1_3.dialogue"
 flag = "npc3"
 
 [node name="Farola" parent="." instance=ExtResource("14_j2lt8")]

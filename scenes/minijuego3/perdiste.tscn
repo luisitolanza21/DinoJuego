@@ -11,7 +11,7 @@ position = Vector2(969.25, 541)
 scale = Vector2(1.98584, 1.56771)
 texture = ExtResource("1_ygul3")
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="Texto" type="TextEdit" parent="."]
 offset_left = 534.0
 offset_top = 200.0
 offset_right = 1408.0

@@ -2,6 +2,9 @@
 set Global.botones = false
 Coronel: Este es el lugar del crimen. Explora cada rincón y encuentra las pistas que nos llevarán al culpable. No dejes que nada pase desapercibido.
 set Global.botones = true
+set npc1 = 0
+set npc2 = 0
+set npc3 = 0
 => END!
 
 ~ npc1
@@ -9,16 +12,15 @@ set Global.botones = false
 Ciudadano: [[hola|buenos días, oficial]], ¿en qué puedo ayudarlo?
 -  ¿Has visto a alguien sospechoso por aquí?
 	Ciudadano: Sí, vi a alguien extraño por la zona. No parecía de por aquí, su apariencia era... peculiar.
-	=> npc1_second
--  ¿Puedes describir al sospechoso?
-	Ciudadano: Pues, llevaba ropa de colores que no se ven mucho por aquí. Había algo en su aspecto que destacaba, pero no podría decir qué exactamente.
-	=> npc1_second
--  ¿Notaste algo peculiar en esa persona?
-	Ciudadano: Ahora que lo mencionas, tenía un par de cuernos en la cabeza. No es algo que se vea todos los días.
-	=> npc1_second
--  ¿Qué hacía el sospechoso?
-	Ciudadano: Parecía estar mirando a su alrededor, como si buscara algo o a alguien en particular. Tenía una especie de aire desconfiado.
-	=> npc1_second
+	-  ¿Puedes describir al sospechoso?
+		Ciudadano: Pues, llevaba ropa de colores que no se ven mucho por aquí. Había algo en su aspecto que destacaba, pero no podría decir qué exactamente.
+		=> npc1_second
+	-  ¿Notaste algo peculiar en esa persona?
+		Ciudadano: Ahora que lo mencionas, tenía un par de cuernos en la cabeza. No es algo que se vea todos los días.
+		=> npc1_second
+	-  ¿Qué hacía el sospechoso?
+		Ciudadano: Parecía estar mirando a su alrededor, como si buscara algo o a alguien en particular. Tenía una especie de aire desconfiado.
+		=> npc1_second
 -  ¡Gracias por tu ayuda!
 	Ciudadano: ¡De nada! Espero que encuentres lo que buscas.
 	set npc1 = 1
@@ -29,19 +31,18 @@ Ciudadano: [[hola|buenos días, oficial]], ¿en qué puedo ayudarlo?
 Ciudadano: ¿En qué más puedo ayudarlo?
 -  ¿Has visto a alguien sospechoso por aquí?
 	Ciudadano: Sí, vi a alguien extraño por la zona. No parecía de por aquí, su apariencia era... peculiar.
-	=> npc1_second
--  ¿Puedes describir al sospechoso?
-	Ciudadano: Pues, llevaba ropa de colores que no se ven mucho por aquí. Había algo en su aspecto que destacaba, pero no podría decir qué exactamente.
-	=> npc1_second
--  ¿Notaste algo peculiar en esa persona?
-	Ciudadano: Su forma de caminar era algo singular. Mantenía la cabeza baja, como si intentara pasar desapercibido, pero había algo en su forma de moverse que captaba la atención.
-	=> npc1_second
--  ¿Qué hacía el sospechoso?
-	Ciudadano: Parecía estar mirando a su alrededor, como si buscara algo o a alguien en particular. Tenía una especie de aire desconfiado.
-	=> npc1_second
--  ¿Llevaba algo inusual?
-	Ciudadano: No estoy seguro, pero tenía algo que se movía detrás de él, no pude ver bien qué era.
-	=> npc1_second
+	-  ¿Puedes describir al sospechoso?
+		Ciudadano: Pues, llevaba ropa de colores que no se ven mucho por aquí. Había algo en su aspecto que destacaba, pero no podría decir qué exactamente.
+		=> npc1_second
+	-  ¿Notaste algo peculiar en esa persona?
+		Ciudadano: Su forma de caminar era algo singular. Mantenía la cabeza baja, como si intentara pasar desapercibido, pero había algo en su forma de moverse que captaba la atención.
+		=> npc1_second
+	-  ¿Qué hacía el sospechoso?
+		Ciudadano: Parecía estar mirando a su alrededor, como si buscara algo o a alguien en particular. Tenía una especie de aire desconfiado.
+		=> npc1_second
+	-  ¿Llevaba algo inusual?
+		Ciudadano: No estoy seguro, pero tenía algo que se movía detrás de él, no pude ver bien qué era.
+		=> npc1_second
 -  ¡Gracias por tu ayuda!
 	Ciudadano: ¡De nada! Espero que encuentres lo que buscas.
 	set npc1 = 1
@@ -59,9 +60,6 @@ Ciudadano: Buenas tardes, oficial. ¿En qué puedo servirle?
 	-  ¿Qué estaba haciendo?
 		Ciudadano: Parecía estar caminando lentamente, observando cada detalle a su alrededor, como si buscara algo específico. Quizás era nuevo por aquí.
 		=> npc2_second
--  ¿Notaste algo más?
-	Ciudadano: Había algo en su forma de moverse que me resultó curioso, como si fuera más consciente de su entorno que otras personas.
-	=> npc2_second
 -  ¿Sabes qué pasó?
 	Ciudadano: No, oficial, solo fui a la tienda, pero esa persona definitivamente no pasaba desapercibida.
 	=> npc2_second
@@ -104,10 +102,11 @@ Ciudadano: [[Hola|Buenos días, oficial]], ¿necesita algo?
 	-  ¿Qué estaba haciendo?
 		Ciudadano: Estaba parado en la esquina, como si estuviera esperando a alguien. Parecía muy concentrado en lo que sucedía a su alrededor.
 		=> npc3_second
+	-  ¿Tenía algo en particular que te llamara la atención?
+		Ciudadano: Es difícil de explicar, pero algo en su presencia era inusual. Puede que solo fueran mis nervios, pero me puso en alerta.
+		=> npc3_second
 -  ¿Viste lo que pasó aquí?
 	Ciudadano: No vi con claridad, pero alguien con una apariencia similar se alejó rápido hace poco.
--  ¿Tenía algo en particular que te llamara la atención?
-	Ciudadano: Es difícil de explicar, pero algo en su presencia era inusual. Puede que solo fueran mis nervios, pero me puso en alerta.
 	=> npc3_second
 -  ¡Gracias por la información!
 	Ciudadano: ¡Con gusto! Ojalá eso ayude en su investigación.
@@ -125,10 +124,11 @@ Ciudadano: ¿En qué más puedo ayudarlo?
 	-  ¿Qué estaba haciendo?
 		Ciudadano: Estaba parado en la esquina, como si estuviera esperando a alguien. Parecía muy concentrado en lo que sucedía a su alrededor.
 		=> npc3_second
+	-  ¿Tenía algo en particular que te llamara la atención?
+		Ciudadano: Es difícil de explicar, pero algo en su presencia era inusual. Puede que solo fueran mis nervios, pero me puso en alerta.
+		=> npc3_second
 -  ¿Viste lo que pasó aquí?
 	Ciudadano: No vi con claridad, pero alguien con una apariencia similar se alejó rápido hace poco.
--  ¿Tenía algo en particular que te llamara la atención?
-	Ciudadano: Es difícil de explicar, pero algo en su presencia era inusual. Puede que solo fueran mis nervios, pero me puso en alerta.
 	=> npc3_second
 -  ¡Gracias por la información!
 	Ciudadano: ¡Con gusto! Ojalá eso ayude en su investigación.
