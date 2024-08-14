@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dg1pjqbfr2u08" path="res://scenes/minijuego3/dinotrafico_1.tscn" id="3_fkpsw"]
 [ext_resource type="Script" path="res://scripts/minijuego3/generaciondeautosvertical.gd" id="3_ieuee"]
 [ext_resource type="PackedScene" uid="uid://0q0vock3f85y" path="res://scenes/minijuego3/interfaz_3.tscn" id="6_jvgyj"]
-[ext_resource type="PackedScene" uid="uid://ce5xo8gv0kfxn" path="res://scenes/world_scenes/farola.tscn" id="7_62q3q"]
+[ext_resource type="PackedScene" path="res://scenes/world_scenes/farola.tscn" id="7_62q3q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwe5t"]
 size = Vector2(444, 435)
