@@ -80,7 +80,6 @@ dialogo = "res://dialogs/dinodetective1/minijuego1_3.dialogue"
 flag = "npc1"
 
 [node name="npc2" parent="." instance=ExtResource("9_wugut")]
-visible = false
 position = Vector2(-216, 2575)
 scale = Vector2(2, 2)
 script = ExtResource("8_0yky4")
@@ -120,3 +119,4 @@ position = Vector2(-354, 171)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_ianjf")
+autoplay = true

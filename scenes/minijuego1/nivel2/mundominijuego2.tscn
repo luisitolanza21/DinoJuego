@@ -65,7 +65,7 @@ dialogo = "res://dialogs/dinodetective1/minijuego1_2.dialogue"
 flag = "npc1"
 
 [node name="npc2" parent="." instance=ExtResource("3_gq8kw")]
-position = Vector2(-1236, 1705)
+position = Vector2(-1236, 1497)
 scale = Vector2(2, 2)
 script = ExtResource("9_n3pfg")
 dialogo = "res://dialogs/dinodetective1/minijuego1_2.dialogue"

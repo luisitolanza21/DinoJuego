@@ -23,4 +23,5 @@ action = "ui_accept"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_0cssr")
+volume_db = -21.225
 autoplay = true
