@@ -1,7 +1,7 @@
 ~ dinoDialogoDeLaDinoPersecucion
 
-Comisario: [[Hi|Hola|Saludos]], Persigue al vehículo sospehoso !!!!!!.
-
+Comisario: [[Hola|Saludos]], Persigue al vehículo sospehoso !!!!!!.
+set Global.listo="Si"
 #Nathan: Here are some choices.
 #- First one
 #	Nathan: You picked the first one.

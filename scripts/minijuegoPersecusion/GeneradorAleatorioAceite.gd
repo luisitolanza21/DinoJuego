@@ -1,6 +1,6 @@
 extends Node2D
 
-var manchaAceite=load("res://scenes/minijuegoPersecusion/manchaDeAceite.tscn")
+var manchaAceite=load("res://scenes/minijuego2/manchaDeAceite.tscn")
 var numeroDeManchasAleatorias=0;
 
 # Called when the node enters the scene tree for the first time.

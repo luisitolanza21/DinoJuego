@@ -13,7 +13,7 @@ func _process(delta):
 	pass
 
 func game_over():
-	Transicion.cambiar_escena("res://scenes/world.tscn");
+	Transicion.cambiar_escena("res://scenes/minijuego2/perdiste2.tscn");
 
 func game_victory():
 	print("Ganador")

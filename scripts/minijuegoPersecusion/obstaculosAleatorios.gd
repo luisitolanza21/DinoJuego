@@ -1,8 +1,8 @@
 extends Node2D
 
-var autoObstaculo=load("res://scenes/minijuegoPersecusion/autoObstaculo.tscn")
+var autoObstaculo=load("res://scenes/minijuego2/autoObstaculo.tscn")
 var autoPolicia;
-
+var fin_dialogo=false;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	autoPolicia=get_node("../../DINOMOVIL");
@@ -11,7 +11,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if $TiempoGen.is_stopped():
+	if $TiempoGen.is_stopped() and fin_dialogo:
 		create_obstacles();
 		$TiempoGen.start();
 
@@ -40,7 +40,7 @@ func create_obstacles():
 	var new_obs = autoObstaculo.instantiate()
 	
 	
-	var nroCarrilesAparecer=randi_range(1, 3);
+	var nroCarrilesAparecer=randi_range(1, 2);
 	while(nroCarrilesAparecer>0):
 		var carrilSeleccionado=randi_range(0, 3);
 		vec_carriles[carrilSeleccionado]=true;
@@ -84,3 +84,8 @@ func create_obstacles():
 
 
 
+
+
+func _on_persecucion_fin_dialogo():
+	fin_dialogo=true;
+	pass # Replace with function body.

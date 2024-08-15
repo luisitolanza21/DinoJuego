@@ -1,8 +1,8 @@
 class_name AutoPolicia
 extends CharacterBody2D
 
-@export var MAX_SPEED = 700.0;
-@export var ACCELERATION = 500.0;
+@export var MAX_SPEED = 500.0;
+@export var ACCELERATION = 300.0;
 @export var DECELERATION = 200.0;
 
 
@@ -84,6 +84,9 @@ func parpadear():
 	invulnerable = false  # Finaliza la invulnerabilidad
 
 func bajar_vida():
+			# Aplicar un retroceso limitado
+	if velocity.x < -MAX_SPEED / 8:
+		velocity.x = -MAX_SPEED / 8  # Limit
 	if not invulnerable:
 		player_hit.emit()
 		parpadear()
