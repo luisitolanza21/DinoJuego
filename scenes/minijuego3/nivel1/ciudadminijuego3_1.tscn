@@ -1,12 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://cjnb0fqoym018"]
+[gd_scene load_steps=12 format=3 uid="uid://cjnb0fqoym018"]
 
 [ext_resource type="PackedScene" uid="uid://bfomrkdrrn7a7" path="res://scenes/minijuego3/nivel1/trafico1.tscn" id="1_2f0t2"]
 [ext_resource type="Script" path="res://scripts/minijuego3/puntajes.gd" id="1_ibnjl"]
 [ext_resource type="PackedScene" uid="uid://c4gh8fcpca48m" path="res://scenes/minijuego3/obstaculosAleatorios.tscn" id="1_upcbk"]
 [ext_resource type="PackedScene" uid="uid://dg1pjqbfr2u08" path="res://scenes/minijuego3/dinotrafico_1.tscn" id="3_fkpsw"]
 [ext_resource type="Script" path="res://scripts/minijuego3/generaciondeautosvertical.gd" id="3_ieuee"]
-[ext_resource type="PackedScene" uid="uid://0q0vock3f85y" path="res://scenes/minijuego3/interfaz_3.tscn" id="6_jvgyj"]
-[ext_resource type="PackedScene" uid="uid://ce5xo8gv0kfxn" path="res://scenes/world_scenes/farola.tscn" id="7_62q3q"]
+[ext_resource type="PackedScene" path="res://scenes/minijuego3/interfaz_3.tscn" id="6_jvgyj"]
+[ext_resource type="PackedScene" path="res://scenes/world_scenes/farola.tscn" id="7_62q3q"]
+[ext_resource type="AudioStream" uid="uid://bmuejbli8wxvy" path="res://sounds/trafico.ogg" id="8_n7wmh"]
+[ext_resource type="AudioStream" uid="uid://b1mctjl50bjeu" path="res://sounds/menu.wav" id="9_3ri2l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwe5t"]
 size = Vector2(444, 435)
@@ -66,3 +68,13 @@ scale = Vector2(0.35, 0.35)
 [node name="Farola2" parent="." instance=ExtResource("7_62q3q")]
 position = Vector2(529, -286)
 scale = Vector2(0.35, 0.35)
+
+[node name="traifco" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_n7wmh")
+volume_db = -21.932
+autoplay = true
+
+[node name="musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_3ri2l")
+volume_db = -30.422
+autoplay = true

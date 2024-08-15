@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://b337s0x7lvipt"]
+
+[ext_resource type="Script" path="res://scripts/minijuegoPersecusion/auto_movil2.gd" id="1_se0ug"]
+[ext_resource type="Texture2D" uid="uid://03310y35g5x1" path="res://assets/autos/policia sprite sheet 490x300.png" id="2_kjy0k"]
+[ext_resource type="AudioStream" uid="uid://ciao7p75fj67w" path="res://sounds/acelerador.wav" id="3_m7miu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvjkh"]
+atlas = ExtResource("2_kjy0k")
+region = Rect2(0, 0, 490, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_72wkb"]
+atlas = ExtResource("2_kjy0k")
+region = Rect2(490, 0, 490, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xuybi"]
+atlas = ExtResource("2_kjy0k")
+region = Rect2(980, 0, 490, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7833c"]
+atlas = ExtResource("2_kjy0k")
+region = Rect2(1470, 0, 490, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cu2s"]
+atlas = ExtResource("2_kjy0k")
+region = Rect2(0, 0, 490, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4vgd5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvjkh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_72wkb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xuybi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7833c")
+}],
+"loop": true,
+"name": &"adelante",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cu2s")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtpaf"]
+size = Vector2(105, 48)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-48, -40)
+script = ExtResource("1_se0ug")
+
+[node name="avanzando" type="AnimatedSprite2D" parent="."]
+position = Vector2(53.5, 38)
+scale = Vector2(0.210204, 0.22)
+sprite_frames = SubResource("SpriteFrames_4vgd5")
+animation = &"idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(79, 13)
+scale = Vector2(0.946101, 0.870536)
+polygon = PackedVector2Array(-81, 13, -80, 51, -71, 57, -69, 58, -66.1363, 66.4205, -54.5097, 66.4205, -51.3388, 59.5282, -38, 58, -4, 58, 1, 65, 6.79456, 66.4205, 14, 63, 15, 59, 27, 59, 28, 27, 26, 12)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(53.5, 47)
+shape = SubResource("RectangleShape2D_gtpaf")
+
+[node name="acelerar_sonido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_m7miu")
+autoplay = true

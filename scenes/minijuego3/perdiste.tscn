@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxahjrwturm5w"]
+[gd_scene load_steps=3 format=3 uid="uid://dynsuvfjync5t"]
 
 [ext_resource type="Texture2D" uid="uid://dhfw8gn5fjrr8" path="res://assets/UI/negro.png" id="1_ygul3"]
 [ext_resource type="Script" path="res://scripts/minijuego3/perdiste.gd" id="3_cd03s"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://rs25s0gepwpb"]
+
+[ext_resource type="Texture2D" uid="uid://clg6r15n27qoy" path="res://assets/miniJuegoPersecucion/res/ImagenesAuto/calle.png" id="1_0iupj"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_x6xj6"]
+a = Vector2(878, -47)
+b = Vector2(-276, -45)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+position = Vector2(95, 56)
+
+[node name="Calle" type="Sprite2D" parent="."]
+position = Vector2(-92.9999, -121.219)
+scale = Vector2(0.719063, 0.235758)
+texture = ExtResource("1_0iupj")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-388, 65)
+shape = SubResource("SegmentShape2D_x6xj6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-390, -222)
+shape = SubResource("SegmentShape2D_x6xj6")

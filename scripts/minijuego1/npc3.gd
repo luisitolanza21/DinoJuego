@@ -26,4 +26,6 @@ func player_interacted():
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
 		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_4")
 		Global.dino_position = $"../../player".position #guardar posicion para persistencia en la escena
-	
+	if Misiones.mision == 4 && Misiones.continuacion == 3:
+		var dialogue_resource = load(Misiones.get_current_dialogue_path())
+		DialogueManager.show_dialogue_balloon(dialogue_resource, " MISION_4_3")	

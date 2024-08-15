@@ -1,8 +1,8 @@
 class_name AutoPolicia
 extends CharacterBody2D
 
-@export var MAX_SPEED = 700.0;
-@export var ACCELERATION = 500.0;
+@export var MAX_SPEED = 500.0;
+@export var ACCELERATION = 300.0;
 @export var DECELERATION = 200.0;
 
 
@@ -16,17 +16,32 @@ var is_immune = false  # Bandera para indicar si el coche es inmune
 var blink_timer : Timer
 var invulnerable = false
 var pisoAceite=false;
+
+
+@onready var acelerar_sonido = $acelerar_sonido
 func _physics_process(delta):
+	
+	if velocity != Vector2.ZERO:
+		if not acelerar_sonido.playing:
+			acelerar_sonido.play()
+	else:
+		if acelerar_sonido.playing:
+			acelerar_sonido.stop()
+	
 	var input_direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	var input_vertical = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
 	var is_braking = Input.is_action_pressed("ui_accept")  # Suponiendo que "ui_accept" es la acción de la barra espaciadora
+	print(Input.is_action_pressed("ui_right"),  "GAAA")
 	
-	
+	if Input.is_action_pressed("ui_right") == false:
+		acelerar_sonido.stop()
+
 	# Aceleración horizontal
 	if input_direction > 0:
 		animacionAdelante.play("adelante");
 		velocity_target.x = clamp(velocity_target.x + ACCELERATION * delta, 0, MAX_SPEED)
 	elif input_direction < 0:
+		
 		animacionAdelante.play("adelante");
 		velocity_target.x = clamp(velocity_target.x - ACCELERATION * delta, -MAX_SPEED, 0)
 	else:
@@ -84,6 +99,9 @@ func parpadear():
 	invulnerable = false  # Finaliza la invulnerabilidad
 
 func bajar_vida():
+			# Aplicar un retroceso limitado
+	if velocity.x < -MAX_SPEED / 8:
+		velocity.x = -MAX_SPEED / 8  # Limit
 	if not invulnerable:
 		player_hit.emit()
 		parpadear()

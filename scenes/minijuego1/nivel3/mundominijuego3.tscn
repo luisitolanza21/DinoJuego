@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bp8scbgafvtfv"]
+[gd_scene load_steps=18 format=3 uid="uid://bp8scbgafvtfv"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego2.gd" id="1_ulh80"]
 [ext_resource type="PackedScene" uid="uid://7juse7binryn" path="res://scenes/minijuego1/nivel3/ciudad3.tscn" id="2_g017b"]
@@ -15,7 +15,8 @@
 [ext_resource type="Script" path="res://scripts/minijuego1/npc.gd" id="8_0yky4"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="9_wugut"]
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="10_8t2qb"]
-[ext_resource type="PackedScene" uid="uid://ce5xo8gv0kfxn" path="res://scenes/world_scenes/farola.tscn" id="14_j2lt8"]
+[ext_resource type="PackedScene" path="res://scenes/world_scenes/farola.tscn" id="14_j2lt8"]
+[ext_resource type="AudioStream" uid="uid://ddve2bv4d0cbf" path="res://sounds/ambiente_recortada.wav" id="17_ianjf"]
 
 [node name="nivel3" type="Node2D"]
 script = ExtResource("1_ulh80")
@@ -94,22 +95,29 @@ dialogo = "res://dialogs/dinodetective1/minijuego1_3.dialogue"
 flag = "npc3"
 
 [node name="Farola" parent="." instance=ExtResource("14_j2lt8")]
-position = Vector2(1042, 692)
+position = Vector2(1051, 41)
 
 [node name="Farola2" parent="." instance=ExtResource("14_j2lt8")]
-position = Vector2(1521, 687)
+position = Vector2(2356, 611)
 
 [node name="Farola3" parent="." instance=ExtResource("14_j2lt8")]
-position = Vector2(1055, 2094)
+position = Vector2(-445, 2852)
 
 [node name="Farola4" parent="." instance=ExtResource("14_j2lt8")]
-position = Vector2(1517, 2099)
+position = Vector2(1841, 1957)
 
 [node name="Farola5" parent="." instance=ExtResource("14_j2lt8")]
-position = Vector2(1055, -1031)
+position = Vector2(784, -1359)
 
 [node name="Farola6" parent="." instance=ExtResource("14_j2lt8")]
-position = Vector2(1499, -1017)
+position = Vector2(1645, -803)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_f1wgs")]
 position = Vector2(399, 825)
+
+[node name="Farola7" parent="." instance=ExtResource("14_j2lt8")]
+position = Vector2(-354, 171)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_ianjf")
+autoplay = true

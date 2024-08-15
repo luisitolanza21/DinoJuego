@@ -1,7 +1,9 @@
 ~ dinoDialogoDeLaDinoPersecucion
-
-Comisario: [[Hi|Hola|Saludos]], Persigue al vehículo sospehoso !!!!!!.
-
+set Global.botones = false
+General: Persigue al vehículo sospechoso !!!!!!.
+General: Evita pasar sobre las manchas de aceite y chocar con otros vehiculos.
+set Global.listo="Si"
+set Global.botones = true
 #Nathan: Here are some choices.
 #- First one
 #	Nathan: You picked the first one.

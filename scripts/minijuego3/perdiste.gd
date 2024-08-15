@@ -1,5 +1,7 @@
 extends Button
 
+@export var perdiste_path = "res://scenes/minijuego3/nivel1/ciudadminijuego3_1.tscn"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

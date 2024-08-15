@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://byof5d83djcet"]
+[gd_scene load_steps=5 format=3 uid="uid://byof5d83djcet"]
 
 [ext_resource type="Texture2D" uid="uid://bwxlkrp4su2a6" path="res://assets/Menu principal (1).png" id="1_n27ov"]
 [ext_resource type="Script" path="res://scenes/MENUS/MENU_PRINCIPAL.gd" id="1_yu70o"]
+[ext_resource type="AudioStream" uid="uid://b1mctjl50bjeu" path="res://sounds/menu.wav" id="3_0cssr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_huvx4"]
 
@@ -19,3 +20,8 @@ rotation = 3.14159
 scale = Vector2(17.9552, 7.70646)
 shape = SubResource("RectangleShape2D_huvx4")
 action = "ui_accept"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_0cssr")
+volume_db = -21.225
+autoplay = true

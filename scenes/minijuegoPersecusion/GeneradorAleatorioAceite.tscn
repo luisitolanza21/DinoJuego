@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://dio8m2x1tm82g"]
-
-[ext_resource type="Script" path="res://scripts/minijuegoPersecusion/GeneradorAleatorioAceite.gd" id="1_sbdn8"]
-
-[node name="GeneradorAleatorioAceite" type="Node2D"]
-script = ExtResource("1_sbdn8")
