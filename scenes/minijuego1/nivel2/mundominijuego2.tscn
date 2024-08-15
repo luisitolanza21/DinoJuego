@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cjv2mlqqavuhb"]
+[gd_scene load_steps=17 format=3 uid="uid://cjv2mlqqavuhb"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego2.gd" id="1_8fn0v"]
 [ext_resource type="PackedScene" uid="uid://de51d7hgc81rt" path="res://scenes/world_scenes/botones.tscn" id="2_dplpr"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="10_bi6r4"]
 [ext_resource type="Resource" uid="uid://ch627og680phc" path="res://dialogs/dinodetective1/policia.dialogue" id="12_ffytw"]
 [ext_resource type="PackedScene" uid="uid://dgtr6jln0idjp" path="res://scenes/minijuego1/autopolicia.tscn" id="13_e06hn"]
+[ext_resource type="AudioStream" uid="uid://ddve2bv4d0cbf" path="res://sounds/ambiente_recortada.wav" id="16_apcjn"]
 
 [node name="nivel2" type="Node2D"]
 script = ExtResource("1_8fn0v")
@@ -79,3 +80,7 @@ flag = "npc3"
 
 [node name="player" parent="." instance=ExtResource("8_wbi1m")]
 position = Vector2(43, 869)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_apcjn")
+autoplay = true
