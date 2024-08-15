@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://brrst3o2xr2i4"
+path="res://.godot/imported/inicio4.dialogue-6548df4e31158cc420e7da51f6fb427f.tres"
+
+[deps]
+
+source_file="res://dialogs/minijuego4/inicio4.dialogue"
+dest_files=["res://.godot/imported/inicio4.dialogue-6548df4e31158cc420e7da51f6fb427f.tres"]
+
+[params]
+
+defaults=true

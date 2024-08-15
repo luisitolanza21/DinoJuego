@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://d4bellcwfdwms"]
+[gd_scene load_steps=12 format=3 uid="uid://d4bellcwfdwms"]
 
 [ext_resource type="PackedScene" uid="uid://cml5fv818uwv2" path="res://scenes/minijuego4/fondo.tscn" id="1_biqm2"]
 [ext_resource type="PackedScene" uid="uid://de51d7hgc81rt" path="res://scenes/world_scenes/botones.tscn" id="1_dco4r"]
+[ext_resource type="Script" path="res://scripts/minijuego4/Dinobullying1.gd" id="1_ix3l6"]
 [ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="2_1s3c1"]
 [ext_resource type="PackedScene" uid="uid://blgd2iyubxb0c" path="res://scenes/world_scenes/arbol_sin_piso.tscn" id="4_7ljr4"]
 [ext_resource type="PackedScene" uid="uid://cpfb07nqlayo6" path="res://scenes/minijuego4/playerminijuego4.tscn" id="4_dwnf1"]
@@ -27,6 +28,7 @@ animations = [{
 radius = 223.081
 
 [node name="Dinobullying" type="Node2D"]
+script = ExtResource("1_ix3l6")
 metadata/_edit_horizontal_guides_ = [721.0, 179.0]
 metadata/_edit_vertical_guides_ = [530.0, 686.0, 851.0]
 
@@ -37,8 +39,8 @@ zoom = Vector2(0.8, 0.8)
 [node name="Botones" parent="." instance=ExtResource("1_dco4r")]
 
 [node name="fondo" parent="." instance=ExtResource("1_biqm2")]
-position = Vector2(1085, 290)
-scale = Vector2(0.5, 0.5)
+position = Vector2(2281, 251)
+scale = Vector2(2, 2)
 
 [node name="dinokid" type="CharacterBody2D" parent="."]
 position = Vector2(486, 134)
@@ -55,6 +57,7 @@ shape = SubResource("CircleShape2D_7taau")
 [node name="player" parent="." instance=ExtResource("4_dwnf1")]
 position = Vector2(593, 153)
 scale = Vector2(0.5, 0.5)
+speed = 500
 
 [node name="Node2D" parent="." instance=ExtResource("4_7ljr4")]
 position = Vector2(215, 442)

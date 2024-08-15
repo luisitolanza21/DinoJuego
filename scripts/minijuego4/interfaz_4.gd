@@ -39,6 +39,7 @@ func _on_timeout():
 	# Si el tiempo llega a 0, detener el Timer
 	if time_remaining <= 0:
 		timer.stop()
+		Global.listo = "no"
 		Transicion.cambiar_escena("res://scenes/world.tscn")
 
 func update_timer_label():

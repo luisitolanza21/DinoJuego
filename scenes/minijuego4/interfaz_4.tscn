@@ -8,15 +8,15 @@ script = ExtResource("1_vgvom")
 
 [node name="negro" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.670588)
-position = Vector2(1045.5, 137)
+position = Vector2(1107.5, 97.0001)
 scale = Vector2(0.25293, 0.213542)
 texture = ExtResource("2_i1s8a")
 
 [node name="textodelcontador" type="RichTextLabel" parent="."]
-offset_left = 943.0
-offset_top = 60.0001
-offset_right = 1127.0
-offset_bottom = 163.0
+offset_left = 1026.0
+offset_top = 23.0
+offset_right = 1210.0
+offset_bottom = 126.0
 theme_override_font_sizes/normal_font_size = 70
 bbcode_enabled = true
 text = "1:20"

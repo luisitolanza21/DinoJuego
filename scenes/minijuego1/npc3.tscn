@@ -3,15 +3,15 @@
 [ext_resource type="Script" path="res://scripts/minijuego1/npc3.gd" id="1_ebs0x"]
 [ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="2_mn6iy"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0lcw2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8pgin"]
 atlas = ExtResource("2_mn6iy")
-region = Rect2(492, 428, 246, 428)
+region = Rect2(246, 428, 246, 428)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xr4hv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0lcw2")
+"texture": SubResource("AtlasTexture_8pgin")
 }],
 "loop": true,
 "name": &"default",

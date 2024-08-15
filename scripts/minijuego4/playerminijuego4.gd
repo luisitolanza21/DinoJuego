@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@export var speed = 1000
+@export var speed = 600
 
 @onready var animated = $SpriteDinoAnimated
 var direction = Vector2()
@@ -34,13 +34,13 @@ func _input(event):
 		idle_position = 2
 
 	if direction.x > 0:
-		#$SpriteDinoAnimated.flip_h = false
-		#animated.play("side_walk")
+		$SpriteDinoAnimated.flip_h = false
+		animated.play("side_walk")
 		idle_position = 3
 
 	if direction.x < 0:
-		#$SpriteDinoAnimated.flip_h = true
-		#animated.play("side_walk")
+		$SpriteDinoAnimated.flip_h = true
+		animated.play("side_walk")
 		idle_position = 3
 
 
@@ -57,22 +57,25 @@ func _physics_process(delta):
 			caminar_sonido.stop()
 			
 			
-#	if velocity == Vector2(0, 0):
+	if velocity == Vector2(0, 0): #and Input.is_action_just_released("ui_accept"):
+	#	animated.play("quieto")
 #		if idle_position == 1:
 #			animated.play("idle_1")
 #		if idle_position == 2:
 #			animated.play("idle_2")
-#		if idle_position == 3:
+		if idle_position == 3:
+			animated.play("quieto")
 #			animated.play("idle_3")
 	move_and_slide()
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
+		idle_position = 1
 		animated.play("rugido")
 		if current_npc:
 			current_npc.player_interacted()
 	elif Input.is_action_just_released("ui_accept"):
-		animated.play("idle_1")  # Cambia esto a la animación normal
+		animated.play("quieto")  # Cambia esto a la animación normal
 		#current_npc.player_interacted()
 
 func _on_body_entered(body):

@@ -1,0 +1,6 @@
+~ Nivel1
+set Global.botones = false
+Coronel: Dino, tienes que evitar que los agresores lleguen al niño, protegelo alejando a los agresores
+set Global.botones = true
+set Global.listo = "si"
+=> END

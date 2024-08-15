@@ -15,7 +15,7 @@
 [ext_resource type="Script" path="res://scripts/minijuego1/npc.gd" id="8_0yky4"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="9_wugut"]
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="10_8t2qb"]
-[ext_resource type="PackedScene" path="res://scenes/world_scenes/farola.tscn" id="14_j2lt8"]
+[ext_resource type="PackedScene" uid="uid://ce5xo8gv0kfxn" path="res://scenes/world_scenes/farola.tscn" id="14_j2lt8"]
 [ext_resource type="AudioStream" uid="uid://ddve2bv4d0cbf" path="res://sounds/ambiente_recortada.wav" id="17_ianjf"]
 
 [node name="nivel3" type="Node2D"]

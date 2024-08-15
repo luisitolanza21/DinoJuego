@@ -1,28 +1,75 @@
-[gd_scene load_steps=9 format=3 uid="uid://bpwldf0q5adbm"]
+[gd_scene load_steps=20 format=3 uid="uid://bpwldf0q5adbm"]
 
 [ext_resource type="Script" path="res://scripts/minijuego4/dinobully.gd" id="1_6h177"]
-[ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="2_6vlsh"]
+[ext_resource type="Texture2D" uid="uid://gjxrbmakcq7j" path="res://assets/NPC/bully 2.png" id="2_ajkn8"]
+[ext_resource type="Texture2D" uid="uid://dwjynb2pjy6q3" path="res://assets/NPC/bully 3.png" id="3_g563p"]
+[ext_resource type="Texture2D" uid="uid://dyl8m2vlsext3" path="res://assets/NPC/bully.png" id="4_qb4tu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jkbhg"]
 size = Vector2(35, 0)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6x14q"]
-atlas = ExtResource("2_6vlsh")
-region = Rect2(0, 428, 246, 428)
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqr1i"]
+atlas = ExtResource("2_ajkn8")
+region = Rect2(0, 0, 388, 389)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a2f6u"]
-atlas = ExtResource("2_6vlsh")
-region = Rect2(738, 428, 246, 428)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbkp4"]
+atlas = ExtResource("2_ajkn8")
+region = Rect2(388, 0, 388, 389)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7v70h"]
-atlas = ExtResource("2_6vlsh")
-region = Rect2(1230, 0, 246, 428)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj0ia"]
+atlas = ExtResource("2_ajkn8")
+region = Rect2(776, 0, 388, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubwxe"]
+atlas = ExtResource("2_ajkn8")
+region = Rect2(1164, 0, 388, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rl24"]
+atlas = ExtResource("3_g563p")
+region = Rect2(0, 0, 388, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1ith"]
+atlas = ExtResource("3_g563p")
+region = Rect2(388, 0, 388, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6udd"]
+atlas = ExtResource("3_g563p")
+region = Rect2(776, 0, 388, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4caoq"]
+atlas = ExtResource("3_g563p")
+region = Rect2(1164, 0, 388, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj7k6"]
+atlas = ExtResource("4_qb4tu")
+region = Rect2(0, 0, 388, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_egjt1"]
+atlas = ExtResource("4_qb4tu")
+region = Rect2(388, 0, 388, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vn4w"]
+atlas = ExtResource("4_qb4tu")
+region = Rect2(776, 0, 388, 389)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqxkd"]
+atlas = ExtResource("4_qb4tu")
+region = Rect2(1164, 0, 388, 389)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4h8wg"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6x14q")
+"texture": SubResource("AtlasTexture_yqr1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbkp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj0ia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubwxe")
 }],
 "loop": true,
 "name": &"NPC1",
@@ -30,7 +77,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_a2f6u")
+"texture": SubResource("AtlasTexture_5rl24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1ith")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6udd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4caoq")
 }],
 "loop": true,
 "name": &"NPC2",
@@ -38,7 +94,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7v70h")
+"texture": SubResource("AtlasTexture_tj7k6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_egjt1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vn4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqxkd")
 }],
 "loop": true,
 "name": &"NPC3",

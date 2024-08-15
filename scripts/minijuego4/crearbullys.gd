@@ -10,13 +10,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	#if Global.listo == "si":
-	if $TiempoGen.is_stopped():
-		var ubicacion = randi() % 3
-		var tiempo = randi() % 3 + 1
-		create_obstacles(ubicacion);
-		$TiempoGen.wait_time = tiempo
-		$TiempoGen.start();
+	if Global.listo == "si":
+		if $TiempoGen.is_stopped():
+			var ubicacion = randi() % 5
+			var tiempo = randi() % 2 + 1
+			create_obstacles(ubicacion);
+			$TiempoGen.wait_time = tiempo
+			$TiempoGen.start();
 		
 func create_obstacles(ubicacion):
 	var position: Vector2
@@ -29,6 +29,11 @@ func create_obstacles(ubicacion):
 			position = Vector2(685, 1000)
 		2:
 			position = Vector2(850, 1000)
+		3:
+			position = Vector2(385, 1000)
+		4:
+			position = Vector2(995, 1000)
+
 
 	
 	# Verificar si hay un objeto en la posición
