@@ -1,0 +1,69 @@
+[gd_scene load_steps=9 format=3 uid="uid://bpwldf0q5adbm"]
+
+[ext_resource type="Script" path="res://scripts/minijuego4/dinobully.gd" id="1_6h177"]
+[ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="2_6vlsh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkbhg"]
+size = Vector2(35, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6x14q"]
+atlas = ExtResource("2_6vlsh")
+region = Rect2(0, 428, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2f6u"]
+atlas = ExtResource("2_6vlsh")
+region = Rect2(738, 428, 246, 428)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v70h"]
+atlas = ExtResource("2_6vlsh")
+region = Rect2(1230, 0, 246, 428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4h8wg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6x14q")
+}],
+"loop": true,
+"name": &"NPC1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2f6u")
+}],
+"loop": true,
+"name": &"NPC2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v70h")
+}],
+"loop": true,
+"name": &"NPC3",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4810r"]
+radius = 102.0
+height = 404.0
+
+[node name="Dinobully" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_6h177")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, -226)
+shape = SubResource("RectangleShape2D_jkbhg")
+
+[node name="Dinoanimaciones" type="AnimatedSprite2D" parent="."]
+position = Vector2(-13, -2)
+sprite_frames = SubResource("SpriteFrames_4h8wg")
+animation = &"NPC3"
+
+[node name="choqueperder" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="choqueperder"]
+position = Vector2(-12, -18)
+shape = SubResource("CapsuleShape2D_4810r")

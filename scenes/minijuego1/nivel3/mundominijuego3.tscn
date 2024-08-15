@@ -17,8 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="10_8t2qb"]
 [ext_resource type="PackedScene" uid="uid://ce5xo8gv0kfxn" path="res://scenes/world_scenes/farola.tscn" id="14_j2lt8"]
 
-[node name="nivel2" type="Node2D"]
+[node name="nivel3" type="Node2D"]
 script = ExtResource("1_ulh80")
+escena = "res://scenes/minijuego1/nivel3/seleccion_culpable3.tscn"
 metadata/_edit_horizontal_guides_ = [2355.0, 261.0, 2357.0, 2617.0]
 metadata/_edit_vertical_guides_ = [2321.0, 2323.0, -205.0, 2205.0]
 

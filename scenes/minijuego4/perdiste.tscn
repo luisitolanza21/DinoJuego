@@ -1,0 +1,34 @@
+[gd_scene load_steps=3 format=3 uid="uid://cu1xwt4o1cjr0"]
+
+[ext_resource type="Texture2D" uid="uid://dhfw8gn5fjrr8" path="res://assets/UI/negro.png" id="1_wi5k4"]
+[ext_resource type="Script" path="res://scripts/minijuego4/reiniciar.gd" id="2_jqtrk"]
+
+[node name="Perdiste" type="Node2D"]
+scale = Vector2(0.654907, 0.665536)
+
+[node name="Negro" type="Sprite2D" parent="."]
+position = Vector2(969.25, 541)
+scale = Vector2(1.98584, 1.56771)
+texture = ExtResource("1_wi5k4")
+
+[node name="reiniciar" type="Button" parent="."]
+offset_left = 794.006
+offset_top = 616.045
+offset_right = 1092.01
+offset_bottom = 745.045
+theme_override_font_sizes/font_size = 40
+text = "REINICIAR"
+script = ExtResource("2_jqtrk")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 587.87
+offset_top = 172.793
+offset_right = 1303.87
+offset_bottom = 567.793
+theme_override_font_sizes/font_size = 90
+text = "  Los agresores 
+     llegaron al
+          niño"
+
+[connection signal="pressed" from="reiniciar" to="reiniciar" method="_on_pressed"]

@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=3 uid="uid://d4bellcwfdwms"]
+
+[ext_resource type="PackedScene" uid="uid://cml5fv818uwv2" path="res://scenes/minijuego4/fondo.tscn" id="1_biqm2"]
+[ext_resource type="PackedScene" uid="uid://de51d7hgc81rt" path="res://scenes/world_scenes/botones.tscn" id="1_dco4r"]
+[ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="2_1s3c1"]
+[ext_resource type="PackedScene" uid="uid://blgd2iyubxb0c" path="res://scenes/world_scenes/arbol_sin_piso.tscn" id="4_7ljr4"]
+[ext_resource type="PackedScene" uid="uid://cpfb07nqlayo6" path="res://scenes/minijuego4/playerminijuego4.tscn" id="4_dwnf1"]
+[ext_resource type="PackedScene" uid="uid://dc3aenlhcebri" path="res://scenes/minijuego4/crearbullys.tscn" id="5_k02y8"]
+[ext_resource type="PackedScene" uid="uid://jwybqy6oux5x" path="res://scenes/minijuego4/interfaz_4.tscn" id="7_qgsf7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_usrox"]
+atlas = ExtResource("2_1s3c1")
+region = Rect2(738, 0, 246, 428)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ctedb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_usrox")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7taau"]
+radius = 223.081
+
+[node name="Dinobullying" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [721.0, 179.0]
+metadata/_edit_vertical_guides_ = [530.0, 686.0, 851.0]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(659, 477)
+zoom = Vector2(0.8, 0.8)
+
+[node name="Botones" parent="." instance=ExtResource("1_dco4r")]
+
+[node name="fondo" parent="." instance=ExtResource("1_biqm2")]
+position = Vector2(1085, 290)
+scale = Vector2(0.5, 0.5)
+
+[node name="dinokid" type="CharacterBody2D" parent="."]
+position = Vector2(486, 134)
+scale = Vector2(0.3, 0.3)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="dinokid"]
+position = Vector2(674, 92)
+sprite_frames = SubResource("SpriteFrames_ctedb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dinokid"]
+position = Vector2(678, 80)
+shape = SubResource("CircleShape2D_7taau")
+
+[node name="player" parent="." instance=ExtResource("4_dwnf1")]
+position = Vector2(593, 153)
+scale = Vector2(0.5, 0.5)
+
+[node name="Node2D" parent="." instance=ExtResource("4_7ljr4")]
+position = Vector2(215, 442)
+scale = Vector2(0.5, 0.5)
+
+[node name="Node2D2" parent="." instance=ExtResource("4_7ljr4")]
+position = Vector2(1105, 524)
+scale = Vector2(0.5, 0.5)
+
+[node name="ObstaculosAleatorios" parent="." instance=ExtResource("5_k02y8")]
+
+[node name="interfaz4" parent="." instance=ExtResource("7_qgsf7")]
