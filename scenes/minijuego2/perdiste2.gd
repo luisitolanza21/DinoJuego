@@ -1,5 +1,6 @@
 extends Button
 
+
 @export var perdiste_path = "res://scenes/minijuego3/nivel1/ciudadminijuego3_1.tscn"
 
 
@@ -14,4 +15,4 @@ func _process(delta):
 
 
 func _on_pressed():
-	Transicion.cambiar_escena("res://scenes/minijuego3/nivel1/ciudadminijuego3_1.tscn")
+	Transicion.cambiar_escena("res://scenes/minijuego2/persecucion_(main).tscn")

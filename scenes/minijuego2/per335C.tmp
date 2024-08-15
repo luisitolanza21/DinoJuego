@@ -3413,6 +3413,8 @@ rotation = -0.0261799
 [node name="botones_persecusion" parent="." instance=ExtResource("26_xlwjh")]
 
 [node name="Perdiste" parent="." instance=ExtResource("25_yg8jc")]
+perdiste_path = "res://scenes/minijuego2/persecucion_(main).tscn"
+texto = "GAAA"
 
 [connection signal="fin_dialogo" from="." to="Trampas/ObstaculosAleatorios" method="_on_persecucion_fin_dialogo"]
 [connection signal="player_hit" from="DINOMOVIL" to="GameController" method="_on_dinomovil_player_hit"]

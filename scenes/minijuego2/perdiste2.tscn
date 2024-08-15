@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://64ngy1xq83ia"]
 
 [ext_resource type="Texture2D" uid="uid://dhfw8gn5fjrr8" path="res://assets/UI/negro.png" id="1_65tg0"]
-[ext_resource type="Script" path="res://scripts/minijuego3/perdiste.gd" id="2_1fvti"]
+[ext_resource type="Script" path="res://scenes/minijuego2/perdiste2.gd" id="2_q73n2"]
 
 [node name="Perdiste" type="Node2D"]
 scale = Vector2(0.654907, 0.665536)
@@ -17,8 +17,8 @@ offset_top = 200.0
 offset_right = 1408.0
 offset_bottom = 501.0
 theme_override_font_sizes/font_size = 90
-text = "Los autos chocaron
-  evita los choques"
+text = "          Perdiste
+       evita chocar"
 metadata/_edit_use_anchors_ = true
 
 [node name="reiniciar" type="Button" parent="."]
@@ -28,7 +28,7 @@ offset_right = 1115.0
 offset_bottom = 750.0
 theme_override_font_sizes/font_size = 40
 text = "REINICIAR"
-script = ExtResource("2_1fvti")
+script = ExtResource("2_q73n2")
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="reiniciar" to="reiniciar" method="_on_pressed"]

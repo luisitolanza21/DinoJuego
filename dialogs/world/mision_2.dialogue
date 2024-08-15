@@ -34,7 +34,7 @@ set Global.botones = false
 Dino: "Alto ahí!!"
 Conducto: "No me atraparas jamas Dino!!" 
 set Misiones.continuacion = 3
-do Transicion.cambiar_escena("res://scenes/minijuegoPersecusion/persecucion_(main).tscn")
+do Transicion.cambiar_escena("res://scenes/minijuego2/persecucion_(main).tscn")
 set Global.botones = true
 => END
 

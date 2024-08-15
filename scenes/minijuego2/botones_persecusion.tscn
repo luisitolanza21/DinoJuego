@@ -10,7 +10,7 @@
 [node name="arriba_abajo" type="Node2D" parent="."]
 
 [node name="abajo" type="Sprite2D" parent="arriba_abajo"]
-position = Vector2(87, 570)
+position = Vector2(91, 631)
 scale = Vector2(1.5875, 1.5875)
 texture = ExtResource("1_2ob0w")
 
@@ -33,7 +33,7 @@ texture_normal = ExtResource("4_fwqjd")
 action = "ui_down"
 
 [node name="acelerar" type="Sprite2D" parent="."]
-position = Vector2(1068, 565)
+position = Vector2(1166, 608)
 scale = Vector2(1.75, 1.75)
 texture = ExtResource("3_f4ftl")
 
