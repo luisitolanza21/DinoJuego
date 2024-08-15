@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="lolcito2"
+config/name="Dinojuego"
 run/main_scene="res://scenes/MENUS/MENU_PRINCIPAL.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://assets/UI/lol.png"
+config/icon="res://assets/UI/Dino Juego Icon.png"
 
 [autoload]
 
