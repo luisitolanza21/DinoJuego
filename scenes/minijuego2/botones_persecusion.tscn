@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://rw3bsew4meqa"]
+[gd_scene load_steps=6 format=3 uid="uid://rw3bsew4meqa"]
 
 [ext_resource type="Texture2D" uid="uid://cexbq1gioiqpc" path="res://assets/UI/shadedLight27.png" id="1_2ob0w"]
+[ext_resource type="Script" path="res://scenes/minijuego2/botones_persecusion.gd" id="1_nw667"]
 [ext_resource type="Texture2D" uid="uid://daa2662dhvsk3" path="res://assets/UI/shadedLight26.png" id="2_or7rr"]
 [ext_resource type="Texture2D" uid="uid://c83vjulsliu2v" path="res://assets/UI/shadedLight36.png" id="3_f4ftl"]
 [ext_resource type="Texture2D" uid="uid://dvhfh1pwm37c5" path="res://icon.svg" id="4_fwqjd"]
 
 [node name="botones_persecusion" type="CanvasLayer"]
+script = ExtResource("1_nw667")
 
 [node name="arriba_abajo" type="Node2D" parent="."]
 

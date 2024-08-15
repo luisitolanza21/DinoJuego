@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://b337s0x7lvipt"]
+[gd_scene load_steps=11 format=3 uid="uid://b337s0x7lvipt"]
 
 [ext_resource type="Script" path="res://scripts/minijuegoPersecusion/auto_movil2.gd" id="1_se0ug"]
 [ext_resource type="Texture2D" uid="uid://03310y35g5x1" path="res://assets/autos/policia sprite sheet 490x300.png" id="2_kjy0k"]
+[ext_resource type="AudioStream" uid="uid://ciao7p75fj67w" path="res://sounds/acelerador.wav" id="3_m7miu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lvjkh"]
 atlas = ExtResource("2_kjy0k")
@@ -74,3 +75,8 @@ polygon = PackedVector2Array(-81, 13, -80, 51, -71, 57, -69, 58, -66.1363, 66.42
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(53.5, 47)
 shape = SubResource("RectangleShape2D_gtpaf")
+
+[node name="acelerar_sonido" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_m7miu")
+volume_db = -11.32
+autoplay = true

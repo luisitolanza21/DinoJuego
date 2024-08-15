@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://buwkurjm8i2x"]
+[gd_scene load_steps=47 format=3 uid="uid://buwkurjm8i2x"]
 
 [ext_resource type="Script" path="res://scripts/minijuegoPersecusion/persecucion_(main).gd" id="1_ojhoy"]
 [ext_resource type="Texture2D" uid="uid://b06lu8i140l61" path="res://assets/calles/calles.png" id="3_7t08f"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" path="res://scenes/minijuego2/CanvasLayer.gd" id="22_n6hhg"]
 [ext_resource type="Script" path="res://scenes/minijuego2/GameController.gd" id="24_to1os"]
 [ext_resource type="PackedScene" uid="uid://dynsuvfjync5t" path="res://scenes/minijuego3/perdiste.tscn" id="25_yg8jc"]
+[ext_resource type="AudioStream" uid="uid://bygp6aqkao87j" path="res://sounds/persecusion.ogg" id="26_c0jh3"]
 [ext_resource type="PackedScene" uid="uid://rw3bsew4meqa" path="res://scenes/minijuego2/botones_persecusion.tscn" id="26_xlwjh"]
 
 [sub_resource type="Animation" id="Animation_2kyoa"]
@@ -1648,7 +1649,7 @@ position = Vector2(22981, 210)
 collision_mask = 15
 floor_max_angle = 0.0
 MAX_SPEED = 800.0
-ACCELERATION = 150.0
+ACCELERATION = 500.0
 DECELERATION = 900.0
 
 [node name="Camera2D" type="Camera2D" parent="DINOMOVIL"]
@@ -3413,6 +3414,11 @@ rotation = -0.0261799
 [node name="botones_persecusion" parent="." instance=ExtResource("26_xlwjh")]
 
 [node name="Perdiste" parent="." instance=ExtResource("25_yg8jc")]
+
+[node name="musica_minijuego2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_c0jh3")
+volume_db = -41.741
+autoplay = true
 
 [connection signal="fin_dialogo" from="." to="Trampas/ObstaculosAleatorios" method="_on_persecucion_fin_dialogo"]
 [connection signal="player_hit" from="DINOMOVIL" to="GameController" method="_on_dinomovil_player_hit"]

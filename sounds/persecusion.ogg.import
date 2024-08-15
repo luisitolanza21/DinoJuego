@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/persecusion.ogg-524d59092388a660760982bf9676c
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
