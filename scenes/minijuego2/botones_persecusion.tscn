@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://rw3bsew4meqa"]
 
-[ext_resource type="Texture2D" uid="uid://crnfum4wmbv7v" path="res://assets/UI/shadedLight27.png" id="1_2ob0w"]
-[ext_resource type="Texture2D" uid="uid://x8fxp4451jpj" path="res://assets/UI/shadedLight26.png" id="2_or7rr"]
+[ext_resource type="Texture2D" uid="uid://cexbq1gioiqpc" path="res://assets/UI/shadedLight27.png" id="1_2ob0w"]
+[ext_resource type="Texture2D" uid="uid://daa2662dhvsk3" path="res://assets/UI/shadedLight26.png" id="2_or7rr"]
 [ext_resource type="Texture2D" uid="uid://c83vjulsliu2v" path="res://assets/UI/shadedLight36.png" id="3_f4ftl"]
 [ext_resource type="Texture2D" uid="uid://dvhfh1pwm37c5" path="res://icon.svg" id="4_fwqjd"]
 
@@ -10,7 +10,7 @@
 [node name="arriba_abajo" type="Node2D" parent="."]
 
 [node name="abajo" type="Sprite2D" parent="arriba_abajo"]
-position = Vector2(117, 638)
+position = Vector2(87, 570)
 scale = Vector2(1.5875, 1.5875)
 texture = ExtResource("1_2ob0w")
 
@@ -33,7 +33,7 @@ texture_normal = ExtResource("4_fwqjd")
 action = "ui_down"
 
 [node name="acelerar" type="Sprite2D" parent="."]
-position = Vector2(1180, 633)
+position = Vector2(1068, 565)
 scale = Vector2(1.75, 1.75)
 texture = ExtResource("3_f4ftl")
 

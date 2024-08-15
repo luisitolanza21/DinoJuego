@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://6us68i7201iy"]
 
 [ext_resource type="Script" path="res://scenes/minijuego2/autoEstatico.gd" id="1_gsixg"]
-[ext_resource type="Texture2D" uid="uid://djtoigx3leht5" path="res://assets/autos/autos vista de arriba.png" id="2_8wcqt"]
+[ext_resource type="Texture2D" uid="uid://do7ftsplismj5" path="res://assets/autos/autos vista de arriba.png" id="2_8wcqt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nviyu"]
 atlas = ExtResource("2_8wcqt")
