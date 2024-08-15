@@ -23,8 +23,10 @@ set Global.botones = true
 => END
 
 ~ MISION_4_3
+set Global.botones = false
 Ciudadano: "¡Gracias, Dino! No sé cómo agradecerle. Usted siempre está ahí cuando más lo necesitamos."
 
 Dino: "Es mi deber asegurarme de que todos en la ciudad estén seguros. Recuerde, siempre decimos: ¡DI-NO a la violencia!"
 
+set Global.botones = true
 => END

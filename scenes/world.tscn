@@ -84,6 +84,7 @@ position = Vector2(-110, 0)
 script = ExtResource("1_bm47p")
 
 [node name="Botones" parent="." instance=ExtResource("2_71bc5")]
+visible = false
 
 [node name="MisionIndicator" parent="Botones" instance=ExtResource("3_a2l4i")]
 
