@@ -31,8 +31,6 @@ func _physics_process(delta):
 	var input_direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 	var input_vertical = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up"))
 	var is_braking = Input.is_action_pressed("ui_accept")  # Suponiendo que "ui_accept" es la acción de la barra espaciadora
-	print(Input.is_action_pressed("ui_right"),  "GAAA")
-	
 	if Input.is_action_pressed("ui_right") == false:
 		acelerar_sonido.stop()
 
