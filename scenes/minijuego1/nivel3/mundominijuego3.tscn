@@ -1,10 +1,12 @@
-[gd_scene load_steps=15 format=3 uid="uid://bp8scbgafvtfv"]
+[gd_scene load_steps=17 format=3 uid="uid://bp8scbgafvtfv"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego2.gd" id="1_ulh80"]
 [ext_resource type="PackedScene" uid="uid://7juse7binryn" path="res://scenes/minijuego1/nivel3/ciudad3.tscn" id="2_g017b"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="2_h4kpg"]
 [ext_resource type="PackedScene" uid="uid://de51d7hgc81rt" path="res://scenes/world_scenes/botones.tscn" id="2_k4muk"]
 [ext_resource type="PackedScene" uid="uid://b3carl8xavxf6" path="res://scenes/player.tscn" id="3_f1wgs"]
+[ext_resource type="PackedScene" uid="uid://r2dkqlpd5lm" path="res://scenes/world_scenes/FLECHA_indicacion/mision_indicator.tscn" id="3_fuybe"]
+[ext_resource type="Script" path="res://scripts/minijuego1/flechas.gd" id="4_3gk73"]
 [ext_resource type="PackedScene" uid="uid://2my17l5say2h" path="res://scenes/npc_1.tscn" id="4_hd2ly"]
 [ext_resource type="PackedScene" uid="uid://dgtr6jln0idjp" path="res://scenes/minijuego1/autopolicia.tscn" id="4_lcrn1"]
 [ext_resource type="Script" path="res://scripts/minijuego1/policia.gd" id="5_acl8n"]
@@ -13,12 +15,38 @@
 [ext_resource type="Script" path="res://scripts/minijuego1/npc.gd" id="8_0yky4"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="9_wugut"]
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="10_8t2qb"]
-[ext_resource type="PackedScene" path="res://scenes/world_scenes/farola.tscn" id="14_j2lt8"]
+[ext_resource type="PackedScene" uid="uid://ce5xo8gv0kfxn" path="res://scenes/world_scenes/farola.tscn" id="14_j2lt8"]
 
 [node name="nivel2" type="Node2D"]
 script = ExtResource("1_ulh80")
+metadata/_edit_horizontal_guides_ = [2355.0, 261.0, 2357.0, 2617.0]
+metadata/_edit_vertical_guides_ = [2321.0, 2323.0, -205.0, 2205.0]
 
 [node name="Botones" parent="." instance=ExtResource("2_k4muk")]
+
+[node name="MisionIndicator1" parent="Botones" instance=ExtResource("3_fuybe")]
+offset_left = 2472.91
+offset_top = 234.499
+offset_right = 2472.91
+offset_bottom = 234.499
+script = ExtResource("4_3gk73")
+quest_target_position = Vector2(2320, 260)
+
+[node name="MisionIndicator2" parent="Botones" instance=ExtResource("3_fuybe")]
+offset_left = 2472.91
+offset_top = 234.499
+offset_right = 2472.91
+offset_bottom = 234.499
+script = ExtResource("4_3gk73")
+quest_target_position = Vector2(-205, 2355)
+
+[node name="MisionIndicator3" parent="Botones" instance=ExtResource("3_fuybe")]
+offset_left = 2472.91
+offset_top = 234.499
+offset_right = 2472.91
+offset_bottom = 234.499
+script = ExtResource("4_3gk73")
+quest_target_position = Vector2(2205, 2615)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("objetct_follow")]
 position = Vector2(224, 1164)
@@ -45,6 +73,7 @@ dialogueResource = ExtResource("6_kvh7q")
 [node name="npc1" parent="." instance=ExtResource("7_dvapl")]
 position = Vector2(2190, 417)
 scale = Vector2(2, 2)
+up_direction = Vector2(1, -0.000431034)
 script = ExtResource("8_0yky4")
 dialogo = "res://dialogs/dinodetective1/minijuego1_3.dialogue"
 flag = "npc1"

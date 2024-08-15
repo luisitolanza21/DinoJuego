@@ -1,10 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://cjv2mlqqavuhb"]
+[gd_scene load_steps=16 format=3 uid="uid://cjv2mlqqavuhb"]
 
 [ext_resource type="Script" path="res://scripts/minijuego1/mundominijuego2.gd" id="1_8fn0v"]
 [ext_resource type="PackedScene" uid="uid://de51d7hgc81rt" path="res://scenes/world_scenes/botones.tscn" id="2_dplpr"]
 [ext_resource type="PackedScene" uid="uid://cmtpga8mk0d14" path="res://scenes/minijuego1/nivel2/ciudad2.tscn" id="2_jy2xc"]
 [ext_resource type="PackedScene" uid="uid://djwdjwhi7xkie" path="res://scenes/minijuego1/npc1.tscn" id="2_tdyoa"]
 [ext_resource type="PackedScene" uid="uid://b0mad3ukakhjg" path="res://scenes/minijuego1/npc2.tscn" id="3_gq8kw"]
+[ext_resource type="PackedScene" uid="uid://r2dkqlpd5lm" path="res://scenes/world_scenes/FLECHA_indicacion/mision_indicator.tscn" id="3_q5i8j"]
+[ext_resource type="Script" path="res://scripts/minijuego1/flechas.gd" id="4_0gjxt"]
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="4_eijhw"]
 [ext_resource type="Script" path="res://scripts/minijuego1/policia.gd" id="6_enmuw"]
 [ext_resource type="Script" path="res://scripts/Camera2D.gd" id="7_x8fyf"]
@@ -16,8 +18,22 @@
 
 [node name="nivel2" type="Node2D"]
 script = ExtResource("1_8fn0v")
+metadata/_edit_vertical_guides_ = [2450.0, 2450.0, -1230.0, 701.0]
+metadata/_edit_horizontal_guides_ = [250.0, 23.0, 1481.0, 2880.0]
 
 [node name="Botones" parent="." instance=ExtResource("2_dplpr")]
+
+[node name="MisionIndicator1" parent="Botones" instance=ExtResource("3_q5i8j")]
+script = ExtResource("4_0gjxt")
+quest_target_position = Vector2(2450, 20)
+
+[node name="MisionIndicator2" parent="Botones" instance=ExtResource("3_q5i8j")]
+script = ExtResource("4_0gjxt")
+quest_target_position = Vector2(-1230, 1280)
+
+[node name="MisionIndicator3" parent="Botones" instance=ExtResource("3_q5i8j")]
+script = ExtResource("4_0gjxt")
+quest_target_position = Vector2(700, 2880)
 
 [node name="Ciudad2" parent="." instance=ExtResource("2_jy2xc")]
 position = Vector2(687.5, 2021.25)

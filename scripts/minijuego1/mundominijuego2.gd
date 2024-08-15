@@ -15,7 +15,12 @@ func _ready():
 	DialogueManager.show_dialogue_balloon(load("res://dialogs/dinodetective1/minijuego1_2.dialogue"), "start")
 	Global.connect("listo_changed", Callable(self, "_on_listo_changed"))
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Global.npc1 == 1:
+		$Botones/MisionIndicator1.hide()
+	if Global.npc2 == 1:
+		$Botones/MisionIndicator2.hide()
+	if Global.npc3 == 1:
+		$Botones/MisionIndicator3.hide()
+		
