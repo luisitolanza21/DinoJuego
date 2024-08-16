@@ -28,6 +28,7 @@ Ciudadano: "¡Gracias, Dino! No sé cómo agradecerle. Usted siempre está ahí 
 
 Dino: "Es mi deber asegurarme de que todos en la ciudad estén seguros. Recuerde, siempre decimos: ¡DI-NO a la violencia!"
 
+set Misiones.posicion_indicador = Misiones.coronel_position
 set Global.botones = true
 => END
 
@@ -38,4 +39,21 @@ Coronel: "¡Gracias, Dino! No sé cómo agradecerle. Usted siempre está ahí cu
 Dino: "Es mi deber asegurarme de que todos en la ciudad estén seguros. Recuerde, siempre decimos: ¡DI-NO a la violencia!"
 
 set Global.botones = true
+=> END
+
+~ MISION_4_5
+set Global.botones = false
+Coronel: "Dino, tenemos una situación delicada. Hay un niño en la escuela que está siendo víctima de bullying. Los maestros están preocupados, pero no han podido detenerlo."
+
+Dino: "Eso es inaceptable, Coronel. Ningún niño debería tener que soportar eso. ¿Cómo puedo ayudar?"
+
+Coronel: "Quiero que hables con el niño, lo apoyes y lo ayudes a encontrar la manera de enfrentarlo. A veces, un poco de valor y orientación puede hacer una gran diferencia. Pero, sobre todo, asegúrate de que los responsables entiendan que en esta ciudad decimos ¡DI-NO a la violencia en cualquier forma!"
+"Voy a encargarme de esto, Coronel. Ayudaré al niño a sentirse seguro y a saber que no está solo. ¡DI-NO al bullying!"
+
+
+set Misiones.posicion_indicador = Misiones.npc_mision5_position
+set Global.botones = true
+set Misiones.mision = 5
+set Misiones.continuacion = 1
+do Misiones.cargar_mision(Misiones.mision)
 => END

@@ -1,14 +1,15 @@
 extends Node
 # MISION INICIA EN 0
 # CONTINUACION INICA EN 1
-@export var mision: int = 0 # Variable para controlar la misión actual
-@export var continuacion: int =  1# variable para controlar dialogo dentro de las mismas misiones
+@export var mision: int = 5 # Variable para controlar la misión actual
+@export var continuacion: int =  2# variable para controlar dialogo dentro de las mismas misiones
 @export var esta_en_world: bool = true
 
 @export var coronel_position: Vector2 = Vector2(150,450)
 @export var npc_mision1_position: Vector2 = Vector2(395,2790)
 @export var npc_mision2_position: Vector2 = Vector2(-2320, 2450)
 @export var npc_mision4_position: Vector2 = Vector2(3075, 2400)
+@export var npc_mision5_position: Vector2 = Vector2(-2185, 4070)
 
 @export var posicion_indicador: Vector2
 # Variable para almacenar el recurso de diálogo
@@ -32,6 +33,8 @@ func cargar_mision(mision_id: int):
 			current_dialogue_path = "res://dialogs/world/mision_3.dialogue"
 		4:
 			current_dialogue_path = "res://dialogs/world/mision_4.dialogue"
+		5:
+			current_dialogue_path = "res://dialogs/world/mision_5.dialogue"
 		# Agrega más casos según el número de misiones
 		_:
 			print("Misión no definida para el ID: ", mision_id)

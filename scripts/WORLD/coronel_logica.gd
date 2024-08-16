@@ -46,3 +46,13 @@ func player_interacted():
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
 		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_3")
 		Global.dino_position = $"../../player".position #guardar posicion para persistencia en la escena
+	###### Mision 4 parte final donde se asigna mision 5 ############
+	if Misiones.mision == 4 && Misiones.continuacion ==3 :
+		Misiones.cargar_mision(Misiones.mision)
+		var dialogue_resource = load(Misiones.get_current_dialogue_path())
+		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_4_5")
+		$"../npc_kid_world_mision_5".show()
+	
+	
+	
+	

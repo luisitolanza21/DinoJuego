@@ -3,15 +3,15 @@
 [ext_resource type="Script" path="res://scripts/minijuego1/npc1.gd" id="1_s45ji"]
 [ext_resource type="Texture2D" uid="uid://dqdfugxwsdppx" path="res://assets/NPC/DINO NPCS (1).png" id="2_gih57"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bfpf6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_thkhm"]
 atlas = ExtResource("2_gih57")
-region = Rect2(1230, 0, 246, 428)
+region = Rect2(738, 0, 246, 428)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_de68x"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bfpf6")
+"texture": SubResource("AtlasTexture_thkhm")
 }],
 "loop": true,
 "name": &"default",
@@ -27,11 +27,12 @@ radius = 121.0
 height = 242.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(-63, -30)
 script = ExtResource("1_s45ji")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(57, 33)
-scale = Vector2(0.5, 0.5)
+position = Vector2(66, 33)
+scale = Vector2(0.351626, 0.351626)
 sprite_frames = SubResource("SpriteFrames_de68x")
 frame_progress = 0.866945
 speed_scale = 2.0

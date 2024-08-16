@@ -1,3 +1,39 @@
 ~ MISION_5
+set Global.botones = false
+Dino: "Hola, soy Dino. Me dijeron que estás pasando por un momento difícil. ¿Puedo sentarme contigo?"
 
+Niño: "Sí... aunque no creo que puedas hacer mucho. Siempre se burlan de mí y no sé qué hacer."
+
+Dino: "Lo que te está pasando no está bien. Nadie merece ser tratado así. Pero no estás solo, estoy aquí para ayudarte."
+
+
+
+set Misiones.continuacion = 2
+do Transicion.cambiar_escena("res://scenes/minijuego4/Dinobullying.tscn")
+set Global.botones = true
 => END
+
+~ MISION_5_2
+set Global.botones = false
+
+Niño: "Dino, quería agradecerte por todo. ahora me siento mejor y se que no estoy solo."
+
+Dino: "Me alegra escuchar eso. Lo más importante es que tú creíste en ti mismo y diste el primer paso. Siempre recuerda: no estás solo, y todos merecen ser tratados con respeto."
+
+Niño: "¡DI-NO al bullying! Gracias, Dino. Eres el mejor."
+
+set Misiones.posicion_indicador = Misiones.coronel_position
+set Misiones.continuacion = 3
+set Global.botones = true
+=> END
+
+~ MISION_5_3
+set Global.botones = false
+
+Niño: "¡DI-NO al bullying! Gracias, Dino. Eres el mejor."
+
+set Misiones.posicion_indicador = Misiones.coronel_position
+set Misiones.continuacion = 3
+set Global.botones = true
+=> END
+

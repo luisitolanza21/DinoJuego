@@ -1,4 +1,6 @@
 extends CharacterBody2D
+
+
 # NPC mision 2 persecusion castillo azul
 @export var player_name = "player"
 @export var dialogueResource : DialogueResource
@@ -20,11 +22,18 @@ func _on_body_exited(body):
 		body.set("current_npc", null)
 
 func player_interacted():
-	######## MISION 2 #############
-	if Misiones.mision == 2 && Misiones.continuacion == 2:
+
+	######## MISION 5#############
+	if Misiones.mision == 5 && Misiones.continuacion == 1:
+		
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
-		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_2_2")
+		DialogueManager.show_dialogue_balloon(dialogue_resource,"MISION_5")
 		Global.dino_position = $"../../player".position #guardar posicion para persistencia en la escena
-	if Misiones.mision == 2 && Misiones.continuacion == 3:
+	if Misiones.mision == 5 && Misiones.continuacion ==2:
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
-		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_2_4")
+		DialogueManager.show_dialogue_balloon(dialogue_resource,"MISION_5_2")
+		pass
+	if Misiones.mision == 5 && Misiones.continuacion  == 3:
+		var dialogue_resource = load(Misiones.get_current_dialogue_path())
+		DialogueManager.show_dialogue_balloon(dialogue_resource,"MISION_5_3")
+		
