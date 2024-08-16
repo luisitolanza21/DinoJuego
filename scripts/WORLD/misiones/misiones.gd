@@ -1,8 +1,8 @@
 extends Node
 # MISION INICIA EN 0
 # CONTINUACION INICA EN 1
-@export var mision: int = 5 # Variable para controlar la misión actual
-@export var continuacion: int =  2# variable para controlar dialogo dentro de las mismas misiones
+@export var mision: int = 0 # Variable para controlar la misión actual
+@export var continuacion: int =  1# variable para controlar dialogo dentro de las mismas misiones
 @export var esta_en_world: bool = true
 
 @export var coronel_position: Vector2 = Vector2(150,450)
