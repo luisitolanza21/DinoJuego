@@ -161,14 +161,17 @@ animations = [{
 "duration": 0.1,
 "texture": SubResource("AtlasTexture_peu0p")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": SubResource("AtlasTexture_x8kgq")
 }, {
-"duration": 1.0,
+"duration": 0.1,
 "texture": SubResource("AtlasTexture_v1mgk")
 }, {
-"duration": 1.0,
+"duration": 0.3,
 "texture": SubResource("AtlasTexture_rcbbx")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_peu0p")
 }],
 "loop": false,
 "name": &"rugido",

@@ -25,7 +25,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7taau"]
-radius = 223.081
+radius = 628.163
 
 [node name="Dinobullying" type="Node2D"]
 script = ExtResource("1_ix3l6")
@@ -51,7 +51,7 @@ position = Vector2(674, 92)
 sprite_frames = SubResource("SpriteFrames_ctedb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="dinokid"]
-position = Vector2(678, 80)
+position = Vector2(15373.3, -4236.67)
 shape = SubResource("CircleShape2D_7taau")
 
 [node name="player" parent="." instance=ExtResource("4_dwnf1")]
