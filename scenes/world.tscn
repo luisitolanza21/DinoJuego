@@ -24,7 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://c3r2q1twsx2mb" path="res://scenes/world_scenes/vehiculo_persecusion.tscn" id="21_gfj67"]
 [ext_resource type="Script" path="res://scripts/minijuego1/npc1.gd" id="21_w5xux"]
 [ext_resource type="PackedScene" uid="uid://bwa5rcvbh24gi" path="res://scenes/minijuego1/npc3.tscn" id="24_ym3pn"]
-[ext_resource type="PackedScene" uid="uid://ce5xo8gv0kfxn" path="res://scenes/world_scenes/farola.tscn" id="25_i0rna"]
+[ext_resource type="PackedScene" path="res://scenes/world_scenes/farola.tscn" id="25_i0rna"]
 [ext_resource type="Texture2D" uid="uid://cn4j2b6y5udfn" path="res://assets/edificios_unicos/banca (1).png" id="26_dxgn0"]
 [ext_resource type="AudioStream" uid="uid://ddve2bv4d0cbf" path="res://sounds/ambiente_recortada.wav" id="27_a10jd"]
 
