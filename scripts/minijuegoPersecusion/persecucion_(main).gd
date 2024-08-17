@@ -4,6 +4,7 @@ signal fin_dialogo()
 # Esta función se llamará cuando 'listo' cambie en el script global
 func _on_listo_changed(new_value):
 	#print("Global.listo ha cambiado a: ", new_value)
+	$ControlTiempo.start();
 	$Inicio.play("escape")
 	fin_dialogo.emit()
 	# Aquí puedes añadir el código que deseas ejecutar cuando 'listo' cambie
