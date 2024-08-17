@@ -72,6 +72,8 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		idle_position = 1
 		animated.play("rugido")
+		$AudioStreamPlayer.play()
+		
 		if current_npc:
 			current_npc.player_interacted()
 	elif Input.is_action_just_released("ui_accept"):

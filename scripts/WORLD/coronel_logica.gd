@@ -51,7 +51,6 @@ func player_interacted():
 		Misiones.cargar_mision(Misiones.mision)
 		var dialogue_resource = load(Misiones.get_current_dialogue_path())
 		DialogueManager.show_dialogue_balloon(dialogue_resource, "MISION_4_5")
-		$"../npc_kid_world_mision_5".show()
 	
 	
 	

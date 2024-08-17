@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d4bellcwfdwms"]
+[gd_scene load_steps=13 format=3 uid="uid://d4bellcwfdwms"]
 
 [ext_resource type="PackedScene" uid="uid://cml5fv818uwv2" path="res://scenes/minijuego4/fondo.tscn" id="1_biqm2"]
 [ext_resource type="PackedScene" uid="uid://de51d7hgc81rt" path="res://scenes/world_scenes/botones.tscn" id="1_dco4r"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cpfb07nqlayo6" path="res://scenes/minijuego4/playerminijuego4.tscn" id="4_dwnf1"]
 [ext_resource type="PackedScene" uid="uid://dc3aenlhcebri" path="res://scenes/minijuego4/crearbullys.tscn" id="5_k02y8"]
 [ext_resource type="PackedScene" uid="uid://jwybqy6oux5x" path="res://scenes/minijuego4/interfaz_4.tscn" id="7_qgsf7"]
+[ext_resource type="AudioStream" uid="uid://b3klwjhp8xiwt" path="res://sounds/minijuego_bullin.ogg" id="9_t3o7n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_usrox"]
 atlas = ExtResource("2_1s3c1")
@@ -70,3 +71,7 @@ scale = Vector2(0.5, 0.5)
 [node name="ObstaculosAleatorios" parent="." instance=ExtResource("5_k02y8")]
 
 [node name="interfaz4" parent="." instance=ExtResource("7_qgsf7")]
+
+[node name="Ambiente" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_t3o7n")
+autoplay = true

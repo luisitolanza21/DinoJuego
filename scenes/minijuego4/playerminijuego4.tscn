@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cpfb07nqlayo6"]
+[gd_scene load_steps=33 format=3 uid="uid://cpfb07nqlayo6"]
 
 [ext_resource type="Texture2D" uid="uid://bnr1ov8vp2x44" path="res://assets/player/back walk animation.png" id="1_3mcrl"]
 [ext_resource type="Script" path="res://scripts/minijuego4/playerminijuego4.gd" id="1_fra1q"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ccrageo0w1bjm" path="res://assets/player/Side walk animation.png" id="5_0aryd"]
 [ext_resource type="Texture2D" uid="uid://c7pg6vjbblqu8" path="res://assets/player/Dino rugido.png" id="6_2jtxm"]
 [ext_resource type="AudioStream" uid="uid://bi0htp31kow6c" path="res://sounds/caminar.wav" id="6_rep1u"]
+[ext_resource type="AudioStream" uid="uid://c06wrn34c36g3" path="res://sounds/rugido.wav" id="9_rpp8c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1l6p7"]
 atlas = ExtResource("1_3mcrl")
@@ -225,3 +226,6 @@ shape = SubResource("CapsuleShape2D_fkgcl")
 stream = ExtResource("6_rep1u")
 volume_db = 9.66
 pitch_scale = 1.22
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_rpp8c")

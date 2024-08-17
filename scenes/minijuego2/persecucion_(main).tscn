@@ -3414,7 +3414,7 @@ rotation = -0.0261799
 
 [node name="musica_minijuego2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("26_c0jh3")
-volume_db = -10.0
+volume_db = -20.13
 autoplay = true
 
 [connection signal="fin_dialogo" from="." to="Trampas/ObstaculosAleatorios" method="_on_persecucion_fin_dialogo"]

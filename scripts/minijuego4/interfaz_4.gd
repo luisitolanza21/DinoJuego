@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var countdown_time = 60 # Tiempo inicial en segundos (ej. 120 segundos = 2 minutos)
+@export var countdown_time = 45 # Tiempo inicial en segundos (ej. 120 segundos = 2 minutos)
 var time_remaining: int
 var timer: Timer
 var rich_text_label: RichTextLabel
