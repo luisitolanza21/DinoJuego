@@ -19,8 +19,8 @@
 
 [node name="nivel2" type="Node2D"]
 script = ExtResource("1_8fn0v")
-metadata/_edit_vertical_guides_ = [2450.0, 2450.0, -1230.0, 701.0]
-metadata/_edit_horizontal_guides_ = [250.0, 23.0, 1481.0, 2880.0]
+metadata/_edit_vertical_guides_ = [2450.0, 2450.0, -1230.0, 701.0, -275.0]
+metadata/_edit_horizontal_guides_ = [250.0, 23.0, 1481.0, 2880.0, 720.0]
 
 [node name="Botones" parent="." instance=ExtResource("2_dplpr")]
 
@@ -35,6 +35,11 @@ quest_target_position = Vector2(-1230, 1280)
 [node name="MisionIndicator3" parent="Botones" instance=ExtResource("3_q5i8j")]
 script = ExtResource("4_0gjxt")
 quest_target_position = Vector2(700, 2880)
+
+[node name="MisionIndicator4" parent="Botones" instance=ExtResource("3_q5i8j")]
+visible = false
+script = ExtResource("4_0gjxt")
+quest_target_position = Vector2(-275, 720)
 
 [node name="Ciudad2" parent="." instance=ExtResource("2_jy2xc")]
 position = Vector2(687.5, 2021.25)

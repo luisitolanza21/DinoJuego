@@ -23,4 +23,6 @@ func _process(delta):
 		$Botones/MisionIndicator2.hide()
 	if Global.npc3 == 1:
 		$Botones/MisionIndicator3.hide()
+	if Global.npc1 + Global.npc2 + Global.npc3 == 3:
+		$Botones/MisionIndicator4.show()
 		

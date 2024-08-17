@@ -1,6 +1,6 @@
 ~ Nivel1
 
-Coronel: Necesito que ordenes la ciudad, en estas calles hay mucho trafico, deja que los autos pasen apretando los botones izquierdos y derechos
+Coronel: Necesito que ordenes la ciudad, en estas calles hay mucho trafico, deja que los autos pasen apretando los botones izquierdos y derechos, verde signigica dejarlos pasar, rojo para no permitirles el paso
 Coronel: Evita que choquen y deja pasar la cantidad necesaria de autos, ¡Suerte!
 
 set Global.listo = "si"
