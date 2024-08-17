@@ -98,7 +98,7 @@ Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?.
 		Ciudadano: Estaba parado en la esquina, como si estuviera esperando a alguien.
 		=> npc3_second
 -  ¿viste lo que paso aqui?
-	Ciudadano: No vi con claridad pero una perosna salio corriendo hace poco
+	Ciudadano: No vi con claridad pero una persona salio corriendo hace poco
 	=> npc3_second
 -  ¡Gracias por la información!
 	Ciudadano: ¡Con gusto! Ojalá eso ayude en su investigación.
@@ -118,7 +118,7 @@ Ciudadano: ¿en que mas puedo ayudarlo?.
 	Ciudadano: Estaba parado en la esquina, como si estuviera esperando a alguien.
 	=> npc3_second
 -  ¿viste lo que paso aqui?
-	Ciudadano: No vi con claridad pero esa perosna que te describi salio corriendo hace poco
+	Ciudadano: No vi con claridad pero esa persona que te describi salio corriendo hace poco
 	=> npc3_second
 -  ¡Gracias por la información!
 	Ciudadano: ¡Con gusto! Ojalá eso ayude en su investigación.
