@@ -37,3 +37,22 @@ set Misiones.continuacion = 3
 set Global.botones = true
 => END
 
+
+~ MISION_5_4
+set Global.botones = false
+
+Coronel: "Dino, has hecho de esta ciudad un lugar más seguro. Tu dedicación ha sido ejemplar."
+
+Dino: "Gracias, Coronel. Aprendí que la fuerza no es lo único que importa. Con empatía y unión, podemos vencer cualquier desafío."
+
+Coronel: "Así es. Aunque las misiones terminen, el trabajo sigue. Pero con alguien como tú, Tarija siempre tendrá esperanza."
+
+Dino: "Seguiré protegiendo nuestra ciudad, pase lo que pase."
+
+set Misiones.posicion_indicador = Misiones.coronel_position
+set Misiones.continuacion = 3
+do Transicion.cambiar_escena("res://scenes/MENUS/final.tscn")
+set Global.botones = true
+=> END
+
+

@@ -6,7 +6,7 @@ set Global.botones = true
 
 ~ npc1
 set Global.botones = false
-Ciudadano: [[hola|buenos dias oficial]], ¿en que puedo ayudarlo?.
+Ciudadano: [[hola|buenos dias oficial]], ¿en que puedo ayudarlo?
 -  ¿Has visto a alguien sospechoso por aquí?
 	Ciudadano: Sí, vi a alguien extraño merodeando por la zona.
 	-  ¿Puedes describir al sospechoso?
@@ -27,7 +27,7 @@ Ciudadano: [[hola|buenos dias oficial]], ¿en que puedo ayudarlo?.
 
 ~ npc1_second 
 set Global.botones = false
-Ciudadano: ¿en que mas puedo ayudarlo?.
+Ciudadano: ¿en que mas puedo ayudarlo?
 -  ¿Has visto a alguien sospechoso por aquí?
 	Ciudadano: Sí, vi a alguien extraño merodeando por la zona.
 	-  ¿Puedes describir al sospechoso?
@@ -68,7 +68,7 @@ Ciudadano: Buenas tardes, oficial. ¿En qué puedo servirle?
 
 ~ npc2_second 
 set Global.botones = false
-Ciudadano: ¿en que mas puedo ayudarlo?.
+Ciudadano: ¿En que mas puedo ayudarlo?
 -  ¿Has visto a alguien sospechoso últimamente?
 	Ciudadano: Creo que vi a alguien raro por aquí hace un rato.
 	-  ¿Cómo era esa persona?
@@ -78,7 +78,7 @@ Ciudadano: ¿en que mas puedo ayudarlo?.
 		Ciudadano: Parecía estar caminando lentamente, observando cada detalle a su alrededor.
 		=> npc2_second
 -  ¿sabes que paso?
-	Ciudadano: no oficial, nada más fui a la tienda.
+	Ciudadano: No oficial, nada más fui a la tienda.
 	=> npc2_second
 -  ¡Gracias por tu ayuda!
 	Ciudadano: ¡De nada! Espero que eso te sirva de algo.
@@ -88,7 +88,7 @@ Ciudadano: ¿en que mas puedo ayudarlo?.
 
 ~ npc3
 set Global.botones = false
-Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?.
+Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?
 -  ¿Has notado a alguien que se vea sospechoso?
 	Ciudadano: Sí, vi a alguien que no me pareció muy confiable.
 	-  ¿Cómo era?
@@ -108,7 +108,7 @@ Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?.
 
 ~ npc3_second 
 
-Ciudadano: ¿en que mas puedo ayudarlo?.
+Ciudadano: ¿En que mas puedo ayudarlo?
 -  ¿Has notado a alguien que se vea sospechoso?
 	Ciudadano: Sí, vi a alguien que no me pareció muy confiable.
 	-  ¿Cómo era?
@@ -117,7 +117,7 @@ Ciudadano: ¿en que mas puedo ayudarlo?.
 	-  ¿Qué estaba haciendo?
 	Ciudadano: Estaba parado en la esquina, como si estuviera esperando a alguien.
 	=> npc3_second
--  ¿viste lo que paso aqui?
+-  ¿Viste lo que paso aqui?
 	Ciudadano: No vi con claridad pero esa persona que te describi salio corriendo hace poco
 	=> npc3_second
 -  ¡Gracias por la información!

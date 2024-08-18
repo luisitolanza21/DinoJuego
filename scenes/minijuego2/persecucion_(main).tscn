@@ -25,7 +25,7 @@
 [ext_resource type="Script" path="res://scenes/minijuego2/GameController.gd" id="24_to1os"]
 [ext_resource type="PackedScene" uid="uid://dynsuvfjync5t" path="res://scenes/minijuego3/perdiste.tscn" id="25_yg8jc"]
 [ext_resource type="AudioStream" uid="uid://bygp6aqkao87j" path="res://sounds/persecusion.ogg" id="26_c0jh3"]
-[ext_resource type="PackedScene" uid="uid://rw3bsew4meqa" path="res://scenes/minijuegoPersecusion/botones_persecusion.tscn" id="26_xlwjh"]
+[ext_resource type="PackedScene" uid="uid://rw3bsew4meqa" path="res://scenes/minijuego2/botones_persecusion.tscn" id="26_xlwjh"]
 
 [sub_resource type="Animation" id="Animation_2kyoa"]
 length = 2.0
@@ -1622,7 +1622,7 @@ rotation = -1.58488
 script = ExtResource("12_uy0x8")
 
 [node name="AutoEstatico" parent="Paths/Path2D8/PathFollow2D" instance=ExtResource("11_71oh0")]
-position = Vector2(-91.3022, -104.759)
+position = Vector2(-48.3778, -8.44962)
 rotation = 0.00523599
 
 [node name="Casas" type="Node2D" parent="."]
@@ -3411,7 +3411,7 @@ texture = ExtResource("22_keo48")
 expand_mode = 2
 
 [node name="ControlTiempo" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 80.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(22137, 165)

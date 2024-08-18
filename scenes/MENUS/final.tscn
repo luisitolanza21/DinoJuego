@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxbdu0f731b3b"]
+
+[ext_resource type="Texture2D" uid="uid://cb1d2dv404nnp" path="res://assets/dino final.png" id="1_2k42f"]
+[ext_resource type="AudioStream" uid="uid://b1mctjl50bjeu" path="res://sounds/menu.wav" id="2_idykv"]
+
+[node name="final" type="Node2D"]
+
+[node name="DinoFinal" type="Sprite2D" parent="."]
+position = Vector2(627, 360)
+scale = Vector2(0.680556, 0.680556)
+texture = ExtResource("1_2k42f")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_idykv")
+volume_db = -20.0
+autoplay = true

@@ -1,6 +1,6 @@
 ~ npc1
 
-Ciudadano: [[hola|buenos dias oficial]], ¿en que puedo ayudarlo?.
+Ciudadano: [[hola|buenos dias oficial]], ¿en que puedo ayudarlo?
 -  ¿Has visto a alguien sospechoso por aquí?
 	Ciudadano: Sí, vi a alguien extraño merodeando por la zona.
 	=> npc1_second
@@ -51,7 +51,7 @@ Ciudadano: Buenas tardes, oficial. ¿En qué puedo servirle?
 => END
 
 ~ npc2_second 
-Ciudadano: ¿en que mas puedo ayudarlo?.
+Ciudadano: ¿en que mas puedo ayudarlo?
 -  ¿Has visto a alguien sospechoso últimamente?
 	Ciudadano: Creo que vi a alguien raro por aquí hace un rato.
 	-  ¿Cómo era esa persona?
@@ -69,7 +69,7 @@ Ciudadano: ¿en que mas puedo ayudarlo?.
 
 ~ npc3
 
-Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?.
+Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?
 -  ¿Has notado a alguien que se vea sospechoso?
 	Ciudadano: Sí, vi a alguien que no me pareció muy confiable.
 	-  ¿Cómo era?
@@ -85,7 +85,7 @@ Ciudadano: [[hola|buenos dias oficial]], ¿necesita algo?.
 => END
 
 ~ npc3_second 
-Ciudadano: ¿en que mas puedo ayudarlo?.
+Ciudadano: ¿en que mas puedo ayudarlo?
 -  ¿Has notado a alguien que se vea sospechoso?
 	Ciudadano: Sí, vi a alguien que no me pareció muy confiable.
 	-  ¿Cómo era?
